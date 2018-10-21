@@ -1,0 +1,25 @@
+for linux switch on MSI:
+1.gcc
+2.python3
+3.clang
+4.chrome
+5.emacs
+6.spotify
+7.Web dev tools
+8.Git
+9.skype
+10. vs code (backup in case new language is used)
+
+for emacs softwaredevelopment:
+ # general stuff:
+ -set tab space
+ -enable line numbers
+ -syntax highlighting 
+
+ # C/C++ packages:
+
+ # Python packages:
+
+ # Javascript HTML & CSS packages
+
+ # C# packages
