@@ -9,6 +9,7 @@ for linux switch on MSI:
 8.Git
 9.skype
 10. vs code (backup in case new language is used)
+11. LATEX
 
 for emacs softwaredevelopment:
  # general stuff:
