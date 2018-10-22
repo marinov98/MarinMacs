@@ -9,7 +9,7 @@ for linux switch on MSI:
 8.Git
 9.skype
 10. vs code (backup in case new language is used)
-11. LATEX
+11. LATEX (sudo apt-get install texlive-full)
 
 for emacs softwaredevelopment:
  # general stuff:
