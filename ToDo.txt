@@ -3,7 +3,7 @@ for linux switch on MSI:
 2.python3
 3.clang
 4.chrome
-5.emacs
+5.emacs (sudo apt-get install emacs23 auctex)
 6.spotify
 7.Web dev tools
 8.Git
