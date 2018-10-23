@@ -25,3 +25,5 @@ for emacs softwaredevelopment:
  # Javascript HTML & CSS packages
 
  # C# packages
+ 
+ (OPTIONAL) hex edit text editor 
