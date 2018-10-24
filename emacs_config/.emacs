@@ -59,12 +59,15 @@
 
 ; Beginning of Python 
 (setq visible-bell t)
+(require 'elpy)
 (require 'package)
 (require 'json)
 (elpy-enable)
 ;; fixing bug in elpy
 (define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand)
-
+; jedi
+(require 'jedi)
+(add-hook 'python-mode-hook 'jedi:setup)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
