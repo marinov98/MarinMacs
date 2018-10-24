@@ -35,8 +35,8 @@
 (defun my:flymake-google-init ()
   (require 'flymake-google-cpplint)
   (custom variables
-  '(flymake-google-cpplint-command "/usr/local/lib/python2.7/site-packages")
-  (flymake-google-cpplint-load))
+  '(flymake-google-cpplint-command "/usr/local/lib/python2.7/site-packages"))
+  (flymake-google-cpplint-load)
 )
 (add-hook 'c-mode-hook 'my:flymake-google-init)
 (add-hook 'c++-mode-hook 'my:flymake-google-init)
