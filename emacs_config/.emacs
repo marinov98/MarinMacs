@@ -1,3 +1,4 @@
+(load-theme 'wombat)
 ; start package.el with
 (require 'package)
 ; add Melpa to repository list
