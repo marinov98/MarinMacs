@@ -1,10 +1,12 @@
 (load-theme 'wombat)
 ; general
-(setq c-basic-offset 4) ; indents 4 chars                                                                                                
- (setq tab-width 4)          ; and 4 char wide for TAB
- (setq indent-tabs-mode nil) ; And force use of spaces
- (turn-on-font-lock)       ; same as syntax on in Vim
- (setq width (max width (+ (length str) 1))) ;line numbers
+(setq c-basic-offset 4) ; indents 4 chars                                                                                             
+(setq tab-width 4)          ; and 4 char wide for TAB
+(setq indent-tabs-mode nil) ; And force use of spaces
+(turn-on-font-lock)       ; same as syntax on in Vim
+(require 'linum)
+(global-linum-mode 1) ; line numbers
+('display-line-numbers)
 ; start package.el with
 (require 'package)
 ; add Melpa to repository list
