@@ -6,7 +6,6 @@
 (turn-on-font-lock)       ; same as syntax on in Vim
 (require 'linum)
 (global-linum-mode 1) ; line numbers
-('display-line-numbers)
 ; start package.el with
 (require 'package)
 ; add Melpa to repository list
@@ -45,6 +44,12 @@
 (require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
+; cedet TRUE c++ intellisense
+(semantic-mode 1)
+(defun my:add-semantic-to-autocomplete()
+  (add-to-list 'ac-sources 'ac-source-semantic)
+)
+(add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
 ; clang-format
 (require 'clang-format)
 (defun clang-format-buffer-smart ()
@@ -61,7 +66,6 @@
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
-
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 ; End of C++
 
