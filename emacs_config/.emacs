@@ -37,7 +37,7 @@
 (require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
-					; clang-format
+; clang-format
 (require 'clang-format)
 (defun clang-format-buffer-smart ()
   "Reformat buffer if .clang-format exists in the projectile root."
@@ -48,6 +48,8 @@
   (add-hook 'before-save-hook 'clang-format-buffer-smart nil t))
   (add-hook 'c++-mode-hook 'clang-format)
 ; Irony
+(require 'irony)
+(irony-enable 'ac)
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
