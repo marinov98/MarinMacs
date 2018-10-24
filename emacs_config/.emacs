@@ -37,7 +37,8 @@
 (require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
-; clang-format
+					; clang-format
+(require 'clang-format)
 (defun clang-format-buffer-smart ()
   "Reformat buffer if .clang-format exists in the projectile root."
   (when (f-exists? (expand-file-name ".clang-format" (projectile-project-root)))
@@ -45,7 +46,13 @@
 (defun clang-format-buffer-smart-on-save ()
   "Add auto-save hook for clang-format-buffer-smart."
   (add-hook 'before-save-hook 'clang-format-buffer-smart nil t))
-(add-hook 'c++-mode-hook 'clang-format)
+  (add-hook 'c++-mode-hook 'clang-format)
+; Irony
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 ; End of C++
 
 ; Beginning of Python 
@@ -64,7 +71,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (color-theme-sanityinc-solarized flymake-google-cpplint iedit auto-complete-c-headers yasnippet auto-complete))))
+    (flycheck-irony company-irony irony clang-format color-theme-sanityinc-solarized flymake-google-cpplint iedit auto-complete-c-headers yasnippet auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
