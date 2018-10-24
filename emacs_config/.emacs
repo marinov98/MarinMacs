@@ -45,7 +45,7 @@
 (defun clang-format-buffer-smart-on-save ()
   "Add auto-save hook for clang-format-buffer-smart."
   (add-hook 'before-save-hook 'clang-format-buffer-smart nil t))
-(add-hool 'c++-mode-hook 'clang-format)
+(add-hook 'c++-mode-hook 'clang-format)
 ; End of C++
 
 ; Beginning of Python 
