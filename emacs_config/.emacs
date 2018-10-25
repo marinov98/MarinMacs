@@ -101,6 +101,34 @@
 (require 'jedi)
 (add-hook 'python-mode-hook 'jedi:setup)
 ; python end
+;; csharp
+(require 'csharp-mode)
+(defun my-csharp-mode-hook ()
+  ;; enable the stuff you want for C# here
+  (electric-pair-local-mode 1) ;; Emacs 25
+  )
+(add-hook 'csharp-mode-hook 'my-csharp-mode-hook)
+; Javascript
+(require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+;; Better imenu
+(add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
+;; refactor and xref
+(require 'js2-refactor)
+(require 'xref-js2)
+
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+(js2r-add-keybindings-with-prefix "C-c C-r")
+(define-key js2-mode-map (kbd "C-k") #'js2r-kill)
+
+;; js-mode (which js2 is based on) binds "M-." which conflicts with xref, so
+;; unbind it.
+(define-key js-mode-map (kbd "M-.") nil)
+
+(add-hook 'js2-mode-hook (lambda ()
+			   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
+; js end
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
