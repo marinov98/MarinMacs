@@ -1,15 +1,15 @@
-(load-theme 'wombat)
 ; general
-(setq c-basic-offset 4) ; indents 4 chars                                                                                             
-(setq tab-width 4)          ; and 4 char wide for TAB
-(setq indent-tabs-mode nil) ; And force use of spaces
-(turn-on-font-lock)       ; same as syntax on in Vim
+(load-theme 'wombat)       ; theme
+(setq c-basic-offset 4)    ; indents 4 chars                                                                                          
+(setq tab-width 4)         ; and 4 char wide for TAB
+(setq indent-tabs-mode nil); And force use of spaces
+(turn-on-font-lock)        ; same as syntax on in Vim
 (require 'linum)
 (global-linum-mode 1) ; line numbers
 ; start package.el with
 (require 'package)
 ; add Melpa to repository list
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/")t)
 ; initialize package.el
 (package-initialize)
 ; start auto-complete with emacs (BEGINNING OF C++ IDE)
@@ -62,11 +62,20 @@
   (add-hook 'c++-mode-hook 'clang-format)
 ; Irony
 (require 'irony)
-(irony-enable 'ac)
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+; projectile-mode s stands for command, windows button for windows
+(require 'projectile)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "s-d") 'projectile-find-dir)
+(define-key projectile-mode-map (kbd "s-f") 'projectile-find-file)
+(define-key projectile-mode-map (kbd "s-g") 'projectile-grep)
+(projectile-mode +1)
+; dump-jump (jump to definition) supports python as well
+;(require dumb-jump)
 ; End of C++
 
 ; Beginning of Python 
@@ -88,10 +97,10 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (flycheck-irony company-irony irony clang-format color-theme-sanityinc-solarized flymake-google-cpplint iedit auto-complete-c-headers yasnippet auto-complete))))
+    (dumb-jump projectile flycheck-irony company-irony irony clang-format color-theme-sanityinc-solarized flymake-google-cpplint iedit auto-complete-c-headers yasnippet auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:inherit nil :stipple nil :background "#242424" :foreground "#f6f3e8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 200 :width normal :foundry "nil" :family "Menlo")))))
