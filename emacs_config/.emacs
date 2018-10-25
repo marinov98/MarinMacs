@@ -1,6 +1,6 @@
 ; general
 (load-theme 'wombat)       ; theme
-(setq c-basic-offset 4)    ; indents 4 chars                                                                                          
+(setq c-basic-offset 4)    ; indents 4 chars                                                                                         
 (setq tab-width 4)         ; and 4 char wide for TAB
 (setq indent-tabs-mode nil); And force use of spaces
 (turn-on-font-lock)        ; same as syntax on in Vim
@@ -50,6 +50,8 @@
   (add-to-list 'ac-sources 'ac-source-semantic)
 )
 (add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
+; turn on automatic reparsing
+(global-semantic-idle-scheduler-mode 1)
 ; clang-format
 (require 'clang-format)
 (defun clang-format-buffer-smart ()
@@ -59,7 +61,16 @@
 (defun clang-format-buffer-smart-on-save ()
   "Add auto-save hook for clang-format-buffer-smart."
   (add-hook 'before-save-hook 'clang-format-buffer-smart nil t))
-  (add-hook 'c++-mode-hook 'clang-format)
+(add-hook 'c++-mode-hook 'clang-format)
+; flycheck
+(require 'flycheck)
+(global-flycheck-mode)
+(require 'flycheck-irony)
+(with-eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
+(with-eval-after-load 'flycheck
+  (require 'flycheck-clang-analyzer)
+  (flycheck-clang-analyzer-setup))
 ; Irony
 (require 'irony)
 (add-hook 'c++-mode-hook 'irony-mode)
@@ -97,10 +108,10 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (dumb-jump projectile flycheck-irony company-irony irony clang-format color-theme-sanityinc-solarized flymake-google-cpplint iedit auto-complete-c-headers yasnippet auto-complete))))
+    (yasnippet-snippets use-package counsel-projectile flycheck-clang-analyzer dumb-jump projectile flycheck-irony company-irony irony clang-format color-theme-sanityinc-solarized flymake-google-cpplint iedit auto-complete-c-headers yasnippet auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#242424" :foreground "#f6f3e8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 200 :width normal :foundry "nil" :family "Menlo")))))
+ '(default ((t (:inherit nil :stipple nil :background "#242424" :foreground "#f6f3e8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 185 :width normal :foundry "nil" :family "Menlo")))))
