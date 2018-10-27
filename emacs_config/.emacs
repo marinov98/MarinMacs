@@ -30,7 +30,7 @@
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
 (add-hook 'c-mode-hook 'my:ac-c-header-init)
 ; Part 2 
-(define-key global-map (kbd "C-c ;") 'iedit-mode)
+(define-key global-map (kbd "C-c c") 'iedit-mode)
 ; start flymake-google-cppline-load
 (defun my:flymake-google-init ()
   (require 'flymake-google-cpplint)
