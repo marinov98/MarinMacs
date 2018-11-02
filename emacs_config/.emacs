@@ -6,6 +6,8 @@
 (require 'linum)
 (global-linum-mode 1)      ;; line numbers
 (electric-pair-mode)       ;; auto closing brackets
+(semantic-mode 1)
+(global-semantic-idle-scheduler-mode 1)
 
 ;;;;;;;;; start package.el with
 (require 'package)
@@ -15,7 +17,7 @@
 ;; initialize package.el
 (package-initialize)
 
-;;;; convinience packages
+;;;;;;;; convinience packages
 
 ;;;; auto completion
 ;; start auto-complete with emacs
@@ -31,6 +33,9 @@
 ;; magit (Git control for emacs)
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+;; flycheck
+(require 'flycheck)
+(global-flycheck-mode)
 ;; neotree for easy directory navigation
 (require 'neotree)
 ;; controls :
@@ -52,71 +57,53 @@
 (define-key projectile-mode-map (kbd "s-f") 'projectile-find-file)
 (define-key projectile-mode-map (kbd "s-g") 'projectile-grep)
 (projectile-mode +1)
-;; dump-jump (jump to definition) supports python as well
+;; dump-jump (jump to definition)
 (require 'dumb-jump)
 (dumb-jump-mode)
 ;; dumb-jump-go C-M-g core functionality. Attempts to jump to the definition for the thing under point
-;; dumb-jump-back C-M-p jumps back to where you were when you jumped. These are chained so if you go down a rabbit hole you can get back out or where you want to be.
-;; dumb-jump-quick-look C-M-q like dumb-jump-go but only shows tooltip with file, line, and context it does not jump.
-;; dumb-jump-go-other-window exactly like dumb-jump-go but uses find-file-other-window instead of find-file
-;; dumb-jump-go-prefer-external like dumb-jump-go but will prefer definitions not in the current buffer
-;; dumb-jump-go-prefer-external-other-window expected combination of dumb-jump-go-prefer-external and dumb-jump-go-other-window
-;; dumb-jump-go-prompt exactly like dumb-jump-go but prompts user for function to jump to instead of using symbol at point
+;; dumb-jump-back C-M-p jumps back to where you were when you jumped.
+;; dumb-jump-quick-look C-M-q like dumb-jump-go but only shows tooltip with file, line, and context
+
 ;;;; convinience end
 
 ;;;;;;;; (BEGINNING OF C++)
 
-;; define function
-(defun my:ac-c-header-init ()
-  (require 'auto-complete-c-headers)
-  (add-to-list 'ac-sources 'ac-source-c-headers)
-  (add-to-list 'achead:include-directories '"/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include")
-  )
-;; call the function
-(add-hook 'c++-mode-hook 'my:ac-c-header-init)
-(add-hook 'c-mode-hook 'my:ac-c-header-init)
-;; start flymake-google-cppline-load
-(defun my:flymake-google-init ()
-  (require 'flymake-google-cpplint)
-  (custom variables
-  '(flymake-google-cpplint-command "/usr/local/lib/python2.7/site-packages"))
-  (flymake-google-cpplint-load)
-)
-(add-hook 'c-mode-hook 'my:flymake-google-init)
-(add-hook 'c++-mode-hook 'my:flymake-google-init)
-;; start google-c-style with emacs
-(require 'google-c-style)
-(add-hook 'c-mode-common-hook 'google-set-c-style)
-(add-hook 'c-mode-common-hook 'google-make-newline-indent)
-;; cedet TRUE c++ intellisense
-(semantic-mode 1)
-(defun my:add-semantic-to-autocomplete()
-  (add-to-list 'ac-sources 'ac-source-semantic)
-)
-(add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
-;; turn on automatic reparsing
-(global-semantic-idle-scheduler-mode 1)
+;; enable modern C++ font lock
+(require 'modern-cpp-font-lock)
+(modern-c++-font-lock-global-mode t)
 ;; clang-format
 (require 'clang-format)
 (global-set-key (kbd "C-c f") 'clang-format-region)
 (global-set-key (kbd "C-c u") 'clang-format-buffer)
 (setq clang-format-style-option ".clang-format")
 (add-hook 'c++-mode-hook 'clang-format)
-;; flycheck
-(require 'flycheck)
-(global-flycheck-mode)
+;; c++ flycheck
 (require 'flycheck-irony)
 (with-eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
 (with-eval-after-load 'flycheck
   (require 'flycheck-clang-analyzer)
   (flycheck-clang-analyzer-setup))
-;; Irony
+;; C++ intellisense
+;; company
+(require 'company)
+(setq company-idle-delay 0)
+(setq company-minimum-prefix-length 3)
+;; company-irony
+(require 'company-irony)
+(add-to-list 'company-backends 'company-irony)
+
 (require 'irony)
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+
+(with-eval-after-load 'company
+  (add-hook 'c++-mode-hook 'company-mode)
+  (add-hook 'c-mode-hook 'company-mode))
+
+
 ;;;;;;;; End of C++
 
 ;;;;;;;; Beginning of Python
@@ -247,7 +234,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (flymake-jshint flymake-jslint base16-theme oceanic-theme seti-theme neotree virtualenv virtualenvwrapper company-tern ac-js2 pylint emmet-mode web-mode ac-html auto-complete-clang rtags xref-js2 js2-refactor js2-mode csharp-mode color-theme-sanityinc-tomorrow yasnippet-snippets use-package counsel-projectile flycheck-clang-analyzer dumb-jump projectile flycheck-irony company-irony irony clang-format color-theme-sanityinc-solarized flymake-google-cpplint iedit auto-complete-c-headers yasnippet auto-complete)))
+    (modern-cpp-font-lock flymake-jshint flymake-jslint base16-theme oceanic-theme seti-theme neotree virtualenv virtualenvwrapper company-tern ac-js2 pylint emmet-mode web-mode ac-html auto-complete-clang rtags xref-js2 js2-refactor js2-mode csharp-mode color-theme-sanityinc-tomorrow yasnippet-snippets use-package counsel-projectile flycheck-clang-analyzer dumb-jump projectile flycheck-irony company-irony irony clang-format color-theme-sanityinc-solarized flymake-google-cpplint iedit auto-complete-c-headers yasnippet auto-complete)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
