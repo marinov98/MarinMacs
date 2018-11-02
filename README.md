@@ -3,8 +3,8 @@
 configuration for emacs
 
 ## Can be used for:
-  C++
-  Python
-  Javascript
-  HTML/CSS
+  C++,
+  Python,
+  Javascript,
+  HTML/CSS,
   GIT
