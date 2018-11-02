@@ -2,7 +2,7 @@
 (setq c-basic-offset 4)    ;; indents 4 chars
 (setq tab-width 4)         ;; and 4 char wide for TAB
 (setq indent-tabs-mode nil);; And force use of spaces
-(global-font-lock-mode 1)  ;; same as syntax on in Vim
+(global-font-lock-mode 1)  ;; Syntax highlighting
 (require 'linum)
 (global-linum-mode 1)      ;; line numbers
 
