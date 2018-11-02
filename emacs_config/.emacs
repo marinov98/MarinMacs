@@ -5,6 +5,7 @@
 (global-font-lock-mode 1)  ;; syntax highlighting
 (require 'linum)
 (global-linum-mode 1)      ;; line numbers
+(electric-pair-mode)       ;; auto closing brackets
 
 ;;;;;;;;; start package.el with
 (require 'package)
@@ -178,27 +179,15 @@
 			   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
 ;;;; js end
 
-;;;; html web dev
+;;;;  web development
 
-(defun setup-ac-for-html ()
-  ;; Require ac-haml since we are setup haml auto completion
-  (require 'ac-html)
-  ;; Require default data provider if you want to use
-  (require 'ac-html-default-data-provider)
-  ;; Enable data providers,
-  ;; currently only default data provider available
-  (ac-html-enable-data-provider 'ac-html-default-data-provider)
-  ;; Let ac-haml do some setup
-  (ac-html-setup)
-  ;; Set your ac-source
-  (setq ac-sources '(ac-source-html-tag
-                     ac-source-html-attr
-                     ac-source-html-attrv))
-  ;; Enable auto complete mode
-  (auto-complete-mode))
-
-(add-hook 'html-mode-hook 'setup-ac-for-html)
+;; emmet
 (require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
+(add-hook 'html-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+
+;; web mode
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -207,13 +196,20 @@
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+
+;; for html
+(setq web-mode-ac-sources-alist
+'(("css" . (ac-source-css-property))
+  ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
+
+(setq web-mode-enable-auto-closing t)
+(setq web-mode-enable-auto-quoting t)
+
+;; javascript web mode
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+
 (flycheck-add-mode 'javascript-eslint 'web-mode)
-(add-to-list 'web-mode-ac-sources-alist
-             '("html" . (ac-source-html-tag
-                         ac-source-html-attr
-                         ac-source-html-attrv)))
 
 (setq-default flycheck-disabled-checkers
   (append flycheck-disabled-checkers
@@ -223,7 +219,7 @@
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 (flycheck-add-mode 'javascript-eslint 'javascript-mode)
 
-;;;; end of html
+;;;; end of web development
 
 
 (custom-set-variables
