@@ -13,9 +13,10 @@
 ;; initialize package.el
 (package-initialize)
 
+;;;; convinience packages
 
-;;;;;;;; (BEGINNING OF C++ IDE)
-;; start auto-complete with emacs 
+;;;; auto completion
+;; start auto-complete with emacs
 (require 'auto-complete)
 ;; do default config for auto-complete
 (require 'auto-complete-config)
@@ -23,12 +24,39 @@
 ;; start yasnippet with emacs
 (require 'yasnippet)
 (yas-global-mode 1)
+;; neotree for easy directory navigation
+(require 'neotree)
+;; controls :
+;; n (next) p(prev)
+;; SPC RET or TAB : open file or fold/unfold dir
+;; g : refresh
+;; A : maximize or minimize tree
+;; H : toggle display hidden files
+;; C-c C-n : create file or directory
+;; C-c C-d : delete
+;; C-c C-r : rename
+;; C-c C-c : change root
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;; projectile-mode s stands for command, windows button for windows
+(require 'projectile)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "s-d") 'projectile-find-dir)
+(define-key projectile-mode-map (kbd "s-f") 'projectile-find-file)
+(define-key projectile-mode-map (kbd "s-g") 'projectile-grep)
+(projectile-mode +1)
+;; dump-jump (jump to definition) supports python as well
+;; (require dumb-jump)
+;;;; convinience end
+
+;;;;;;;; (BEGINNING OF C++)
+
 ;; define function
 (defun my:ac-c-header-init ()
   (require 'auto-complete-c-headers)
   (add-to-list 'ac-sources 'ac-source-c-headers)
   (add-to-list 'achead:include-directories '"/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include")
-)
+  )
 ;; call the function
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
 (add-hook 'c-mode-hook 'my:ac-c-header-init)
@@ -76,19 +104,10 @@
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-;; projectile-mode s stands for command, windows button for windows
-(require 'projectile)
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "s-d") 'projectile-find-dir)
-(define-key projectile-mode-map (kbd "s-f") 'projectile-find-file)
-(define-key projectile-mode-map (kbd "s-g") 'projectile-grep)
-(projectile-mode +1)
-;; dump-jump (jump to definition) supports python as well
-;; (require dumb-jump)
 ;;;;;;;; End of C++
 
 ;;;;;;;; Beginning of Python
+
 ;; virtualenv
 (require 'virtualenvwrapper)
 (venv-initialize-interactive-shells) 
@@ -112,9 +131,7 @@
 ;;;; csharp
 (require 'csharp-mode)
 (defun my-csharp-mode-hook ()
-  ;; enable the stuff you want for C# here
-  (electric-pair-local-mode 1) ;; Emacs 25
-  )
+  (electric-pair-local-mode 1))
 (add-hook 'csharp-mode-hook 'my-csharp-mode-hook)
 ;;;; csharp end
 
@@ -153,6 +170,7 @@
 ;;;; js end
 
 ;;;; html web dev
+
 (defun setup-ac-for-html ()
   ;; Require ac-haml since we are setup haml auto completion
   (require 'ac-html)
@@ -186,7 +204,9 @@
                          ac-source-html-attr
                          ac-source-html-attrv)))
 
-;;;; end of html 
+;;;; end of html
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -201,7 +221,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (virtualenv virtualenvwrapper company-tern ac-js2 pylint emmet-mode web-mode ac-html auto-complete-clang rtags xref-js2 js2-refactor js2-mode csharp-mode color-theme-sanityinc-tomorrow yasnippet-snippets use-package counsel-projectile flycheck-clang-analyzer dumb-jump projectile flycheck-irony company-irony irony clang-format color-theme-sanityinc-solarized flymake-google-cpplint iedit auto-complete-c-headers yasnippet auto-complete)))
+    (neotree virtualenv virtualenvwrapper company-tern ac-js2 pylint emmet-mode web-mode ac-html auto-complete-clang rtags xref-js2 js2-refactor js2-mode csharp-mode color-theme-sanityinc-tomorrow yasnippet-snippets use-package counsel-projectile flycheck-clang-analyzer dumb-jump projectile flycheck-irony company-irony irony clang-format color-theme-sanityinc-solarized flymake-google-cpplint iedit auto-complete-c-headers yasnippet auto-complete)))
  '(virtualenv-root
    "~/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/py2app/recipes/"))
 (custom-set-faces
