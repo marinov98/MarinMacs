@@ -7,3 +7,4 @@ configuration for emacs
   Python
   Javascript
   HTML/CSS
+  GIT
