@@ -1,11 +1,14 @@
 # What my .emacs file consists of (currently)
 
+## general
+linium(line numbers), tabspace: 4, syntax highlighting
+
 ## Convenience :
-linium(line numbers), set tab space to 4, syntax highlighting , projectile, dump-jump(jump to definition), flycheck, neotree,
-auto-complete, yasnippet, yasnippet snippets,
+projectile, dump-jump(jump to definition), flycheck, neotree,
+auto-complete, yasnippet, yasnippet snippets, iedit
 
 ## CPP packages: 
-flycheck-google-cpplint ,flycheck-irony,flycheck-clang, flycheck-clang-analyzer, clang-format, iedit, auto-complete c-headers, irony-mode,company-irony 
+flycheck-google-cpplint ,flycheck-irony,flycheck-clang, flycheck-clang-analyzer, clang-format, auto-complete c-headers, irony-mode,company-irony 
 
 ## Python packages: 
 elpy, jedi, rope, virtualenv, virtualenvwrapper
@@ -14,7 +17,7 @@ elpy, jedi, rope, virtualenv, virtualenvwrapper
 csharp-mode
 
 ## JavaScript packages:
-js2-mode , js2-refactor, xref-js2 company/company-tern
+js2-mode , js2-refactor, xref-js2 company/company-tern, flycheck-jslint, flycheck-jshint
 
-## Html
-ac-html, web-mode
+## Web-dev
+ac-html, web-mode, emmet-mode
