@@ -16,5 +16,5 @@ csharp-mode
 ## JavaScript packages:
 js2-mode , js2-refactor, xref-js2 company/company-tern
 
-## html
+## Html
 ac-html, web-mode
