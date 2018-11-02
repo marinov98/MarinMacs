@@ -5,7 +5,7 @@ linium(line numbers), tabspace: 4, syntax highlighting
 
 ## Convenience :
 projectile, dump-jump(jump to definition), flycheck, neotree,
-auto-complete, yasnippet, yasnippet snippets, iedit
+auto-complete, yasnippet, yasnippet snippets, iedit, magit
 
 ## CPP packages: 
 flycheck-google-cpplint ,flycheck-irony,flycheck-clang, flycheck-clang-analyzer, clang-format, auto-complete c-headers, irony-mode,company-irony 
