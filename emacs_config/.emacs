@@ -2,7 +2,7 @@
 (setq c-basic-offset 4)    ;; indents 4 chars
 (setq tab-width 4)         ;; and 4 char wide for TAB
 (setq indent-tabs-mode nil);; And force use of spaces
-(turn-on-font-lock)        ;; same as syntax on in Vim
+(global-font-lock-mode 1)  ;; same as syntax on in Vim
 (require 'linum)
 (global-linum-mode 1)      ;; line numbers
 
@@ -24,6 +24,8 @@
 ;; start yasnippet with emacs
 (require 'yasnippet)
 (yas-global-mode 1)
+;; iedit mode
+(define-key global-map (kbd "C-c c") 'iedit-mode)
 ;; neotree for easy directory navigation
 (require 'neotree)
 ;; controls :
@@ -46,7 +48,15 @@
 (define-key projectile-mode-map (kbd "s-g") 'projectile-grep)
 (projectile-mode +1)
 ;; dump-jump (jump to definition) supports python as well
-;; (require dumb-jump)
+(require 'dumb-jump)
+(dumb-jump-mode)
+;; dumb-jump-go C-M-g core functionality. Attempts to jump to the definition for the thing under point
+;; dumb-jump-back C-M-p jumps back to where you were when you jumped. These are chained so if you go down a rabbit hole you can get back out or where you want to be.
+;; dumb-jump-quick-look C-M-q like dumb-jump-go but only shows tooltip with file, line, and context it does not jump.
+;; dumb-jump-go-other-window exactly like dumb-jump-go but uses find-file-other-window instead of find-file
+;; dumb-jump-go-prefer-external like dumb-jump-go but will prefer definitions not in the current buffer
+;; dumb-jump-go-prefer-external-other-window expected combination of dumb-jump-go-prefer-external and dumb-jump-go-other-window
+;; dumb-jump-go-prompt exactly like dumb-jump-go but prompts user for function to jump to instead of using symbol at point
 ;;;; convinience end
 
 ;;;;;;;; (BEGINNING OF C++)
@@ -60,8 +70,6 @@
 ;; call the function
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
 (add-hook 'c-mode-hook 'my:ac-c-header-init)
-;; Part 2
-(define-key global-map (kbd "C-c c") 'iedit-mode)
 ;; start flymake-google-cppline-load
 (defun my:flymake-google-init ()
   (require 'flymake-google-cpplint)
@@ -110,8 +118,8 @@
 
 ;; virtualenv
 (require 'virtualenvwrapper)
-(venv-initialize-interactive-shells) 
-(venv-initialize-eshell) 
+(venv-initialize-interactive-shells)
+(venv-initialize-eshell)
 (setq venv-location "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/py2app/recipes/virtualenv.py")
 ;;;; Elpy
 (setq visible-bell t)
@@ -122,7 +130,7 @@
 (elpy-enable)
 ;; fixing bug in elpy
 (define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand)
-;;;; jedi
+;;;; jedi python intelisense
 (require 'jedi)
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
@@ -221,7 +229,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (neotree virtualenv virtualenvwrapper company-tern ac-js2 pylint emmet-mode web-mode ac-html auto-complete-clang rtags xref-js2 js2-refactor js2-mode csharp-mode color-theme-sanityinc-tomorrow yasnippet-snippets use-package counsel-projectile flycheck-clang-analyzer dumb-jump projectile flycheck-irony company-irony irony clang-format color-theme-sanityinc-solarized flymake-google-cpplint iedit auto-complete-c-headers yasnippet auto-complete)))
+    (oceanic-theme seti-theme neotree virtualenv virtualenvwrapper company-tern ac-js2 pylint emmet-mode web-mode ac-html auto-complete-clang rtags xref-js2 js2-refactor js2-mode csharp-mode color-theme-sanityinc-tomorrow yasnippet-snippets use-package counsel-projectile flycheck-clang-analyzer dumb-jump projectile flycheck-irony company-irony irony clang-format color-theme-sanityinc-solarized flymake-google-cpplint iedit auto-complete-c-headers yasnippet auto-complete)))
  '(virtualenv-root
    "~/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/py2app/recipes/"))
 (custom-set-faces
