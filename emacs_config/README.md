@@ -5,7 +5,7 @@ linium(line numbers), set tab space to 4, syntax highlighting , projectile, dump
 auto-complete, yasnippet, yasnippet snippets,
 
 ## CPP packages: 
-flycheck-google-cpplint ,flycheck-irony,flycheck-clang, flycheck-clang analyzer, clang-format, iedit, auto-complete c-headers, irony-mode,company-irony 
+flycheck-google-cpplint ,flycheck-irony,flycheck-clang, flycheck-clang-analyzer, clang-format, iedit, auto-complete c-headers, irony-mode,company-irony 
 
 ## Python packages: 
 elpy, jedi, rope, virtualenv, virtualenvwrapper
