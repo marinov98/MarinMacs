@@ -28,6 +28,9 @@
 (yas-global-mode 1)
 ;; iedit mode
 (define-key global-map (kbd "C-c c") 'iedit-mode)
+;; magit (Git control for emacs)
+(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 ;; neotree for easy directory navigation
 (require 'neotree)
 ;; controls :
