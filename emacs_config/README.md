@@ -8,7 +8,7 @@ projectile, dump-jump(jump to definition), flycheck, neotree,
 auto-complete, yasnippet, yasnippet snippets, iedit, magit
 
 ## CPP packages: 
-flycheck-google-cpplint ,flycheck-irony,flycheck-clang, flycheck-clang-analyzer, clang-format, auto-complete c-headers, irony-mode,company-irony 
+c++-modern-font-lock,flycheck-irony,flycheck-clang, flycheck-clang-analyzer, clang-format, auto-complete c-headers, irony-mode,company-irony 
 
 ## Python packages: 
 elpy, jedi, rope, virtualenv, virtualenvwrapper
