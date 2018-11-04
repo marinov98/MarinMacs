@@ -42,7 +42,7 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   
   #### Before going to Nodejs
   
-  ##### install curl (Ubuntu only!)
+  ##### install curl (Necessary for Ubuntu only!)
   -sudo apt-get install curl
   
   ##### install npm
