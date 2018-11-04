@@ -1,4 +1,4 @@
-# emacs guide 
+# emacs MY WAY guide 
 please note: I have used emacs ONLY on MacOs and Ubuntu so my knowledge is limited
 NOTE: in order to for brew install {package name} make sure your mac has brew installed
 
