@@ -1,9 +1,9 @@
 # What my .emacs file consists of (currently)
 
-## general
+## general settings 
 linium(line numbers), tabspace: 4, syntax highlighting
 
-## Convenience :
+## Convenience packages :
 projectile, dump-jump(jump to definition), flycheck, neotree,
 auto-complete, yasnippet, yasnippet snippets, iedit, magit
 
