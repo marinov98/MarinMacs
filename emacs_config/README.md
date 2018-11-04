@@ -13,7 +13,7 @@ linium(line numbers), tabspace: 4, syntax highlighting
 - iedit (change multiple words at the same time)
 - magit (git integration)
 
-## CPP packages: 
+## C++ packages: 
 - c++-modern-font-lock (integrates c++11 and above) (OPTIONAL)
 - flycheck-irony (smarter flycheck linter for c++)
 - flycheck-clang, flycheck-clang-analyzer (OPTIONAL provide linting capabilities similiar to flycheck-irony)
