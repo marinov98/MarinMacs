@@ -18,3 +18,4 @@
 16. node (npm) (NEED to install curl first)
 17. react
 18. tweak tool (ubuntu)
+19. Gummi text editor (until I find suitable packages for emacs)
