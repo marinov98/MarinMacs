@@ -11,7 +11,7 @@ auto-complete, yasnippet, yasnippet snippets, iedit, magit
 c++-modern-font-lock,flycheck-irony,flycheck-clang, flycheck-clang-analyzer, clang-format, auto-complete c-headers, irony-mode,company-irony 
 
 ## Python packages: 
-elpy, jedi, rope, virtualenv, virtualenvwrapper
+elpy, jedi, virtualenv, virtualenvwrapper
 
 ## Csharp packages:
 csharp-mode
