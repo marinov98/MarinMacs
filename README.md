@@ -11,7 +11,7 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   HTML/CSS,
   GIT
   
-## Necesities before using all Packages in my .emacs file:
+## Necesities before using all Packages in my .emacs file (I put sections so that you can pick only the ones you need) :
   ### C++
   
   ####  gcc
@@ -22,7 +22,7 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   - Ubuntu (sudo apt-get install clang)
   - MacOs (brew install clang)
   #### libclang
-  - Ubuntu (sudo apt-get install libclang-deb)
+  - Ubuntu (sudo apt-get install libclang-dev)
   - MacOs should already have it
   #### CMake
   - Ubuntu (sudo apt-get install cmake)
@@ -38,10 +38,11 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   
   #### Node 
   - look up how to install nodejs
-  - After installing node, use its commands to install ##### eslint
+  - After installing node, use its commands to install eslint
   
   #### GIT
+  ### search up how to set up git on your OperatingSystem AFTER INSTALLING IT
   - Ubuntu (sudo apt-get install git)
-    
+   
   
    
