@@ -1,4 +1,5 @@
-for linux switch on MSI:
+
+# for linux switch on MSI:
 1.gcc
 2.python3
 3.clang
@@ -13,6 +14,7 @@ for linux switch on MSI:
 12. GDB (debugger)
 13. libclang-dev
 14. llvm
-15. node (npm) (NEED to install curl first)
-16. react
-17. tweak tool (ubuntu)
+15. virtualenv
+16. node (npm) (NEED to install curl first)
+17. react
+18. tweak tool (ubuntu)
