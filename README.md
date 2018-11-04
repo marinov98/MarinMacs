@@ -20,7 +20,7 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   - MacOS (brew install gcc)
   #### clang
   - Ubuntu (sudo apt-get install clang)
-  - MacOs (brew install clang)
+  - MacOS (brew install clang)
   #### libclang
   - Ubuntu (sudo apt-get install libclang-dev)
   - MacOS should already have it
