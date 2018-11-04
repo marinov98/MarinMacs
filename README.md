@@ -1,5 +1,9 @@
-# emacs MY WAY guide 
-please note: I have used emacs ONLY on MacOs and Ubuntu so my knowledge is limited
+# emacs guide MY WAY
+
+# I was inspired to write this after I finished configuring my emacs file to write c++, python, and javascript code
+
+## please note: 
+I have used emacs ONLY on MacOs and Ubuntu so my knowledge is limited
 NOTE: in order to for brew install {package name} make sure your mac has brew installed
 
 # Contains my configuration for emacs 
