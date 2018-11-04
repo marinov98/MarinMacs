@@ -19,7 +19,8 @@ linium(line numbers), tabspace: 4, syntax highlighting
 - flycheck-clang, flycheck-clang-analyzer (OPTIONAL provide linting capabilities similiar to flycheck-irony)
 - clang-format (formats c++ code) (OPTIONAL)
 - irony-mode 
-- company-irony (provides true intelligent c++ intellisense and autocompletetion)
+- company-irony (provides true intelligent c++ intellisense and autocompletetion) 
+##### Run irony-install-server after you put compamy-irony in your init file ( THIS IS WHERE YOU NEED TO MAKE SURE YOU HAVE LIBCLANG AND CMAKE INSTALLED)
 
 
 ## Python packages: 
