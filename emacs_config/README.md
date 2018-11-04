@@ -47,7 +47,7 @@ pip install yapf
 - install jedi on emacs (Run jedi:install-server after you added it to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv)
 
 ## Csharp packages:
-csharp-mode
+- csharp-mode
 
 ## JavaScript packages:
 - js2-mode (enables Javascript mode in emacs)
