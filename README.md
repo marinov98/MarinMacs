@@ -36,10 +36,18 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   
   ### Javascript 
   
-  #### Node 
-  - install curl on Ubuntu before looking up the instructions
+  #### Before going to Nodejs
+  
+  ##### install curl (Ubuntu only!)
+  -sudo apt-get install curl
+  
+  ##### install npm
+  - Ubuntu: sudo apt-get install npm
+  - MacOS: brew install npm
+  
+  #### Nodejs
   - look up how to install nodejs
-  - After installing node, use its commands to install eslint
+  - After installing node,  install eslint
   
   #### GIT
   ### search up how to set up git on your OperatingSystem AFTER INSTALLING IT
