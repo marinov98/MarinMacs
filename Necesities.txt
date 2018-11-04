@@ -4,7 +4,7 @@
 2.python3
 3.clang
 4.chrome
-5.emacs (sudo apt-get install emacs26 auctex)
+5.emacs (sudo apt-get install emacs26)
 6.spotify
 7.Web dev tools
 8.Git
@@ -18,4 +18,4 @@
 16. node (npm) (NEED to install curl first)
 17. react
 18. tweak tool (ubuntu)
-19. Gummi text editor (until I find suitable packages for emacs)
+19. Gummi text editor (Latex text editor as backup to emac's auctex)
