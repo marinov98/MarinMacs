@@ -17,13 +17,13 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   ####  gcc
   - Windows (MinGw)
   - Ubuntu (sudo apt-get install gcc)
-  - MacOs (brew install gcc)
+  - MacOS (brew install gcc)
   #### clang
   - Ubuntu (sudo apt-get install clang)
   - MacOs (brew install clang)
   #### libclang
   - Ubuntu (sudo apt-get install libclang-dev)
-  - MacOs should already have it
+  - MacOS should already have it
   #### CMake
   - Ubuntu (sudo apt-get install cmake)
   - MacOS (brew install cmake)
