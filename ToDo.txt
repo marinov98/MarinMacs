@@ -13,6 +13,6 @@ for linux switch on MSI:
 12. GDB (debugger)
 13. libclang-dev
 14. llvm
-15. node (npm)
+15. node (npm) (NEED to install curl first)
 16. react
 17. tweak tool (ubuntu)
