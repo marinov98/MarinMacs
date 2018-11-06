@@ -1,7 +1,9 @@
 # What my .emacs file consists of (currently)
 
 ## general settings 
-linium(line numbers), tabspace: 4, syntax highlighting
+- linium(line numbers) 
+- tabspace: 4 
+- syntax highlighting
 
 ## Convenience packages :
 - projectile (easier project navigation) + counsel projectile (ivy integration of projectile)
