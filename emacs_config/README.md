@@ -4,7 +4,7 @@
 linium(line numbers), tabspace: 4, syntax highlighting
 
 ## Convenience packages :
-- projectile (easier project navigation)
+- projectile (easier project navigation) + counsel projectile (ivy integration of projectile)
 - dump-jump(jump to definition) 
 - flycheck(linter) 
 - neotree(easy directory navigation)
