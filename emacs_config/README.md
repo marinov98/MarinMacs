@@ -51,6 +51,7 @@ pip install yapf
 
 ## Csharp packages:
 - csharp-mode
+- omnisharp 
 
 ## JavaScript packages:
 - js2-mode (enables Javascript mode in emacs)
