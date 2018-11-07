@@ -128,7 +128,7 @@
 ;;;;;;;; End of C++
 
 ;;;;;;;; Beginning of Python
-
+;; UNCOMMENT ONLY IF YOU NEED A PYTHON SHELL 
 ;; virtualenv (interactive python shell) 
 ;(require 'virtualenvwrapper)
 ;(venv-initialize-interactive-shells)
