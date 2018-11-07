@@ -90,6 +90,13 @@
 
 ;; C++ intellisense
 
+;; enable irony mode for C/C++/Objective-C
+(require 'irony)
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+
 ;; company-irony
 (require 'company-irony)
 (add-to-list 'company-backends 'company-irony)
@@ -100,12 +107,7 @@
   '(add-to-list
     'company-backends '(company-irony-c-headers company-irony)))
 
-(require 'irony)
-(add-hook 'c++-mode-hook 'irony-mode)
-(add-hook 'c-mode-hook 'irony-mode)
-(add-hook 'objc-mode-hook 'irony-mode)
-(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-
+;; initiate company mode when opening/creating C/C++ files
 (with-eval-after-load 'company
   (add-hook 'c++-mode-hook 'company-mode)
   (add-hook 'c-mode-hook 'company-mode))
@@ -115,14 +117,14 @@
 (with-eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup)
   (setq irony--compile-options
-      '("-std=c++14"
-        "-stdlib=libc++")))
+      '("-std=c++14"        ;; general 
+        "-stdlib=libc++"))) ;; for mac only 
 
 ;;;;;;;; End of C++
 
 ;;;;;;;; Beginning of Python
 
-;; virtualenv (interactive python shell)
+;; virtualenv (interactive python shell) 
 ;(require 'virtualenvwrapper)
 ;(venv-initialize-interactive-shells)
 ;(venv-initialize-eshell)
@@ -145,7 +147,7 @@
 
 ;;;; python end
 
-;;;; csharp
+;;;; C#
 
 (require 'csharp-mode)
 (defun my-csharp-mode-hook ()
@@ -154,7 +156,7 @@
 (add-hook 'csharp-mode-hook 'my-csharp-mode-hook)
 (add-hook 'csharp-mode-hook 'omnisharp-mode)
 
-;;;; csharp end
+;;;; C# end
 
 ;;;; Javascript
 
