@@ -87,6 +87,12 @@
 (require 'modern-cpp-font-lock)
 (modern-c++-font-lock-global-mode t)
 
+;; clang-format
+(require 'clang-format)
+(global-set-key (kbd "C-c u") 'clang-format-region)
+(global-set-key (kbd "C-c f") 'clang-format-buffer)
+(setq clang-format-style-option ".clang-format") ;; another option is llvm
+
 ;; C++ intellisense
 
 ;; enable irony mode for C/C++/Objective-C
