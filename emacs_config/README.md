@@ -66,7 +66,7 @@ pip install yapf
 - flycheck-jshint (javascript hints)
 
 ## Web-dev
-- csswatcher 
+- csswatcher (sudo cpan i CSS::Watcher to install csswatcher file)
 - company-web (auto-completion)
 - web-mode (allows for auto completion and automatic tag closing) 
 - emmet-mode (increase html/css productivity) (OPTIONAL)
