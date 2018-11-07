@@ -1,5 +1,8 @@
 # What my .emacs file consists of (currently)
 
+## NOTE before beginning
+- any errors you get can be googled and every package can also be checked online 
+
 ## general settings 
 - linium(line numbers) 
 - tabspace: 4 
