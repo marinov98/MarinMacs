@@ -4,10 +4,12 @@
 - linium(line numbers) 
 - tabspace: 4 
 - syntax highlighting
+- debugging on error 
 
 ## Convenience packages :
 - projectile (easier project navigation) + counsel projectile (ivy integration of projectile)
 - dump-jump(jump to definition) 
+- company (auto-completion)
 - flycheck(linter) 
 - neotree(easy directory navigation)
 - auto-complete (convinient global auto-completion within emacs)
@@ -26,7 +28,6 @@
 ##### Run irony-install-server after you put compamy-irony in your init file ( THIS IS WHERE YOU NEED TO MAKE SURE YOU HAVE LIBCLANG AND CMAKE INSTALLED)
 ##### After irony server is setup M-x flycheck-select-checker RET irony RET
 ##### You can do the same with clang-analyzer 
-
 
 ## Python packages: 
 
@@ -59,10 +60,12 @@ pip install yapf
 - js2-mode (enables Javascript mode in emacs)
 - js2-refactor (powerful refactoring)
 - xref-js2 (easy jumping to definitions and refrences)
-- company/company-tern (Javascript autocompletion)
+- company-tern (Javascript autocompletion)
 - flycheck-jslint (javascript linter)
 - flycheck-jshint (javascript hints)
 
 ## Web-dev
+- csswatcher 
+- company-web (auto-completion)
 - web-mode (allows for auto completion and automatic tag closing) 
 - emmet-mode (increase html/css productivity) (OPTIONAL)
