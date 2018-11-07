@@ -95,13 +95,6 @@
 
 ;; C++ intellisense
 
-;; enable irony mode for C/C++/Objective-C
-(require 'irony)
-(add-hook 'c++-mode-hook 'irony-mode)
-(add-hook 'c-mode-hook 'irony-mode)
-(add-hook 'objc-mode-hook 'irony-mode)
-(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-
 ;; company-irony
 (require 'company-irony)
 (add-to-list 'company-backends 'company-irony)
@@ -111,6 +104,13 @@
 (eval-after-load 'company
   '(add-to-list
     'company-backends '(company-irony-c-headers company-irony)))
+
+;; enable irony mode for C/C++/Objective-C
+(require 'irony)
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
 ;; initiate company mode when opening/creating C/C++ files
 (with-eval-after-load 'company
