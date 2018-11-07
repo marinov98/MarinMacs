@@ -180,7 +180,6 @@
 (define-key js2-mode-map (kbd "C-k") #'js2r-kill)
 
 ;; company for js
-(require 'company)
 (require 'company-tern)
 
 (add-to-list 'company-backends 'company-tern)
