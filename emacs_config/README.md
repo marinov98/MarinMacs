@@ -19,8 +19,8 @@
 
 ## C++ packages: 
 - c++-modern-font-lock (integrates c++11 and above) (OPTIONAL)
-- flycheck-irony (smarter flycheck linter for c++) (The one I use)
-- flycheck-clang (Another linter option) (OPTIONAL)
+- flycheck-clang (clang linter for c++) 
+- flycheck-irony (smarter flycheck linter for c++ combines with flycheck-clang) (The one I use)
 - flycheck-clang-analyzer (OTHER LINTER OPTIONS provide linting capabilities similiar to flycheck-irony) (OPTIONAL)
 - clang-format (formats c++ code) (OPTIONAL)
 - irony-mode 
