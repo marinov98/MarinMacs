@@ -1,6 +1,6 @@
 # emacs guide MY WAY
 
-# I was inspired to write this after I finished configuring my emacs file to write c++, python, and javascript code
+# I was inspired to write this after I finished configuring my emacs file to write C++, Python, and JavaScript code
 
 ## please note: 
 I have used emacs ONLY on MacOs and Ubuntu so my knowledge is limited
