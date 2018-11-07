@@ -200,7 +200,7 @@
 			   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
 ;;;; js end
 
-;;;;  web development
+;;;;  web-development (html/css)
 
 ;; web mode
 (require 'web-mode)
@@ -213,8 +213,9 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 
-;;csswatcher
+;;csswatcher (uncomment only if you've installed csswatcher and really need it) 
 ;(require 'ac-html-csswatcher)
 ;(ac-html-csswatcher-setup)
 
@@ -244,9 +245,7 @@
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
 (add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
 
-;; javascript web mode
-(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
-
+;; es-lint for javascript
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 
 (setq-default flycheck-disabled-checkers
@@ -257,5 +256,5 @@
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 (flycheck-add-mode 'javascript-eslint 'javascript-mode)
 
-;;;; end of web development
+;;;; end of web-development
 
