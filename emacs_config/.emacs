@@ -202,11 +202,6 @@
 
 ;;;;  web development
 
-;; emmet
-(require 'emmet-mode)
-(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
-(add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
-
 ;; web mode
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
@@ -218,14 +213,6 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
-
-;; company auto-completion
-(require 'company-web-html)
-(defun my-web-mode-hook ()
-  "Company auto-complete."
-  (set (make-local-variable 'company-backends) '(company-css company-web-html company-yasnippet company-files))
-  )
-(add-hook 'web-mode-hook  'my-web-mode-hook)
 
 ;;csswatcher
 ;(require 'ac-html-csswatcher)
@@ -243,6 +230,19 @@
 ;; highlighting
 (setq web-mode-enable-current-column-highlight t)
 (setq web-mode-enable-current-element-highlight t)
+
+;; company auto-completion
+(require 'company-web-html)
+(defun my-web-mode-hook ()
+  "Company auto-complete."
+  (set (make-local-variable 'company-backends) '(company-css company-web-html company-yasnippet company-files))
+  )
+(add-hook 'web-mode-hook  'my-web-mode-hook)
+
+;; emmet
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
 
 ;; javascript web mode
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
