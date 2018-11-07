@@ -19,8 +19,9 @@
 
 ## C++ packages: 
 - c++-modern-font-lock (integrates c++11 and above) (OPTIONAL)
-- flycheck-irony (smarter flycheck linter for c++)
-- flycheck-clang, flycheck-clang-analyzer (OPTIONAL provide linting capabilities similiar to flycheck-irony)
+- flycheck-irony (smarter flycheck linter for c++) (The one I use)
+- flycheck-clang (Another linter option) (OPTIONAL)
+- flycheck-clang-analyzer (OTHER LINTER OPTIONS provide linting capabilities similiar to flycheck-irony) (OPTIONAL)
 - clang-format (formats c++ code) (OPTIONAL)
 - irony-mode 
 - company-irony (provides true intelligent c++ intellisense and autocompletetion)
@@ -53,8 +54,8 @@ pip install yapf
 - install jedi on emacs (Run jedi:install-server after you added it to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv)
 
 ## Csharp packages:
-- csharp-mode
-- omnisharp 
+- csharp-mode (Allows for emacs to recognize Csharp files)
+- omnisharp (development environment for Csharp)
 
 ## JavaScript packages:
 - js2-mode (enables Javascript mode in emacs)
