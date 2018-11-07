@@ -117,7 +117,7 @@
   (add-hook 'c++-mode-hook 'company-mode)
   (add-hook 'c-mode-hook 'company-mode))
 
-;; c++ flycheck intelligent linter for c++
+;; c++ flycheck intelligent linter for c++ 
 (require 'flycheck-irony)
 (with-eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup)
