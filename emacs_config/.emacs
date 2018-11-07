@@ -62,9 +62,8 @@
 ;; C-c C-d : delete
 ;; C-c C-r : rename
 ;; C-c C-c : change root
-;;;;;;;;;;;;;;;;;;;;;;;;;
-;; projectile-mode s stands for command, windows button for windows
 
+;; projectile-mode s stands for command on MacOS, windows button for Windows
 (require 'projectile)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
