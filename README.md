@@ -38,7 +38,7 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   - Ubuntu (sudo apt-get install virtualenv)
   - MacOS (brew install virtualenv)
   
-  ### Javascript 
+  ### JavaScript 
   
   #### Before going to Nodejs
   
