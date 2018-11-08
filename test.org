@@ -1,1 +1,50 @@
 
+#+TITLE: The Marinov Init file 
+
+#+AUTHOR: Marin P. Marinov 
+
+* General Settings
+** indentation
+** custom settings 
+
+* Org 
+** Enable Package
+** Bullets 
+
+* Convinience Packages
+** Auto-Complete
+** Yasnippet 
+** Company
+** Flycheck
+** Iedit
+** Treemacs/NeoTree
+** Projectile
+** Dumb-Jump
+** Github
+
+* C++
+** Standard & Modern Font Lock
+** Flycheck-Irony Linting 
+** Company-Irony Intellisense  
+** Clang-Format
+
+* Python
+** Virtualenv Interactive Shell
+** Elpy Python Environment
+** Jedi Autocomplete
+
+* Csharp
+** enable-mode
+
+* Javascript 
+** Linter
+** Jump-To-Definition & Refactor
+** Company-Tern Intellisense
+
+* Web-development
+** Web-Mode
+** Indentation
+** Highlighting 
+** Auto-Close Tag
+** Company-Web intellisense 
+** CSSWATCHER
