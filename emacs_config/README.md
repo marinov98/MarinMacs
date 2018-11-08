@@ -16,11 +16,12 @@
 - Zenburn and ZeroDark (theme)
 
 ## Convenience packages :
+- Auctex (smoother latex editing)
 - projectile (easier project navigation) + counsel projectile (ivy integration of projectile)
-- dump-jump(jump to definition) 
+- dump-jump (jump to definition) 
 - company (auto-completion)
-- flycheck(linter) 
-- neotree(easy directory navigation)
+- flycheck (linter/syntax checker ) 
+- neotree (easy directory navigation)
 - auto-complete (convinient global auto-completion within emacs)
 - yasnippet, yasnippet snippets (snippets)
 - iedit (change multiple words at the same time)
