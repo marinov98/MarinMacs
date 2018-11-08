@@ -1,7 +1,8 @@
 ;;; package --- summary
 ;;; Commentary:
 ;;; Code:
-;;;; general
+
+;;;;;;;; general
 (setq c-basic-offset 4)    ;; indents 4 chars
 (setq tab-width 4)         ;; and 4 char wide for TAB
 (setq indent-tabs-mode nil);; And force use of spaces
@@ -41,13 +42,11 @@
 
 ;; company
 (require 'company)
-(setq company-idle-delay 0)
-(setq company-minimum-prefix-length 3)
+(setq company-idle-delay 0) ;; faster auto-completion
+(setq company-minimum-prefix-length 3) ;; begin autocompletion after 3 characters have been typed 
 
 ;; flycheck
 (require 'flycheck)
-(add-hook 'c++-mode-hook
-          (lambda () (setq flycheck-clang-language-standard "c++11")))
 (global-flycheck-mode)
 
 ;; neotree for easy directory navigation
@@ -79,9 +78,13 @@
 ;; dumb-jump-back C-M-p jumps back to where you were when you jumped.
 ;; dumb-jump-quick-look C-M-q like dumb-jump-go but only shows tooltip with file, line, and context
 
-;;;; convinience end
+;;;;;;;; convinience end
 
 ;;;;;;;; (BEGINNING OF C++)
+
+;; set language standard 
+(add-hook 'c++-mode-hook
+          (lambda () (setq flycheck-clang-language-standard "c++11")))
 
 ;; enable modern C++ font lock
 (require 'modern-cpp-font-lock)
@@ -93,7 +96,7 @@
 (global-set-key (kbd "C-c f") 'clang-format-buffer)
 (setq clang-format-style-option ".clang-format") ;; another option is llvm
 
-;; C++ intellisense
+;;;; C++ intellisense
 
 ;; company-irony
 (require 'company-irony)
@@ -128,6 +131,7 @@
 ;;;;;;;; End of C++
 
 ;;;;;;;; Beginning of Python
+
 ;; UNCOMMENT ONLY IF YOU NEED A PYTHON SHELL 
 ;; virtualenv (interactive python shell) 
 ;(require 'virtualenvwrapper)
@@ -150,9 +154,9 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 
-;;;; python end
+;;;;;;;; python end
 
-;;;; C#
+;;;;;;;; C#
 
 (require 'csharp-mode)
 (defun my-csharp-mode-hook ()
@@ -161,9 +165,9 @@
 (add-hook 'csharp-mode-hook 'my-csharp-mode-hook)
 (add-hook 'csharp-mode-hook 'omnisharp-mode)
 
-;;;; C# end
+;;;;;;;; C# end
 
-;;;; Javascript
+;;;;;;;; Javascript
 
 ;; js2-mode
 (require 'js2-mode)
@@ -197,9 +201,9 @@
 
 (add-hook 'js2-mode-hook (lambda ()
 			   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
-;;;; js end
+;;;; JavaScript end
 
-;;;;  web-development (html/css)
+;;;;;;;;  web-development (html/css)
 
 ;; web mode
 (require 'web-mode)
@@ -255,5 +259,5 @@
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 (flycheck-add-mode 'javascript-eslint 'javascript-mode)
 
-;;;; end of web-development
+;;;;;;;; end of web-development
 
