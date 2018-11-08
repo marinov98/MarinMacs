@@ -10,7 +10,6 @@
 - debugging on error 
 
 ## To be tested packages
-- org bullets (cleaner org editing)
 - Treemacs (navigation similiar to neotree)
 - use-package (cleaner way to define packages and faster)
 - Zenburn and ZeroDark (theme)
@@ -26,6 +25,10 @@
 - yasnippet, yasnippet snippets (snippets)
 - iedit (change multiple words at the same time)
 - magit (git integration)
+
+## Org
+- org-ac (auto-completion for org)
+- org-bullets (nicer org formatting)
 
 ## C++ packages: 
 - c++-modern-font-lock (integrates c++11 and above) (OPTIONAL)
