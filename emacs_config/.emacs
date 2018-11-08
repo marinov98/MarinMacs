@@ -82,6 +82,19 @@
 
 ;;;;;;;; Convinience end
 
+;;;;;;;; Org
+
+;;autocomplete
+(require 'org-ac)
+(org-ac/config-default)
+(add-to-list 'ac-modes 'org-mode)
+
+;; bullets
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+;;;;;;;; Org end
+
 ;;;;;;;; C++
 
 ;; set language standard
