@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-;;;;;;;; general
+;;;;;;;; General
 (setq c-basic-offset 4)    ;; indents 4 chars
 (setq tab-width 4)         ;; and 4 char wide for TAB
 (setq indent-tabs-mode nil);; And force use of spaces
@@ -13,16 +13,16 @@
 (setq debug-on-error t)    ;; debugging
 (fset 'yes-or-no-p 'y-or-n-p) ;; change yes or no to y or n 
 (global-set-key (kbd "<f5>") 'revert-buffer) ;; allow window reload using F5
+;;;;;;;; General end
 
-;;;;;;;;; start package.el with
+;;;;;;;;; Enable the ability to download packages
 (require 'package)
-;; add Melpa to repository list
+;; add as many package-archives as you want below 
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.milkbox.net/packages/")t)
-;; initialize package.el
 (package-initialize)
 
-;;;;;;;; convinience packages
+;;;;;;;; Convinience packages
 
 ;;;; auto completion
 ;; start auto-complete with emacs
@@ -80,9 +80,9 @@
 ;; dumb-jump-back C-M-p jumps back to where you were when you jumped.
 ;; dumb-jump-quick-look C-M-q like dumb-jump-go but only shows tooltip with file, line, and context
 
-;;;;;;;; convinience end
+;;;;;;;; Convinience end
 
-;;;;;;;; (BEGINNING OF C++)
+;;;;;;;; C++
 
 ;; set language standard
 (add-hook 'c++-mode-hook
@@ -133,7 +133,7 @@
 
 ;;;;;;;; End of C++
 
-;;;;;;;; Beginning of Python
+;;;;;;;; Python
 
 ;; UNCOMMENT ONLY IF YOU NEED A PYTHON SHELL 
 ;; virtualenv (interactive python shell) 
@@ -157,7 +157,7 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 
-;;;;;;;; python end
+;;;;;;;; Python end
 
 ;;;;;;;; C#
 
