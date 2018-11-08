@@ -117,6 +117,8 @@
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+;; eldoc indexing
+(add-hook 'irony-mode-hook #'irony-eldoc)
 
 ;; initiate company mode when opening/creating C/C++ files
 (with-eval-after-load 'company
