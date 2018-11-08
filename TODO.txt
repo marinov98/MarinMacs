@@ -3,3 +3,4 @@ Org-bullets
 treemacs
 company jedi 
 create init.el->marinovinit.org  with use package
+Zenburn theme
