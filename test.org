@@ -23,12 +23,12 @@
 ** Github
 
 * C++
-** Standard & Modern Font Lock
+** Language Standard & Modern Font Lock
 ** Flycheck-Irony Linting 
-*** Company-Irony
-*** Irony
-*** Enable Intellisense
-** Company-Irony Intellisense  
+** Intellisense
+*** Company-Irony & Headers Backend 
+*** Irony Mode + Eldoc
+*** Enable Company Mode   
 ** Clang-Format
 
 * Python
@@ -40,6 +40,7 @@
 ** Enable-Mode
 
 * Javascript 
+** Enable js2-mode 
 ** Linter
 ** Jump-To-Definition & Refactor
 ** Company-Tern Intellisense
