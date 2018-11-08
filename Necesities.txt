@@ -19,3 +19,6 @@
 17. react
 18. tweak tool (ubuntu)
 19. Gummi text editor (Latex text editor as backup to emac's auctex)
+20. ivy
+21. cpan
+22. csswatcher
