@@ -36,7 +36,7 @@
 ## Python packages: 
 
 ### notes : Install packages in this order
-- virtualenv
+- virtualenv (interactive python shell) (OPTIONAL but you still need the file for jedi to work)
 - virtualenvwrapper
 - elpy (enables a powerful python development environment)
 #### Before moving to jedi
