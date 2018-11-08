@@ -11,6 +11,8 @@
 (global-linum-mode 1)      ;; line numbers
 (electric-pair-mode)       ;; auto closing brackets
 (setq debug-on-error t)    ;; debugging
+(fset 'yes-or-no-p 'y-or-n-p) ;; change yes or no to y or n 
+(global-set-key (kbd "<f5>") 'revert-buffer) ;; allow window reload using F5
 
 ;;;;;;;;; start package.el with
 (require 'package)
