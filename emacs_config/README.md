@@ -9,6 +9,12 @@
 - syntax highlighting
 - debugging on error 
 
+## To be tested packages
+- org bullets (cleaner org editing)
+- Treemacs (navigation similiar to neotree)
+- Irony-eldoc (C++ indexing) 
+- Zenburn and ZeroDark (theme)
+
 ## Convenience packages :
 - projectile (easier project navigation) + counsel projectile (ivy integration of projectile)
 - dump-jump(jump to definition) 
