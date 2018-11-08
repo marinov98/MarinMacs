@@ -25,12 +25,15 @@
 * C++
 ** Standard & Modern Font Lock
 ** Flycheck-Irony Linting 
+*** Company-Irony
+*** Irony
+*** Enable Intellisense
 ** Company-Irony Intellisense  
 ** Clang-Format
 
 * Python
 ** Virtualenv Interactive Shell
-** Elpy Python Environment
+** Elpy Integrated Python Environment
 ** Jedi Autocomplete
 
 * Csharp
