@@ -84,9 +84,9 @@
 
 ;;;;;;;; (BEGINNING OF C++)
 
-;; set language standard 
+;; set language standard
 (add-hook 'c++-mode-hook
-          (lambda () (setq flycheck-clang-language-standard "c++11")))
+          (lambda () (setq flycheck-clang-language-standard "c++14")))
 
 ;; enable modern C++ font lock
 (require 'modern-cpp-font-lock)
@@ -96,7 +96,8 @@
 (require 'clang-format)
 (global-set-key (kbd "C-c u") 'clang-format-region)
 (global-set-key (kbd "C-c f") 'clang-format-buffer)
-(setq clang-format-style-option ".clang-format") ;; another option is llvm
+(setq clang-format-style-option ".clang-format") ;; another option is llvm 
+;(add-hook 'c++-mode-hook 'clang-format) ;; this gives issues for some reason
 
 ;;;; C++ intellisense
 
