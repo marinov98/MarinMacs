@@ -12,7 +12,7 @@
 ## To be tested packages
 - org bullets (cleaner org editing)
 - Treemacs (navigation similiar to neotree)
-- Irony-eldoc (C++ indexing) 
+- use-package
 - Zenburn and ZeroDark (theme)
 
 ## Convenience packages :
@@ -33,6 +33,7 @@
 - flycheck-clang-analyzer (OTHER LINTER OPTIONS provide linting capabilities similiar to flycheck-irony) (OPTIONAL)
 - clang-format (formats c++ code) (OPTIONAL)
 - irony-mode 
+- irony-eldoc (indexes c++)
 - company-irony (provides true intelligent c++ intellisense and autocompletetion)
 - company-irony-c-headers (auto completetion for header files)
 #### Run irony-install-server after you put compamy-irony in your init file (THIS IS WHERE YOU NEED TO MAKE SURE YOU HAVE LIBCLANG AND CMAKE INSTALLED)
