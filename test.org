@@ -4,8 +4,8 @@
 #+AUTHOR: Marin P. Marinov 
 
 * General Settings
-** indentation
-** custom settings 
+** Indentation
+** Custom Settings 
 
 * Org 
 ** Enable Package
@@ -34,7 +34,7 @@
 ** Jedi Autocomplete
 
 * Csharp
-** enable-mode
+** Enable-Mode
 
 * Javascript 
 ** Linter
@@ -46,5 +46,5 @@
 ** Indentation
 ** Highlighting 
 ** Auto-Close Tag
-** Company-Web intellisense 
+** Company-Web Intellisense 
 ** CSSWATCHER
