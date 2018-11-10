@@ -25,7 +25,7 @@
 - base16-ocean (One I use now :) )
 - base16-solarized-dark/light 
 
-### Other cool things  
+### Other great theme options   
 - spacemacs-theme
 - Zerodark
 
