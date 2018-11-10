@@ -55,7 +55,7 @@
 - irony-eldoc (indexes c++)
 - company-irony (provides true intelligent c++ intellisense and autocompletetion)
 - company-irony-c-headers (auto completetion for header files)
-### C++ : Irony-server
+#### C++ : Irony-server
 - Run irony-install-server after you put compamy-irony in your init file( will only work if you have cmake and libclang installed!)
 - After irony server is setup M-x flycheck-select-checker RET irony RET
 
