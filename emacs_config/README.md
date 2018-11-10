@@ -3,7 +3,7 @@
 ## Note before beginning
 - Any errors you get can be googled and every package can also be checked online 
 
-## general settings 
+## General settings 
 - linium(line numbers) 
 - tabspace: 4 
 - syntax highlighting
