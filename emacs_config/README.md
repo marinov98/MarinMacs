@@ -40,6 +40,7 @@
 - yasnippet, yasnippet snippets (snippets)
 - iedit (change multiple words at the same time)
 - magit (git integration)
+- better-shell (improves shell functionality within emacs)
 
 ## Org
 - org-ac (auto-completion for org)
