@@ -75,7 +75,7 @@
 - autopep: pip install autopep8 (Pep8 formatting) 
 - yapf: pip install yapf(Formatting)
 
-#### After the packages are installed:
+#### Python: Jedi and Jedi Server 
 - install the jedi package on emacs 
 - Run jedi:install-server AFTER you added it to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv
 
