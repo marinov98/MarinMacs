@@ -12,7 +12,8 @@
 ## To be tested packages
 - Treemacs (navigation similiar to neotree)
 - use-package (cleaner way to define packages and faster)
-- try and which-key (work in combination with use-package)
+- try (try emacs packages before installing them)
+- which-key (key assignments)
 
 ## Themes 
 
