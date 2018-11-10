@@ -20,6 +20,7 @@
 (global-set-key (kbd "C-x C-a") 'move-beginning-of-line)
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "<f5>") 'revert-buffer) ;; allow window reload using F5
+(global-set-key (kbd "C-`") 'shell) ;; easier way to open shell
 
 ;;;;;;;; General end
 
