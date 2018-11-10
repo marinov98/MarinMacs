@@ -12,6 +12,7 @@
 ## To be tested packages
 - Treemacs (navigation similiar to neotree)
 - use-package (cleaner way to define packages and faster)
+- try and which-key (work in combination with use-package)
 - Zenburn and ZeroDark (theme)
 
 ## Convenience packages :
