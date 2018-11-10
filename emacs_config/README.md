@@ -76,7 +76,8 @@
 - yapf: pip install yapf(Formatting)
 
 #### After the packages are installed:
-- install jedi on emacs (Run jedi:install-server after you added it to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv)
+- install the jedi package on emacs 
+- Run jedi:install-server AFTER you added it to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv
 
 ## Csharp packages:
 - csharp-mode (Allows for emacs to recognize Csharp files)
