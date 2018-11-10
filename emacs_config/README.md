@@ -66,19 +66,15 @@
 - virtualenv (interactive python shell) (OPTIONAL but you still need the file for jedi to work)
 - virtualenvwrapper
 - elpy (enables a powerful python development environment)
-#### Before moving to jedi
 ##### install pip (allows you to use pip install in your terminal)
 - Ubuntu (sudo apt install python-pip)
 - MacOS (brew install pip)
-##### now install the following packages
+##### now install any of the following packages
 - pip install rope
 - pip install jedi
-##### flake8 for code checks
-- pip install flake8
-##### and autopep8 for automatic PEP8 formatting
-pip install autopep8
-##### and yapf for code formatting
-pip install yapf
+- pip install flake8 (code checks)
+- pip install autopep8 (Pep8 formatting)
+- pip install yapf(formatting
 
 #### After the packages are installed:
 - install jedi on emacs (Run jedi:install-server after you added it to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv)
