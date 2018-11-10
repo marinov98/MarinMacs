@@ -69,11 +69,11 @@
 - Ubuntu (sudo apt install python-pip)
 - MacOS (brew install pip)
 ##### Now install any of the following packages
-- pip install rope
-- pip install jedi
-- pip install flake8 (code checks)
-- pip install autopep8 (Pep8 formatting)
-- pip install yapf(formatting
+- Rope: pip install rope (Reccommended)
+- Jedi: pip install jedi (Strongly reccommended)
+- flake: pip install flake8 (code checks)
+- autopep: pip install autopep8 (Pep8 formatting) 
+- yapf: pip install yapf(Formatting)
 
 #### After the packages are installed:
 - install jedi on emacs (Run jedi:install-server after you added it to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv)
