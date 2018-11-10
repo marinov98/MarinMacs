@@ -21,7 +21,8 @@
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "<f5>") 'revert-buffer) ;; allow window reload using F5
 (global-set-key (kbd "C-`") 'better-shell-shell) ;; open better shell 
-(global-set-key (kbd "C-;") 'better-shell-remote-open) 
+(global-set-key (kbd "C-;") 'better-shell-remote-open)
+(global-set-key (kbd "s-r") 'compile)
 
 ;;;;;;;; General end
 
