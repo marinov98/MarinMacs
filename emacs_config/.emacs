@@ -32,34 +32,32 @@
 
 ;;;;;;;; Convinience packages
 
-;;;; auto completion
-;; start auto-complete with emacs
+;;;; Auto-complete 
 (require 'auto-complete)
-
-;; do default config for auto-complete
 (require 'auto-complete-config)
 (ac-config-default)
 
-;; start yasnippet with emacs
+;; Yasnippet
 (require 'yasnippet)
 (yas-global-mode 1)
 
-;; iedit mode
+;; Iedit mode
 (define-key global-map (kbd "C-c c") 'iedit-mode)
-;; magit (Git control for emacs)
+
+;; Magit (Git control for emacs)
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 
-;; company
+;; Company
 (require 'company)
 (setq company-idle-delay 0) ;; faster auto-completion
 (setq company-minimum-prefix-length 3) ;; begin autocompletion after 3 characters have been typed 
 
-;; flycheck
+;; Flycheck
 (require 'flycheck)
 (global-flycheck-mode)
 
-;; neotree for easy directory navigation
+;; Neotree for easy directory navigation
 (require 'neotree)
 ;; controls :
 ;; n (next) p(prev)
@@ -72,7 +70,7 @@
 ;; C-c C-r : rename
 ;; C-c C-c : change root
 
-;; projectile-mode s stands for command on MacOS, windows button for Windows
+;; Projectile-mode NOTE: s stands for command on MacOS, windows button for Windows
 (require 'projectile)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
@@ -81,7 +79,7 @@
 (define-key projectile-mode-map (kbd "s-g") 'projectile-grep)
 (projectile-mode +1)
 
-;; dump-jump (jump to definition)
+;; Dump-jump (jump to definition)
 (require 'dumb-jump)
 (dumb-jump-mode)
 ;; dumb-jump-go C-M-g core functionality. Attempts to jump to the definition for the thing under point
@@ -92,12 +90,12 @@
 
 ;;;;;;;; Org
 
-;;autocomplete
+;; Auto-Complete for org mode
 (require 'org-ac)
 (org-ac/config-default)
 (add-to-list 'ac-modes 'org-mode)
 
-;; bullets
+;; Bullets
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
@@ -105,15 +103,15 @@
 
 ;;;;;;;; C++
 
-;; set language standard
+;; Set language standard
 (add-hook 'c++-mode-hook
           (lambda () (setq flycheck-clang-language-standard "c++14")))
 
-;; enable modern C++ font lock
+;; Enable modern C++ font lock
 (require 'modern-cpp-font-lock)
 (modern-c++-font-lock-global-mode t)
 
-;; clang-format
+;; Clang-format
 (require 'clang-format)
 (global-set-key (kbd "C-c u") 'clang-format-region)
 (global-set-key (kbd "C-c f") 'clang-format-buffer)
@@ -122,31 +120,31 @@
 
 ;;;; C++ intellisense
 
-;; company-irony
+;; Company-irony
 (require 'company-irony)
 (add-to-list 'company-backends 'company-irony)
 
-;; c headers auto completion with irony
+;; C headers auto completion with irony
 (require 'company-irony-c-headers)
 (eval-after-load 'company
   '(add-to-list
     'company-backends '(company-irony-c-headers company-irony)))
 
-;; enable irony mode for C/C++/Objective-C
+;; Enable irony mode for C/C++/Objective-C
 (require 'irony)
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-;; eldoc indexing
+;; Eldoc indexing
 (add-hook 'irony-mode-hook #'irony-eldoc)
 
-;; initiate company mode when opening/creating C/C++ files
+;; Initiate company mode when opening/creating C/C++ files
 (with-eval-after-load 'company
   (add-hook 'c++-mode-hook 'company-mode)
   (add-hook 'c-mode-hook 'company-mode))
 
-;; c++ flycheck intelligent linter for c++ 
+;; Flycheck-irony  
 (require 'flycheck-irony)
 (with-eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup)
@@ -174,8 +172,8 @@
 (elpy-enable)
 ;; fixing bug in elpy
 (define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand)
-;;;; jedi python intelisense
 
+;;;; Jedi python intelisense
 (require 'jedi)
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
@@ -195,7 +193,7 @@
 
 ;;;;;;;; Javascript
 
-;; js2-mode
+;; Js2-mode
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
@@ -209,9 +207,8 @@
 (js2r-add-keybindings-with-prefix "C-c C-r")
 (define-key js2-mode-map (kbd "C-k") #'js2r-kill)
 
-;; company for js
+;; Company-tern Intellisense for JavaScript
 (require 'company-tern)
-
 (add-to-list 'company-backends 'company-tern)
 (add-hook 'js2-mode-hook (lambda ()
                            (tern-mode)
@@ -221,17 +218,17 @@
 (define-key tern-mode-keymap (kbd "M-.") nil)
 (define-key tern-mode-keymap (kbd "M-,") nil)
 
-;; js-mode (which js2 is based on) binds "M-." which conflicts with xref, so
+;; Js-mode (which js2 is based on) binds "M-." which conflicts with xref, so
 ;; unbind it.
 (define-key js-mode-map (kbd "M-.") nil)
 
 (add-hook 'js2-mode-hook (lambda ()
 			   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
-;;;; JavaScript end
+;;;;;;;; JavaScript end
 
-;;;;;;;;  web-development (html/css)
+;;;;;;;;  Web-Development (html/css)
 
-;; web mode
+;; Web mode
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -244,24 +241,24 @@
 (add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 
-;;csswatcher (uncomment only if you've installed csswatcher and really need it) 
+;; Csswatcher (uncomment only if you've installed csswatcher and really need it) 
 ;(require 'ac-html-csswatcher)
 ;(ac-html-csswatcher-setup)
 
-;; indentation
+;; Indentation
 (setq web-mode-markup-indent-offset 4)
 (setq web-mode-code-indent-offset 4)
 (setq web-mode-css-indent-offset 4)
 
-;; auto-closing
+;; Auto-closing
 (setq web-mode-enable-auto-closing t)
 (setq web-mode-enable-auto-quoting t)
 
-;; highlighting
+;; Highlighting
 (setq web-mode-enable-current-column-highlight t)
 (setq web-mode-enable-current-element-highlight t)
 
-;; company auto-completion
+;; Company-web auto-completion for html/css
 (require 'company-web-html)
 (defun my-web-mode-hook ()
   "Company auto-complete."
@@ -269,21 +266,21 @@
   )
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
-;; emmet
+;; Emmet
 (require 'emmet-mode)
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
 (add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
 
-;; es-lint for javascript
+;; Es-lint for javascript
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 
 (setq-default flycheck-disabled-checkers
   (append flycheck-disabled-checkers
     '(javascript-jshint)))
 
-;; use eslint with web-mode for jsx files
+;; Use eslint with web-mode for jsx files
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 (flycheck-add-mode 'javascript-eslint 'javascript-mode)
 
-;;;;;;;; end of web-development
+;;;;;;;; End of Web-Development
 
