@@ -56,9 +56,9 @@
 - irony-eldoc (indexes c++)
 - company-irony (provides true intelligent c++ intellisense and autocompletetion)
 - company-irony-c-headers (auto completetion for header files)
-#### Run irony-install-server after you put compamy-irony in your init file (THIS IS WHERE YOU NEED TO MAKE SURE YOU HAVE LIBCLANG AND CMAKE INSTALLED)
-#### After irony server is setup M-x flycheck-select-checker RET irony RET
-#### You can do the same with clang-analyzer 
+### Irony-server
+- Run irony-install-server after you put compamy-irony in your init file( will only work if you have cmake and libclang installed!)
+- After irony server is setup M-x flycheck-select-checker RET irony RET
 
 ## Python packages: 
 
