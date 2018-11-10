@@ -13,7 +13,21 @@
 - Treemacs (navigation similiar to neotree)
 - use-package (cleaner way to define packages and faster)
 - try and which-key (work in combination with use-package)
-- Zenburn and ZeroDark (theme)
+
+## Themes 
+
+### Themes to be tested
+- Zenburn 
+- gruvbox
+
+### Base16 
+- base16-ocean (One I use now :) )
+- base16-solarized-dark/light 
+
+### Other cool things  
+- spacemacs-theme
+- Zerodark
+
 
 ## Convenience packages :
 - Auctex (smoother latex editing)
