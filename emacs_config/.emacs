@@ -3,6 +3,7 @@
 ;;; Code:
 
 ;;;;;;;; General
+
 (setq c-basic-offset 4)    ;; indents 4 chars
 (setq tab-width 4)         ;; and 4 char wide for TAB
 (setq indent-tabs-mode nil);; And force use of spaces
@@ -11,8 +12,15 @@
 (global-linum-mode 1)      ;; line numbers
 (electric-pair-mode)       ;; auto closing brackets
 (setq debug-on-error t)    ;; debugging
-(fset 'yes-or-no-p 'y-or-n-p) ;; change yes or no to y or n 
+(fset 'yes-or-no-p 'y-or-n-p) ;; change yes or no to y or n
+
+;;;; Key-Bindings
+(global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
+(global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file
+(global-set-key (kbd "C-x C-a") 'move-beginning-of-line)
+(global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "<f5>") 'revert-buffer) ;; allow window reload using F5
+
 ;;;;;;;; General end
 
 ;;;;;;;;; Enable the ability to download packages
