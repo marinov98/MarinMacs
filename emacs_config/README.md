@@ -1,7 +1,7 @@
 # What my .emacs file consists of (currently)
 
 ## Note before beginning
-- any errors you get can be googled and every package can also be checked online 
+- Any errors you get can be googled and every package can also be checked online 
 
 ## general settings 
 - linium(line numbers) 
@@ -28,7 +28,6 @@
 ### Other cool things  
 - spacemacs-theme
 - Zerodark
-
 
 ## Convenience packages :
 - Auctex (smoother latex editing)
@@ -62,14 +61,14 @@
 
 ## Python packages: 
 
-### notes : Install packages in this order
+### Notes : Install packages in this order
 - virtualenv (interactive python shell) (OPTIONAL but you still need the file for jedi to work)
 - virtualenvwrapper
 - elpy (enables a powerful python development environment)
-##### install pip (allows you to use pip install in your terminal)
+##### Install pip (allows you to use pip install in your terminal)
 - Ubuntu (sudo apt install python-pip)
 - MacOS (brew install pip)
-##### now install any of the following packages
+##### Now install any of the following packages
 - pip install rope
 - pip install jedi
 - pip install flake8 (code checks)
