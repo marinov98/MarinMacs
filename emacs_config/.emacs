@@ -23,6 +23,8 @@
 (global-set-key (kbd "C-`") 'better-shell-shell) ;; open better shell 
 (global-set-key (kbd "C-;") 'better-shell-remote-open)
 (global-set-key (kbd "s-r") 'compile)
+(global-set-key (kbd "C-c C-e") 'eval-buffer) ;; reload
+
 
 ;;;;;;;; General end
 
