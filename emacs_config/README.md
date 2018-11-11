@@ -3,6 +3,11 @@
 ## Note before beginning
 - Any errors you get can be googled and every package can also be checked online 
 
+## Fonts
+- Hack (What I use currently)
+- Source Code Pro
+- Inconsolata
+
 ## General settings 
 - linium(line numbers) 
 - tabspace: 4 
