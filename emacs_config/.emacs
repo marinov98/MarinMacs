@@ -100,6 +100,7 @@
 (define-key projectile-mode-map (kbd "s-d") 'projectile-find-dir)
 (define-key projectile-mode-map (kbd "s-f") 'projectile-find-file)
 (define-key projectile-mode-map (kbd "s-g") 'projectile-grep)
+(setq projectile-completion-system 'ivy) ;; enable counsel-projectile
 (projectile-mode +1)
 
 ;; Dump-jump (jump to definition)
