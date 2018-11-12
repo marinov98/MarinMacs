@@ -15,24 +15,23 @@
 - debugging on error 
 
 ## To be tested packages
-- Treemacs (navigation similiar to neotree)
 - use-package (cleaner way to define packages and faster)
 - try (try emacs packages before installing them)
 - which-key (key assignments)
+- ace-window (easier window switching)
 
-## Themes 
-
-### Themes to be tested
-- Zenburn 
-- gruvbox
+## Favorite Themes
 
 ### Base16 
 - base16-ocean (One I use now :) )
+- base16-oceannext
 - base16-solarized-dark/light 
 
 ### Other great theme options   
-- spacemacs-theme
+- Spacemacs-theme
 - Zerodark
+- Gruvbox
+- Zenburn
 
 ## Convenience packages :
 - Auctex (smoother latex editing)
