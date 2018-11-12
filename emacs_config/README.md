@@ -19,6 +19,7 @@
 - try (try emacs packages before installing them)
 - which-key (key assignments)
 - ace-window (easier window switching)
+- switch window (similiar to ace-window)
 
 ## Favorite Themes
 
