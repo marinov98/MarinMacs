@@ -27,9 +27,11 @@
 - base16-oceannext
 - base16-solarized-dark/light 
 
-### Other great theme options   
+### Flashy    
 - Spacemacs-theme
 - Zerodark
+
+### Easy on the eyes
 - Gruvbox
 - Zenburn
 
