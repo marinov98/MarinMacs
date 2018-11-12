@@ -13,6 +13,9 @@
 (electric-pair-mode)       ;; auto closing brackets
 (setq debug-on-error t)    ;; debugging
 (fset 'yes-or-no-p 'y-or-n-p) ;; change yes or no to y or n
+(menu-bar-mode -1) ;; disable menu bar
+(toggle-scroll-bar -1) ;; disable scroll bar
+(tool-bar-mode -1) ;; disable tool bar 
 
 ;;;; Key-Bindings
 (global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
