@@ -1,10 +1,2 @@
 NEW THINGS TO TRY ON EMACS
-irony-eldoc
-org
-Org-bullets
-treemacs
-company jedi 
-create init.el->marinovinit.org  with use package
-Zenburn theme
-Zerodark theme
-rtags/ggtags (maybe)
+
