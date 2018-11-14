@@ -20,14 +20,6 @@
 - which-key (key assignments)
 - ace-window (easier window switching)
 - switch window (similiar to ace-window)
-- avy (word navigation)
-- dashboard (customizable start up screen)
-- beacon (light that follows your cursor)
-
-## Modeline 
-- spacline
-- smart-mode line
-- telephone-line
 
 ## Favorite Themes
 
@@ -46,10 +38,11 @@
 
 ## Convenience packages :
 
-### For Searching 
+### Searching 
 - ivy (improved file search)
 - swiper (improved file/name search)
 - counsel (enhanced ivy commands)
+- avy (fast word navigation)
 ### Directory Navigation
 - neotree (easy directory navigation)
 - ranger (replaces dired mode)
@@ -66,6 +59,10 @@
 - iedit (change multiple words at the same time)
 - magit (git integration)
 - better-shell (improves shell functionality within emacs)
+### Customizing The Look of Emacs
+- dashboard (customizable start up screen)
+- beacon (light that follows your cursor)
+- telephone-line (better looking modeline)
 
 ## Org
 - org-ac (auto-completion for org)
