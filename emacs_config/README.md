@@ -83,8 +83,8 @@
 - virtualenv (interactive python shell) (OPTIONAL but you still need the file for jedi to work)
 - virtualenvwrapper
 - elpy (enables a powerful python development environment)
+- jedi (intellisense)
 #### Python: Jedi and Jedi Server 
-- install the jedi package on emacs 
 - Run jedi:install-server AFTER you added it to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv
 
 ## Csharp packages:
