@@ -87,7 +87,7 @@
 - virtualenvwrapper
 - elpy (enables a powerful python development environment)
 - jedi (intellisense)
-#### Python: Jedi and Jedi Server 
+#### Python: Jedi Server 
 - Run jedi:install-server AFTER you added it to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv
 
 ## Csharp packages:
