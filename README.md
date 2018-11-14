@@ -9,11 +9,13 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
 ## Contains my .emacs file 
 
 ## Usages:
-  C++,
-  Python,
-  Javascript,
-  HTML/CSS,
-  GIT
+  - C++,
+  - Python,
+  - Javascript,
+  - HTML/CSS,
+  - GIT,
+  - LaTex,
+  - Org
   
 ## Necesities before using all Packages in my .emacs file (I put sections so that you can pick only the ones you need) :
 
