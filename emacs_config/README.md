@@ -21,6 +21,7 @@
 - ace-window (easier window switching)
 - switch window (similiar to ace-window)
 - ggtags/rtags (C++ stuff)
+-pdf tools
 
 ## Favorite Themes
 
