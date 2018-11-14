@@ -58,7 +58,7 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   ### search up how to set up git on your OperatingSystem AFTER INSTALLING IT
   - Ubuntu (sudo apt-get install git)
    
-  ##### Bonus
+  #### Bonus
   - Auctex (creating latex files)
   - Cask (using the dashboard package)
    
