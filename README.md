@@ -40,7 +40,7 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   - MacOS (brew install virtualenv)
   
   #### Pip (allows you to use pip install in your terminal)
-  - Ubuntu (sudo apt install python-pip)
+  - Ubuntu (sudo apt-get install python-pip)
   - MacOS (brew install pip)
   ##### Packages to install with Pip
   - Rope: pip install rope (refactoring library)
