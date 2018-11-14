@@ -20,7 +20,8 @@
 - which-key (key assignments)
 - ace-window (easier window switching)
 - switch window (similiar to ace-window)
-- avy
+- avy (word navigation)
+- dashboard
 
 ## Modeline 
 - spacline
