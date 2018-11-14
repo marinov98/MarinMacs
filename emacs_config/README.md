@@ -21,7 +21,8 @@
 - ace-window (easier window switching)
 - switch window (similiar to ace-window)
 - avy (word navigation)
-- dashboard
+- dashboard (customizable start up screen)
+- beacon (light that follows your cursor)
 
 ## Modeline 
 - spacline
