@@ -47,7 +47,7 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   - Jedi: pip install jedi (intellisense)
   - flake: pip install flake8 (code checks)
   - autopep: pip install autopep8 (Pep8 formatting) 
-  - yapf: pip install yapf(Formatting)
+  - yapf: pip install yapf (Formatting)
   
   ### JavaScript 
   
