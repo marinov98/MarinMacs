@@ -76,7 +76,7 @@
 - flycheck-irony (smarter flycheck linter for c++ combines with flycheck-clang) (The one I use)
 - flycheck-clang-analyzer (OTHER LINTER OPTIONS provide linting capabilities similiar to flycheck-irony) (OPTIONAL)
 - clang-format (formats c++ code) (OPTIONAL)
-- irony-mode 
+- irony
 - irony-eldoc (indexes c++)
 - company-irony (provides true intelligent c++ intellisense and autocompletetion)
 - company-irony-c-headers (auto completetion for header files)
