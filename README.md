@@ -59,6 +59,10 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   - Ubuntu (sudo apt-get install git)
    
   #### Bonus
-  - Auctex (creating latex files)
-  - Cask (using the dashboard package)
+  ##### Auctex (creating latex files) 
+  - Ubuntu: sudo apt-get install auctex
+  - MacOS: brew install auctex
+  ##### Cask (for using the dashboard package)
+  - MacOS: brew install cask
+  - Ubuntu: curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
    
