@@ -121,6 +121,45 @@
 ;; dumb-jump-back C-M-p jumps back to where you were when you jumped.
 ;; dumb-jump-quick-look C-M-q like dumb-jump-go but only shows tooltip with file, line, and context
 
+;;;; Telephone line
+(require 'telephone-line)
+
+(setq telephone-line-primary-right-separator 'telephone-line-abs-left
+      telephone-line-secondary-right-separator 'telephone-line-abs-hollow-left)
+(setq telephone-line-height 24
+      telephone-line-evil-use-short-tag t)
+
+
+(setq telephone-line-lhs
+        '((evil   . (telephone-line-evil-tag-segment))
+          (accent . (telephone-line-vc-segment
+                     telephone-line-erc-modified-channels-segment
+                     telephone-line-process-segment))
+          (nil    . (telephone-line-minor-mode-segment
+                     telephone-line-buffer-segment))))
+(setq telephone-line-rhs
+        '((nil    . (telephone-line-misc-info-segment))
+          (accent . (telephone-line-major-mode-segment))
+          (evil   . (telephone-line-airline-position-segment))))
+(telephone-line-mode 1)
+
+;;;; Beacon
+(require 'beacon)
+(beacon-mode 1)
+
+;;;; Avy
+
+;; go to the selected character
+(global-set-key (kbd "C-:") 'avy-goto-char)
+(global-set-key (kbd "C-'") 'avy-goto-char-2)
+
+;; Go to Line
+(global-set-key (kbd "M-g f") 'avy-goto-line)
+
+;; Go to word
+(global-set-key (kbd "M-g w") 'avy-goto-word-1)
+(global-set-key (kbd "M-g e") 'avy-goto-word-0)
+
 ;;;;;;;; Convinience end
 
 ;;;;;;;; Org
