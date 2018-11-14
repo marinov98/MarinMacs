@@ -21,6 +21,11 @@
 - ace-window (easier window switching)
 - switch window (similiar to ace-window)
 
+## Modeline 
+- spacline
+- smart-mode line
+- telephone-line
+
 ## Favorite Themes
 
 ### Base16 
