@@ -65,7 +65,7 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   - After installing node,  install eslint (npm install eslint)
   
   #### GIT
-  ### search up how to set up git on your OperatingSystem AFTER INSTALLING IT
+  ### search up how to set up git on your Operating System AFTER installing it
   - Ubuntu (sudo apt-get install git)
    
   #### Bonus
