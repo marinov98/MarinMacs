@@ -80,21 +80,9 @@
 - After irony server is setup M-x flycheck-select-checker RET irony RET
 
 ## Python packages: 
-
-### Notes : Install packages in this order
 - virtualenv (interactive python shell) (OPTIONAL but you still need the file for jedi to work)
 - virtualenvwrapper
 - elpy (enables a powerful python development environment)
-##### Install pip (allows you to use pip install in your terminal)
-- Ubuntu (sudo apt install python-pip)
-- MacOS (brew install pip)
-##### Now install any of the following packages
-- Rope: pip install rope (Reccommended)
-- Jedi: pip install jedi (Strongly reccommended)
-- flake: pip install flake8 (code checks)
-- autopep: pip install autopep8 (Pep8 formatting) 
-- yapf: pip install yapf(Formatting)
-
 #### Python: Jedi and Jedi Server 
 - install the jedi package on emacs 
 - Run jedi:install-server AFTER you added it to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv
