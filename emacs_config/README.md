@@ -50,7 +50,7 @@
 - ranger (replaces dired mode)
 - projectile (easier project navigation)
 - counsel-projectile (ivy integration of projectile)
-### Programming 
+### Coding
 - Auctex (smoother latex editing)
 - dump-jump (jump to definition) 
 - company (auto-completion)
