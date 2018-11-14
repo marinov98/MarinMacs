@@ -43,8 +43,8 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   - Ubuntu (sudo apt install python-pip)
   - MacOS (brew install pip)
   ##### Packages to install with Pip
-  - Rope: pip install rope (Reccommended)
-  - Jedi: pip install jedi (Strongly reccommended)
+  - Rope: pip install rope (refactoring library)
+  - Jedi: pip install jedi (intellisense)
   - flake: pip install flake8 (code checks)
   - autopep: pip install autopep8 (Pep8 formatting) 
   - yapf: pip install yapf(Formatting)
