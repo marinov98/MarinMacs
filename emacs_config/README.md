@@ -46,8 +46,8 @@
 ### Directory Navigation
 - neotree (easy directory navigation)
 - ranger (replaces dired mode)
-- counsel-projectile (ivy integration of projectile)
 - projectile (easier project navigation)
+- counsel-projectile (ivy integration of projectile)
 ### Programming 
 - Auctex (smoother latex editing)
 - dump-jump (jump to definition) 
