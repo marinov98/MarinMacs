@@ -39,6 +39,16 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   - Ubuntu (sudo apt-get install virtualenv)
   - MacOS (brew install virtualenv)
   
+  #### Pip (allows you to use pip install in your terminal)
+  - Ubuntu (sudo apt install python-pip)
+  - MacOS (brew install pip)
+  ##### Packages to install with Pip
+  - Rope: pip install rope (Reccommended)
+  - Jedi: pip install jedi (Strongly reccommended)
+  - flake: pip install flake8 (code checks)
+  - autopep: pip install autopep8 (Pep8 formatting) 
+  - yapf: pip install yapf(Formatting)
+  
   ### JavaScript 
   
   #### Before going to Nodejs
