@@ -43,6 +43,7 @@
 - company (auto-completion)
 - flycheck (linter/syntax checker ) 
 - neotree (easy directory navigation)
+- ranger (replaces dired mode)
 - auto-complete (convinient global auto-completion within emacs)
 - yasnippet, yasnippet snippets (snippets)
 - ivy (improved file search)
