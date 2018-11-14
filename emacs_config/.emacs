@@ -160,6 +160,16 @@
 (global-set-key (kbd "M-g w") 'avy-goto-word-1)
 (global-set-key (kbd "M-g e") 'avy-goto-word-0)
 
+;;;; DashBoard
+(require 'dashboard)
+(dashboard-setup-startup-hook)
+;; Set the title
+(setq dashboard-banner-logo-title "The Marinov Emacs ;)")
+;; Set the banner
+(setq dashboard-startup-banner 'logo)
+(setq dashboard-items '((recents  . 5)
+                        (projects . 5)))
+
 ;;;;;;;; Convinience end
 
 ;;;;;;;; Org
