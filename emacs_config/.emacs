@@ -83,8 +83,8 @@
 (require 'flycheck)
 (global-flycheck-mode)
 
-;; Neotree for easy directory navigation
 (require 'neotree)
+(global-set-key (kbd "C-c C-t")  'neotree-toggle)
 ;; controls :
 ;; n (next) p(prev)
 ;; SPC RET or TAB : open file or fold/unfold dir
@@ -95,6 +95,14 @@
 ;; C-c C-d : delete
 ;; C-c C-r : rename
 ;; C-c C-c : change root
+
+;; Treemacs
+;; (require 'treemacs)
+
+;; Ranger
+(require 'ranger)
+;; (ranger-mode) actual  ranger
+(ranger-override-dired-mode t) ;; minimal ranger mode
 
 ;; Projectile-mode NOTE: s stands for command on MacOS, windows button for Windows
 (require 'projectile)
