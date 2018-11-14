@@ -45,19 +45,24 @@
 - Zenburn
 
 ## Convenience packages :
-- Auctex (smoother latex editing)
-- projectile (easier project navigation) 
-- dump-jump (jump to definition) 
-- company (auto-completion)
-- flycheck (linter/syntax checker ) 
-- neotree (easy directory navigation)
-- ranger (replaces dired mode)
-- auto-complete (convinient global auto-completion within emacs)
-- yasnippet, yasnippet snippets (snippets)
+
+### For Searching 
 - ivy (improved file search)
 - swiper (improved file/name search)
 - counsel (enhanced ivy commands)
+### Directory Navigation
+- neotree (easy directory navigation)
+- ranger (replaces dired mode)
 - counsel-projectile (ivy integration of projectile)
+- projectile (easier project navigation)
+### Programming 
+- Auctex (smoother latex editing)
+- dump-jump (jump to definition) 
+- company (auto-completion)
+- flycheck (linter/syntax checker ) 
+- auto-complete (convinient global auto-completion within emacs)
+- yasnippet, yasnippet snippets (snippets)
+### GitHub Integration 
 - iedit (change multiple words at the same time)
 - magit (git integration)
 - better-shell (improves shell functionality within emacs)
