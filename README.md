@@ -1,4 +1,4 @@
-# emacs guide MY WAY
+# Emacs guide MY WAY
 
 # I was inspired to write this after I finished configuring my emacs file to write C++, Python, and JavaScript code as well as take notes in Org mode and write LaTex
 
@@ -16,6 +16,7 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   GIT
   
 ## Necesities before using all Packages in my .emacs file (I put sections so that you can pick only the ones you need) :
+
   ### C++
   
   ####  gcc
@@ -57,5 +58,7 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   ### search up how to set up git on your OperatingSystem AFTER INSTALLING IT
   - Ubuntu (sudo apt-get install git)
    
-  
+  ##### Bonus
+  - Auctex (creating latex files)
+  - Cask (using the dashboard package)
    
