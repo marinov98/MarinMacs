@@ -61,7 +61,7 @@
 - iedit (change multiple words at the same time)
 - magit (git integration)
 - better-shell (improves shell functionality within emacs)
-### Customizing The Look of Emacs
+### Miscellaneous packages
 - dashboard (customizable start up screen)
 - beacon (light that follows your cursor)
 - telephone-line (better looking modeline)
