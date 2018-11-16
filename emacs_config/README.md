@@ -1,5 +1,8 @@
 # What my .emacs file consists of (currently)
 
+# IMPORTANT: The test folder contains my an init.el and marinit.org which is the new way I run my emacs!
+# TODO: Implement all the packages using use-package 
+
 ## Note before beginning
 - Any errors you get can be googled and every package can also be checked online 
 
