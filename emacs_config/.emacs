@@ -86,6 +86,7 @@
 (require 'flycheck)
 (global-flycheck-mode)
 
+;; Neotree
 (require 'neotree)
 (global-set-key (kbd "C-c C-t")  'neotree-toggle)
 ;; controls :
