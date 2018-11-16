@@ -38,7 +38,7 @@
 (global-set-key (kbd "C-c C-e") 'eval-buffer) ;; reload
 #+END_SRC
 
-* Searching (Ivy, Swiper & Counsel, Avy)
+* Searching (Ivy, Swiper, Counsel & Avy)
 #+BEGIN_SRC emacs-lisp
 ;; Ivy, Swiper & Counsel
 (ivy-mode 1)
