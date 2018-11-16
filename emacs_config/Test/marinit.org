@@ -269,7 +269,7 @@
 (require 'flycheck)
 (global-flycheck-mode)
 #+END_SRC
-** Irony
+** C++ Irony
    #+BEGIN_SRC emacs-lisp
 ;; set language standard
 (add-hook 'c++-mode-hook
@@ -283,7 +283,7 @@
         "-stdlib=libc++"))) ;; for mac only 
 #+END_SRC
 
-** Es-Lint
+**  JavaScript Es-Lint
 #+BEGIN_SRC emacs-lisp
 ;; Es-lint for javascript
 (flycheck-add-mode 'javascript-eslint 'web-mode)
