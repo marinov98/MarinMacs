@@ -19,6 +19,8 @@
 
 ## To be tested packages
 - use-package (cleaner way to define packages and faster)
+- Reveal.js
+- pdf-tools
 
 ## Favorite Themes
 
