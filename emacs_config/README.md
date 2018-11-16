@@ -16,12 +16,7 @@
 
 ## To be tested packages
 - use-package (cleaner way to define packages and faster)
-- try (try emacs packages before installing them)
 - which-key (key assignments)
-- ace-window (easier window switching)
-- switch window (similiar to ace-window)
-- ggtags/rtags (C++ stuff)
-- pdf tools
 - company-jedi (Python intellisense)
 
 ## Favorite Themes
