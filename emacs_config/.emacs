@@ -40,6 +40,9 @@
 
 ;;;;;;;; Convinience packages
 
+;; Which-key
+(which-key-setup-side-window-bottom)
+
 ;; Auto-complete 
 (require 'auto-complete)
 (require 'auto-complete-config)
