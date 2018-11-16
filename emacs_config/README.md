@@ -16,7 +16,6 @@
 
 ## To be tested packages
 - use-package (cleaner way to define packages and faster)
-- which-key (key assignments)
 - company-jedi (Python intellisense)
 
 ## Favorite Themes
@@ -63,6 +62,7 @@
 - better-shell (improves shell functionality within emacs)
 
 ### Miscellaneous packages
+- which-key (key assignments help)
 - ace-window (faster window swapping)
 - dashboard (customizable start up screen)
 - beacon (light that follows your cursor)
