@@ -46,11 +46,13 @@
 - swiper (improved file/name search)
 - counsel (enhanced ivy commands)
 - avy (fast word navigation)
+
 ### Directory Navigation
 - neotree (easy directory navigation)
 - ranger (replaces dired mode)
 - projectile (easier project navigation)
 - counsel-projectile (ivy integration of projectile)
+
 ### Coding
 - Auctex (smoother latex editing)
 - dump-jump (jump to definition) 
@@ -58,11 +60,15 @@
 - flycheck (linter/syntax checker ) 
 - auto-complete (convinient global auto-completion within emacs)
 - yasnippet, yasnippet snippets (snippets)
+- cider (interactive programming with closure)
+
 ### GitHub Integration 
 - iedit (change multiple words at the same time)
 - magit (git integration)
 - better-shell (improves shell functionality within emacs)
+
 ### Miscellaneous packages
+- ace-window (faster window swapping)
 - dashboard (customizable start up screen)
 - beacon (light that follows your cursor)
 - telephone-line (better looking modeline)
@@ -79,6 +85,7 @@
 - irony-eldoc (indexes c++)
 - company-irony (provides true intelligent c++ intellisense and autocompletetion)
 - company-irony-c-headers (auto completetion for header files)
+- ggtags (creates tags and analyzes code)
 #### C++ Irony-server:
 - Run irony-install-server after you put compamy-irony in your init file( will only work if you have cmake and libclang installed!)
 - After irony server is setup M-x flycheck-select-checker RET irony RET
