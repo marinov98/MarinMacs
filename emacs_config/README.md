@@ -19,8 +19,9 @@
 
 ## To be tested packages
 - use-package (cleaner way to define packages and faster)
-- Reveal.js
-- pdf-tools
+- Reveal.js (create presentations with org mode)
+- pdf-tools (emacs support for pdf)
+- skewer (live web development)
 
 ## Favorite Themes
 
