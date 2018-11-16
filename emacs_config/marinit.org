@@ -374,10 +374,6 @@
 (add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 
-;; Csswatcher (uncomment only if you've installed csswatcher and really need it) 
-;(require 'ac-html-csswatcher)
-;(ac-html-csswatcher-setup)
-
 ;; Indentation
 (setq web-mode-markup-indent-offset 4)
 (setq web-mode-code-indent-offset 4)
