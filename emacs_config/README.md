@@ -19,7 +19,6 @@
 
 ## To be tested packages
 - use-package (cleaner way to define packages and faster)
-- company-jedi (Python intellisense)
 
 ## Favorite Themes
 
@@ -92,7 +91,7 @@
 - virtualenv (interactive python shell) (OPTIONAL but you still need the file for jedi to work)
 - virtualenvwrapper
 - elpy (enables a powerful python development environment)
-- jedi (intellisense)
+- company-jedi (intellisense)
 #### Python Jedi Server :
 - Run jedi:install-server AFTER you added it to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv
 
