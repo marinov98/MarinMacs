@@ -71,9 +71,9 @@
 (global-set-key (kbd "M-g w") 'avy-goto-word-1)
 (global-set-key (kbd "M-g e") 'avy-goto-word-0)
 #+END_SRC
-* General Programming Convienience (Autocomplete, Yasnippet, Iedit, Dump-Jump)  
+* General Programming Convienience (Auto-Complete, Yasnippet, Iedit, Dump-Jump)  
 #+BEGIN_SRC emacs-lisp
-; Auto-complete 
+; Auto-Complete 
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
