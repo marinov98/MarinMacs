@@ -55,9 +55,9 @@
 - auto-complete (convinient global auto-completion within emacs)
 - yasnippet, yasnippet snippets (snippets)
 - cider (interactive programming with closure)
+- iedit (change multiple words at the same time)
 
 ### GitHub Integration 
-- iedit (change multiple words at the same time)
 - magit (git integration)
 - better-shell (improves shell functionality within emacs)
 
