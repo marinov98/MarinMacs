@@ -276,10 +276,12 @@
 ;; fixing bug in elpy
 (define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand)
 
-;;;; Jedi python intelisense
-(require 'jedi)
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
+;; Company-Jedi Intellisense
+(require 'company-jedi)
+(defun my/python-mode-hook ()
+  (add-to-list 'company-backends 'company-jedi))
+
+ (add-hook 'python-mode-hook 'my/python-mode-hook)
 
 ;;;;;;;; Python end
 
