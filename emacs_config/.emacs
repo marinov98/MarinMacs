@@ -121,6 +121,13 @@
 ;; dumb-jump-back C-M-p jumps back to where you were when you jumped.
 ;; dumb-jump-quick-look C-M-q like dumb-jump-go but only shows tooltip with file, line, and context
 
+;; Ace-window
+(require 'ace-window)
+(global-set-key (kbd "M-o") 'ace-window)
+(setq aw-background nil) ;; turn off background
+(setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+
+
 ;;;; Telephone line
 (require 'telephone-line)
 
@@ -235,6 +242,14 @@
   (setq irony--compile-options
       '("-std=c++14"        ;; general 
         "-stdlib=libc++"))) ;; for mac only 
+
+;; ggtags 
+(require 'ggtags)
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+              (ggtags-mode 1))))
+
 
 ;;;;;;;; End of C++
 
