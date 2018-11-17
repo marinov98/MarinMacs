@@ -10,7 +10,8 @@
 - Any errors you get can be googled and every package can also be checked online 
 - Depending on how you installed emacs, certain packages might be preinstalled into it 
 - When you see ```RET``` it means hit the ENTER key
-- In emacs C = ctrl and M = alt example: ```M-x``` = alt + x
+- In emacs C = ctrl and M = alt 
+- Example: ```M-x``` = alt + x  ```C-x C-f``` = ctrl + x ctrl + f
 
 ## Good Fonts For Programming
 - Hack (Personal Favorite)
