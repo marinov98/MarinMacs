@@ -18,8 +18,8 @@
 - **NOTE:** in order to for brew install {package name} make sure your mac has brew installed
 
 ## Contents of this Repo:
-- **MyChecklist.md** : General things to have installed when I either get a new machine or switch to a new distro (You DO NOT NEED to view this file) 
-- **emacs_config** folder : Contains my init file as well as the packages that have been installed (with explaination) and the code for each one
+- [**MyChecklist.md**](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/MyChecklist.md) : General things to have installed when I either get a new machine or switch to a new distro (You DO NOT NEED to view this file) 
+- [**emacs_config**] (https://github.com/marinov98/My_Emacs-Detailed_Guide/tree/master/emacs_config) folder : Contains my init file as well as the packages that have been installed (with explaination) and the code for each one
 - **DO NOT** go to the emacs_config folder before reading the contents below:
   
 ## Necesities to make sure all the emacs packages work correctly
