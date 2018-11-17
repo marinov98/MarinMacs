@@ -37,7 +37,7 @@
   - Org
   
   ### Navigation 
-  **NOTE**: the things listed here are OPTIONAL 
+  **NOTE**: the things listed for Navigation are OPTIONAL, emacs should able to use their packages without them being on your machine 
    #### Ranger:
   - Ubuntu: Ranger is in Ubuntu's default repositories
   - MacOS ```brew install ranger```
