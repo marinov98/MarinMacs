@@ -1,7 +1,7 @@
 # What My Init File Consists Of (Currently)
 
 ## IMPORTANT:  
-- I use init.el and marinit.org to run my emacs! The .emacs file is an old version of my file without the org 
+- I use init.el and marinit.org to run my emacs! The [.emacs](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/.emacs) file is an old version of my file without the org 
 
 ## TODO: 
 - Implement all the packages using use-package 
