@@ -12,8 +12,9 @@
 - Installing each package requires going to different sites and/or blogs to see how each individual one works, its better to have all the information you need in one place 
 
 ## Please note: 
-I have used emacs ONLY on MacOS and Ubuntu so my knowledge is limited
-NOTE: in order to for brew install {package name} make sure your mac has brew installed
+- I have used emacs ONLY on MacOS and Ubuntu so my knowledge is limited
+- Make sure you either have xcode installed or xcode command line tools for MacOS
+- NOTE: in order to for brew install {package name} make sure your mac has brew installed
 
 ## Contains my .emacs file 
 
