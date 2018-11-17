@@ -1,14 +1,14 @@
 
-# for linux switch on MSI:
-1.gcc
-2.python3
-3.clang
-4.chrome
-5.emacs (sudo apt-get install emacs26)
-6.spotify
-7.Web dev tools
-8.Git
-9.skype
+# Checklist when switching to a new device (mainly for Linux)
+1. Gcc
+2. Python3
+3. Clang
+4. Chromium-browser
+5. Emacs (sudo apt-get install emacs26)
+6. Spotify
+7. Web dev tools
+8. Git
+9. Skype
 10. vs code (backup in case new language is used)
 11. LATEX (sudo apt-get install texlive-full)
 12. GDB (debugger)
@@ -22,4 +22,8 @@
 20. ivy
 21. cpan
 22. csswatcher
-23. Ranger?
+23. Ranger
+24. ctags
+25. auctex
+26 cask
+
