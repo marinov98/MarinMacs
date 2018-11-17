@@ -42,26 +42,26 @@
   - Ubuntu ```sudo apt-get install gcc```
   - MacOS ```brew install gcc```
   #### Clang (Compiler front-end for C++)
-  - Ubuntu (sudo apt-get install clang)
-  - MacOS (brew install clang)
+  - Ubuntu ```sudo apt-get install clang```
+  - MacOS ```brew install clang```
   #### Libclang (C API that exposes the C++ abstract syntax)
-  - Ubuntu (sudo apt-get install libclang-dev)
+  - Ubuntu ```sudo apt-get install libclang-dev```
   - MacOS should already have it
   #### CMake (software application for managing the build process of software)
-  - Ubuntu (sudo apt-get install cmake)
-  - MacOS (brew install cmake)
+  - Ubuntu ```sudo apt-get install cmake```
+  - MacOS ```brew install cmake```
   #### Ctags (Programming tool that creates tags) 
-  - Ubuntu (sudo apt-get install ctags)
-  - MacOS (brew install ctags)
+  - Ubuntu ```sudo apt-get install ctags```
+  - MacOS ```brew install ctags```
   
   ### Python
   
   #### virtualenv (Python interactive shell)
-  - Ubuntu (sudo apt-get install virtualenv)
-  - MacOS (brew install virtualenv)
+  - Ubuntu ```sudo apt-get install virtualenv```
+  - MacOS ```brew install virtualenv```
   #### Pip (allows you to use pip install in your terminal)
-  - Ubuntu (sudo apt-get install python-pip)
-  - MacOS (brew install pip)
+  - Ubuntu ```sudo apt-get install python-pip```
+  - MacOS ```brew install pip```
   ##### Packages to install with Pip
   - Rope: pip install rope (refactoring library)
   - Jedi: pip install jedi (intellisense)
@@ -74,33 +74,33 @@
   #### Before going to Nodejs
   
   ##### install curl 
-  - Ubuntu: sudo apt-get install curl
+  - Ubuntu: ```sudo apt-get install curl```
   - MacOS:
-  1. ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
-  2. brew install curl 
+  1. ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null```
+  2. ```brew install curl``` 
   
   ##### install npm
-  - Ubuntu: sudo apt-get install npm
-  - MacOS: brew install npm
+  - Ubuntu: ```sudo apt-get install npm```
+  - MacOS: ```brew install npm```
   
   #### Nodejs
   - look up how to install nodejs
   - After installing node,  install eslint (npm install eslint)
   
   #### GIT (Github)
-  - Ubuntu (sudo apt-get install git)
+  - Ubuntu ```sudo apt-get install git```
   - MacOS: Should have it preinstalled from xcode command lind tools
   ### Now search up how to set up git on your Operating System AFTER installation is complete
    
   #### Latex
   
   ##### Auctex (creating latex files in emacs) 
-  - Ubuntu: sudo apt-get install auctex
-  - MacOS: brew install auctex
+  - Ubuntu: ```sudo apt-get install auctex```
+  - MacOS: ```brew install auctex```
   
   ##### Cask (for using the dashboard package)
-  - MacOS: brew install cask
-  - Ubuntu: curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+  - MacOS: ```brew install cask```
+  - Ubuntu: ```curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python```
   
   #### Org
   - Org comes with emacs, so you can directly go into using packages 
