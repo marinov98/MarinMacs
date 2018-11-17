@@ -91,7 +91,7 @@
 - company-irony-c-headers (auto completetion for header files)
 - ggtags (creates tags and analyzes code)
 #### C++ Irony-server:
-- Run irony-install-server after you put compamy-irony in your init file( will only work if you have cmake and libclang installed!)
+- Run ```M-x irony-install-server RET``` after you put compamy-irony in your init file( will only work if you have cmake and libclang installed!)
 - After irony server is setup ```M-x flycheck-select-checker RET irony RET```
 
 ## Python packages: 
