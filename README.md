@@ -72,8 +72,6 @@
   
   ### JavaScript 
   
-  #### Before going to Nodejs
-  
   ##### install curl 
   - Ubuntu: ```sudo apt-get install curl```
   - MacOS:
