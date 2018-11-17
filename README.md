@@ -17,10 +17,15 @@
 - NOTE: in order to for brew install {package name} make sure your mac has brew installed
 
 ## Contents of this Repo:
-- Necesities : General things to have installed when I either get a new machine or switch to a new distro 
-- 
+- Necesities : General things to have installed when I either get a new machine or switch to a new distro (You DO NOT NEED to view this file) 
+- emacs_config folder : Contains my init file as well as the packages that have been installed (with explaination) and the code for each one
+- DO NOT go to the emacs_config folder before reading the contents below:
+  
+## Necesities to make sure all the emacs packages work correctly
+[### Disclaimer] : You DO NOT need to install everything here ONLY take what you need 
 
-## Usages:
+## Table of contents:
+  - Navigation
   - C++,
   - Python,
   - Javascript,
@@ -28,8 +33,6 @@
   - GIT,
   - LaTex,
   - Org
-  
-## Necesities before using all Packages in my .emacs file (I put sections so that you can pick only the ones you need):
 
   ### C++
   
@@ -89,11 +92,16 @@
   ### search up how to set up git on your Operating System AFTER installing it
   - Ubuntu (sudo apt-get install git)
    
-  #### Bonus
-  ##### Auctex (creating latex files) 
+  #### Latex
+  
+  ##### Auctex (creating latex files in emacs) 
   - Ubuntu: sudo apt-get install auctex
   - MacOS: brew install auctex
+  
   ##### Cask (for using the dashboard package)
   - MacOS: brew install cask
   - Ubuntu: curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+  
+  #### Org
+  - Org comes with emacs, so you can directly go into using packages 
    
