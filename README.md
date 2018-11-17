@@ -3,7 +3,7 @@
 ## Inspiration:
 - I became inspired to write this after I configured my emacs init file to the point where I could comftorably wrtie C++, Python, and JavaScript code as well as take notes in Org mode and write LaTex
 
-## Purpose
+## Purpose:
 - Initially, I made this repo for myself to keep track of my configurations...
 - However, now I want to make it more of a guide for anyone trying to switch to emacs and is confused about what packages to install
 
@@ -16,7 +16,9 @@
 - Make sure you either have xcode installed or xcode command line tools for MacOS
 - NOTE: in order to for brew install {package name} make sure your mac has brew installed
 
-## Contains my .emacs file 
+## Contents of this Repo:
+- Necesities : General things to have installed when I either get a new machine or switch to a new distro 
+- 
 
 ## Usages:
   - C++,
@@ -27,7 +29,7 @@
   - LaTex,
   - Org
   
-## Necesities before using all Packages in my .emacs file (I put sections so that you can pick only the ones you need) :
+## Necesities before using all Packages in my .emacs file (I put sections so that you can pick only the ones you need):
 
   ### C++
   
