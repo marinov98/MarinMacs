@@ -6,18 +6,19 @@
 ## Note before beginning
 - Any errors you get can be googled and every package can also be checked online 
 
-## Fonts
-- Hack (What I use currently)
+## Good Fonts For Programming
+- Hack (Personal Favorite)
 - Source Code Pro
 - Inconsolata
 
-## General settings 
-- linium(line numbers) 
-- tabspace: 4 
+## General Settings 
+- line numbers 
+- tabspace: 4
+- force editor to use spaces
 - syntax highlighting
 - debugging on error 
 
-## To be tested packages
+## To Be Tested Packages
 - use-package (cleaner way to define packages and faster)
 - Reveal.js (create presentations with org mode)
 - pdf-tools (emacs support for pdf)
@@ -26,7 +27,7 @@
 ## Favorite Themes
 
 ### Base16 
-- base16-ocean (One I use now :) )
+- base16-ocean (Personal Favorite)
 - base16-oceannext
 - base16-solarized-dark/light 
 
