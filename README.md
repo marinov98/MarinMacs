@@ -37,21 +37,20 @@
 
   ### C++
   
-  ####  gcc
+  ####  Gcc (GNU Compiler Collection)
   - Windows (MinGw)
   - Ubuntu (sudo apt-get install gcc)
   - MacOS (brew install gcc)
-  #### clang
+  #### Clang (Compiler front-end for C++)
   - Ubuntu (sudo apt-get install clang)
   - MacOS (brew install clang)
-  #### libclang
+  #### Libclang (C API that exposes the C++ abstract syntax)
   - Ubuntu (sudo apt-get install libclang-dev)
   - MacOS should already have it
-  #### CMake
+  #### CMake (software application for managing the build process of software)
   - Ubuntu (sudo apt-get install cmake)
   - MacOS (brew install cmake)
-  
-  #### Ctags
+  #### Ctags (Programming tool that creates tags) 
   - Ubuntu (sudo apt-get install ctags)
   - MacOS (brew install ctags)
   
@@ -60,7 +59,6 @@
   #### virtualenv (Python interactive shell)
   - Ubuntu (sudo apt-get install virtualenv)
   - MacOS (brew install virtualenv)
-  
   #### Pip (allows you to use pip install in your terminal)
   - Ubuntu (sudo apt-get install python-pip)
   - MacOS (brew install pip)
