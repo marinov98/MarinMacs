@@ -7,11 +7,11 @@
 - Initially, I made this repo for myself to keep track of my configurations...
 - However, now I want to make it more of a guide for anyone trying to switch to emacs and is confused about what packages to install
 
-## Why make this guide?
+## Why Make This Guide?
 - Emacs has a ton of packages and it can be really confusing which ones are the right ones
 - Installing each package requires going to different sites and/or blogs to see how each individual one works, its better to have all the information you need in one place 
 
-## Please note: 
+## Please Note: 
 - I have used emacs ONLY on MacOS and Ubuntu so my knowledge is limited
 - Make sure you either have xcode installed or xcode command line tools for MacOS
 - NOTE: in order to for brew install {package name} make sure your mac has brew installed
@@ -22,7 +22,7 @@
 - DO NOT go to the emacs_config folder before reading the contents below:
   
 ## Necesities to make sure all the emacs packages work correctly
-### Disclaimer : You DO NOT need to install everything here ONLY take what you need 
+ **Disclaimer** : You DO NOT need to install everything here ONLY take what you need
 
 ## Table of contents:
   - Navigation
