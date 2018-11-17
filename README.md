@@ -1,8 +1,17 @@
 # Emacs guide MY WAY
 
-## I was inspired to write this after I finished configuring my emacs file to write C++, Python, and JavaScript code as well as take notes in Org mode and write LaTex
+## Inspiration:
+- I became inspired to write this after I configured my emacs init file to the point where I could comftorably wrtie C++, Python, and JavaScript code as well as take notes in Org mode and write LaTex
 
-## please note: 
+## Purpose
+- Initially, I made this repo for myself to keep track of my configurations...
+- However, now I want to make it more of a guide for anyone trying to switch to emacs and is confused about what packages to install
+
+## Why make this guide?
+- Emacs has a ton of packages and it can be really confusing which ones are the right ones
+- Installing each package requires going to different sites and/or blogs to see how each individual one works, its better to have all the information you need in one place 
+
+## Please note: 
 I have used emacs ONLY on MacOS and Ubuntu so my knowledge is limited
 NOTE: in order to for brew install {package name} make sure your mac has brew installed
 
