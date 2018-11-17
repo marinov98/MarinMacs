@@ -14,7 +14,7 @@
 ## Please Note: 
 - I have used emacs ONLY on MacOS and Ubuntu so my knowledge is limited
 - Make sure you either have xcode installed or xcode command line tools for MacOS
-- NOTE: in order to for brew install {package name} make sure your mac has brew installed
+- **NOTE:** in order to for brew install {package name} make sure your mac has brew installed
 
 ## Contents of this Repo:
 - Necesities : General things to have installed when I either get a new machine or switch to a new distro (You DO NOT NEED to view this file) 
