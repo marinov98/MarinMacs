@@ -19,6 +19,7 @@
 (menu-bar-mode -1) ;; disable menu bar
 (toggle-scroll-bar -1) ;; disable scroll bar
 (tool-bar-mode -1) ;; disable tool bar 
+;; (setq make-backup-files nil) (Uncomment if you want to disable emacs creating backup files)
 #+END_SRC
 
 * KeyBindings + Which-Key
