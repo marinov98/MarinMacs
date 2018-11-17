@@ -87,7 +87,7 @@
   - After installing node,  install eslint (npm install eslint)
   
   ### HTML/CSS
-  - Csswatcher : ```sudo cpan i CSS::Watcher to install csswatcher file```
+  - Csswatcher : ```sudo cpan i CSS::Watcher```
   
   #### GIT (Github)
   - Ubuntu ```sudo apt-get install git```
