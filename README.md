@@ -39,20 +39,20 @@
   
   ####  Gcc (GNU Compiler Collection)
   - Windows (MinGw)
-  - Ubuntu ```sudo apt-get install gcc```
-  - MacOS ```brew install gcc```
+  - Ubuntu: ```sudo apt-get install gcc```
+  - MacOS: ```brew install gcc```
   #### Clang (Compiler front-end for C++)
   - Ubuntu ```sudo apt-get install clang```
   - MacOS ```brew install clang```
   #### Libclang (C API that exposes the C++ abstract syntax)
   - Ubuntu ```sudo apt-get install libclang-dev```
-  - MacOS should already have it
+  - MacOS: ```brew install --with-toolchain llvm```
   #### CMake (software application for managing the build process of software)
-  - Ubuntu ```sudo apt-get install cmake```
-  - MacOS ```brew install cmake```
+  - Ubuntu: ```sudo apt-get install cmake```
+  - MacOS: ```brew install cmake```
   #### Ctags (Programming tool that creates tags) 
-  - Ubuntu ```sudo apt-get install ctags```
-  - MacOS ```brew install ctags```
+  - Ubuntu: ```sudo apt-get install ctags```
+  - MacOS: ```brew install ctags```
   
   ### Python
   
