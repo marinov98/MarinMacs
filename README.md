@@ -23,6 +23,7 @@
   
 ## Necesities to make sure all the emacs packages work correctly
  **Disclaimer** : You DO NOT need to install everything here ONLY take what you need
+ **Keep In Mind** : You might find certain machines with certain software (such as gcc and python) already installed I put all the topics below in case your machine has almost nothing related to programming installed on it 
 
 ## Table of contents:
   - Navigation
