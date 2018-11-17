@@ -10,6 +10,7 @@
 ## Why Make This Guide?
 - Emacs has a ton of packages and it can be really confusing which ones are the right ones
 - Installing each package requires going to different sites and/or blogs to see how each individual one works, its better to have all the information you need in one place 
+- Also I just really like to have my stuff online in case event XYZ happens with my machine 
 
 ## Please Note: 
 - I have used emacs ONLY on MacOS and Ubuntu so my knowledge is limited
