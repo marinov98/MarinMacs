@@ -35,9 +35,13 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   - Ubuntu (sudo apt-get install cmake)
   - MacOS (brew install cmake)
   
+  #### Ctags
+  - Ubuntu (sudo apt-get install ctags)
+  - MacOS (brew install ctags)
+  
   ### Python
   
-  #### virtualenv
+  #### virtualenv (Python interactive shell)
   - Ubuntu (sudo apt-get install virtualenv)
   - MacOS (brew install virtualenv)
   
@@ -55,8 +59,11 @@ NOTE: in order to for brew install {package name} make sure your mac has brew in
   
   #### Before going to Nodejs
   
-  ##### install curl (Necessary for Ubuntu only!)
-  -sudo apt-get install curl
+  ##### install curl 
+  - Ubuntu: sudo apt-get install curl
+  - MacOS:
+  1. ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
+  2. brew install curl 
   
   ##### install npm
   - Ubuntu: sudo apt-get install npm
