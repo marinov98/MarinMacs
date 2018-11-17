@@ -28,12 +28,12 @@
 
 ## Table of contents:
   - Navigation
-  - C++,
-  - Python,
-  - Javascript,
-  - HTML/CSS,
-  - GIT,
-  - LaTex,
+  - C/C++
+  - Python
+  - Javascript
+  - HTML/CSS
+  - GIT
+  - LaTex
   - Org
   
   ### Navigation 
