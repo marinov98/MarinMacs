@@ -92,7 +92,7 @@
 - ggtags (creates tags and analyzes code)
 #### C++ Irony-server:
 - Run irony-install-server after you put compamy-irony in your init file( will only work if you have cmake and libclang installed!)
-- After irony server is setup M-x flycheck-select-checker RET irony RET
+- After irony server is setup ```M-x flycheck-select-checker RET irony RET```
 
 ## Python packages: 
 - virtualenv (interactive python shell) (OPTIONAL but you still need the file for jedi to work)
@@ -100,7 +100,7 @@
 - elpy (enables a powerful python development environment)
 - company-jedi (intellisense)
 #### Python Jedi Server :
-- Run jedi:install-server AFTER you added it to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv
+- Run ``` M-x jedi:install-server RET``` AFTER you added it to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv
 
 ## Csharp packages:
 - csharp-mode (Allows for emacs to recognize Csharp files)
