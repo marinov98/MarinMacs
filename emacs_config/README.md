@@ -50,7 +50,7 @@
 
 ### Searching 
 - ivy (improved file search)
-- swiper (improved file/name search)
+- swiper (improved file/name search by integrating ivy)
 - counsel (enhanced ivy commands)
 - avy (fast word navigation)
 
