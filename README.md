@@ -90,8 +90,9 @@
   - After installing node,  install eslint (npm install eslint)
   
   #### GIT (Github)
-  ### search up how to set up git on your Operating System AFTER installing it
   - Ubuntu (sudo apt-get install git)
+  - MacOS: Should have it preinstalled from xcode command lind tools
+  ### Now search up how to set up git on your Operating System AFTER installation is complete
    
   #### Latex
   
