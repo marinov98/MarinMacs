@@ -34,13 +34,13 @@
   - GIT,
   - LaTex,
   - Org
-
+  
   ### C++
   
   ####  Gcc (GNU Compiler Collection)
   - Windows (MinGw)
-  - Ubuntu (sudo apt-get install gcc)
-  - MacOS (brew install gcc)
+  - Ubuntu ```sudo apt-get install gcc```
+  - MacOS ```brew install gcc```
   #### Clang (Compiler front-end for C++)
   - Ubuntu (sudo apt-get install clang)
   - MacOS (brew install clang)
