@@ -87,6 +87,9 @@
   - look up how to install nodejs
   - After installing node,  install eslint (npm install eslint)
   
+  ### HTML/CSS
+  - Csswatcher : 
+  
   #### GIT (Github)
   - Ubuntu ```sudo apt-get install git```
   - MacOS: Should have it preinstalled from xcode command lind tools
