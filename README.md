@@ -22,7 +22,7 @@
 - DO NOT go to the emacs_config folder before reading the contents below:
   
 ## Necesities to make sure all the emacs packages work correctly
-[### Disclaimer] : You DO NOT need to install everything here ONLY take what you need 
+### Disclaimer : You DO NOT need to install everything here ONLY take what you need 
 
 ## Table of contents:
   - Navigation
