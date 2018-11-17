@@ -8,6 +8,7 @@
 
 ## Note before beginning
 - Any errors you get can be googled and every package can also be checked online 
+- Depending on how you installed emacs, certain packages might be preinstalled into it 
 
 ## Good Fonts For Programming
 - Hack (Personal Favorite)
