@@ -50,7 +50,7 @@
   ### C/C++
   
   ####  Gcc (GNU Compiler Collection)
-  - Windows (MinGw)
+  - Windows: Look up how to install MinGW
   - Ubuntu: ```sudo apt-get install gcc```
   - MacOS: ```brew install gcc```
   #### Clang (Compiler front-end for C++)
