@@ -106,10 +106,6 @@
 #### Python Jedi Server :
 - Run ``` M-x jedi:install-server RET``` AFTER you added it to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv
 
-## Csharp packages:
-- csharp-mode (Allows for emacs to recognize Csharp files)
-- omnisharp (development environment for Csharp)
-
 ## JavaScript packages:
 - js2-mode (enables Javascript mode in emacs)
 - js2-refactor (powerful refactoring)
@@ -123,3 +119,8 @@
 - company-web (auto-completion)
 - web-mode (allows for auto completion and automatic tag closing) 
 - emmet-mode (increase html/css productivity) (OPTIONAL)
+
+## Csharp packages:
+- **Disclaimer:** Csharp on emacs is something that I am still experimenting with
+- csharp-mode (Allows for emacs to recognize Csharp files)
+- omnisharp (development environment for Csharp)
