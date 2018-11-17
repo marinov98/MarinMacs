@@ -25,5 +25,5 @@
 23. Ranger
 24. ctags
 25. auctex
-26 cask
+26. cask
 
