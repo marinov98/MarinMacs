@@ -65,12 +65,13 @@
   #### Ctags (Programming tool that creates tags) 
   - Ubuntu: ```sudo apt-get install ctags```
   - MacOS: ```brew install ctags```
+  ##### Additional install intructions for Ctags
+  - ```./configure --prefix=<PREFIX> --with-exuberant-ctags=/usr/local/bin/ctags```
+     ```make && make install```
+  - Install pygments (directions below)   
   
   ### Python
   
-  #### virtualenv (Python interactive shell)
-  - Ubuntu ```sudo apt-get install virtualenv```
-  - MacOS ```brew install virtualenv```
   #### Pip (allows you to use pip install in your terminal)
   - Ubuntu ```sudo apt-get install python-pip```
   - MacOS ```brew install pip```
@@ -80,6 +81,10 @@
   - flake: ```pip install flake8``` (code checks)
   - autopep: ```pip install autopep8``` (Pep8 formatting) 
   - yapf: ```pip install yapf``` (Formatting)
+  - pygments : ```pip install pygments``` (This helps ggtags for C++)
+  #### virtualenv (Python interactive shell)
+  - Ubuntu ```sudo apt-get install virtualenv```
+  - MacOS ```brew install virtualenv```
   
   ### JavaScript 
   
