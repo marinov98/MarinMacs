@@ -12,6 +12,9 @@
 - When you see ```RET``` it means hit the ENTER key
 - In emacs C = ctrl and M = alt 
 - Example: ```M-x``` = alt + x  ```C-x C-f``` = ctrl + x ctrl + f
+- You cannot start installing packages until you have ```(require `package)``` in your init (init.el or .emacs) file
+- Once you have it ```M-x package-list-packages RET``` will open up the package list
+- Additonally you can run ```M-x package-install RET package_name RET``` if you know the exact package that you want 
 
 ## Good Fonts For Programming
 - Hack (Personal Favorite)
