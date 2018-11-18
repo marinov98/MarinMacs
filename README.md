@@ -10,7 +10,8 @@
 ## Why Make This Guide?
 - Emacs has a ton of packages and it can be really confusing which ones are the right ones
 - Installing each package requires going to different sites and/or blogs to see how each individual one works, its better to have all the information you need in one place 
-- Also I just really like to have my stuff online in case event XYZ happens with my machine 
+- Not everybody likes spending time customizing and configuring, they like things that work right out of the box. However, everybody likes speed and Emacs provides that and the configuration should not be what keeps people using editors such as emacs or vim
+- I just really like to have my stuff online in case event XYZ happens with my machine 
 
 ## Please Note: 
 - I have used emacs ONLY on MacOS and Ubuntu so my knowledge is limited
