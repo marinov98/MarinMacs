@@ -63,7 +63,7 @@
 - avy (fast word navigation)
 
 ### Directory Navigation
-- neotree (easy directory navigation)
+- neotree (popup sidebar for easy directory/file navigation)
 - ranger (replaces dired mode)
 - projectile (easier project navigation)
 - counsel-projectile (ivy integration of projectile)
