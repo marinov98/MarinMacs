@@ -20,7 +20,7 @@
 - cmake ```sudo apt-get install cmake```
 - Python
 - - ```sudo apt-get install python-pip```
-- - ```sudo pip install virtualenv```
+- - ```sudo apt-get install virtualenv``` && ```sudo pip install virtualenv``` 
 - - Rope: ```pip install rope``` 
 - - Jedi: ```pip install jedi``` 
 - - flake: ```pip install flake8``` 
