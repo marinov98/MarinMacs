@@ -12,7 +12,7 @@
 - ivy (look up)
 - csswatcher ```sudo cpan i CSS::Watcher```
 ## Programming 
-- Gcc
+- Gcc ```sudo-apt get install gcc```
 - Clang ```sudo apt-get install clang```
 - LibClang ```sudo apt-get install libclang-dev```
 - llvm ```sudo apt-get install lldb```
