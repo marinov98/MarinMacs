@@ -18,6 +18,7 @@
 - LibClang ```sudo apt-get install libclang-dev```
 - llvm ```sudo apt-get install lldb```
 - ctags ```sudo apt-get install ctags```
+- cmake ```sudo apt-get install cmake```
 - Python
 - - ```sudo apt-get install python-pip```
 - - ```sudo pip install virtualenv```
