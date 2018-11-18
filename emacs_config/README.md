@@ -64,6 +64,7 @@
 - counsel-projectile (ivy integration of projectile)
 
 ### Coding
+- better-shell (improves shell functionality within emacs)
 - Auctex (smoother latex editing)
 - dump-jump (jump to definition) 
 - company (auto-completion)
@@ -75,7 +76,6 @@
 
 ### GitHub Integration 
 - magit (git integration)
-- better-shell (improves shell functionality within emacs)
 
 ### Miscellaneous packages
 - which-key (key assignments help)
