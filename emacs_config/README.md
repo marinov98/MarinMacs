@@ -28,6 +28,10 @@
 - Reveal.js (create presentations with org mode)
 - pdf-tools (emacs support for pdf)
 - skewer (live web development)
+- Muse (writing formatting)
+- Flyspell (spell checker)
+- wc Mode (word count checker)
+- WriteGood Mode (improves sentence structure/word choice)
 
 ## Favorite Themes
 
