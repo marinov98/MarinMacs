@@ -1,6 +1,6 @@
 
 # Checklist when switching to a new device (mainly for Ubuntu Linux)
-## General
+## Necesities
 - Curl ```sudo apt install curl```
 - cask ```curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python```
 - Git 
