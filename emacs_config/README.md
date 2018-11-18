@@ -103,8 +103,8 @@
 - company-irony-c-headers (auto completetion for header files)
 - ggtags (creates tags and analyzes code)
 #### C++ Irony-server:
-- Run ```M-x irony-install-server RET``` after you put compamy-irony in your init file( will only work if you have cmake and libclang installed!)
-- After irony server is setup ```M-x flycheck-select-checker RET irony RET```
+- Run ```M-x irony-install-server RET``` after you put company-irony in your init file(will only execute if you have cmake and libclang installed!). You now have C++ intellisense :D
+- After irony server is setup ```M-x flycheck-select-checker RET irony RET``` If you decided to install flycheck-irony 
 
 ## Python packages: 
 - virtualenv (interactive python shell) (OPTIONAL but you still need the file for jedi to work)
