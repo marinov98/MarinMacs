@@ -107,7 +107,7 @@
 - After irony server is setup ```M-x flycheck-select-checker RET irony RET``` If you decided to install flycheck-irony 
 
 ## Python packages: 
-- virtualenv (interactive python shell) (OPTIONAL but you still need the file for jedi to work)
+- virtualenv (interactive python shell) 
 - virtualenvwrapper
 - elpy (enables a powerful python development environment)
 - company-jedi (intellisense)
