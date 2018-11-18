@@ -10,7 +10,7 @@
 - Curl ```sudo apt install curl```
 - cask ```curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python```
 - Chromium-browser ```sudo apt install -y chromium-browser```
-- Emacs ```sudo apt-get install emacs26 auctex cask```
+- Emacs ```sudo apt-get install emacs26 auctex ```
 - Spotify
 1. ```sudo apt-get install snapd```
 2. ```sudo snap install spotify```
