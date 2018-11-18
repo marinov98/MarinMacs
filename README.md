@@ -87,6 +87,7 @@
   #### virtualenv (Python interactive shell)
   - Ubuntu ```sudo apt-get install virtualenv```
   - MacOS ```brew install virtualenv```
+  - Now run ```pip install virtualenv```
   
   ### JavaScript 
   
