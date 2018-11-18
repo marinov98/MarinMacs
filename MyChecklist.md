@@ -12,10 +12,6 @@
 - GDB (debugger) ```sudo apt-get install gdb```
 - tweak tool (ubuntu) ```sudo add-apt-repository universe``` ```sudo apt install gnome-tweak-tool```
 - ivy (look up)
-- vs code (backup in case new language is used) ```sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make```
-- ```sudo apt-get update```
-- ```sudo apt-get install ubuntu-make```
-- ```umake web visual-studio-code```
 - csswatcher ```sudo cpan i CSS::Watcher```
 - Gcc
 - Clang ```sudo apt-get install clang```
@@ -31,6 +27,18 @@
 - autopep: ```pip install autopep8```  
 - yapf: ```pip install yapf``` 
 - pygments : ```pip install pygments```
+- - vs code (backup in case new language is used) ```sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make```
+- ```sudo apt-get update```
+- ```sudo apt-get install ubuntu-make```
+- ```umake web visual-studio-code```
+- Extensions for vs code: 
+1. ```Auto Close Tag```
+2. ```Auto Rename Tag```
+3. ```Color Highlight```
+4. ```Project manager```
+5. ```Paste and Indent```
+6. ```Path Intellisense```
+7. ```Prettier```
 - Emacs ```sudo apt-get install emacs26 auctex ```
 - Spotify
 1. ```sudo apt-get install snapd```
