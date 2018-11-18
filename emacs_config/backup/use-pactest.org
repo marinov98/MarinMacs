@@ -1,0 +1,52 @@
+#+TITLE: 
+#+TAGS: 
+#+DESCRIPTION: 
+
+* Repo
+* General Settings
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+* KeyBindings
+* Fun Packages
+* Extra Productivity Helper (Which Key & Ace-Window)
+* Modeline
+* Ivy, Swiper & Counsel
+* Directory Navigation (Neotree, Ranger, Projectile)
+* Coding Convienience Packages
+** Auto-Complete
+** Yasnippet
+** Company
+** Latex
+** FlyCheck
+** Iedit
+** Dump-Jump
+** Cider
+** Better-Shell
+
+* Magit (Github Integration)
+* Org
+** Org-AutoComplete
+** Bullets
+* C++
+** Modern Font Lock
+** Clang-Format
+** Company-Irony Intellisense
+** Flycheck-Irony Linter 
+   
+** ggtags 
+* Python
+** Elpy
+** Company-Jedi Intellisense
+
+* Web-Development 
+** Web-Mode
+** Company-Web
+** CssWatcher
+** Emmet 
+
+* JavaScript
+** Js2 (Mode & Refactoring)
+** Xref
+** Company-Tern Intellisense
+** ES-Lint Linter
+* Csharp 
