@@ -25,6 +25,12 @@
 - Python
 1. ```sudo apt-get install python-pip```
 2. ```sudo pip install virtualenv```
+- Rope: ```pip install rope``` 
+- Jedi: ```pip install jedi``` 
+- flake: ```pip install flake8``` 
+- autopep: ```pip install autopep8```  
+- yapf: ```pip install yapf``` 
+- pygments : ```pip install pygments```
 - Emacs ```sudo apt-get install emacs26 auctex ```
 - Spotify
 1. ```sudo apt-get install snapd```
