@@ -21,13 +21,6 @@
 - Source Code Pro
 - Inconsolata
 
-## General Settings 
-- line numbers 
-- tabspace: 4
-- force editor to use spaces
-- syntax highlighting
-- debugging on error 
-
 ## To Be Tested Packages
 - use-package (cleaner way to define packages and faster)
 - Reveal.js (create presentations with org mode)
@@ -53,6 +46,14 @@
 
 - **Theme:** Base16-Ocean
 - **Font:** Hack
+
+## General Settings 
+- line numbers 
+- tabspace: 4
+- force editor to use spaces
+- syntax highlighting
+- debugging on error 
+- tool bar turned off
 
 ## Convenience packages :
 
