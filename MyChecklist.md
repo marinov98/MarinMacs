@@ -3,7 +3,10 @@
 - Curl ```sudo apt install curl```
 - cask ```curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python```
 - Chromium-browser ```sudo apt install -y chromium-browser```
-- Git ```sudo apt install git```
+- Git 
+1. ```sudo apt install git```
+2. ````git config --global user.name "Your Name"```
+3. ```git config --global user.email "youremail@domain.com"```
 - LATEX ```sudo apt-get install texlive-full```
 - Gummi text editor (Latex text editor as backup to emac's auctex) ```sudo apt install gummi```
 - GDB (debugger) ```sudo apt-get install gdb```
