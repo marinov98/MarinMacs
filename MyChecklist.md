@@ -28,9 +28,9 @@
 - yapf: ```pip install yapf``` 
 - pygments : ```pip install pygments```
 -  vs code (backup in case new language is used) ```sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make```
-- - ```sudo apt-get update```
-- - ```sudo apt-get install ubuntu-make```
-- - ```umake web visual-studio-code```
+ - ```sudo apt-get update```
+ - ```sudo apt-get install ubuntu-make```
+ - ```umake web visual-studio-code```
 - Extensions for vs code: 
 1. ```Auto Close Tag```
 2. ```Auto Rename Tag```
