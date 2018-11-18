@@ -1,4 +1,4 @@
-# What My Init File Consists Of (Currently)
+# My Emacs Configuration
 
 ## IMPORTANT:  
 - I use init.el and marinit.org to run my emacs! The [.emacs](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/.emacs) file is an old version of my file without the org 
@@ -48,6 +48,11 @@
 ### Easy on the eyes
 - Gruvbox
 - Zenburn
+
+# What My Init File Consists Of (Currently)
+
+- **Theme:** Base16-Ocean
+- **Font:** Hack
 
 ## Convenience packages :
 
