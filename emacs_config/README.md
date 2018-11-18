@@ -57,21 +57,30 @@
 - debugging on error 
 - tool bar turned off
 
-## Convenience packages :
+## Fun packages
+- dashboard (customizable start up screen)
+- beacon (light that follows your cursor)
 
-### Searching 
+## Extra Productivity Helper Packages
+- which-key (key assignments help)
+- ace-window (faster window swapping)
+
+## Modeline
+- telephone-line (better looking modeline)
+
+## Searching 
 - ivy (improved file search)
 - swiper (improved file/name search by integrating ivy)
 - counsel (enhanced ivy commands)
 - avy (fast word navigation)
 
-### Directory Navigation
+## Directory Navigation
 - neotree (popup sidebar for easy directory/file navigation)
 - ranger (replaces dired mode)
 - projectile (easier project navigation)
 - counsel-projectile (ivy integration of projectile)
 
-### Coding
+## Coding
 - better-shell (improves shell functionality within emacs)
 - Auctex (smoother latex editing)
 - dump-jump (jump to definition) 
@@ -82,15 +91,8 @@
 - cider (interactive programming with closure)
 - iedit (change multiple words at the same time)
 
-### GitHub Integration 
+## GitHub Integration 
 - magit 
-
-### Miscellaneous packages
-- which-key (key assignments help)
-- ace-window (faster window swapping)
-- dashboard (customizable start up screen)
-- beacon (light that follows your cursor)
-- telephone-line (better looking modeline)
 
 ## Org
 - org-ac (auto-completion for org)
