@@ -43,7 +43,7 @@
   - Ubuntu: Ranger is in Ubuntu's default repositories
   - MacOS ```brew install ranger```
   #### Ivy :
-  - Ubuntu (Ivy creates a few more steps for Linux please look it up)
+  - Ubuntu (Ivy creates a few more steps for Linux distros, please look it up)
   - MacOS: 
   1. ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null```
   2. ```brew install ivy```
