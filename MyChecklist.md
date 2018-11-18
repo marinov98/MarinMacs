@@ -1,29 +1,35 @@
 
 # Checklist when switching to a new device (mainly for Linux)
-1. Gcc
-2. Python3
-3. Clang
-4. Chromium-browser
-5. Emacs (sudo apt-get install emacs26)
-6. Spotify
-7. Web dev tools
-8. Git
-9. Skype
-10. vs code (backup in case new language is used)
-11. LATEX (sudo apt-get install texlive-full)
-12. GDB (debugger)
-13. libclang-dev
-14. llvm
-15. virtualenv
-16. node (npm) (NEED to install curl first)
-17. react
-18. tweak tool (ubuntu)
-19. Gummi text editor (Latex text editor as backup to emac's auctex)
-20. ivy
-21. cpan
-22. csswatcher
-23. Ranger
-24. ctags
-25. auctex
-26. cask
+- Gcc
+- Clang ```sudo apt-get install clang```
+- LibClang ```sudo apt-get install libclang-dev```
+- llvm ```sudo apt-get install lldb```
+- Python
+1. ```sudo apt-get install python-pip```
+2. ```sudo pip install virtualenv```
+- Curl ```sudo apt install curl```
+- cask ```curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python```
+- Chromium-browser ```sudo apt install -y chromium-browser```
+- Emacs ```sudo apt-get install emacs26 auctex cask```
+- Spotify
+1. ```sudo apt-get install snapd```
+2. ```sudo snap install spotify```
+- Web dev tools
+1. npm (look up)
+2. react
+- Git ```sudo apt install git```
+- Skype
+- vs code (backup in case new language is used) ```sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make```
+- ```sudo apt-get update```
+- ```sudo apt-get install ubuntu-make```
+- ```umake web visual-studio-code```
+- LATEX ```sudo apt-get install texlive-full```
+- GDB (debugger) ```sudo apt-get install gdb```
+- tweak tool (ubuntu) ```sudo add-apt-repository universe``` ```sudo apt install gnome-tweak-tool```
+- Gummi text editor (Latex text editor as backup to emac's auctex) ```sudo apt install gummi```
+- ivy (look up)
+- csswatcher ```sudo cpan i CSS::Watcher```
+- Ranger (preinstalled on ubuntu) 
+- ctags ```sudo apt-get install ctags```
+
 
