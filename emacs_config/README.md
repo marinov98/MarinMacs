@@ -118,7 +118,7 @@
 - js2-mode (enables Javascript mode in emacs)
 - js2-refactor (powerful refactoring)
 - xref-js2 (easy jumping to definitions and refrences)
-- company-tern (Javascript autocompletion)
+- company-tern (Javascript intellisense)
 - flycheck-jslint (javascript linter)
 - flycheck-jshint (javascript hints)
 
