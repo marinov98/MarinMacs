@@ -19,33 +19,33 @@
 - llvm ```sudo apt-get install lldb```
 - ctags ```sudo apt-get install ctags```
 - Python
-1. ```sudo apt-get install python-pip```
-2. ```sudo pip install virtualenv```
-- Rope: ```pip install rope``` 
-- Jedi: ```pip install jedi``` 
-- flake: ```pip install flake8``` 
-- autopep: ```pip install autopep8```  
-- yapf: ```pip install yapf``` 
-- pygments : ```pip install pygments```
+- - ```sudo apt-get install python-pip```
+- - ```sudo pip install virtualenv```
+- - Rope: ```pip install rope``` 
+- - Jedi: ```pip install jedi``` 
+- - flake: ```pip install flake8``` 
+- - autopep: ```pip install autopep8```  
+- - yapf: ```pip install yapf``` 
+- - pygments : ```pip install pygments```
 -  vs code (backup in case new language is used) ```sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make```
- - ```sudo apt-get update```
- - ```sudo apt-get install ubuntu-make```
- - ```umake web visual-studio-code```
+- - ```sudo apt-get update```
+- - ```sudo apt-get install ubuntu-make```
+- - ```umake web visual-studio-code```
 - Extensions for vs code: 
-1. ```Auto Close Tag```
-2. ```Auto Rename Tag```
-3. ```Color Highlight```
-4. ```Project manager```
-5. ```Paste and Indent```
-6. ```Path Intellisense```
-7. ```Prettier```
+- - ```Auto Close Tag```
+- - ```Auto Rename Tag```
+- - ```Color Highlight```
+- - ```Project manager```
+- - ```Paste and Indent```
+- - ```Path Intellisense```
+- - ```Prettier```
 - Emacs ```sudo apt-get install emacs26 auctex ```
 - Spotify
-1. ```sudo apt-get install snapd```
-2. ```sudo snap install spotify```
+- - ```sudo apt-get install snapd```
+- - ```sudo snap install spotify```
 - Web dev tools
-1. npm (look up)
-2. react
+- - npm (look up)
+- - react
 - Skype
 - Ranger (preinstalled on ubuntu) 
 
