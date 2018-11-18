@@ -75,7 +75,7 @@
 - iedit (change multiple words at the same time)
 
 ### GitHub Integration 
-- magit (git integration)
+- magit 
 
 ### Miscellaneous packages
 - which-key (key assignments help)
