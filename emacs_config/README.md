@@ -80,7 +80,7 @@
 - projectile (easier project navigation)
 - counsel-projectile (ivy integration of projectile)
 
-## Coding
+## Packages That Make Coding Easier And Faster
 - better-shell (improves shell functionality within emacs)
 - Auctex (smoother latex editing)
 - dump-jump (jump to definition) 
