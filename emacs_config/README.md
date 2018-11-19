@@ -32,7 +32,7 @@
 
 ### Base16 
 - base16-ocean (Personal Favorite)
-- base16-oceannext
+- base16-ocean-next
 - base16-solarized-dark/light 
 
 ### Flashy    
