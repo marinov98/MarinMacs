@@ -440,16 +440,6 @@
     (setq web-mode-enable-current-element-highlight t))
 
 #+END_SRC
-** Company-Web
-#+BEGIN_SRC emacs-lisp
-;(use-package company-web-html
- ;   :ensure t
- ;   :config
- ;   (defun 'web-intellisense ()
- ;   "Company-web auto-complete."
- ;   (set (make-local-variable 'company-backends) '(company-css company-web-html company-yasnippet company-files)))
- ;   (add-hook 'web-mode-hook  'web-intellisense))
-#+END_SRC
 ** CssWatcher
 #+BEGIN_SRC emacs-lisp
 ;; (use-package csswatcher
