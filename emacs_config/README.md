@@ -24,14 +24,9 @@
 - Inconsolata
 
 ## To Be Tested Packages
-- use-package (cleaner way to define packages and faster)
 - Reveal.js (create presentations with org mode)
-- pdf-tools (emacs support for pdf)
 - skewer (live web development)
-- Muse (writing formatting)
-- Flyspell (spell checker)
-- wc Mode (word count checker)
-- WriteGood Mode (improves sentence structure/word choice)
+
 
 ## Favorite Themes
 
@@ -101,6 +96,9 @@
 ## Org
 - org-ac (auto-completion for org)
 - org-bullets (nicer org formatting)
+- pdf tools (pdf support in emacs)
+- wc-mode (word counter)
+- writegood-mode (sentence/word choice checker)
 
 ## C++ packages: 
 - c++-modern-font-lock (integrates c++11 and above) (OPTIONAL)
