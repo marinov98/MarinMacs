@@ -99,6 +99,11 @@
      :ensure t
      :init
      (global-flycheck-mode t))
+
+(use-package flycheck-pos-tip
+    :ensure t
+    :config
+    (flycheck-pos-tip-mode))
 #+END_SRC
 ** Company
 #+BEGIN_SRC emacs-lisp
@@ -386,7 +391,7 @@
     :config
     (setq irony--compile-options
       '("-std=c++14"        ;; general 
-        "-stdlib=libc++")) ;; for mac only 
+        "-stdlib=libc++")) ;; for mac only
     :hook (flycheck-mode . flycheck-irony-setup))
 #+END_SRC
 ** ggtags 
