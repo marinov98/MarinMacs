@@ -1,4 +1,13 @@
+#+TITLE: The Marinov Init File 
+#+TAGS: Emacs
+#+DESCRIPTION: Init file using use-package 
+
+* Repo
+#+BEGIN_SRC emacs-lisp
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+#+END_SRC
+* Themes
+#+BEGIN_SRC emacs-lisp
 
 (use-package zerodark-theme
     :ensure t)
@@ -12,6 +21,10 @@
 (use-package base16-theme
     :ensure t)
 
+#+END_SRC
+* General Settings
+#+BEGIN_SRC emacs-lisp
+
 (setq c-basic-offset 4)    ;; indents 4 chars
 (setq tab-width 4)         ;; and 4 char wide for TAB
 (setq indent-tabs-mode nil);; And force use of spaces
@@ -24,6 +37,10 @@
 (tool-bar-mode -1) ;; disable tool bar 
 ;; (setq make-backup-files nil) (Uncomment if you want to disable emacs creating backup files)
 
+#+END_SRC
+* KeyBindings
+#+BEGIN_SRC emacs-lisp
+
 ;; KeyBindings
 (global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
 (global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file
@@ -32,6 +49,10 @@
 (global-set-key (kbd "<f5>") 'revert-buffer) ;; allow window reload using F5
 (global-set-key (kbd "s-r") 'compile) ;; compile code
 (global-set-key (kbd "C-c C-e") 'eval-buffer) ;; reload
+
+#+END_SRC
+* Fun Packages
+#+BEGIN_SRC emacs-lisp
 
 ;; Beacon
 (use-package beacon
@@ -50,13 +71,20 @@
                            (bookmarks . 5)
                            (projects . 5))))
 
+#+END_SRC
+
+* Coding Convienience Packages
+** Auto-Complete
+#+BEGIN_SRC emacs-lisp
 (use-package auto-complete 
   :ensure t
   :init
   (progn
   (ac-config-default)
   (global-auto-complete-mode t)))
-
+#+END_SRC
+** Yasnippet
+#+BEGIN_SRC emacs-lisp
 (use-package yasnippet
   :ensure t
   :init 
@@ -64,26 +92,37 @@
 
 (use-package yasnippet-snippets 
   :ensure t)
-
+#+END_SRC 
+** FlyCheck
+#+BEGIN_SRC emacs-lisp
 (use-package flycheck
      :ensure t
      :init
      (global-flycheck-mode t))
-
+#+END_SRC
+** Company
+#+BEGIN_SRC emacs-lisp
 (use-package company
     :ensure t
     :config
     (setq company-idle-delay 0) ;; faster autcompletion
     (setq company-minimum-prefix-length 3) ;; show completions after 3 chars
-    (setq global-company-mode t))
+    (setq global-company-mode t)) 
+#+END_SRC
 
+** Latex 
+#+BEGIN_SRC emacs-lisp
 (use-package tex
     :ensure auctex)
-
+#+END_SRC
+** Iedit
+#+BEGIN_SRC emacs-lisp
 (use-package iedit
 :ensure t
 :bind (("C-c c" . iedit-mode)))
-
+#+END_SRC
+** Dump-Jump
+#+BEGIN_SRC emacs-lisp
 (use-package dumb-jump
   :bind (("C-M-g" . dumb-jump-go-other-window)
          ("M-g j" . dumb-jump-go)
@@ -92,29 +131,43 @@
          ("M-g z" . dumb-jump-go-prefer-external-other-window))
   :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
   :ensure)
-
+; dumb-jump-go C-M-g core functionality. Attempts to jump to the definition for the thing under point
+;; dumb-jump-back C-M-p jumps back to where you were when you jumped.
+;; dumb-jump-quick-look C-M-q like dumb-jump-go but only shows tooltip with file, line, and context
+#+END_SRC
+** Cider
+#+BEGIN_SRC emacs-lisp
 (use-package cider
     :ensure t)
-
-(use-package better-shell
- :ensure t
- :bind 
- (("C-`" . better-shell-shell)
- ("C-;" . better-shell-remote-open)))
-
-(use-package org 
+#+END_SRC
+** Better-Shell
+   #+BEGIN_SRC emacs-lisp
+   (use-package better-shell
+    :ensure t
+    :bind 
+    (("C-`" . better-shell-shell)
+    ("C-;" . better-shell-remote-open)))
+   #+END_SRC
+* Org
+** Org-AutoComplete
+#+BEGIN_SRC emacs-lisp
+ (use-package org 
   :ensure t
   :pin org)
 
 (use-package org-ac
   :config 
   (org-ac/config-default))
-
+#+END_SRC
+** Bullets
+#+Begin_SRC emacs-lisp
 (use-package org-bullets
   :ensure t
   :config
   (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
-
+#+END_SRC
+** Writing
+#+BEGIN_SRC emacs-lisp 
 ;; Pdf tools
 (use-package pdf-tools
     :ensure t)
@@ -135,6 +188,10 @@
     :ensure t
     :bind 
     ("C-." . writegood-mode))
+ #+END_SRC
+#+END_SRC
+* Extra Productivity Helper (Which Key & Ace-Window)
+#+BEGIN_SRC emacs-lisp
 
 ;; Which-Key
 (use-package which-key
@@ -149,6 +206,10 @@
      (global-set-key (kbd "M-o") 'ace-window)
      (setq aw-background nil)
      (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
+
+#+END_SRC
+* Modeline
+#+BEGIN_SRC emacs-lisp
 
 (use-package telephone-line
     :ensure t
@@ -169,6 +230,11 @@
            (accent . (telephone-line-major-mode-segment))
            (evil   . (telephone-line-airline-position-segment))))
     (telephone-line-mode 1))
+
+#+END_SRC
+
+* Ivy, Swiper, Counsel & Avy
+#+BEGIN_SRC emacs-lisp
 
 ;; Ivy
 (use-package ivy
@@ -210,6 +276,10 @@
    :bind 
    (("C-:" . avy-goto-word-1)))
 
+#+END_SRC
+* Directory Navigation (Neotree, Ranger, Projectile)
+#+BEGIN_SRC emacs-lisp
+
 ;; All icons
 (use-package all-the-icons)
 
@@ -242,6 +312,10 @@
  (use-package counsel-projectile
     :ensure t)
 
+#+END_SRC
+* Magit (Github Integration)
+#+BEGIN_SRC emacs-lisp
+
 (use-package magit
     :ensure t
     :init
@@ -249,11 +323,17 @@
     (bind-key "C-x g" 'magit-status)
     (bind-key "C-x M-g" 'magit-dispatch-popup)))
 
+#+END_SRC
+* C++
+** Modern Font Lock
+#+BEGIN_SRC emacs-lisp
 (use-package modern-cpp-font-lock
   :ensure t
   :config
   (modern-c++-font-lock-global-mode t))
-
+#+END_SRC
+** Clang-Format
+#+BEGIN_SRC emacs-lisp
 (use-package clang-format 
     :ensure t
     :bind 
@@ -261,6 +341,9 @@
     ("C-c f" . clang-format-buffer)) ;; format entire file
     :config
     (setq clang-format-style-option ".clang-format"))
+#+END_SRC
+** Company-Irony Intellisense
+#+BEGIN_SRC emacs-lisp
 
 ;; Begin auto-completion for C++
 (use-package company-irony
@@ -294,33 +377,47 @@
   (add-hook 'c++-mode-hook 'company-mode)
   (add-hook 'c-mode-hook 'company-mode))
 
+
+#+END_SRC
+** Flycheck-Irony Linter 
+ #+BEGIN_SRC emacs-lisp
 (use-package flycheck-irony
     :ensure t
     :hook (flycheck-mode . flycheck-irony-setup)
     :config
     (setq irony--compile-options
       '("-std=c++14"        ;; general 
-        "-stdlib=libc++"))) ;; for mac only
-
+        "-stdlib=libc++"))) ;; for mac only 
+    
+#+END_SRC
+** ggtags 
+#+BEGIN_SRC emacs-lisp
 (use-package ggtags
     :ensure t
     :config 
     (add-hook 'c-mode-common-hook
           (lambda ()
             (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
-              (ggtags-mode 1)))))
-
+              (ggtags-mode 1))))) 
+#+END_SRC
+* Python
+** Elpy
+#+BEGIN_SRC emacs-lisp
 (use-package elpy
     :ensure t
     :config 
     (elpy-enable))
-
+#+END_SRC
+** Virtualenv
+#+BEGIN_SRC emacs-lisp
 ;(use-package virtualenvwrapper
  ;   :ensure t
   ;  :config
   ;  (venv-initialize-interactive-shells)
   ;  (venv-initialize-eshell))
-
+#+END_SRC
+** Company-Jedi Intellisense
+#+BEGIN_SRC emacs-lisp
 (use-package company-jedi
     :ensure t
     :config
@@ -331,7 +428,10 @@
   (add-to-list 'company-backends 'company-jedi))
 
 (add-hook 'python-mode-hook 'add-intellisense-hook)
-
+#+END_SRC
+* Web-Development 
+** Web-Mode
+#+BEGIN_SRC emacs-lisp
 (use-package web-mode
     :ensure t
     :config
@@ -359,17 +459,25 @@
     (setq web-mode-enable-current-column-highlight t)
     (setq web-mode-enable-current-element-highlight t))
 
+#+END_SRC
+** CssWatcher
+#+BEGIN_SRC emacs-lisp
 ;; (use-package csswatcher
     ;;:ensure t
     ;;:config
     ;;((ac-html-csswatcher-setup)))
-
+#+END_SRC
+** Emmet 
+#+BEGIN_SRC emacs-lisp
 (use-package emmet-mode
     :ensure t
     :config
     (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
     (add-hook 'css-mode-hook  'emmet-mode)) ;; enable Emmet's css abbreviation.)
+#+END_SRC
 
+* JavaScript
+#+BEGIN_SRC emacs-lisp
 ;; Js2-mode
 (use-package js2-mode
     :ensure t)
@@ -424,7 +532,9 @@
 (flycheck-add-mode 'javascript-eslint 'javascript-mode)
 
 ;;;;;;;; JavaScript end
-
+#+END_SRC
+* Csharp 
+#+BEGIN_SRC emacs-lisp
 (use-package csharp-mode
     :ensure t)
 
@@ -436,3 +546,4 @@
   (electric-pair-local-mode 1))
 (add-hook 'csharp-mode-hook 'csharp-development)
 (add-hook 'csharp-mode-hook 'omnisharp-mode)
+#+END_SRC
