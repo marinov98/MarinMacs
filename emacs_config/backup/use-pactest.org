@@ -1,20 +1,73 @@
-#+TITLE: 
-#+TAGS: 
-#+DESCRIPTION: 
+#+TITLE: The Marinov Init FIle 
 
 * Repo
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+#+END_SRC
+* Themes
+#+BEGIN_SRC emacs-lisp
+(use-package zerodark-theme
+  :ensure t)
+
+(use-package zenburn-theme
+  :ensure t
+)
+
+(use-package base16-theme
+:ensure t)
+#+END_SRC
 * General Settings
 #+BEGIN_SRC emacs-lisp
+(setq c-basic-offset 4)    ;; indents 4 chars
+(setq tab-width 4)         ;; and 4 char wide for TAB
+(setq indent-tabs-mode nil);; And force use of spaces
+(global-font-lock-mode 1)  ;; syntax highlighting
+(global-linum-mode 1)      ;; line numbers
+(electric-pair-mode)       ;; auto closing brackets
+(fset 'yes-or-no-p 'y-or-n-p) ;; change yes or no to y or n
+(menu-bar-mode -1) ;; disable menu bar
+(toggle-scroll-bar -1) ;; disable scroll bar
+(tool-bar-mode -1) ;; disable tool bar 
+;; (setq make-backup-files nil) (Uncomment if you want to disable emacs creating backup files)
 #+END_SRC
 * KeyBindings
+#+BEGIN_SRC emacs-lisp
+;; KeyBindings
+(global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
+(global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file
+(global-set-key (kbd "C-x C-a") 'move-beginning-of-line)
+(global-set-key (kbd "C-a") 'back-to-indentation)
+(global-set-key (kbd "<f5>") 'revert-buffer) ;; allow window reload using F5
+(global-set-key (kbd "C-`") 'better-shell-shell) ;; open better shell 
+(global-set-key (kbd "C-;") 'better-shell-remote-open)
+(global-set-key (kbd "s-r") 'compile) ;; compile code
+(global-set-key (kbd "C-c C-e") 'eval-buffer) ;; reload
+#+END_SRC
 * Fun Packages
 * Extra Productivity Helper (Which Key & Ace-Window)
 * Modeline
-* Ivy, Swiper & Counsel
+* Ivy, pSwiper & Counsel
 * Directory Navigation (Neotree, Ranger, Projectile)
 * Coding Convienience Packages
 ** Auto-Complete
+#+BEGIN_SRC emacs-lisp
+(use-package auto-complete 
+  :ensure t
+  :init
+  (progn
+  (ac-config-default)
+  (global-auto-complete-mode t)))
+#+END_SRC
 ** Yasnippet
+#+BEGIN_SRC emacs-lisp
+(use-package yasnippet
+  :ensure t
+  :init 
+  (yas-global-mode 1))
+
+(use-package yasnippet-snippets 
+  :ensure t)
+#+END_SRC 
 ** Company
 ** Latex
 ** FlyCheck
@@ -26,7 +79,21 @@
 * Magit (Github Integration)
 * Org
 ** Org-AutoComplete
+#+BEGIN_SRC emacs-lisp
+;; (use-package org 
+;;  :ensure t
+;;  :pin org)
+;;(use-package org-ac
+;;  :config 
+;;  (org-ac/config-default))
+#+END_SRC
 ** Bullets
+#+Begin_SRC emacs-lisp
+(use-package org-bullets
+:ensure t
+:config
+(add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
+#+END_SRC
 * C++
 ** Modern Font Lock
 ** Clang-Format
