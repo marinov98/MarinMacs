@@ -1,6 +1,9 @@
 ;;; package --- Summary
 ;;; Commentary:
 ;;; Code:
+
+(setq debug-on-error t)
+
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
@@ -11,12 +14,13 @@
 	     '("melpa3" . "http://www.mirrorservice.org/sites/stable.melpa.org/packages/"))
 (package-initialize)
 
-;;(unless (package-installed-p 'use-package)
-;;	(package-refresh-contents)
-;;	(package-install 'use-package))
+;;  install use-package unless it has been previously installed
+(unless (package-installed-p 'use-package)
+	(package-refresh-contents)
+	(package-install 'use-package))
 
 
-(org-babel-load-file (expand-file-name "~/.emacs.d/marinit.org"))
+(org-babel-load-file (expand-file-name "~/.emacs.d/marinov.org"))
 ;;; init.el ends here
 
 (custom-set-faces
@@ -38,7 +42,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (which-key ggtags cider dashboard beacon telephone-line ranger gruvbox-theme latex-math-preview swiper-helm better-shell org-ac tabbar zerodark-theme yasnippet-snippets xref-js2 web-mode virtualenvwrapper virtualenv treemacs spacemacs-theme seti-theme rtags python-mode pylint org-bullets org omnisharp oceanic-theme neotree modern-cpp-font-lock magit js2-refactor jedi irony-eldoc iedit google-c-style flymake-jslint flymake-jshint flymake-cursor flycheck-irony flycheck-clang-analyzer emmet-mode elpy dumb-jump counsel-projectile company-web company-tern company-irony-c-headers company-irony clang-format bind-key base16-theme auto-complete-clang auto-complete-c-headers ac-js2 ac-html-csswatcher ac-html)))
+    (company-jedi which-key ggtags cider dashboard beacon telephone-line ranger gruvbox-theme latex-math-preview swiper-helm better-shell org-ac tabbar zerodark-theme yasnippet-snippets xref-js2 web-mode virtualenvwrapper virtualenv treemacs spacemacs-theme seti-theme rtags python-mode pylint org-bullets org omnisharp oceanic-theme neotree modern-cpp-font-lock magit js2-refactor irony-eldoc iedit google-c-style flymake-jslint flymake-jshint flymake-cursor flycheck-irony flycheck-clang-analyzer emmet-mode elpy dumb-jump counsel-projectile company-web company-tern company-irony-c-headers company-irony clang-format bind-key base16-theme auto-complete-clang auto-complete-c-headers ac-js2 ac-html-csswatcher ac-html)))
  '(pdf-view-midnight-colors (quote ("#fdf4c1" . "#282828"))))
 (put 'set-goal-column 'disabled nil)
 
