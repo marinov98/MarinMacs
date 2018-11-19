@@ -1,4 +1,4 @@
-+TITLE: The Marinov Init File 
+#+TITLE: The Marinov Init File 
 #+TAGS: Emacs
 #+DESCRIPTION: Init file using use-package 
 
@@ -467,60 +467,50 @@
 #+END_SRC
 
 * JavaScript
-** Js2 (Mode, Refactoring & xref)
 #+BEGIN_SRC emacs-lisp
-
-;; js2-mode
+;; Js2-mode
 (use-package js2-mode
-    :ensure t
-    :init
-(progn
-(add-hook 'js-mode-hook 'js2-minor-mode)))
-
-;; Refactor
-(use-package js2-refactor
-    :ensure t
-    :config 
-    (progn
-    (js2r-add-keybindings-with-prefix "C-c C-m")
-    (add-hook 'js2-mode-hook #'js2-refactor-mode)))
-
-;; Xref
-(use-package xref-js2
     :ensure t)
 
-(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+(use-package js2-refactor
+    :ensure t)
 
+(use-package company-tern
+   :ensure t
+   :ensure tern)
+
+(require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+;; Better imenu
+(add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
+;; refactor and xref
+(require 'js2-refactor)
+(require 'xref-js2)
+
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+(js2r-add-keybindings-with-prefix "C-c C-r")
 (define-key js2-mode-map (kbd "C-k") #'js2r-kill)
 
-;; js-mode (which js2 is based on) binds "M-." which conflicts with xref, so
+;; Company-tern Intellisense for JavaScript
+(require 'company-tern)
+(add-to-list 'company-backends 'company-tern)
+(add-hook 'js2-mode-hook (lambda ()
+                           (tern-mode)
+                           (company-mode)))
+                           
+;; Disable completion keybindings, as we use xref-js2 instead
+(define-key tern-mode-keymap (kbd "M-.") nil)
+(define-key tern-mode-keymap (kbd "M-,") nil)
+
+;; Js-mode (which js2 is based on) binds "M-." which conflicts with xref, so
 ;; unbind it.
 (define-key js-mode-map (kbd "M-.") nil)
 
 (add-hook 'js2-mode-hook (lambda ()
-  (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
-#+END_SRC
-** Company-Tern Intellisense
-#+BEGIN_SRC emacs-lisp
+			   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
 
-(use-package company-tern
-    :ensure t
-    :config
-    (require 'company)
-    (add-to-list 'company-backends 'company-tern)
-    (add-hook 'js2-mode-hook (lambda ()
-                           (tern-mode)
-                           (company-mode))))
-
-;; Disable completion keybindings, as we use xref-js2 instead
-(define-key tern-mode-keymap (kbd "M-.") nil)
-(define-key tern-mode-keymap (kbd "M-,") nil)
-#+END_SRC
-** ES-Lint Linter
-#+BEGIN_SRC emacs-lisp
-;; turn on flychecking globally
-(add-hook 'after-init-hook #'global-flycheck-mode)
-
+;; Es-lint for javascript
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 
 (setq-default flycheck-disabled-checkers
@@ -531,6 +521,7 @@
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 (flycheck-add-mode 'javascript-eslint 'javascript-mode)
 
+;;;;;;;; JavaScript end
 #+END_SRC
 * Csharp 
 #+BEGIN_SRC emacs-lisp
