@@ -194,7 +194,6 @@
 ;; Ranger
 (use-package ranger
     :ensure t
-    :defer t
     :config
     (ranger-override-dired-mode t))
 
