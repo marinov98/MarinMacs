@@ -131,9 +131,6 @@
          ("M-g z" . dumb-jump-go-prefer-external-other-window))
   :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
   :ensure)
-; dumb-jump-go C-M-g core functionality. Attempts to jump to the definition for the thing under point
-;; dumb-jump-back C-M-p jumps back to where you were when you jumped.
-;; dumb-jump-quick-look C-M-q like dumb-jump-go but only shows tooltip with file, line, and context
 #+END_SRC
 ** Cider
 #+BEGIN_SRC emacs-lisp
