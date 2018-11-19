@@ -72,6 +72,7 @@
 - avy (fast word navigation)
 
 ## Directory Navigation
+- all-the-icons (provides icon-images)
 - neotree (popup sidebar for easy directory/file navigation)
 - ranger (replaces dired mode)
 - projectile (easier project navigation)
@@ -79,7 +80,6 @@
 
 ## Packages That Make Coding Easier And Faster
 - better-shell (improves shell functionality within emacs)
-- Auctex (smoother latex editing)
 - dump-jump (jump to definition) 
 - company (auto-completion)
 - flycheck (linter/syntax checker ) 
@@ -94,6 +94,7 @@
 ## Org
 - org-ac (auto-completion for org)
 - org-bullets (nicer org formatting)
+- auctex & tex(smoother latex editing)
 - pdf tools (pdf support in emacs)
 - wc-mode (word counter)
 - writegood-mode (sentence/word choice checker)
