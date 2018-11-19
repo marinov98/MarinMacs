@@ -1,4 +1,6 @@
-#+TITLE: The Marinov Init FIle 
+#+TITLE: The Marinov Init File 
+#+TAGS: Emacs
+#+DESCRIPTION: Init file using use-package 
 
 * Repo
 #+BEGIN_SRC emacs-lisp
@@ -7,14 +9,18 @@
 * Themes
 #+BEGIN_SRC emacs-lisp
 (use-package zerodark-theme
-  :ensure t)
+    :ensure t)
 
 (use-package zenburn-theme
-  :ensure t
+    :ensure t
 )
 
 (use-package base16-theme
-:ensure t)
+    :ensure t)
+
+(use-package gruvbox-theme
+    :ensure t)
+
 #+END_SRC
 * General Settings
 #+BEGIN_SRC emacs-lisp
@@ -45,6 +51,19 @@
 #+END_SRC
 * Fun Packages
 * Extra Productivity Helper (Which Key & Ace-Window)
+#+BEGIN_SRC emacs-lisp
+(use-package which-key
+	:ensure t 
+	:config
+	(which-key-mode))
+
+(use-package ace-window
+     :ensure t
+     :init 
+     (global-set-key (kbd "M-o") 'ace-window)
+     (setq aw-background nil)
+     (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
+#+END_SRC
 * Modeline
 * Ivy, pSwiper & Counsel
 * Directory Navigation (Neotree, Ranger, Projectile)
@@ -71,6 +90,12 @@
 ** Company
 ** Latex
 ** FlyCheck
+#+BEGIN_SRC emacs-lisp
+(use-package flycheck
+     :ensure t
+     :init
+     (global-flycheck-mode t))
+#+END_SRC
 ** Iedit
 ** Dump-Jump
 ** Cider
@@ -80,19 +105,20 @@
 * Org
 ** Org-AutoComplete
 #+BEGIN_SRC emacs-lisp
-;; (use-package org 
-;;  :ensure t
-;;  :pin org)
-;;(use-package org-ac
-;;  :config 
-;;  (org-ac/config-default))
+ (use-package org 
+  :ensure t
+  :pin org)
+
+(use-package org-ac
+  :config 
+  (org-ac/config-default))
 #+END_SRC
 ** Bullets
 #+Begin_SRC emacs-lisp
 (use-package org-bullets
-:ensure t
-:config
-(add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
 #+END_SRC
 * C++
 ** Modern Font Lock
