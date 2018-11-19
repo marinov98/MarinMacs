@@ -131,7 +131,6 @@
 
 ## Web-Development Packages:
 - csswatcher (indexes and keeps track of css)
-- company-web (auto-completion)
 - web-mode (allows for auto completion and automatic tag closing) 
 - emmet-mode (increase html/css productivity with snippets) (OPTIONAL)
 
