@@ -482,6 +482,9 @@
 (use-package js2-refactor
     :ensure t)
 
+(use-package xref-js2
+    :ensure t)
+
 (use-package company-tern
    :ensure t
    :ensure tern)
