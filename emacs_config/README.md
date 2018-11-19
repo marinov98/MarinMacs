@@ -127,6 +127,7 @@
 - js2-refactor (powerful refactoring)
 - xref-js2 (easy jumping to definitions and refrences)
 - company-tern (Javascript intellisense)
+- add-node-modules-path (sets proper path for modules)
 
 ## Web-Development Packages:
 - csswatcher (indexes and keeps track of css)
