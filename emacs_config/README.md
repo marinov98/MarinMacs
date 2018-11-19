@@ -96,7 +96,7 @@
 - org-ac (auto-completion for org)
 - org-bullets (nicer org formatting)
 - auctex & tex(smoother latex editing)
-- pdf tools (pdf support in emacs)
+- pdf-tools (pdf support in emacs)
 - wc-mode (word counter)
 - writegood-mode (sentence/word choice checker)
 
