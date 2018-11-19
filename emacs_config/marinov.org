@@ -73,6 +73,81 @@
 
 #+END_SRC
 
+* Coding Convienience Packages
+** Auto-Complete
+#+BEGIN_SRC emacs-lisp
+(use-package auto-complete 
+  :ensure t
+  :init
+  (progn
+  (ac-config-default)
+  (global-auto-complete-mode t)))
+#+END_SRC
+** Yasnippet
+#+BEGIN_SRC emacs-lisp
+(use-package yasnippet
+  :ensure t
+  :init 
+  (yas-global-mode 1))
+
+(use-package yasnippet-snippets 
+  :ensure t)
+#+END_SRC 
+** FlyCheck
+#+BEGIN_SRC emacs-lisp
+(use-package flycheck
+     :ensure t
+     :init
+     (global-flycheck-mode t))
+#+END_SRC
+** Company
+#+BEGIN_SRC emacs-lisp
+(use-package company
+    :ensure t
+    :config
+    (setq company-idle-delay 0) ;; faster autcompletion
+    (setq company-minimum-prefix-length 3) ;; show completions after 3 chars
+    (setq global-company-mode t)) 
+#+END_SRC
+
+** Latex 
+#+BEGIN_SRC emacs-lisp
+(use-package tex
+    :ensure auctex)
+#+END_SRC
+** Iedit
+#+BEGIN_SRC emacs-lisp
+(use-package iedit
+:ensure t
+:bind (("C-c c" . iedit-mode)))
+#+END_SRC
+** Dump-Jump
+#+BEGIN_SRC emacs-lisp
+(use-package dumb-jump
+  :bind (("M-g o" . dumb-jump-go-other-window)
+         ("M-g j" . dumb-jump-go)
+         ("M-g i" . dumb-jump-go-prompt)
+         ("M-g x" . dumb-jump-go-prefer-external)
+         ("M-g z" . dumb-jump-go-prefer-external-other-window))
+  :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
+  :ensure)
+; dumb-jump-go C-M-g core functionality. Attempts to jump to the definition for the thing under point
+;; dumb-jump-back C-M-p jumps back to where you were when you jumped.
+;; dumb-jump-quick-look C-M-q like dumb-jump-go but only shows tooltip with file, line, and context
+#+END_SRC
+** Cider
+#+BEGIN_SRC emacs-lisp
+(use-package cider
+    :ensure t)
+#+END_SRC
+** Better-Shell
+   #+BEGIN_SRC emacs-lisp
+   (use-package better-shell
+    :ensure t
+    :bind 
+    (("C-`" . better-shell-shell)
+    ("C-;" . better-shell-remote-open)))
+   #+END_SRC
 * Org
 ** Org-AutoComplete
 #+BEGIN_SRC emacs-lisp
@@ -90,6 +165,30 @@
   :ensure t
   :config
   (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
+#+END_SRC
+** Writing
+#+BEGIN_SRC emacs-lisp 
+;; Pdf tools
+(use-package pdf-tools
+    :ensure t)
+
+(use-package org-pdfview
+    :ensure t)
+
+(require 'pdf-tools)
+(require 'org-pdfview)
+
+;; writegood and wc mode 
+(use-package wc-mode
+    :ensure t
+    :bind 
+    ("C-x C-j" . wc-mode))
+
+(use-package writegood-mode
+    :ensure t
+    :bind 
+    ("C-." . writegood-mode)
+ #+END_SRC
 #+END_SRC
 * Extra Productivity Helper (Which Key & Ace-Window)
 #+BEGIN_SRC emacs-lisp
@@ -214,82 +313,6 @@
     :ensure t)
 
 #+END_SRC
-* Coding Convienience Packages
-** Auto-Complete
-#+BEGIN_SRC emacs-lisp
-(use-package auto-complete 
-  :ensure t
-  :init
-  (progn
-  (ac-config-default)
-  (global-auto-complete-mode t)))
-#+END_SRC
-** Yasnippet
-#+BEGIN_SRC emacs-lisp
-(use-package yasnippet
-  :ensure t
-  :init 
-  (yas-global-mode 1))
-
-(use-package yasnippet-snippets 
-  :ensure t)
-#+END_SRC 
-** FlyCheck
-#+BEGIN_SRC emacs-lisp
-(use-package flycheck
-     :ensure t
-     :init
-     (global-flycheck-mode t))
-#+END_SRC
-** Company
-#+BEGIN_SRC emacs-lisp
-(use-package company
-    :ensure t
-    :config
-    (setq company-idle-delay 0) ;; faster autcompletion
-    (setq company-minimum-prefix-length 3) ;; show completions after 3 chars
-    (setq global-company-mode t)) 
-#+END_SRC
-
-** Latex
-#+BEGIN_SRC emacs-lisp
-(use-package tex
-    :ensure auctex)
-#+END_SRC
-** Iedit
-#+BEGIN_SRC emacs-lisp
-(use-package iedit
-:ensure t
-:bind (("C-c c" . iedit-mode)))
-#+END_SRC
-** Dump-Jump
-#+BEGIN_SRC emacs-lisp
-(use-package dumb-jump
-  :bind (("M-g o" . dumb-jump-go-other-window)
-         ("M-g j" . dumb-jump-go)
-         ("M-g i" . dumb-jump-go-prompt)
-         ("M-g x" . dumb-jump-go-prefer-external)
-         ("M-g z" . dumb-jump-go-prefer-external-other-window))
-  :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
-  :ensure)
-; dumb-jump-go C-M-g core functionality. Attempts to jump to the definition for the thing under point
-;; dumb-jump-back C-M-p jumps back to where you were when you jumped.
-;; dumb-jump-quick-look C-M-q like dumb-jump-go but only shows tooltip with file, line, and context
-#+END_SRC
-** Cider
-#+BEGIN_SRC emacs-lisp
-(use-package cider
-    :ensure t)
-#+END_SRC
-** Better-Shell
-   #+BEGIN_SRC emacs-lisp
-   (use-package better-shell
-    :ensure t
-    :bind 
-    (("C-`" . better-shell-shell)
-    ("C-;" . better-shell-remote-open)))
-   #+END_SRC
-
 * Magit (Github Integration)
 #+BEGIN_SRC emacs-lisp
 
