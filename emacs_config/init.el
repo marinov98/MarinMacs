@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(setq debug-on-error t)
+(setq debug-on-error t) ;; enable debugging in case anything goes wrong
 
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -19,7 +19,7 @@
 	(package-refresh-contents)
 	(package-install 'use-package))
 
-
+;; expand marinov.org and convert it to marinov.el to start-up emacs
 (org-babel-load-file (expand-file-name "~/.emacs.d/marinov.org"))
 ;;; init.el ends here
 
