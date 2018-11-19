@@ -4,6 +4,7 @@
 
 (setq debug-on-error t) ;; enable debugging in case anything goes wrong
 
+;; allow the use of installing packages
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
