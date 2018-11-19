@@ -12,7 +12,7 @@
 - When you see ```RET``` it means hit the ENTER key
 - In emacs C = ctrl and M = alt 
 - Example: ```M-x``` = alt + x  ```C-x C-f``` = ctrl + x ctrl + f
-- You cannot start installing packages until you have ```(require `package)``` in your init (init.el or .emacs) file
+- You cannot start installing packages until you have ```(require `package)``` in your [init](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/init.el) (init.el or .emacs) file
 - Once you have it ```M-x package-list-packages RET``` will open up the package list
 - Additonally you can run ```M-x package-install RET package_name RET``` if you know the exact package that you want 
 - If you just want to get it over with, simply copy my init.el and marinov.org all the packages should install and configure automatically (power of use-package), **however** you would still have to install the servers for jedi and irony
