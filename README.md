@@ -105,6 +105,9 @@
   - look up how to install nodejs
   - After installing node,  install eslint (npm install eslint)
   
+  #### Javascript autocompletion
+  - run ```sudo npm install -g tern```
+  
   ### HTML/CSS
   - Csswatcher : ```sudo cpan i CSS::Watcher```
   
