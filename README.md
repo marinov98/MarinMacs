@@ -103,7 +103,7 @@
   
   #### Nodejs
   - look up how to install nodejs
-  - After installing node,  install eslint (npm install eslint)
+  - install eslint ```npm install eslint```
   
   #### Javascript autocompletion
   - run ```sudo npm install -g tern```
