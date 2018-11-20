@@ -55,6 +55,9 @@
 - debugging on error 
 - tool bar turned off
 
+## package-helper-manager
+- use-package (provides the use-package syntax and makes emacs download files if they are not intalled yet)
+
 ## Fun packages
 - dashboard (customizable start up screen)
 - beacon (light that follows your cursor)
