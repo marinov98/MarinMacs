@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(setq debug-on-error t) ;; enable debugging in case anything goes wrong
+;(setq debug-on-error t) ;; enable debugging in case anything goes wrong
 
 ;; Enable the ability to install packages
 (require 'package)
