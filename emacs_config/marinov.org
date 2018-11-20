@@ -44,7 +44,7 @@
 ;; KeyBindings
 (global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
 (global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file
-(global-set-key (kbd "C-x C-a") 'move-beginning-of-line)
+(global-set-key (kbd "M-m") 'move-beginning-of-line)
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "<f5>") 'revert-buffer) ;; allow window reload using F5
 (global-set-key (kbd "s-r") 'compile) ;; compile code
@@ -414,11 +414,15 @@
 #+END_SRC
 ** Virtualenv
 #+BEGIN_SRC emacs-lisp
-;(use-package virtualenvwrapper
- ;   :ensure t
-  ;  :config
-  ;  (venv-initialize-interactive-shells)
-  ;  (venv-initialize-eshell))
+(use-package virtualenv
+    :ensure t)
+
+(use-package virtualenvwrapper
+    :ensure t
+    :config
+    (venv-initialize-interactive-shells)
+    (venv-initialize-eshell))
+;    (setq venv-location "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/py2app/recipes/virtualenv.py"))
 #+END_SRC
 ** Company-Jedi Intellisense
 #+BEGIN_SRC emacs-lisp
