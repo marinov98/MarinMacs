@@ -72,7 +72,8 @@
   - To use ctags run ```ctags -R``` in the source directory
   
   ### Python
-  #### pyenv
+  
+  #### pyenv (python version management)
   - Ubuntu: 
   1. ```git clone https://github.com/yyuu/pyenv.git ~/.pyenv```
   2. ```git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv```
