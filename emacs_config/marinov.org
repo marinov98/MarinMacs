@@ -45,6 +45,7 @@
 (global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
 (global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file
 (global-set-key (kbd "M-m") 'move-beginning-of-line)
+(global-set-key (kbd "C-?") 'comment-region) ;; comment
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "<f5>") 'revert-buffer) ;; allow window reload using F5
 (global-set-key (kbd "s-r") 'compile) ;; compile code
@@ -94,25 +95,48 @@
 * Modeline
 #+BEGIN_SRC emacs-lisp
 
-(use-package telephone-line
-    :ensure t
-    :config
-    (setq telephone-line-primary-right-separator 'telephone-line-abs-left
-          telephone-line-secondary-right-separator 'telephone-line-abs-hollow-left)
-    (setq telephone-line-height 24
-          telephone-line-evil-use-short-tag t)
-    (setq telephone-line-lhs
-        '((evil   . (telephone-line-evil-tag-segment))
-         (accent . (telephone-line-vc-segment
-                   telephone-line-erc-modified-channels-segment
-                   telephone-line-process-segment))
-         (nil    . (telephone-line-minor-mode-segment
-                   telephone-line-buffer-segment))))
-    (setq telephone-line-rhs
-          '((nil    . (telephone-line-misc-info-segment))
-           (accent . (telephone-line-major-mode-segment))
-           (evil   . (telephone-line-airline-position-segment))))
-    (telephone-line-mode 1))
+  ;; (use-package telephone-line
+  ;;     :ensure t
+  ;;     :config
+  ;;     (setq telephone-line-primary-right-separator 'telephone-line-abs-left
+  ;;           telephone-line-secondary-right-separator 'telephone-line-abs-hollow-left)
+  ;;     (setq telephone-line-height 24
+  ;;           telephone-line-evil-use-short-tag t)
+  ;;     (setq telephone-line-lhs
+  ;;         '((evil   . (telephone-line-evil-tag-segment))
+  ;;          (accent . (telephone-line-vc-segment
+  ;;                    telephone-line-erc-modified-channels-segment
+  ;;                    telephone-line-process-segment))
+  ;;          (nil    . (telephone-line-minor-mode-segment
+  ;;                    telephone-line-buffer-segment))))
+  ;;     (setq telephone-line-rhs
+  ;;           '((nil    . (telephone-line-misc-info-segment))
+  ;;            (accent . (telephone-line-major-mode-segment))
+  ;;            (evil   . (telephone-line-airline-position-segment))))
+  ;;     (telephone-line-mode 1))
+
+  ;; More options
+
+  ;; Spaceline
+  ;; (use-package spaceline
+  ;;    :ensure t
+  ;;    :init
+  ;;    (require 'spaceline-config)
+  ;;    :config
+  ;;    (spaceline-spacemacs-theme))
+
+  ;; Powerline
+
+ (use-package powerline
+       :ensure t
+       :config
+       (powerline-default-theme))
+       ;(powerline-center-theme))
+       ;(powerline-center-evil-theme)
+       ;(powerline-vim-theme)
+       ;(powerline-nano-theme)
+
+
 
 #+END_SRC
 
@@ -368,8 +392,6 @@
     (add-hook 'c++-mode-hook 'irony-mode)
     (add-hook 'c-mode-hook 'irony-mode)
     (add-hook 'objc-mode-hook 'irony-mode)
-    (setq company-backends '(company-irony-c-headers company-irony))
-    (setq irony-additional-clang-options '("-std=c++14"))
     (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
 
 ;; Eldoc indexing
@@ -388,10 +410,6 @@
 (use-package flycheck-irony
     :ensure t
     :after (flycheck)
-    :config
-    (setq irony--compile-options
-      '("-std=c++14"        ;; general 
-        "-stdlib=libc++")) ;; for mac only
     :hook (flycheck-mode . flycheck-irony-setup))
 #+END_SRC
 ** ggtags 
