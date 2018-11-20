@@ -32,7 +32,6 @@
   - C/C++
   - Python
   - Javascript
-  - HTML/CSS
   - GIT
   - LaTex
   - Org
@@ -110,9 +109,6 @@
   #### Javascript autocompletion
   - run ```sudo npm install -g tern```
   
-  ### HTML/CSS
-  - Csswatcher : ```sudo cpan i CSS::Watcher```
-  
   #### GIT (Github)
   - Ubuntu ```sudo apt-get install git```
   - MacOS: Should have it preinstalled from xcode command lind tools
@@ -130,4 +126,3 @@
   
   #### Org
   - Org comes with emacs, so you can directly go into using packages 
-   
