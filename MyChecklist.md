@@ -10,7 +10,12 @@
 - GDB (debugger) ```sudo apt-get install gdb```
 - tweak tool (ubuntu) ```sudo add-apt-repository universe``` ```sudo apt install gnome-tweak-tool```
 - ivy (look up)
-- csswatcher ```sudo cpan i CSS::Watcher```
+
+## Good Fonts For Programming
+- Hack (Personal Favorite)
+- Source Code Pro
+- Inconsolata
+
 ## Programming 
 - Gcc ```sudo-apt get install gcc```
 - Clang ```sudo apt-get install clang```
