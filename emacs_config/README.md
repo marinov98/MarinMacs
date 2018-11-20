@@ -17,15 +17,9 @@
 - Additonally you can run ```M-x package-install RET package_name RET``` if you know the exact package that you want 
 - If you just want to get it over with, simply copy my init.el and marinov.org all the packages should install and configure automatically (power of use-package), **however** you would still have to install the servers for jedi and irony
 
-## Good Fonts For Programming
-- Hack (Personal Favorite)
-- Source Code Pro
-- Inconsolata
-
 ## To Be Tested Packages
 - Reveal.js (create presentations with org mode)
 - skewer (live web development)
-
 
 ## Favorite Themes
 
