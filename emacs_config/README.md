@@ -49,8 +49,9 @@
 - debugging on error 
 - tool bar turned off
 
-## package-helper-manager
+## package-helper-manager & restart-emacs
 - use-package (provides the use-package syntax and makes emacs download files if they are not intalled yet)
+- the restart-emacs package allows use to keybind the command ```restart-emacs``` so that we can restart and refresh the session with one keystroke whenever we need to.
 
 ## Fun packages
 - dashboard (customizable start up screen)
@@ -105,7 +106,7 @@
 - clang-format (formats c++ code) (OPTIONAL)
 - company-irony (provides true intelligent c++ intellisense and autocompletetion)
 - company-irony-c-headers (auto completetion for header files)
-- irony (C++ minor mode based on libclang)
+- irony (C++ minor mode based on libclang works with company to give intellisense)
 - irony-eldoc (indexes c++)
 - flycheck-irony (C/C++/obj-C syntax checker)
 - ggtags (creates tags and analyzes code)
