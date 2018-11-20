@@ -119,7 +119,7 @@
 
 ## Python packages: 
 - virtualenv (interactive python shell) 
-- virtualenvwrapper
+- virtualenvwrapper (virtualized isolated python environment)
 - elpy (enables a powerful python development environment)
 - company-jedi (intellisense)
 #### Python Jedi Server :
