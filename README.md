@@ -66,8 +66,6 @@
   - Ubuntu: ```sudo apt-get install ctags```
   - MacOS: ```brew install ctags```
   ##### Additional install intructions for Ctags
-  - ```./configure --prefix=<PREFIX> --with-exuberant-ctags=/usr/local/bin/ctags```
-     ```make && make install```
   - Install pygments (directions below)
   - To use ctags run ```ctags -R``` in the source directory
   
