@@ -60,8 +60,10 @@
 - which-key (key assignments help)
 - ace-window (faster window swapping)
 
-## Modeline
-- telephone-line (better looking modeline)
+## Modeline customization (choose one)
+- telephone-line 
+- spaceline
+- powerline (currently using this one)
 
 ## Searching 
 - ivy (improved file search)
