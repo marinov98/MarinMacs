@@ -107,11 +107,11 @@
 ## C++ packages: 
 - c++-modern-font-lock (integrates c++11 and above) (OPTIONAL)
 - clang-format (formats c++ code) (OPTIONAL)
+- company-irony (provides true intelligent c++ intellisense and autocompletetion)
+- company-irony-c-headers (auto completetion for header files)
 - irony (C++ minor mode based on libclang)
 - irony-eldoc (indexes c++)
 - flycheck-irony (C/C++/obj-C syntax checker)
-- company-irony (provides true intelligent c++ intellisense and autocompletetion)
-- company-irony-c-headers (auto completetion for header files)
 - ggtags (creates tags and analyzes code)
 #### C++ Irony-server:
 - Run ```M-x irony-install-server RET``` after you put company-irony in your init file(will only execute if you have cmake and libclang installed!). You now have C++ intellisense :D
