@@ -20,7 +20,7 @@
 ;;;; Key-Bindings
 (global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
 (global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file
-(global-set-key (kbd "C-x C-a") 'move-beginning-of-line)
+(global-set-key (kbd "M-m") 'move-beginning-of-line)
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "<f5>") 'revert-buffer) ;; allow window reload using F5
 (global-set-key (kbd "C-`") 'better-shell-shell) ;; open better shell 
