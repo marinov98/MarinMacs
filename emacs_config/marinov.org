@@ -469,13 +469,6 @@
     (setq web-mode-enable-current-element-highlight t))
 
 #+END_SRC
-** CssWatcher
-#+BEGIN_SRC emacs-lisp
-;; (use-package csswatcher
-    ;;:ensure t
-    ;;:config
-    ;;((ac-html-csswatcher-setup)))
-#+END_SRC
 ** Emmet 
 #+BEGIN_SRC emacs-lisp
 (use-package emmet-mode
