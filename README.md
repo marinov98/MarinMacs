@@ -85,9 +85,7 @@
   - yapf: ```pip install yapf``` (Formatting)
   - pygments : ```pip install pygments``` (This helps ggtags for C++)
   #### virtualenv (Python interactive shell)
-  - Ubuntu ```sudo apt-get install virtualenv```
-  - MacOS ```brew install virtualenv```
-  - Now run ```pip install virtualenv```
+  - Run ```pip install virtualenv``` and ```pip install virtualnevwrapper``` afterwords
   
   ### JavaScript 
   
