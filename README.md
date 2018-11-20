@@ -77,7 +77,7 @@
   - Ubuntu: 
   1. ```git clone https://github.com/yyuu/pyenv.git ~/.pyenv```
   2. ```git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv```
-  -MacOS: ```brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper```
+  - MacOS: ```brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper```
   #### Pip (allows you to use pip install in your terminal)
   - Ubuntu ```sudo apt-get install python-pip```
   - MacOS ```brew install pip```
