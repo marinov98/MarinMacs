@@ -133,7 +133,6 @@
 - add-node-modules-path (sets proper path for modules)
 
 ## Web-Development Packages:
-- csswatcher (indexes and keeps track of css)
 - web-mode (allows for auto completion and automatic tag closing) 
 - emmet-mode (increase html/css productivity with snippets) (OPTIONAL)
 
