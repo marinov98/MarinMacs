@@ -67,7 +67,7 @@
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "s-r") 'compile) ;; compile code
 (global-set-key (kbd "<f5>") 'restart-emacs) ;; reload
-(global-set-key (kbd "C-c C-e") 'eval-buffer) ;; reload
+(global-set-key (kbd "C-c C-e") 'eval-buffer) ;; evaluate the buffer (mini reload)
 
 #+END_SRC
 * Fun Packages
