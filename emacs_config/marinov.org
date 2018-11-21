@@ -114,6 +114,8 @@
 #+BEGIN_SRC emacs-lisp
    ;; You can pick one of these, simply uncomment the one you want to try and comment the rest  
    
+   ;; Telephone-line
+   
    ;; (use-package telephone-line
    ;;     :ensure t
    ;;     :config
