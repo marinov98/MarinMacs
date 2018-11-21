@@ -62,9 +62,9 @@
 ;; KeyBindings
 (global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
 (global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file
-(global-set-key (kbd "M-m") 'move-beginning-of-line)
+(global-set-key (kbd "M-m") 'move-beginning-of-line) ;; moves beginning of the line 
 (global-set-key (kbd "C-?") 'comment-region) ;; comment
-(global-set-key (kbd "C-a") 'back-to-indentation)
+(global-set-key (kbd "C-a") 'back-to-indentation) ;; moves beginning of the first char 
 (global-set-key (kbd "s-r") 'compile) ;; compile code
 (global-set-key (kbd "<f5>") 'restart-emacs) ;; reload
 (global-set-key (kbd "C-c C-e") 'eval-buffer) ;; evaluate the buffer (mini reload)
