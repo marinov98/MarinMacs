@@ -36,7 +36,7 @@
 - Gruvbox
 - Zenburn
 
-## For Org and any Markdown Language
+### For Org and any Markdown Language
 - poet 
 
 # What My Init File Consists Of (Currently)
