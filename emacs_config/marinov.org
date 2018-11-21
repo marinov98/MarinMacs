@@ -50,6 +50,9 @@
 (tool-bar-mode -1) ;; disable tool bar 
 ;; (setq make-backup-files nil) (Uncomment if you want to disable emacs creating backup files)
 
+;;;;; Debugger
+(setq gdb-many-windows t) ;; have multiple windows when debugging
+(setq  gdb-show-main t )  ;; Non-nil means display source file containing the main routine at startup
 #+END_SRC
 * KeyBindings
 #+BEGIN_SRC emacs-lisp
