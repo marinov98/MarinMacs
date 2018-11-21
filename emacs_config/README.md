@@ -51,6 +51,7 @@
 - syntax highlighting
 - debugging on error 
 - tool bar turned off
+- Enable different parts of the debugger on multiple windows 
 
 ## package-helper-manager & restart-emacs
 - use-package (provides the use-package syntax and makes emacs download files if they are not intalled yet)
