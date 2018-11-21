@@ -152,10 +152,13 @@
            :ensure t
            :config
            (powerline-default-theme))
+	   
+    ;; Other themes with powerline
+    
     ;;     (powerline-center-theme)
     ;;     (powerline-vim-theme)
-
-
+    ;;     (powerline-center-evil-theme)
+    ;;     (powerline-nano-theme)
 
 #+END_SRC
 
