@@ -382,7 +382,7 @@
     ("C-c f" . clang-format-buffer)) ;; format entire file
     :config
     (setq clang-format-style-option ".clang-format")) 
- ;;   (setq clang-format-style-option "llvm")) use this option if you do not have a .clang-format file
+ ;; (setq clang-format-style-option "llvm")) use this option if you do not have a .clang-format file
 #+END_SRC
 ** Company-Irony Intellisense
 #+BEGIN_SRC emacs-lisp
