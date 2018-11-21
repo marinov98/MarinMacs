@@ -111,7 +111,7 @@
   
   #### Debugger
   - Ubuntu ```Sudo apt-get install gdb```
-  - MacOS ```brew install gdb```
+  - MacOS ```brew install gdb``` 
   
   #### GIT (Github)
   - Ubuntu ```sudo apt-get install git```
