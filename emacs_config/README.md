@@ -87,7 +87,7 @@
 - flycheck-pos-tip (shows errors immedietly where the cursor points)
 - auto-complete (convinient global auto-completion within emacs)
 - yasnippet, yasnippet snippets (snippets)
-- cider (interactive programming with closure)
+- cider (interactive programming with clojure)
 - iedit (change multiple words at the same time)
 
 ## GitHub Integration 
