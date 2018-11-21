@@ -28,7 +28,9 @@
 
 (use-package base16-theme
     :ensure t)
-    
+
+;;(load-theme 'zerodark t)
+;;(zerodark-setup-modeline-format)
 #+END_SRC
 * General Settings
 #+BEGIN_SRC emacs-lisp
