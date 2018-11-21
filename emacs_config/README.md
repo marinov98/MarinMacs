@@ -25,7 +25,7 @@
 
 ### Base16 (Contains 20+ themes but these are my top picks)
 - base16-ocean (Personal Favorite)
-- base16-ocean-next 
+- base16-oceanicnext 
 - base16-solarized-dark/light
 
 ### Flashy    
