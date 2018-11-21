@@ -3,7 +3,7 @@
 ;;; Code:
 
 ;; uncomment line below if you encounter an error while loading 
-;; votherwise do not touch it for it can act crazy for the littliest things
+;; otherwise do not touch it for it can act crazy for the littliest things
 ;; (setq debug-on-error t) ;; enable debugging in case anything goes wrong
 
 ;; Enable the ability to install packages
