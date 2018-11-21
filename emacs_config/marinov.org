@@ -134,9 +134,9 @@
    ;;            (evil   . (telephone-line-airline-position-segment))))
    ;;     (telephone-line-mode 1))
 
-   ;; More options
 
-   ;; Spaceline
+  ;; Spaceline
+  
   ;;  (use-package spaceline
   ;;     :ensure t
   ;;     :config
@@ -144,14 +144,14 @@
   ;;     (setq powerline-default-separator (quote arrow))
   ;;     (spaceline-spacemacs-theme))
 
-   ;; Powerline
+  ;; Powerline
 
      (use-package powerline
            :ensure t
            :config
            (powerline-default-theme))
-    ;;       ;(powerline-center-theme)
-    ;;       ;(powerline-vim-theme)
+    ;;     (powerline-center-theme)
+    ;;     (powerline-vim-theme)
 
 
 
