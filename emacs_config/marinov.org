@@ -380,7 +380,8 @@
     (("C-c u" . clang-format-region) ;; format current line
     ("C-c f" . clang-format-buffer)) ;; format entire file
     :config
-    (setq clang-format-style-option ".clang-format"))
+    (setq clang-format-style-option ".clang-format")) 
+ ;;   (setq clang-format-style-option "llvm")) use this option if you do not have a .clang-format file
 #+END_SRC
 ** Company-Irony Intellisense
 #+BEGIN_SRC emacs-lisp
@@ -451,6 +452,7 @@
 #+END_SRC
 ** Virtualenv
 #+BEGIN_SRC emacs-lisp
+
 (use-package virtualenv
     :ensure t)
 
@@ -459,7 +461,6 @@
     :config
     (venv-initialize-interactive-shells)
     (venv-initialize-eshell))
-;    (setq venv-location "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/py2app/recipes/virtualenv.py"))
 #+END_SRC
 ** Company-Jedi Intellisense
 #+BEGIN_SRC emacs-lisp
