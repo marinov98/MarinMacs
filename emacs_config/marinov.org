@@ -19,7 +19,7 @@
 ;; (use-package poet-theme
 ;;    :ensure t)
  
-;; (use-package spacemacs-theme (load-theme 'spacemacs-dark t))
+;; (use-package spacemacs-theme 
 ;;    :defer t) 
 ;;    :init  (load-theme 'spacemacs-dark t))
 
