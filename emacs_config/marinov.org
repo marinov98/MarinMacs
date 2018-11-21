@@ -9,6 +9,8 @@
 * Themes
 #+BEGIN_SRC emacs-lisp
 ;; You can uncomment any themes that you like
+;; BE AWARE: emacs can have multiple themes on the same time
+;; Multiple themes can mix into a super, some themes do not mix well which is why I commented some themes
 
 (use-package zerodark-theme
     :ensure t)
