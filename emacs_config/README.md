@@ -41,9 +41,6 @@
 
 # What My Init File Consists Of (Currently)
 
-- **Theme:** Base16-Ocean
-- **Font:** Hack
-
 ## General Settings 
 - line numbers 
 - tabspace: 4
