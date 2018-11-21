@@ -62,7 +62,7 @@
 - which-key (key assignments help)
 - ace-window (faster window swapping)
 
-## Modeline customization (choose one)
+## Modeline customization 
 - telephone-line 
 - spaceline
 - powerline (currently using this one)
