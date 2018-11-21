@@ -8,19 +8,29 @@
 #+END_SRC
 * Themes
 #+BEGIN_SRC emacs-lisp
+;; You can uncomment any themes that you like
 
 (use-package zerodark-theme
     :ensure t)
 
 (use-package zenburn-theme
     :ensure t)
+    
+;; (use-package poet-theme
+;;    :ensure t)
+ 
+;; (use-package spacemacs-theme 
+;;    :defer t) 
+;;    :init  (load-theme 'spacemacs-dark t))
 
-(use-package gruvbox-theme
-    :ensure t)
+;; (use-package gruvbox-theme
+;;    :ensure t)
 
 (use-package base16-theme
     :ensure t)
-
+;;    :config 
+;;    (load-theme 'base16-ocean))
+    
 #+END_SRC
 * General Settings
 #+BEGIN_SRC emacs-lisp
@@ -37,17 +47,24 @@
 (tool-bar-mode -1) ;; disable tool bar 
 ;; (setq make-backup-files nil) (Uncomment if you want to disable emacs creating backup files)
 
+;;;;; Debugger
+(setq gdb-many-windows t) ;; have multiple windows when debugging
+(setq  gdb-show-main t )  ;; Non-nil means display source file containing the main routine at startup
+
 #+END_SRC
 * KeyBindings
 #+BEGIN_SRC emacs-lisp
+(use-package restart-emacs
+    :ensure t)
 
 ;; KeyBindings
 (global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
 (global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file
-(global-set-key (kbd "C-x C-a") 'move-beginning-of-line)
+(global-set-key (kbd "M-m") 'move-beginning-of-line)
+(global-set-key (kbd "C-?") 'comment-region) ;; comment
 (global-set-key (kbd "C-a") 'back-to-indentation)
-(global-set-key (kbd "<f5>") 'revert-buffer) ;; allow window reload using F5
 (global-set-key (kbd "s-r") 'compile) ;; compile code
+(global-set-key (kbd "<f5>") 'restart-emacs) ;; reload
 (global-set-key (kbd "C-c C-e") 'eval-buffer) ;; reload
 
 #+END_SRC
@@ -73,24 +90,6 @@
 
 #+END_SRC
 
-* Org
-** Org-AutoComplete
-#+BEGIN_SRC emacs-lisp
- (use-package org 
-  :ensure t
-  :pin org)
-
-(use-package org-ac
-  :config 
-  (org-ac/config-default))
-#+END_SRC
-** Bullets
-#+Begin_SRC emacs-lisp
-(use-package org-bullets
-  :ensure t
-  :config
-  (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
-#+END_SRC
 * Extra Productivity Helper (Which Key & Ace-Window)
 #+BEGIN_SRC emacs-lisp
 
@@ -112,25 +111,46 @@
 * Modeline
 #+BEGIN_SRC emacs-lisp
 
-(use-package telephone-line
-    :ensure t
-    :config
-    (setq telephone-line-primary-right-separator 'telephone-line-abs-left
-          telephone-line-secondary-right-separator 'telephone-line-abs-hollow-left)
-    (setq telephone-line-height 24
-          telephone-line-evil-use-short-tag t)
-    (setq telephone-line-lhs
-        '((evil   . (telephone-line-evil-tag-segment))
-         (accent . (telephone-line-vc-segment
-                   telephone-line-erc-modified-channels-segment
-                   telephone-line-process-segment))
-         (nil    . (telephone-line-minor-mode-segment
-                   telephone-line-buffer-segment))))
-    (setq telephone-line-rhs
-          '((nil    . (telephone-line-misc-info-segment))
-           (accent . (telephone-line-major-mode-segment))
-           (evil   . (telephone-line-airline-position-segment))))
-    (telephone-line-mode 1))
+   ;; (use-package telephone-line
+   ;;     :ensure t
+   ;;     :config
+   ;;     (setq telephone-line-primary-right-separator 'telephone-line-abs-left
+   ;;           telephone-line-secondary-right-separator 'telephone-line-abs-hollow-left)
+   ;;     (setq telephone-line-height 24
+   ;;           telephone-line-evil-use-short-tag t)
+   ;;     (setq telephone-line-lhs
+   ;;         '((evil   . (telephone-line-evil-tag-segment))
+   ;;          (accent . (telephone-line-vc-segment
+   ;;                    telephone-line-erc-modified-channels-segment
+   ;;                    telephone-line-process-segment))
+   ;;          (nil    . (telephone-line-minor-mode-segment
+   ;;                    telephone-line-buffer-segment))))
+   ;;     (setq telephone-line-rhs
+   ;;           '((nil    . (telephone-line-misc-info-segment))
+   ;;            (accent . (telephone-line-major-mode-segment))
+   ;;            (evil   . (telephone-line-airline-position-segment))))
+   ;;     (telephone-line-mode 1))
+
+   ;; More options
+
+   ;; Spaceline
+  ;;  (use-package spaceline
+  ;;     :ensure t
+  ;;     :config
+  ;;     (require 'spaceline-config)
+  ;;     (setq powerline-default-separator (quote arrow))
+  ;;     (spaceline-spacemacs-theme))
+
+   ;; Powerline
+
+     (use-package powerline
+           :ensure t
+           :config
+           (powerline-default-theme))
+    ;;       ;(powerline-center-theme)
+    ;;       ;(powerline-vim-theme)
+
+
 
 #+END_SRC
 
@@ -181,8 +201,9 @@
 * Directory Navigation (Neotree, Ranger, Projectile)
 #+BEGIN_SRC emacs-lisp
 
-;; All icons
-(use-package all-the-icons)
+;; Pretty Icons
+(use-package all-the-icons
+    :ensure t)
 
 ;; Neotree
 (use-package neotree
@@ -194,7 +215,6 @@
 ;; Ranger
 (use-package ranger
     :ensure t
-    :defer t
     :config
     (ranger-override-dired-mode t))
 
@@ -241,6 +261,11 @@
      :ensure t
      :init
      (global-flycheck-mode t))
+
+(use-package flycheck-pos-tip
+    :ensure t
+    :config
+    (flycheck-pos-tip-mode))
 #+END_SRC
 ** Company
 #+BEGIN_SRC emacs-lisp
@@ -252,11 +277,6 @@
     (setq global-company-mode t)) 
 #+END_SRC
 
-** Latex
-#+BEGIN_SRC emacs-lisp
-(use-package tex
-    :ensure auctex)
-#+END_SRC
 ** Iedit
 #+BEGIN_SRC emacs-lisp
 (use-package iedit
@@ -266,16 +286,13 @@
 ** Dump-Jump
 #+BEGIN_SRC emacs-lisp
 (use-package dumb-jump
-  :bind (("M-g o" . dumb-jump-go-other-window)
+  :bind (("C-M-g" . dumb-jump-go-other-window)
          ("M-g j" . dumb-jump-go)
          ("M-g i" . dumb-jump-go-prompt)
          ("M-g x" . dumb-jump-go-prefer-external)
          ("M-g z" . dumb-jump-go-prefer-external-other-window))
   :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
   :ensure)
-; dumb-jump-go C-M-g core functionality. Attempts to jump to the definition for the thing under point
-;; dumb-jump-back C-M-p jumps back to where you were when you jumped.
-;; dumb-jump-quick-look C-M-q like dumb-jump-go but only shows tooltip with file, line, and context
 #+END_SRC
 ** Cider
 #+BEGIN_SRC emacs-lisp
@@ -290,17 +307,60 @@
     (("C-`" . better-shell-shell)
     ("C-;" . better-shell-remote-open)))
    #+END_SRC
-
 * Magit (Github Integration)
 #+BEGIN_SRC emacs-lisp
-
 (use-package magit
     :ensure t
-    :init
-    (progn
-    (bind-key "C-x g" 'magit-status)
-    (bind-key "C-x M-g" 'magit-dispatch-popup)))
+    :bind
+    (("C-x g" . magit-status)
+    ("C-x M-g" . magit-dispatch-popup)))
+#+END_SRC
+* Org
+** Org-AutoComplete
+#+BEGIN_SRC emacs-lisp
+ (use-package org 
+  :ensure t
+  :pin org)
 
+(use-package org-ac
+  :config 
+  (org-ac/config-default))
+#+END_SRC
+** Bullets
+#+Begin_SRC emacs-lisp
+(use-package org-bullets
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
+#+END_SRC
+** Latex 
+#+BEGIN_SRC emacs-lisp
+(use-package tex
+    :ensure auctex)
+#+END_SRC
+** Writing
+#+BEGIN_SRC emacs-lisp 
+;; Pdf tools
+(use-package pdf-tools
+    :ensure t)
+
+(use-package org-pdfview
+    :ensure t)
+
+(require 'pdf-tools)
+(require 'org-pdfview)
+
+;; writegood and wc mode 
+(use-package wc-mode
+    :ensure t
+    :bind 
+    ("C-x C-j" . wc-mode))
+
+(use-package writegood-mode
+    :ensure t
+    :bind 
+    ("C-." . writegood-mode))
+ #+END_SRC
 #+END_SRC
 * C++
 ** Modern Font Lock
@@ -333,9 +393,9 @@
 ;; C Headers Auto-Completion
 (use-package company-irony-c-headers
     :ensure t
+    :after (company)
     :config
-    (eval-after-load 'company
-    '(add-to-list 'company-backends '(company-irony-c-headers company-irony))))
+    (add-to-list 'company-backends '(company-irony-c-headers company-irony)))
 
 ;; Enable Irony Mode
 (use-package irony
@@ -361,12 +421,8 @@
  #+BEGIN_SRC emacs-lisp
 (use-package flycheck-irony
     :ensure t
-    :hook (flycheck-mode . flycheck-irony-setup)
-    :config
-    (setq irony--compile-options
-      '("-std=c++14"        ;; general 
-        "-stdlib=libc++"))) ;; for mac only 
-    
+    :after (flycheck)
+    :hook (flycheck-mode . flycheck-irony-setup))
 #+END_SRC
 ** ggtags 
 #+BEGIN_SRC emacs-lisp
@@ -379,6 +435,11 @@
               (ggtags-mode 1))))) 
 #+END_SRC
 * Python
+** Version
+#+BEGIN_SRC emacs-lisp
+(setq py-python-command "python3")
+(setq python-shell-interpreter "python3")
+#+END_SRC
 ** Elpy
 #+BEGIN_SRC emacs-lisp
 (use-package elpy
@@ -388,11 +449,15 @@
 #+END_SRC
 ** Virtualenv
 #+BEGIN_SRC emacs-lisp
-;(use-package virtualenvwrapper
- ;   :ensure t
-  ;  :config
-  ;  (venv-initialize-interactive-shells)
-  ;  (venv-initialize-eshell))
+(use-package virtualenv
+    :ensure t)
+
+(use-package virtualenvwrapper
+    :ensure t
+    :config
+    (venv-initialize-interactive-shells)
+    (venv-initialize-eshell))
+;    (setq venv-location "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/py2app/recipes/virtualenv.py"))
 #+END_SRC
 ** Company-Jedi Intellisense
 #+BEGIN_SRC emacs-lisp
@@ -412,6 +477,7 @@
 #+BEGIN_SRC emacs-lisp
 (use-package web-mode
     :ensure t
+    :after (add-node-modules-path)
     :config
 	   (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 	   (add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
@@ -438,13 +504,6 @@
     (setq web-mode-enable-current-element-highlight t))
 
 #+END_SRC
-** CssWatcher
-#+BEGIN_SRC emacs-lisp
-;; (use-package csswatcher
-    ;;:ensure t
-    ;;:config
-    ;;((ac-html-csswatcher-setup)))
-#+END_SRC
 ** Emmet 
 #+BEGIN_SRC emacs-lisp
 (use-package emmet-mode
@@ -455,6 +514,7 @@
 #+END_SRC
 
 * JavaScript
+** Necesities
 #+BEGIN_SRC emacs-lisp
 ;; Js2-mode
 (use-package js2-mode
@@ -463,10 +523,22 @@
 (use-package js2-refactor
     :ensure t)
 
+(use-package xref-js2
+    :ensure t)
+
 (use-package company-tern
    :ensure t
    :ensure tern)
 
+(use-package add-node-modules-path
+   :ensure t
+   :config
+   ;; automatically run the function when web-mode starts
+   (eval-after-load 'web-mode
+     '(add-hook 'web-mode-hook 'add-node-modules-path)))
+#+END_SRC
+** Js2-mode
+#+BEGIN_SRC emacs-lisp
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
@@ -479,7 +551,9 @@
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
 (js2r-add-keybindings-with-prefix "C-c C-r")
 (define-key js2-mode-map (kbd "C-k") #'js2r-kill)
-
+#+END_SRC
+** Company-tern intellisense
+#+BEGIN_SRC emacs-lisp
 ;; Company-tern Intellisense for JavaScript
 (require 'company-tern)
 (add-to-list 'company-backends 'company-tern)
@@ -497,10 +571,20 @@
 
 (add-hook 'js2-mode-hook (lambda ()
 			   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
-
+#+END_SRC
+** Es-lint
+#+BEGIN_SRC emacs-lisp
 ;; Es-lint for javascript
+(eval-after-load 'js-mode
+  '(add-hook 'js-mode-hook #'add-node-modules-path))
+
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 
+(setq-default flycheck-disabled-checkers 
+    (append flycheck-disabled-checkers 
+    '(json-jsonlist)))
+
+;; Disable jshint and enable es-lint
 (setq-default flycheck-disabled-checkers
   (append flycheck-disabled-checkers
     '(javascript-jshint)))
@@ -514,14 +598,17 @@
 * Csharp 
 #+BEGIN_SRC emacs-lisp
 (use-package csharp-mode
-    :ensure t)
+    :ensure t
+    :config
+    (defun csharp-development ()
+    "Csharp development."
+    (electric-pair-local-mode 1))
+    (add-hook 'csharp-mode-hook 'csharp-development))
 
 (use-package omnisharp
-    :ensure t)
+    :ensure t
+    :config
+    (add-hook 'csharp-mode-hook 'omnisharp-mode))
 
-(defun csharp-development ()
-  "Csharp development."
-  (electric-pair-local-mode 1))
-(add-hook 'csharp-mode-hook 'csharp-development)
-(add-hook 'csharp-mode-hook 'omnisharp-mode)
+
 #+END_SRC
