@@ -32,6 +32,7 @@
   - C/C++
   - Python
   - Javascript
+  - Debugger
   - GIT
   - LaTex
   - Org
@@ -108,11 +109,15 @@
   #### Javascript autocompletion
   - run ```sudo npm install -g tern```
   
+  #### Debugger
+  - Ubuntu ```Sudo apt-get install gdb```
+  - MacOS ```brew install gdb```
+  
   #### GIT (Github)
   - Ubuntu ```sudo apt-get install git```
   - MacOS: Should have it preinstalled from xcode command lind tools
   - **Now search up how to set up git on your Operating System AFTER installation is complete**
-   
+    
   #### Latex
   
   ##### Auctex (creating latex files in emacs) 
