@@ -15,7 +15,7 @@
 - You cannot start installing packages until you have ```(require `package)``` in your [init](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/init.el) file (init.el or .emacs) 
 - Once you have it ```M-x package-list-packages RET``` will open up the package list
 - Additonally you can run ```M-x package-install RET package_name RET``` if you know the exact package that you want 
-- If you just want to get it over with, simply copy my ```init.el``` and ```marinov.org``` the files should be created inside the ```.emacs.d``` folder which you get when you install emacs. All the packages should install and configure automatically (power of use-package), **however** you would still have to install the servers for jedi and irony
+- If you just want to get it over with, simply copy my ```init.el``` and ```marinov.org``` the files should be created inside the ```.emacs.d``` folder which you get when you install emacs. All the packages should install and configure automatically (power of use-package), **however** you would still have to install the servers for jedi(Python) and irony(C++) (instructions for that below)
 
 ## To Be Tested Packages
 - Reveal.js (create presentations with org mode)
