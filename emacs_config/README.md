@@ -121,7 +121,7 @@
 - elpy (enables a powerful python development environment)
 - company-jedi (intellisense)
 #### Python Jedi Server :
-- Run ``` M-x jedi:install-server RET``` AFTER you added company-jedi to your init file (.emacs or .emacs.d/init.el, etc..) AND AFTER you installed virtualenv
+- Run ``` M-x jedi:install-server RET``` AFTER you added company-jedi to your init file AND AFTER you installed virtualenv
 
 ## JavaScript packages:
 - js2-mode (enables Javascript mode in emacs)
