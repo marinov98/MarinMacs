@@ -35,7 +35,6 @@
   - Debugger
   - GIT
   - LaTex
-  - Org
   
   ### Navigation 
   **NOTE**: the things listed for Navigation are OPTIONAL, emacs should able to use their packages without them being on your machine 
@@ -129,5 +128,3 @@
   - MacOS: ```brew install cask```
   - Ubuntu: ```curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python```
   
-  #### Org
-  - Org comes with emacs, so you can directly go into using packages 
