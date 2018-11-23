@@ -105,9 +105,9 @@
 ## C++ packages: 
 - c++-modern-font-lock (integrates c++11 and above) (OPTIONAL)
 - clang-format (formats c++ code) (OPTIONAL)
+- irony (C++ minor mode based on libclang works with company to give intellisense)
 - company-irony (provides true intelligent c++ intellisense and autocompletetion)
 - company-irony-c-headers (auto completetion for header files)
-- irony (C++ minor mode based on libclang works with company to give intellisense)
 - irony-eldoc (indexes c++)
 - flycheck-irony (C/C++/obj-C syntax checker)
 - ggtags (creates tags where you jump around and navigate to definitions)
