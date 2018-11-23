@@ -104,8 +104,7 @@
   - Ubuntu: ```sudo apt-get install npm```
   - MacOS: ```brew install npm```
   
-  #### Nodejs
-  - look up how to install nodejs
+  #### Eslint for Javascript
   - install eslint ```npm install eslint```
   
   #### Javascript autocompletion
