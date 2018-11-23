@@ -66,7 +66,9 @@
   #### Ctags (Programming tool that creates tags) 
   - Ubuntu: ```sudo apt-get install ctags```
   - MacOS: ```brew install ctags```
-  ##### Additional install intructions for Ctags
+  ##### Additional install intructions for Ctags to work with ggtags
+  - ```./configure --prefix=<PREFIX> --with-exuberant-ctags=/usr/local/bin/ctags
+make && make install```
   - Install pygments (directions below)
   - To use ctags run ```ctags -R``` in the source directory
   
