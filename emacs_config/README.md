@@ -50,7 +50,9 @@
 - tool bar turned off
 - Enable different parts of the debugger on multiple windows 
 
-## package-helper-manager & restart-emacs
+# Packages
+
+## Use-Package & Restart-Emacs
 - ```use-package``` (provides the use-package syntax and makes emacs download files if they are not intalled yet)
 - the ```restart-emacs``` package allows use to keybind the command ```restart-emacs``` so that we can restart and refresh the session with one keystroke whenever we need to.
 
