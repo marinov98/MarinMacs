@@ -82,14 +82,14 @@
   - Ubuntu ```sudo apt-get install python-pip```
   - MacOS ```brew install pip```
   ##### Packages to install with Pip
-  - Rope: ```pip install rope``` (refactoring library)
-  - Jedi: ```pip install jedi``` (intellisense)
-  - flake: ```pip install flake8``` (code checks)
-  - autopep: ```pip install autopep8``` (Pep8 formatting) 
-  - yapf: ```pip install yapf``` (Formatting)
-  - pygments : ```pip install pygments``` (This helps ggtags for C++)
+  - Rope: ``` sudo pip install rope``` (refactoring library)
+  - Jedi: ``` sudo pip install jedi``` (intellisense)
+  - flake: ```sudo pip install flake8``` (code checks)
+  - autopep: ```sudo pip install autopep8``` (Pep8 formatting) 
+  - yapf: ```sudo pip install yapf``` (Formatting)
+  - pygments : ```sudo pip install pygments``` (This helps ggtags for C++)
   #### virtualenv (Python interactive shell)
-  - Run ```pip install virtualenv``` and ```pip install virtualnevwrapper``` afterwords
+  - Run ``` sudo pip install virtualenv``` and ``` sudo pip install virtualnevwrapper``` afterwords
   
   ### JavaScript 
   
