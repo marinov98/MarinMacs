@@ -62,11 +62,12 @@
   #### CMake (software application for managing the build process of software)
   - Ubuntu: ```sudo apt-get install cmake```
   - MacOS: ```brew install cmake```
-  #### Ctags (Programming tool that creates tags) (dont worry about this part too much, im experimenting  with it) 
+  #### Ctags (Programming tool that creates tags) 
   - Ubuntu: ```sudo apt-get install ctags```
   - MacOS: ```brew install ctags```
-  ##### Additional install intructions for Ctags to work with ggtags
-  - ``` ./configure --prefix=<PREFIX> --with-exuberant-ctags=/usr/local/bin/ctags make && make install ```
+  ##### Additional install intructions for Ctags to work with ggtags (dont worry about this part too much, im experimenting  with it) 
+  - **Simply make sure you have ctags here is the [ggtags](https://github.com/leoliu/ggtags) repo if you want to have a go at configuring it**
+  - I **may or may not** switch to rtags, I want to do more research on the tags and test them on my config 
   - Install pygments (directions below)
   - To use ctags run ```ctags -R``` in the source directory
   
