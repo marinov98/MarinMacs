@@ -63,6 +63,9 @@
   #### CMake (software application for managing the build process of software)
   - Ubuntu: ```sudo apt-get install cmake```
   - MacOS: ```brew install cmake```
+  
+  --- 
+  
   #### Ctags (Programming tool that creates tags) (dont worry about this part too much, im experimenting  with it) 
   - Ubuntu: ```sudo apt-get install ctags```
   - MacOS: ```brew install ctags```
