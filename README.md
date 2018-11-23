@@ -53,7 +53,7 @@
   ####  Gcc (GNU Compiler Collection)
   - Windows: Look up how to install MinGW
   - Ubuntu: ```sudo apt-get install gcc```
-  - MacOS: ```brew install gcc```
+  - MacOS: Should be taken care of by xcode but just in case  ```brew install gcc``` 
   #### Clang (Compiler front-end for C++)
   - Ubuntu ```sudo apt-get install clang```
   - MacOS ```brew install clang```
