@@ -21,6 +21,7 @@
 - Reveal.js (create presentations with org mode)
 - skewer (live web development)
 - rtags & company-rtags
+- cmake-ide
 
 ## Favorite Themes
 
