@@ -110,7 +110,7 @@
 - irony (C++ minor mode based on libclang works with company to give intellisense)
 - irony-eldoc (indexes c++)
 - flycheck-irony (C/C++/obj-C syntax checker)
-- ggtags (creates tags and analyzes code)
+- ggtags (creates tags where you jump around and navigate to definitions)
 #### C++ Irony-server:
 - Run ```M-x irony-install-server RET``` after you put company-irony in your init file(will only execute if you have cmake and libclang installed!). You now have C++ intellisense :D
 - After irony server is setup ```M-x flycheck-select-checker RET irony RET``` If you decided to install flycheck-irony 
