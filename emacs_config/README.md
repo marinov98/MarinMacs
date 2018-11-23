@@ -117,7 +117,6 @@
 - ggtags (creates tags where you jump around and navigate to definitions)
 #### C++ Irony-server:
 - Run ```M-x irony-install-server RET``` after you put company-irony in your init file(will only execute if you have cmake and libclang installed!). You now have C++ intellisense :D
-- After irony server is setup ```M-x flycheck-select-checker RET irony RET``` If you decided to install flycheck-irony 
 
 ## Python packages: 
 - virtualenv (interactive python shell) 
