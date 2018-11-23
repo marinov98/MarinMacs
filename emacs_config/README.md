@@ -20,6 +20,7 @@
 ## To Be Tested Packages
 - Reveal.js (create presentations with org mode)
 - skewer (live web development)
+- rtags & company-rtags
 
 ## Favorite Themes
 
