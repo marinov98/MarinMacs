@@ -19,6 +19,7 @@
 - **NOTE:** in order to for brew install {package name} make sure your mac has brew installed
 
 ## Contents of this Repo:
+- This README is here to make sure that when you go to my config, everything gets installed without giving error, it would be a pity if you got the config right, but the packages do not even work 
 - **emacs_config** folder : Contains my [init](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/marinit.org) file as well as a [manual](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/README.md) that lists all the packages that have been installed and their purpose. 
 - **DO NOT** go to the emacs_config folder before reading the contents below:
   
