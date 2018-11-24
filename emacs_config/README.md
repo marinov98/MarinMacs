@@ -5,8 +5,11 @@
 - [Possible Issues](#Possible-Issues)
 - [Themes I use](#Favorite-Themes)
 - What Packages Are In My Init File:
+- - [Fun Packages](#Fun-Packages)
+- - [Productivity](#Extra-Productivity-Helper-Packages)
 - - [Navigation](#Searching)
 - - [General Coding Packages](#General-Coding-Convenience)
+- - [Github](GitHub-Integration)
 - - [Org & MarkDown](#Org)
 - - [C++](#Cpp)
 - - [Python](#Python)
@@ -81,15 +84,15 @@
 - ```use-package``` (provides the use-package syntax and makes emacs download files if they are not intalled yet)
 - the ```restart-emacs``` package allows use to keybind the command ```restart-emacs``` so that we can restart and refresh the session with one keystroke whenever we need to.
 
-## Fun packages
+## Fun-Packages
 - dashboard (customizable start up screen)
 - beacon (light that follows your cursor)
 
-## Extra Productivity Helper Packages
+## Extra-Productivity-Helper-Packages
 - which-key (key assignments help)
 - ace-window (faster window swapping)
 
-## Modeline customization 
+## Modeline-Customization 
 - telephone-line 
 - spaceline
 - powerline (currently using this one)
@@ -118,7 +121,7 @@
 - cider (interactive programming with clojure)
 - iedit (change multiple words at the same time)
 
-## GitHub Integration 
+## GitHub-Integration 
 - magit 
 
 ## Org
