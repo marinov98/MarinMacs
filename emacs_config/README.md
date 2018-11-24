@@ -8,7 +8,7 @@
 - - [Navigation](#Searching)
 - - [General Coding Packages](#General-Coding-Convenience)
 - - [Org & MarkDown](#Org)
-- - [C/C++](#C++)
+- - [C++](#C++)
 - - [Python](#Python)
 - - [JavaScript](#JavaScript)
 - - [Web-Deveopment](#Web-Development)
