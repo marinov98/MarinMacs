@@ -4,8 +4,8 @@
 - [Notes Before Beginning](#Notes-Before-Beginning)
 - [Possible Issues](#Possible-Issues)
 - [Themes I use](#Favorite-Themes)
-1. What's In My Init File:
-  * [Navigation](#Searching)
+- What's In My Init File:
+- - [Navigation](#Searching)
 - - [General Coding Packages](#General-Coding-Convenience)
 - - [Org & MarkDown](#Org)
 - - [C/C++](#C++)
