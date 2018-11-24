@@ -8,7 +8,7 @@
 - - [Navigation](#Searching)
 - - [General Coding Packages](#General-Coding-Convenience)
 - - [Org & MarkDown](#Org)
-- - [C++](#C++)
+- - [C++](#Cpp)
 - - [Python](#Python)
 - - [JavaScript](#JavaScript)
 - - [Web-Deveopment](#Web-Development)
@@ -129,7 +129,7 @@
 - wc-mode (word counter)
 - writegood-mode (sentence/word choice checker)
 
-## C++
+## Cpp
 - c++-modern-font-lock (integrates c++11 and above) (OPTIONAL)
 - clang-format (formats c++ code) (OPTIONAL)
 - irony (C++ minor mode based on libclang works with company to give intellisense)
