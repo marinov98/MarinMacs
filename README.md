@@ -60,8 +60,7 @@
   ##### Additional install intructions for Ctags to work with ggtags (dont worry about this part too much, im experimenting  with it) 
   - **Simply make sure you have ctags here is the [ggtags](https://github.com/leoliu/ggtags) repo if you want to have a go at configuring it**
   - I **may or may not** switch to rtags, I want to do more research on the tags and test them on my config 
-  - Install pygments (directions below)
-  - To use ctags run ```ctags -R``` in the source directory
+  - Whatever I choose, we woul still need to install pygments (directions below)
   
   ### Python
   
