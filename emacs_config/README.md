@@ -6,12 +6,13 @@
 - [Themes I use](#Favorite Themes)
 - [What's In My Init File](#What My Init File Consists Of (Currently))
 - - [Navigation](#Searching)
-- - [General Coding Packages](#Packages That Make Coding Easier And Faster)
+- - [General Coding Packages](#General-Coding-Convenience)
 - - [Org & MarkDown](#Org)
 - - [C/C++](#C++)
 - - [Python](#Python)
 - - [JavaScript](#JavaScript)
 - - [Web-Deveopment](#Web-Development)
+- - [Csharp](#Csharp)
 
 ## IMPORTANT:  
 - I use init.el and marinov.org to run my emacs! The [.emacs](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/backup/.emacs) file in the backup folder is an old version of my init file without utilizing org mode and use-package
