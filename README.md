@@ -47,13 +47,15 @@
   - Ubuntu ```sudo apt-get install clang```
   - MacOS ```brew install clang```
   #### Libclang (C API that exposes the C++ abstract syntax)
-  - Arch ```
+  - Arch ``` sudo pacman -S llvm lldb```
   - Ubuntu ```sudo apt-get install libclang-dev```
   - MacOS: ```brew install --with-toolchain llvm```
   #### CMake (software application for managing the build process of software)
+  - Arch: ```sudo pacman -S cmake```
   - Ubuntu: ```sudo apt-get install cmake```
   - MacOS: ```brew install cmake```
   #### Ctags (Programming tool that creates tags) 
+  - Arch ``` sudo pacman -S ctags ```
   - Ubuntu: ```sudo apt-get install ctags```
   - MacOS: ```brew install ctags```
   ##### Additional install intructions for Ctags to work with ggtags (dont worry about this part too much, im experimenting  with it) 
@@ -70,6 +72,7 @@
   2. ```git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv```
   - MacOS: ```brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper```
   #### Pip (allows you to use pip install in your terminal)
+  - Arch ```sudo pacman -S python-pip```
   - Ubuntu ```sudo apt-get install python-pip```
   - MacOS ```brew install pip```
   ##### Packages to install with Pip
@@ -85,22 +88,26 @@
   ### JavaScript 
   
   ##### install curl 
+  - Arch : ``` sudo pacman -S curl ```
   - Ubuntu: ```sudo apt-get install curl```
   - MacOS:
   1. ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null```
   2. ```brew install curl``` 
   
   ##### install npm
+  - Arch ``` sudo pacman -S npm ```
   - Ubuntu: ```sudo apt-get install npm```
   - MacOS: ```brew install npm```
   
   #### Eslint for Javascript
+  
   - install eslint ```npm install eslint```
   
   #### Javascript autocompletion
   - run ```sudo npm install -g tern```
   
   #### Debugger
+  - Arch ```sudo pacman -S gdb```
   - Ubuntu ```Sudo apt-get install gdb```
   - MacOS ```brew install gdb``` 
   
