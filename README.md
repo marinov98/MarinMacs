@@ -67,7 +67,7 @@
   ### Python
   
   #### pyenv (python version management)
-  - Ubuntu: 
+  - Ubuntu & Arch: 
   1. ```git clone https://github.com/yyuu/pyenv.git ~/.pyenv```
   2. ```git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv```
   - MacOS: ```brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper```
