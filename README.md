@@ -23,7 +23,7 @@
 - **emacs_config** folder : Contains my [init](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/marinit.org) file as well as a [manual](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/README.md) that lists all the packages that have been installed and their purpose. If you just want to see that then just click the link and go to it. I wanted to make this guide as detailed as possible and tried to ensure that everything you try here works. 
 - **DO NOT** go to the emacs_config folder before reading the contents below:
   
-## Necesities to make sure all the emacs packages work correctly
+# Necesities to make sure all the emacs packages work correctly
 - **Disclaimer** : You DO NOT need to install everything here ONLY take what you need
 - **Keep In Mind** : You might find certain machines with certain software (such as gcc and python) already installed I put all the topics below in case your machine has almost nothing related to programming installed on it 
 
