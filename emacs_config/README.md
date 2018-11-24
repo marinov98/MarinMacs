@@ -1,5 +1,5 @@
 # My Emacs Configuration
-- Just to reiterate, Take ONLY what you need.
+- Just to reiterate, Take ONLY what you need. Or all of it ;)
 # Table Of Contents
 - [Notes Before Beginning](#Notes-Before-Beginning)
 - [Possible Issues](#Possible-Issues)
@@ -7,6 +7,7 @@
 - What Packages Are In My Init File:
 - - [Fun Packages](#Fun-Packages)
 - - [Productivity](#Extra-Productivity-Helper-Packages)
+- - [Modeline](#Modeline-Customization)
 - - [Navigation](#Searching)
 - - [General Coding Packages](#General-Coding-Convenience)
 - - [Github](GitHub-Integration)
