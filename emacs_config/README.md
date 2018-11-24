@@ -3,7 +3,7 @@
 # Table Of Contents
 - [Notes Before Beginning](#Notes-Before-Beginning)
 - [Possible Issues](#Possible-Issues)
-- [Themes I use](#Favorite Themes)
+- [Themes I use](#Favorite-Themes)
 - What's In My Init File
 - - [Navigation](#Searching)
 - - [General Coding Packages](#General-Coding-Convenience)
@@ -46,7 +46,7 @@
 - rtags & company-rtags
 - cmake-ide
 
-## Favorite Themes
+## Favorite-Themes
 
 ### Base16 (Contains 20+ themes but these are my top picks)
 - base16-ocean (Personal Favorite)
