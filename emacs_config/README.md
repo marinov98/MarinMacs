@@ -1,8 +1,8 @@
 # My Emacs Configuration
 
 # Table Of Contents
-- [Notes Before Beginning](#Notes Before Beginning)
-- [Possible Issues](#Possible Issues You may encounter and how to avoid them)
+- [Notes Before Beginning](#Notes-Before-Beginning)
+- [Possible Issues](#Possible-Issues)
 - [Themes I use](#Favorite Themes)
 - What's In My Init File
 - - [Navigation](#Searching)
@@ -20,7 +20,7 @@
 
 # Things to consider as you customize your emacs
 
-## Notes Before Beginning
+## Notes-Before-Beginning
 - Any errors you get can be googled and every package can also be checked online 
 - Depending on how you installed emacs, certain packages might be preinstalled into it 
 - When you see ```RET``` it means hit the ENTER key
@@ -30,8 +30,9 @@
 - Additonally you can run ```M-x package-install RET package_name RET``` if you know the exact package that you want 
 - If you just want to get it over with, simply copy my ```init.el``` and ```marinov.org``` the files should be created inside the ```.emacs.d``` folder which you get when you install emacs. All the packages should install and configure automatically (power of use-package), **however** you would still have to install the servers for jedi(Python) and irony(C++) (instructions for that below)
 
-# Possible Issues You may encounter and how to avoid them
-- After installing my config on 3 different machines, here are some things to watch out for:
+# Possible-Issues 
+- After installing my config on a few different machines, I encountered some minor bugs, but they are easily fixed
+- They are rare but they still happen so here are some solutions to them 
 ## Issue #1: Packagae cannot load 
 - **Possible Solution** run ```M-x package-refresh-contents ``` , if that doesnt work and the package doesnt mean much to you remove it from the config or look up the package to see if anything has changed, some packages get deleted over time
 ## Issue #2 : (some word) is void 
