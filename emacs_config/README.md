@@ -59,14 +59,14 @@
 
 ### Flashy    
 - Spacemacs-theme
-- Zerodark
+- Zerodark-theme
 
 ### Easy on the eyes
-- Gruvbox
-- Zenburn
+- Gruvbox-theme
+- Zenburn-theme
 
 ### For Org and any Markdown Language
-- poet 
+- Poet-theme 
 
 # What My Init File Consists Of (Currently)
 
