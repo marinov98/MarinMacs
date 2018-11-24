@@ -1,12 +1,25 @@
 # My Emacs Configuration
 
+# Table Of Contents
+- [Notes Before Beginning](#Notes Before Beginning)
+- [Possible Issues](#Possible Issues You may encounter and how to avoid them)
+- [Themes I use](#Favorite Themes)
+- [What's In My Init File](#What My Init File Consists Of (Currently))
+- - [Navigation](#Searching)
+- - [General Coding Packages](#Packages That Make Coding Easier And Faster)
+- - [Org & MarkDown](#Org)
+- - [C/C++](#C++ Packages:)
+- - [Python](#Python Packages:)
+- - [JavaScript](#JavaScript Packages:)
+- - [Web-Deveopment](#Web-Development Packages:)
+
 ## IMPORTANT:  
 - I use init.el and marinov.org to run my emacs! The [.emacs](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/backup/.emacs) file in the backup folder is an old version of my init file without utilizing org mode and use-package
 - **Make sure** you read the previous [README](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/README.md) before proceeding with this part of the guide.
 
 # Things to consider as you customize your emacs
 
-## Note before beginning
+## Notes Before Beginning
 - Any errors you get can be googled and every package can also be checked online 
 - Depending on how you installed emacs, certain packages might be preinstalled into it 
 - When you see ```RET``` it means hit the ENTER key
@@ -15,6 +28,15 @@
 - If you wish to browse through Emac's packages ```M-x package-list-packages RET``` will open up the package list
 - Additonally you can run ```M-x package-install RET package_name RET``` if you know the exact package that you want 
 - If you just want to get it over with, simply copy my ```init.el``` and ```marinov.org``` the files should be created inside the ```.emacs.d``` folder which you get when you install emacs. All the packages should install and configure automatically (power of use-package), **however** you would still have to install the servers for jedi(Python) and irony(C++) (instructions for that below)
+
+# Possible Issues You may encounter and how to avoid them
+- After installing my config on 3 different machines, here are some things to watch out for:
+## Issue #1: Packagae cannot load 
+- **Possible Solution** run ```M-x package-refresh-contents ``` , if that doesnt work and the package doesnt mean much to you remove it from the config or look up the package to see if anything has changed, some packages get deleted over time
+## Issue #2 : (some word) is void 
+- **Possible Solution #1 :** my config is tested, so there should not be anything that stops your emacs file from loading, however sometimes because my config has long lines of code and emacs default size is not that big, emacs indents and the piece of code goes on a new line and is not part of anything so it looks like an error 
+- Best thing to do is ```C-s``` and search for the word and either try to put it in the same line or delete it
+- **Possible Solution #2 :** Make sure you have my init.el copied (fix any small indentention issues there) then run ```M-x customize RET```, go to faces->basics faces->default change the size of the emacs screen to prevent it from indenting.
 
 ## To Be Tested Packages
 - Reveal.js (create presentations with org mode)
@@ -105,7 +127,7 @@
 - wc-mode (word counter)
 - writegood-mode (sentence/word choice checker)
 
-## C++ packages: 
+## C++ Packages:
 - c++-modern-font-lock (integrates c++11 and above) (OPTIONAL)
 - clang-format (formats c++ code) (OPTIONAL)
 - irony (C++ minor mode based on libclang works with company to give intellisense)
@@ -117,15 +139,15 @@
 #### C++ Irony-server:
 - Run ```M-x irony-install-server RET``` after you put company-irony in your init file(will only execute if you have cmake and libclang installed!). You now have C++ intellisense :D
 
-## Python packages: 
+## Python Packages : 
 - virtualenv (interactive python shell) 
 - virtualenvwrapper (virtualized isolated python environment)
 - elpy (enables a powerful python development environment)
 - company-jedi (intellisense)
-#### Python Jedi Server :
+#### Python Jedi Server:
 - Run ``` M-x jedi:install-server RET``` AFTER you added company-jedi to your init file AND AFTER you installed virtualenv
 
-## JavaScript packages:
+## JavaScript Packages:
 - js2-mode (enables Javascript mode in emacs)
 - js2-refactor (powerful refactoring)
 - xref-js2 (easy jumping to definitions and refrences)
