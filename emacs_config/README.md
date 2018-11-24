@@ -5,7 +5,7 @@
 - [Possible Issues](#Possible-Issues)
 - [Themes I use](#Favorite-Themes)
 - What's In My Init File:
- * [Navigation](#Searching)
+- - [Navigation](#Searching)
 - - [General Coding Packages](#General-Coding-Convenience)
 - - [Org & MarkDown](#Org)
 - - [C/C++](#C++)
