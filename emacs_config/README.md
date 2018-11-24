@@ -8,10 +8,10 @@
 - - [Navigation](#Searching)
 - - [General Coding Packages](#Packages That Make Coding Easier And Faster)
 - - [Org & MarkDown](#Org)
-- - [C/C++](#C++ Packages:)
-- - [Python](#Python Packages:)
-- - [JavaScript](#JavaScript Packages:)
-- - [Web-Deveopment](#Web-Development Packages:)
+- - [C/C++](#C++)
+- - [Python](#Python)
+- - [JavaScript](#JavaScript)
+- - [Web-Deveopment](#Web-Development)
 
 ## IMPORTANT:  
 - I use init.el and marinov.org to run my emacs! The [.emacs](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/backup/.emacs) file in the backup folder is an old version of my init file without utilizing org mode and use-package
@@ -105,7 +105,7 @@
 - projectile (easier project navigation)
 - counsel-projectile (ivy integration of projectile)
 
-## Packages That Make Coding Easier And Faster
+## General-Coding-Convenience
 - better-shell (improves shell functionality within emacs)
 - dump-jump (jump to definition) 
 - company (auto-completion)
@@ -139,7 +139,7 @@
 #### C++ Irony-server:
 - Run ```M-x irony-install-server RET``` after you put company-irony in your init file(will only execute if you have cmake and libclang installed!). You now have C++ intellisense :D
 
-## Python Packages : 
+## Python
 - virtualenv (interactive python shell) 
 - virtualenvwrapper (virtualized isolated python environment)
 - elpy (enables a powerful python development environment)
@@ -147,18 +147,18 @@
 #### Python Jedi Server:
 - Run ``` M-x jedi:install-server RET``` AFTER you added company-jedi to your init file AND AFTER you installed virtualenv
 
-## JavaScript Packages:
+## JavaScript 
 - js2-mode (enables Javascript mode in emacs)
 - js2-refactor (powerful refactoring)
 - xref-js2 (easy jumping to definitions and refrences)
 - company-tern (Javascript intellisense)
 - add-node-modules-path (sets proper path for modules)
 
-## Web-Development Packages:
+## Web-Development 
 - web-mode (allows for auto completion and automatic tag closing) 
 - emmet-mode (increase html/css productivity with snippets) (OPTIONAL)
 
-## Csharp packages:
+## Csharp 
 - **Disclaimer:** Csharp on emacs is something that I am still experimenting with
 - csharp-mode (Allows for emacs to recognize Csharp files)
 - omnisharp (development environment for Csharp)
