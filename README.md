@@ -14,7 +14,7 @@
 - I just really like to have my stuff online in case event XYZ happens with my machine 
 
 ## Please Note: 
-- I have used emacs ONLY on MacOS and Ubuntu so my knowledge is limited
+- I have used emacs on MacOS, Arch, & Ubuntu so my knowledge is limited when it comes to Windows 
 - Make sure you either have xcode installed or xcode command line tools for MacOS
 - **NOTE:** in order to for brew install {package name} make sure your mac has brew installed
 
@@ -28,7 +28,6 @@
 - **Keep In Mind** : You might find certain machines with certain software (such as gcc and python) already installed I put all the topics below in case your machine has almost nothing related to programming installed on it 
 
 ## Table of contents:
-  - [Navigation](#Navigation)
   - [C/C++](#C/C++)
   - [Python](#Python)
   - [JavaScript](#JavaScript)
@@ -36,27 +35,19 @@
   - [GIT](#GIT)
   - [LaTex](#LaTex)
   
-  ### Navigation 
-  **NOTE**: the things listed for Navigation are OPTIONAL, emacs should able to use their packages without them being on your machine 
-   #### Ranger:
-  - Ubuntu: Ranger is in Ubuntu's default repositories
-  - MacOS ```brew install ranger```
-  #### Ivy :
-  - Ubuntu (Ivy creates a few more steps for Linux distros, please look it up)
-  - MacOS: 
-  1. ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null```
-  2. ```brew install ivy```
-  
   ### C/C++
   
   ####  Gcc (GNU Compiler Collection)
   - Windows: Look up how to install MinGW
+  - Arch ``` sudo pacman -S base-devel ```
   - Ubuntu: ```sudo apt-get install gcc```
   - MacOS: Should be taken care of by xcode but just in case  ```brew install gcc``` 
   #### Clang (Compiler front-end for C++)
+  - Arch: ``` sudo pacman -S clang ```
   - Ubuntu ```sudo apt-get install clang```
   - MacOS ```brew install clang```
   #### Libclang (C API that exposes the C++ abstract syntax)
+  - Arch ```
   - Ubuntu ```sudo apt-get install libclang-dev```
   - MacOS: ```brew install --with-toolchain llvm```
   #### CMake (software application for managing the build process of software)
