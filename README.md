@@ -38,16 +38,16 @@
   ### C/C++
   
   ####  Gcc (GNU Compiler Collection)
-  - Arch ``` sudo pacman -S base-devel ```
+  - Arch: ``` sudo pacman -S base-devel ```
   - Ubuntu: ```sudo apt-get install gcc```
   - MacOS: Should be taken care of by xcode but just in case  ```brew install gcc``` 
   #### Clang (Compiler front-end for C++)
   - Arch: ``` sudo pacman -S clang ```
-  - Ubuntu ```sudo apt-get install clang```
-  - MacOS ```brew install clang```
+  - Ubuntu: ```sudo apt-get install clang```
+  - MacOS: ```brew install clang```
   #### Libclang (C API that exposes the C++ abstract syntax)
-  - Arch ``` sudo pacman -S llvm lldb```
-  - Ubuntu ```sudo apt-get install libclang-dev```
+  - Arch: ``` sudo pacman -S llvm lldb```
+  - Ubuntu: ```sudo apt-get install libclang-dev```
   - MacOS: ```brew install --with-toolchain llvm```
   #### CMake (software application for managing the build process of software)
   - Arch: ```sudo pacman -S cmake```
@@ -86,14 +86,14 @@
   ### JavaScript 
   
   ##### install curl 
-  - Arch : ``` sudo pacman -S curl ```
+  - Arch: ``` sudo pacman -S curl ```
   - Ubuntu: ```sudo apt-get install curl```
   - MacOS:
   1. ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null```
   2. ```brew install curl``` 
   
   ##### install npm
-  - Arch ``` sudo pacman -S npm ```
+  - Arch: ``` sudo pacman -S npm ```
   - Ubuntu: ```sudo apt-get install npm```
   - MacOS: ```brew install npm```
   
@@ -105,12 +105,12 @@
   - run ```sudo npm install -g tern```
   
   #### Debugger
-  - Arch ```sudo pacman -S gdb```
+  - Arch: ```sudo pacman -S gdb```
   - Ubuntu ```Sudo apt-get install gdb```
   - MacOS ```brew install gdb``` 
   
   #### GIT (Github)
-  - Ubuntu ```sudo apt-get install git```
+  - Ubuntu: ```sudo apt-get install git```
   - MacOS: Should have it preinstalled from xcode command line tools
   - **Now search up how to set up git on your Operating System AFTER installation is complete**
     
