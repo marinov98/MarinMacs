@@ -4,7 +4,7 @@
 - [Notes Before Beginning](#Notes Before Beginning)
 - [Possible Issues](#Possible Issues You may encounter and how to avoid them)
 - [Themes I use](#Favorite Themes)
-- [What's In My Init File](#What My Init File Consists Of (Currently))
+- What's In My Init File
 - - [Navigation](#Searching)
 - - [General Coding Packages](#General-Coding-Convenience)
 - - [Org & MarkDown](#Org)
