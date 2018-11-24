@@ -33,7 +33,7 @@
 # Possible-Issues 
 - After installing my config on a few different machines, I encountered some minor bugs, but they are easily fixed
 - They are rare but they still happen so here are some solutions to them 
-## Issue #1: Packagae cannot load 
+## Issue #1: Package cannot load 
 - **Possible Solution** run ```M-x package-refresh-contents ``` , if that doesnt work and the package doesnt mean much to you remove it from the config or look up the package to see if anything has changed, some packages get deleted over time
 ## Issue #2 : (some word) is void 
 - **Possible Solution #1 :** my config is tested, so there should not be anything that stops your emacs file from loading, however sometimes because my config has long lines of code and emacs default size is not that big, emacs indents and the piece of code goes on a new line and is not part of anything so it looks like an error 
