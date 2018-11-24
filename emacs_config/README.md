@@ -129,7 +129,7 @@
 - wc-mode (word counter)
 - writegood-mode (sentence/word choice checker)
 
-## C++ Packages:
+## C++
 - c++-modern-font-lock (integrates c++11 and above) (OPTIONAL)
 - clang-format (formats c++ code) (OPTIONAL)
 - irony (C++ minor mode based on libclang works with company to give intellisense)
