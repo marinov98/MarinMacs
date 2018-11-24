@@ -28,7 +28,7 @@
 - **Keep In Mind** : You might find certain machines with certain software (such as gcc and python) already installed I put all the topics below in case your machine has almost nothing related to programming installed on it 
 
 ## Table of contents:
-  - [Navigation](###Navigation)
+  - [Navigation](### Navigation)
   - C/C++
   - Python
   - Javascript
