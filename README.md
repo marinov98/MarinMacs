@@ -29,12 +29,12 @@
 
 ## Table of contents:
   - [Navigation](#Navigation)
-  - C/C++
-  - Python
-  - Javascript
-  - Debugger
-  - GIT
-  - LaTex
+  - [C/C++](#C/C++)
+  - [Python](#Python)
+  - [JavaScript](#JavaScript)
+  - [Debugger](#Debugger)
+  - [GIT](#GIT)
+  - [LaTex](#LaTex)
   
   ### Navigation 
   **NOTE**: the things listed for Navigation are OPTIONAL, emacs should able to use their packages without them being on your machine 
@@ -118,7 +118,7 @@
   - MacOS: Should have it preinstalled from xcode command line tools
   - **Now search up how to set up git on your Operating System AFTER installation is complete**
     
-  #### Latex
+  #### LaTex
   
   ##### Auctex (creating latex files in emacs) 
   - Ubuntu: ```sudo apt-get install auctex```
