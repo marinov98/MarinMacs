@@ -38,7 +38,6 @@
   ### C/C++
   
   ####  Gcc (GNU Compiler Collection)
-  - Windows: Look up how to install MinGW
   - Arch ``` sudo pacman -S base-devel ```
   - Ubuntu: ```sudo apt-get install gcc```
   - MacOS: Should be taken care of by xcode but just in case  ```brew install gcc``` 
