@@ -107,7 +107,7 @@
 ## Directory Navigation
 - all-the-icons (provides icon-images)
 - neotree (popup sidebar for easy directory/file navigation)
-- ranger (replaces dired mode)
+- ranger (ranger-like file manager, replaces dired)
 - projectile (easier project navigation)
 - counsel-projectile (ivy integration of projectile)
 
