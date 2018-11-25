@@ -1,5 +1,5 @@
 # My Emacs Configuration
-- Just to reiterate, Take ONLY what you need. Or all of it ;)
+
 # Table Of Contents
 - [Notes Before Beginning](#Notes-Before-Beginning)
 - [Possible Issues](#Possible-Issues)
