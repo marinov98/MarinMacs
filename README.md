@@ -44,7 +44,7 @@
   #### Clang (Compiler front-end for C++)
   - Arch: ``` sudo pacman -S clang ```
   - Ubuntu: ```sudo apt-get install clang```
-  - MacOS: ```brew install clang```
+  - MacOS: Settled by xcode
   #### Libclang (C API that exposes the C++ abstract syntax)
   - Arch: ``` sudo pacman -S llvm lldb```
   - Ubuntu: ```sudo apt-get install libclang-dev```
