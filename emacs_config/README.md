@@ -1,5 +1,8 @@
 # My Emacs Configuration
 
+# Contact
+- **Email me if there are any issues**: marin.marinov@macaulay.cuny.edu
+
 # Table Of Contents
 - [Notes Before Beginning](#Notes-Before-Beginning)
 - [Possible Issues](#Possible-Issues)
@@ -168,6 +171,3 @@
 - **Disclaimer:** Csharp on emacs is something that I am still experimenting with
 - csharp-mode (Allows for emacs to recognize Csharp files)
 - omnisharp (development environment for Csharp)
-
-# Contact
-- **Email me if there are any issues**: marin.marinov@macaulay.cuny.edu
