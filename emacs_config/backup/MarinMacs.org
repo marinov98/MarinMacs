@@ -9,6 +9,9 @@
 * Themes
 #+BEGIN_SRC emacs-lisp
 ;; You can uncomment any themes that you like
+;; BE AWARE: emacs can have multiple themes on at the same time
+;; Multiple themes can mix into a super theme
+;; Some themes do not mix well which is why I commented some themes
 
 (use-package zerodark-theme
     :ensure t)
@@ -23,14 +26,14 @@
 ;;    :defer t) 
 ;;    :init  (load-theme 'spacemacs-dark t))
 
-;; (use-package gruvbox-theme
-;;    :ensure t)
+(use-package gruvbox-theme
+    :ensure t)
 
 (use-package base16-theme
     :ensure t)
-;;    :config 
-;;    (load-theme 'base16-ocean))
-    
+
+;;(load-theme 'zerodark t)
+;;(zerodark-setup-modeline-format)
 #+END_SRC
 * General Settings
 #+BEGIN_SRC emacs-lisp
@@ -50,22 +53,21 @@
 ;;;;; Debugger
 (setq gdb-many-windows t) ;; have multiple windows when debugging
 (setq  gdb-show-main t )  ;; Non-nil means display source file containing the main routine at startup
-
 #+END_SRC
 * KeyBindings
 #+BEGIN_SRC emacs-lisp
 (use-package restart-emacs
     :ensure t)
 
-;; KeyBindings
+;; My personal keybindings, you change these anyway you like 
 (global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
 (global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file
-(global-set-key (kbd "M-m") 'move-beginning-of-line)
+(global-set-key (kbd "M-m") 'move-beginning-of-line) ;; moves beginning of the line 
 (global-set-key (kbd "C-?") 'comment-region) ;; comment
-(global-set-key (kbd "C-a") 'back-to-indentation)
+(global-set-key (kbd "C-a") 'back-to-indentation) ;; moves beginning of the first char 
 (global-set-key (kbd "s-r") 'compile) ;; compile code
 (global-set-key (kbd "<f5>") 'restart-emacs) ;; reload
-(global-set-key (kbd "C-c C-e") 'eval-buffer) ;; reload
+(global-set-key (kbd "C-c C-e") 'eval-buffer) ;; evaluate the buffer (mini reload)
 
 #+END_SRC
 * Fun Packages
@@ -110,7 +112,10 @@
 #+END_SRC
 * Modeline
 #+BEGIN_SRC emacs-lisp
-
+   ;; You can pick one of these, simply uncomment the one you want to try and comment the rest  
+   
+   ;; Telephone-line
+   
    ;; (use-package telephone-line
    ;;     :ensure t
    ;;     :config
@@ -131,9 +136,9 @@
    ;;            (evil   . (telephone-line-airline-position-segment))))
    ;;     (telephone-line-mode 1))
 
-   ;; More options
 
-   ;; Spaceline
+  ;; Spaceline
+  
   ;;  (use-package spaceline
   ;;     :ensure t
   ;;     :config
@@ -141,16 +146,19 @@
   ;;     (setq powerline-default-separator (quote arrow))
   ;;     (spaceline-spacemacs-theme))
 
-   ;; Powerline
+  ;; Powerline
 
      (use-package powerline
            :ensure t
            :config
            (powerline-default-theme))
-    ;;       ;(powerline-center-theme)
-    ;;       ;(powerline-vim-theme)
-
-
+	   
+    ;; Other themes with powerline
+    
+    ;;     (powerline-center-theme)
+    ;;     (powerline-vim-theme)
+    ;;     (powerline-center-evil-theme)
+    ;;     (powerline-nano-theme)
 
 #+END_SRC
 
@@ -378,7 +386,8 @@
     (("C-c u" . clang-format-region) ;; format current line
     ("C-c f" . clang-format-buffer)) ;; format entire file
     :config
-    (setq clang-format-style-option ".clang-format"))
+    (setq clang-format-style-option ".clang-format")) 
+ ;; (setq clang-format-style-option "llvm")) use this option if you do not have a .clang-format file
 #+END_SRC
 ** Company-Irony Intellisense
 #+BEGIN_SRC emacs-lisp
@@ -449,6 +458,7 @@
 #+END_SRC
 ** Virtualenv
 #+BEGIN_SRC emacs-lisp
+
 (use-package virtualenv
     :ensure t)
 
@@ -457,7 +467,6 @@
     :config
     (venv-initialize-interactive-shells)
     (venv-initialize-eshell))
-;    (setq venv-location "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/py2app/recipes/virtualenv.py"))
 #+END_SRC
 ** Company-Jedi Intellisense
 #+BEGIN_SRC emacs-lisp
