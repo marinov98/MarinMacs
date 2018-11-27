@@ -15,8 +15,8 @@
 
 ## Please Note: 
 - I have used emacs on MacOS, Arch, & Ubuntu so my knowledge is limited when it comes to Windows 
-- Make sure you either have xcode installed or xcode command line tools for MacOS
-- **NOTE:** in order to for brew install {package name} make sure your mac has brew installed
+- Make sure you either have [xcode](https://developer.apple.com/xcode/) installed or xcode command line tools for MacOS
+- **NOTE:** in order to for brew install {package name} make sure your mac has [brew](https://brew.sh/) installed
 
 ## Contents of this Repo:
 - This README is here to make sure that when you go to my config, everything gets installed without giving error, it would be a pity if you got the config right, but the packages do not even work 
