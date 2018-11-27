@@ -1,6 +1,9 @@
-#+TITLE: The Marinov Init File 
+#+TITLE: The Marinov Init File
+#+AUTHOR: Marin P. Marinov  
+#+EMAIL: marin.marinov@macaulay.cuny.edu
+#+LANGUAGE: en
 #+TAGS: Emacs
-#+DESCRIPTION: Init file using use-package 
+#+DESCRIPTION: My emacs config for software developement
 
 * Repo
 #+BEGIN_SRC emacs-lisp
@@ -31,6 +34,8 @@
 
 (use-package base16-theme
     :ensure t)
+ ;;   :config
+ ;;   (load-theme 'base16-ocean))
 
 ;;(load-theme 'zerodark t)
 ;;(zerodark-setup-modeline-format)
@@ -47,8 +52,12 @@
 (fset 'yes-or-no-p 'y-or-n-p) ;; change yes or no to y or n
 (menu-bar-mode -1) ;; disable menu bar
 (toggle-scroll-bar -1) ;; disable scroll bar
-(tool-bar-mode -1) ;; disable tool bar 
-;; (setq make-backup-files nil) (Uncomment if you want to disable emacs creating backup files)
+(tool-bar-mode -1) ;; disable tool bar
+
+;; Disable annoying back up files (comment if you want to enable backup files) 
+(setq make-backup-files nil) ;; stop creating backup~ files
+(setq auto-save-default nil) ;; stop creating autosave# files
+(setq create-lockfiles nil)  ;; stop creating any # files
 
 ;;;;; Debugger
 (setq gdb-many-windows t) ;; have multiple windows when debugging
@@ -324,15 +333,16 @@
     ("C-x M-g" . magit-dispatch-popup)))
 #+END_SRC
 * Org
-** Org-AutoComplete
+** Enable Org-Mode
 #+BEGIN_SRC emacs-lisp
- (use-package org 
-  :ensure t
-  :pin org)
+   (use-package org 
+    :ensure t
+    :pin org)
 
-(use-package org-ac
-  :config 
-  (org-ac/config-default))
+  ;; Package cannot load for some reason on newer versions so I commented it   
+  ;; (use-package org-ac
+  ;;   :config 
+  ;;   (org-ac/config-default))
 #+END_SRC
 ** Bullets
 #+Begin_SRC emacs-lisp
