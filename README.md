@@ -28,14 +28,14 @@
 - **Keep In Mind** : You might find certain machines with certain software (such as gcc and python) already installed I put all the topics below in case your machine has almost nothing related to programming installed on it 
 
 ## Table of contents:
-  - [C/C++](#C/C++)
+  - [C/C++](#C/Cpp)
   - [Python](#Python)
   - [JavaScript](#JavaScript)
   - [Debugger](#Debugger)
   - [GIT](#GIT)
   - [LaTex](#LaTex)
   
-  ### C/C++
+  ### C/Cpp
   
   ####  Gcc (GNU Compiler Collection)
   - Arch: ``` sudo pacman -S base-devel ```
