@@ -1,7 +1,7 @@
 # My Emacs Configuration
 
 # Contact
-- **Email me if there are any issues**: marin.marinov@macaulay.cuny.edu
+- **Email me if there are any issues/questions/things that can be better**: marin.marinov@macaulay.cuny.edu
 
 # Table Of Contents
 - [Notes Before Beginning](#Notes-Before-Beginning)
