@@ -8,18 +8,18 @@
 - [Possible Issues](#Possible-Issues)
 - [Themes I use](#Favorite-Themes)
 - What Packages Are In My Init File:
-- - [Fun Packages](#Fun-Packages)
-- - [Productivity](#Extra-Productivity-Helper-Packages)
-- - [Modeline](#Modeline-Customization)
-- - [Navigation](#Searching)
-- - [General Coding Packages](#General-Coding-Convenience)
-- - [Github](GitHub-Integration)
-- - [Org & MarkDown](#Org)
-- - [C++](#Cpp)
-- - [Python](#Python)
-- - [JavaScript](#JavaScript)
-- - [Web-Deveopment](#Web-Development)
-- - [Csharp](#Csharp)
+  - [Fun Packages](#Fun-Packages)
+  - [Productivity](#Extra-Productivity-Helper-Packages)
+  - [Modeline](#Modeline-Customization)
+  - [Navigation](#Searching)
+  - [General Coding Packages](#General-Coding-Convenience)
+  - [Github](GitHub-Integration)
+  - [Org & MarkDown](#Org)
+  - [C++](#Cpp)
+  - [Python](#Python)
+  - [JavaScript](#JavaScript)
+  - [Web-Deveopment](#Web-Development)
+  - [Csharp](#Csharp)
 
 ## IMPORTANT:  
 - I use init.el and marinov.org to run my emacs! The [.emacs](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/backup/.emacs) file in the backup folder is an old version of my init file without utilizing org mode and use-package
@@ -171,4 +171,4 @@
 ## Csharp 
 - **Disclaimer:** Csharp on emacs is something that I am still experimenting with
 - csharp-mode (Allows for emacs to recognize Csharp files)
-- omnisharp (development environment for Csharp)
+-
