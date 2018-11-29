@@ -118,6 +118,7 @@
 
 ## General-Coding-Convenience
 - better-shell (improves shell functionality within emacs)
+- exec-path-from-shell (sets paths for the terminal automatically)
 - dump-jump (jump to definition) 
 - company (auto-completion)
 - flycheck (linter/syntax checker)
