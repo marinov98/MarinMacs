@@ -67,6 +67,7 @@
 ### Easy on the eyes
 - Gruvbox-theme
 - Zenburn-theme
+- JellyBeans (currently in use)
 
 ### For Org and any Markdown Language
 - Poet-theme 
