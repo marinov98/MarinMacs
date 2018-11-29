@@ -14,7 +14,7 @@
   - [Navigation](#Searching)
   - [General Coding Packages](#General-Coding-Convenience)
   - [Github](GitHub-Integration)
-  - [Org & MarkDown](#Org)
+  - [Org & MarkDown](#Org-and-Markdown)
   - [C++](#Cpp)
   - [Python](#Python)
   - [JavaScript](#JavaScript)
@@ -131,7 +131,7 @@
 ## GitHub-Integration 
 - magit 
 
-## Org
+## Org-and-Markdown
 - org-ac (auto-completion for org)
 - org-bullets (nicer org formatting)
 - auctex & tex(smoother latex editing)
