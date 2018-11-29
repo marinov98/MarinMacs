@@ -37,6 +37,11 @@
  ;;   :config
  ;;   (load-theme 'base16-ocean))
 
+(use-package jbeans-theme
+    :ensure t
+    :config
+    (load-theme 'jbeans t))
+
 ;;(load-theme 'zerodark t)
 ;;(zerodark-setup-modeline-format)
 #+END_SRC
