@@ -119,7 +119,6 @@
   ##### Auctex (creating latex files in emacs) 
   - Arch: ``` sudo pacman -S auctex```
   - Ubuntu: ```sudo apt-get install auctex```
-  - MacOS: ```brew install auctex```
   
   ##### Cask (for using the dashboard package)
   - Ubuntu & Arch: ```curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python```
