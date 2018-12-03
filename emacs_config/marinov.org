@@ -83,6 +83,7 @@
 (global-set-key (kbd "<f5>") 'restart-emacs) ;; reload
 (global-set-key (kbd "C-c C-e") 'eval-buffer) ;; evaluate the buffer (mini reload)
 (global-set-key (kbd "C-`") 'eshell)
+(global-set-key (kbd "C-c b") 'switch-to-prev-buffer)
 
 #+END_SRC
 * Fun Packages
@@ -107,7 +108,7 @@
 
 #+END_SRC
 
-* Extra Productivity Helper (Which Key & Ace-Window)
+* Which Key & Ace-Window
 #+BEGIN_SRC emacs-lisp
 
 ;; Which-Key
@@ -201,19 +202,18 @@
 ;; Swiper 
 (use-package swiper
     :ensure t
-    :bind (("C-s" . swiper)
-	   ("C-r" . swiper)
-	   ("C-c C-r" . ivy-resume)
-	   ("M-x" . counsel-M-x)
-	   ("C-x C-f" . counsel-find-file))
+    :bind 
+    (("C-s" . swiper)
+    ("C-r" . swiper)
+    ("C-c C-r" . ivy-resume)
+    ("M-x" . counsel-M-x)
+    ("C-x C-f" . counsel-find-file))
     :config
-  (progn
+    (progn
     (ivy-mode 1)
     (setq ivy-use-virtual-buffers t)
     (setq ivy-display-style 'fancy)
-    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
-    ))
-
+    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)))
 
 (use-package avy
    :ensure t
@@ -221,7 +221,7 @@
    (("C-:" . avy-goto-word-1)))
 
 #+END_SRC
-* Directory Navigation (Neotree, Ranger, Projectile)
+* Neotree, Ranger & Projectile
 #+BEGIN_SRC emacs-lisp
 
 ;; Pretty Icons
@@ -258,7 +258,7 @@
     :ensure t)
 
 #+END_SRC
-* Coding Convienience Packages
+* Coding Convienience 
 ** Auto-Complete
 #+BEGIN_SRC emacs-lisp
 (use-package auto-complete 
@@ -323,6 +323,13 @@
 #+BEGIN_SRC emacs-lisp
 (use-package cider
     :ensure t)
+#+END_SRC
+** Undo-Tree
+#+BEGIN_SRC emacs-lisp
+(use-package undo-tree
+  :ensure t
+  :init
+  (global-undo-tree-mode))
 #+END_SRC
 ** Shell Config
    #+BEGIN_SRC emacs-lisp
@@ -643,4 +650,13 @@
     (add-hook 'csharp-mode-hook 'omnisharp-mode))
 
 
+#+END_SRC
+* Evil-Mode
+#+BEGIN_SRC emacs-lisp
+;; Uncomment if you want to switch to vim bindings 
+
+;; (use-package evil
+;;    :ensure t
+;;    :config
+;;    (evil-mode 1))
 #+END_SRC
