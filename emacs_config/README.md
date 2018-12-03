@@ -159,7 +159,7 @@
 - elpy (enables a powerful python development environment)
 - company-jedi (intellisense)
 #### Python Jedi Server:
-- Run ``` M-x jedi:install-server RET``` AFTER you added company-jedi to your init file AND AFTER you installed virtualenv
+- Run ``` M-x jedi:install-server RET``` AFTER you added company-jedi to your init file AND AFTER you installed pip installed virtualenv. Now you have Python intellisense ;)
 
 ## JavaScript 
 - js2-mode (enables Javascript mode in emacs)
