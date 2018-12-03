@@ -6,7 +6,7 @@
 ## Purpose:
 - Initially, I made this repo for myself to keep track of my emacs configurations...
 - However, now I want to make it more of a guide for anyone trying to switch to emacs and is confused about what packages to install
-- If you are a vim user, my config allows you to use the power of emacs while keeping the vim bindings
+- If you are a **Vim user**, my config allows you to use the power of emacs while keeping the vim bindings.
 
 ## Why Make This Guide?
 - Emacs is extremely powerful but has a ton of packages and it can be really confusing to pick the right ones, much less configure them
