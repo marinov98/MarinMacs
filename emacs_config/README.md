@@ -8,10 +8,10 @@
 - [Possible Issues](#Possible-Issues)
 - [Themes I use](#Favorite-Themes)
 - What Packages Are In My Init File:
-  - [Fun Packages](#Fun-Packages)
+  - [Clarity Packages](#Clarity-Packages)
   - [Productivity](#Extra-Productivity-Helper-Packages)
   - [Modeline](#Modeline-Customization)
-  - [Navigation](#Searching)
+  - [Navigation](#Enhanced-Searching)
   - [General Coding Packages](#General-Coding-Convenience)
   - [Github](GitHub-Integration)
   - [Org & MarkDown](#Org-and-Markdown)
@@ -20,6 +20,7 @@
   - [JavaScript](#JavaScript)
   - [Web-Deveopment](#Web-Development)
   - [Csharp](#Csharp)
+  - [For Vim users](#Vim)
 
 ## IMPORTANT:  
 - I use init.el and marinov.org to run my emacs! The [.emacs](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/backup/.emacs) file in the backup folder is an old version of my init file without utilizing org mode and use-package
@@ -90,7 +91,7 @@
 - ```use-package``` (provides the use-package syntax and makes emacs download files if they are not intalled yet)
 - the ```restart-emacs``` package allows use to keybind the command ```restart-emacs``` so that we can restart and refresh the session with one keystroke whenever we need to.
 
-## Fun-Packages
+## Clarity-Packages
 - dashboard (customizable start up screen)
 - beacon (light that follows your cursor)
 
@@ -103,7 +104,7 @@
 - spaceline
 - powerline (currently using this one)
 
-## Searching 
+## Enhanced-Searching 
 - ivy (improved file search)
 - swiper (improved file/name search by integrating ivy)
 - counsel (enhanced ivy commands)
@@ -173,3 +174,7 @@
 ## Csharp 
 - **Disclaimer:** Csharp on emacs is something that I am still experimenting with
 - csharp-mode (Allows for emacs to recognize Csharp files)
+
+## Vim
+- evil **You have to uncomment this package in order to ENABLE THE BINDINGS**
+- **WARNING** Make sure you have Undo-tree and keep in mind that the keybindings section will be turned off 
