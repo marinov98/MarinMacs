@@ -1,6 +1,9 @@
-#+TITLE: The Marinov Init File 
+#+TITLE: The Marinov Init File
+#+AUTHOR: Marin P. Marinov  
+#+EMAIL: marin.marinov@macaulay.cuny.edu
+#+LANGUAGE: en
 #+TAGS: Emacs
-#+DESCRIPTION: Init file using use-package 
+#+DESCRIPTION: My emacs config for software developement
 
 * Repo
 #+BEGIN_SRC emacs-lisp
@@ -22,15 +25,22 @@
 ;; (use-package poet-theme
 ;;    :ensure t)
  
-;; (use-package spacemacs-theme 
-;;    :defer t) 
+ (use-package spacemacs-theme 
+      :defer t) 
 ;;    :init  (load-theme 'spacemacs-dark t))
 
-(use-package gruvbox-theme
+ (use-package gruvbox-theme
     :ensure t)
 
 (use-package base16-theme
     :ensure t)
+ ;;   :config
+ ;;   (load-theme 'base16-ocean))
+
+(use-package jbeans-theme
+    :ensure t
+    :config
+    (load-theme 'jbeans t))
 
 ;;(load-theme 'zerodark t)
 ;;(zerodark-setup-modeline-format)
@@ -47,8 +57,12 @@
 (fset 'yes-or-no-p 'y-or-n-p) ;; change yes or no to y or n
 (menu-bar-mode -1) ;; disable menu bar
 (toggle-scroll-bar -1) ;; disable scroll bar
-(tool-bar-mode -1) ;; disable tool bar 
-;; (setq make-backup-files nil) (Uncomment if you want to disable emacs creating backup files)
+(tool-bar-mode -1) ;; disable tool bar
+
+;; Disable annoying back up files (comment if you want to enable backup files) 
+(setq make-backup-files nil) ;; stop creating backup~ files
+(setq auto-save-default nil) ;; stop creating autosave# files
+(setq create-lockfiles nil)  ;; stop creating any # files
 
 ;;;;; Debugger
 (setq gdb-many-windows t) ;; have multiple windows when debugging
@@ -68,6 +82,7 @@
 (global-set-key (kbd "s-r") 'compile) ;; compile code
 (global-set-key (kbd "<f5>") 'restart-emacs) ;; reload
 (global-set-key (kbd "C-c C-e") 'eval-buffer) ;; evaluate the buffer (mini reload)
+(global-set-key (kbd "C-`") 'eshell)
 
 #+END_SRC
 * Fun Packages
@@ -84,7 +99,7 @@
     :ensure t
     :config
     (dashboard-setup-startup-hook)
-    (setq dashboard-banner-logo-title "Marinov's Emacs Welcomes Thee")
+    (setq dashboard-banner-logo-title "MarinMacs")
     (setq dashboard-startup-banner 'logo)
     (setq dashboard-items '((recents  . 5)
                            (bookmarks . 5)
@@ -256,12 +271,12 @@
 ** Yasnippet
 #+BEGIN_SRC emacs-lisp
 (use-package yasnippet
-  :ensure t
-  :init 
-  (yas-global-mode 1))
+    :ensure t
+    :init 
+    (yas-global-mode 1))
 
 (use-package yasnippet-snippets 
-  :ensure t)
+    :ensure t)
 #+END_SRC 
 ** FlyCheck
 #+BEGIN_SRC emacs-lisp
@@ -288,32 +303,40 @@
 ** Iedit
 #+BEGIN_SRC emacs-lisp
 (use-package iedit
-:ensure t
-:bind (("C-c c" . iedit-mode)))
+    :ensure t
+    :bind (("C-c c" . iedit-mode)))
 #+END_SRC
 ** Dump-Jump
 #+BEGIN_SRC emacs-lisp
 (use-package dumb-jump
-  :bind (("C-M-g" . dumb-jump-go-other-window)
-         ("M-g j" . dumb-jump-go)
-         ("M-g i" . dumb-jump-go-prompt)
-         ("M-g x" . dumb-jump-go-prefer-external)
-         ("M-g z" . dumb-jump-go-prefer-external-other-window))
-  :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
-  :ensure)
+    :bind 
+    (("C-M-g" . dumb-jump-go-other-window)
+    ("M-g j" . dumb-jump-go)
+    ("M-g i" . dumb-jump-go-prompt)
+    ("M-g x" . dumb-jump-go-prefer-external)
+    ("M-g z" . dumb-jump-go-prefer-external-other-window))
+    :config 
+    (setq dumb-jump-selector 'ivy) 
+    :ensure)
 #+END_SRC
 ** Cider
 #+BEGIN_SRC emacs-lisp
 (use-package cider
     :ensure t)
 #+END_SRC
-** Better-Shell
+** Shell Config
    #+BEGIN_SRC emacs-lisp
-   (use-package better-shell
+(use-package better-shell
     :ensure t
     :bind 
-    (("C-`" . better-shell-shell)
+    (("C-x C-`" . better-shell-shell)
     ("C-;" . better-shell-remote-open)))
+
+(use-package exec-path-from-shell
+    :ensure t
+    :config
+    (when (memq window-system '(mac ns x)) ;; check if its mac
+    (exec-path-from-shell-initialize)))
    #+END_SRC
 * Magit (Github Integration)
 #+BEGIN_SRC emacs-lisp
@@ -323,30 +346,31 @@
     (("C-x g" . magit-status)
     ("C-x M-g" . magit-dispatch-popup)))
 #+END_SRC
-* Org
-** Org-AutoComplete
+* Org & Markdown
+** Enable Org-Mode
 #+BEGIN_SRC emacs-lisp
- (use-package org 
-  :ensure t
-  :pin org)
+(use-package org 
+   :ensure t
+   :pin org)
 
-(use-package org-ac
-  :config 
-  (org-ac/config-default))
+  ;; Package cannot load for some reason on newer versions so I commented it   
+  ;; (use-package org-ac
+  ;;   :config 
+  ;;   (org-ac/config-default))
 #+END_SRC
-** Bullets
+** Org Bullets
 #+Begin_SRC emacs-lisp
 (use-package org-bullets
-  :ensure t
-  :config
-  (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
+    :ensure t
+    :config
+    (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
 #+END_SRC
 ** Latex 
 #+BEGIN_SRC emacs-lisp
 (use-package tex
     :ensure auctex)
 #+END_SRC
-** Writing
+** Writing & PDF
 #+BEGIN_SRC emacs-lisp 
 ;; Pdf tools
 (use-package pdf-tools
@@ -374,9 +398,9 @@
 ** Modern Font Lock
 #+BEGIN_SRC emacs-lisp
 (use-package modern-cpp-font-lock
-  :ensure t
-  :config
-  (modern-c++-font-lock-global-mode t))
+    :ensure t
+    :config
+    (modern-c++-font-lock-global-mode t))
 #+END_SRC
 ** Clang-Format
 #+BEGIN_SRC emacs-lisp
@@ -458,7 +482,6 @@
 #+END_SRC
 ** Virtualenv
 #+BEGIN_SRC emacs-lisp
-
 (use-package virtualenv
     :ensure t)
 
