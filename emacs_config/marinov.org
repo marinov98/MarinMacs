@@ -86,7 +86,7 @@
 (global-set-key (kbd "C-c b") 'switch-to-prev-buffer)
 
 #+END_SRC
-* Fun Packages
+* Clarity Packages
 #+BEGIN_SRC emacs-lisp
 
 ;; Beacon
@@ -221,9 +221,9 @@
    (("C-:" . avy-goto-word-1)))
 
 #+END_SRC
-* Neotree, Ranger & Projectile
+* Directory Navigation
+** Neotree
 #+BEGIN_SRC emacs-lisp
-
 ;; Pretty Icons
 (use-package all-the-icons
     :ensure t)
@@ -234,13 +234,17 @@
     :defer t
     :bind ("C-c t" . neotree-toggle)
     :config (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
-    
+#+END_SRC
+** Ranger
+#+BEGIN_SRC emacs-lisp
 ;; Ranger
 (use-package ranger
     :ensure t
     :config
     (ranger-override-dired-mode t))
-
+#+END_SRC
+** Projectile
+#+BEGIN_SRC emacs-lisp
 ;; Projectile-mode NOTE: s stands for command on MacOS, windows button for Windows
 (use-package projectile
     :ensure t
