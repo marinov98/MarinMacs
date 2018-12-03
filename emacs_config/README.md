@@ -176,5 +176,5 @@
 - csharp-mode (Allows for emacs to recognize Csharp files)
 
 ## Vim
-- evil **You have to uncomment this package in order to ENABLE THE BINDINGS**
+- evil (basically creates vim inside emacs) **You have to uncomment this package in order to ENABLE THE BINDINGS**
 - **WARNING** Make sure you have undo-tree and keep in mind that the keybindings section will be turned off 
