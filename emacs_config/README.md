@@ -118,16 +118,17 @@
 - counsel-projectile (ivy integration of projectile)
 
 ## General-Coding-Convenience
-- better-shell (improves shell functionality within emacs)
-- exec-path-from-shell (sets paths for the terminal automatically)
-- dump-jump (jump to definition) 
+- auto-complete (convinient global auto-completion within emacs)
+- yasnippet, yasnippet snippets (snippets)
 - company (auto-completion)
 - flycheck (linter/syntax checker)
 - flycheck-pos-tip (shows errors immedietly where the cursor points)
-- auto-complete (convinient global auto-completion within emacs)
-- yasnippet, yasnippet snippets (snippets)
-- cider (interactive programming with clojure)
 - iedit (change multiple words at the same time)
+- dump-jump (jump to definition) 
+- undo-tree (smarter undo)
+- cider (interactive programming with clojure)
+- better-shell (improves shell functionality within emacs)
+- exec-path-from-shell (sets paths for the terminal automatically)
 
 ## GitHub-Integration 
 - magit 
