@@ -177,4 +177,4 @@
 
 ## Vim
 - evil **You have to uncomment this package in order to ENABLE THE BINDINGS**
-- **WARNING** Make sure you have Undo-tree and keep in mind that the keybindings section will be turned off 
+- **WARNING** Make sure you have undo-tree and keep in mind that the keybindings section will be turned off 
