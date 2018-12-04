@@ -29,6 +29,7 @@
 (setq create-lockfiles nil)  ;; stop creating any # files
 
 ;;;;; Debugger
+(global-set-key (kbd "C-c d") 'gdb)
 (setq gdb-many-windows t) ;; have multiple windows when debugging
 (setq  gdb-show-main t )  ;; Non-nil means display source file containing the main routine at startup
 #+END_SRC
@@ -36,6 +37,8 @@
 #+BEGIN_SRC emacs-lisp
 (use-package restart-emacs
     :ensure t)
+;; To restart emacs
+(global-set-key (kbd "<f5>") 'restart-emacs) 
 
 ;; My personal keybindings, you change these anyway you like 
 (global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
@@ -44,19 +47,18 @@
 (global-set-key (kbd "C-?") 'comment-region) ;; comment
 (global-set-key (kbd "C-a") 'back-to-indentation) ;; moves beginning of the first char 
 (global-set-key (kbd "s-r") 'compile) ;; compile code
-(global-set-key (kbd "<f5>") 'restart-emacs) ;; reload
 (global-set-key (kbd "C-c C-e") 'eval-buffer) ;; evaluate the buffer (mini reload)
-(global-set-key (kbd "C-`") 'eshell)
-(global-set-key (kbd "C-c b") 'switch-to-prev-buffer)
-
+(global-set-key (kbd "C-`") 'eshell) ;; terminal in emacs
+(global-set-key (kbd "C-c b") 'switch-to-prev-buffer) 
+(global-set-key (kbd "C-c r") 'ranger) ;; start ranger from file
 #+END_SRC
 * Evil-Mode
 #+BEGIN_SRC emacs-lisp
 ;; Uncomment if you want to switch to vim bindings 
-;; (use-package evil
-;;   :ensure t
-;;   :config
-;;   (evil-mode 1))
+;;(use-package evil
+;;  :ensure t
+;;  :config
+;;  (evil-mode 1))
 #+END_SRC
 * Themes
 #+BEGIN_SRC emacs-lisp
