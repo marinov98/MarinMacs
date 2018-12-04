@@ -1,4 +1,4 @@
-#+TITLE: The MarinMacs Init File
+#+TITLE: The Marinov Init File
 #+AUTHOR: Marin P. Marinov  
 #+EMAIL: marin.marinov@macaulay.cuny.edu
 #+LANGUAGE: en
@@ -9,6 +9,19 @@
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 #+END_SRC
+* Restart-Emacs & Linum Relative
+#+BEGIN_SRC emacs-lisp
+(use-package linum-relative
+    :ensure t
+    :config
+    (linum-relative-global-mode 1)) ;; relative line numbers
+;;  (global-linum-mode 1) uncomment this if you want normal line numbers
+
+(use-package restart-emacs
+    :ensure t
+    :config
+    (global-set-key (kbd "<f5>") 'restart-emacs)) ;; To restart emacs
+#+END_SRC
 * General Settings
 #+BEGIN_SRC emacs-lisp
 
@@ -16,7 +29,6 @@
 (setq tab-width 4)         ;; and 4 char wide for TAB
 (setq indent-tabs-mode nil);; And force use of spaces
 (global-font-lock-mode 1)  ;; syntax highlighting
-(global-linum-mode 1)      ;; line numbers
 (electric-pair-mode)       ;; auto closing brackets
 (fset 'yes-or-no-p 'y-or-n-p) ;; change yes or no to y or n
 (menu-bar-mode -1) ;; disable menu bar
@@ -28,17 +40,13 @@
 (setq auto-save-default nil) ;; stop creating autosave# files
 (setq create-lockfiles nil)  ;; stop creating any # files
 
-;;;;; Debugger
+;; Debugger
 (global-set-key (kbd "C-c d") 'gdb)
 (setq gdb-many-windows t) ;; have multiple windows when debugging
 (setq  gdb-show-main t )  ;; Non-nil means display source file containing the main routine at startup
 #+END_SRC
 * Personal KeyBindings
 #+BEGIN_SRC emacs-lisp
-(use-package restart-emacs
-    :ensure t)
-;; To restart emacs
-(global-set-key (kbd "<f5>") 'restart-emacs) 
 
 ;; My personal keybindings, you change these anyway you like 
 (global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
