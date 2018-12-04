@@ -14,17 +14,22 @@
 ;; (use-package poet-theme
 ;;    :ensure t)
  
-;; (use-package spacemacs-theme 
-;;    :defer t) 
+ (use-package spacemacs-theme 
+      :defer t) 
 ;;    :init  (load-theme 'spacemacs-dark t))
 
-(use-package gruvbox-theme
+ (use-package gruvbox-theme
     :ensure t)
 
 (use-package base16-theme
     :ensure t)
  ;;   :config
  ;;   (load-theme 'base16-ocean))
+
+(use-package jbeans-theme
+    :ensure t
+    :config
+    (load-theme 'jbeans t))
 
 ;;(load-theme 'zerodark t)
 ;;(zerodark-setup-modeline-format)
@@ -61,6 +66,8 @@
 (global-set-key (kbd "s-r") 'compile) ;; compile code
 (global-set-key (kbd "<f5>") 'restart-emacs) ;; reload
 (global-set-key (kbd "C-c C-e") 'eval-buffer) ;; evaluate the buffer (mini reload)
+(global-set-key (kbd "C-`") 'eshell)
+(global-set-key (kbd "C-c b") 'switch-to-prev-buffer)
 
 ;; Beacon
 (use-package beacon
@@ -73,7 +80,7 @@
     :ensure t
     :config
     (dashboard-setup-startup-hook)
-    (setq dashboard-banner-logo-title "Marinov's Emacs Welcomes Thee")
+    (setq dashboard-banner-logo-title "MarinMacs")
     (setq dashboard-startup-banner 'logo)
     (setq dashboard-items '((recents  . 5)
                            (bookmarks . 5)
@@ -162,19 +169,18 @@
 ;; Swiper 
 (use-package swiper
     :ensure t
-    :bind (("C-s" . swiper)
-	   ("C-r" . swiper)
-	   ("C-c C-r" . ivy-resume)
-	   ("M-x" . counsel-M-x)
-	   ("C-x C-f" . counsel-find-file))
+    :bind 
+    (("C-s" . swiper)
+    ("C-r" . swiper)
+    ("C-c C-r" . ivy-resume)
+    ("M-x" . counsel-M-x)
+    ("C-x C-f" . counsel-find-file))
     :config
-  (progn
+    (progn
     (ivy-mode 1)
     (setq ivy-use-virtual-buffers t)
     (setq ivy-display-style 'fancy)
-    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
-    ))
-
+    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)))
 
 (use-package avy
    :ensure t
@@ -191,7 +197,7 @@
     :defer t
     :bind ("C-c t" . neotree-toggle)
     :config (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
-    
+
 ;; Ranger
 (use-package ranger
     :ensure t
@@ -222,12 +228,12 @@
   (global-auto-complete-mode t)))
 
 (use-package yasnippet
-  :ensure t
-  :init 
-  (yas-global-mode 1))
+    :ensure t
+    :init 
+    (yas-global-mode 1))
 
 (use-package yasnippet-snippets 
-  :ensure t)
+    :ensure t)
 
 (use-package flycheck
      :ensure t
@@ -247,26 +253,39 @@
     (setq global-company-mode t))
 
 (use-package iedit
-:ensure t
-:bind (("C-c c" . iedit-mode)))
+    :ensure t
+    :bind (("C-c c" . iedit-mode)))
 
 (use-package dumb-jump
-  :bind (("C-M-g" . dumb-jump-go-other-window)
-         ("M-g j" . dumb-jump-go)
-         ("M-g i" . dumb-jump-go-prompt)
-         ("M-g x" . dumb-jump-go-prefer-external)
-         ("M-g z" . dumb-jump-go-prefer-external-other-window))
-  :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
-  :ensure)
+    :bind 
+    (("C-M-g" . dumb-jump-go-other-window)
+    ("M-g j" . dumb-jump-go)
+    ("M-g i" . dumb-jump-go-prompt)
+    ("M-g x" . dumb-jump-go-prefer-external)
+    ("M-g z" . dumb-jump-go-prefer-external-other-window))
+    :config 
+    (setq dumb-jump-selector 'ivy) 
+    :ensure)
 
 (use-package cider
     :ensure t)
 
+(use-package undo-tree
+  :ensure t
+  :init
+  (global-undo-tree-mode))
+
 (use-package better-shell
- :ensure t
- :bind 
- (("C-`" . better-shell-shell)
- ("C-;" . better-shell-remote-open)))
+    :ensure t
+    :bind 
+    (("C-x C-`" . better-shell-shell)
+    ("C-;" . better-shell-remote-open)))
+
+(use-package exec-path-from-shell
+    :ensure t
+    :config
+    (when (memq window-system '(mac ns x)) ;; check if its mac
+    (exec-path-from-shell-initialize)))
 
 (use-package magit
     :ensure t
@@ -275,18 +294,18 @@
     ("C-x M-g" . magit-dispatch-popup)))
 
 (use-package org 
-  :ensure t
-  :pin org)
+   :ensure t
+   :pin org)
 
-;; Package cannot load for some reason on newer versions so I commented it   
-;; (use-package org-ac
-;;   :config 
-;;   (org-ac/config-default))
+  ;; Package cannot load for some reason on newer versions so I commented it   
+  ;; (use-package org-ac
+  ;;   :config 
+  ;;   (org-ac/config-default))
 
 (use-package org-bullets
-  :ensure t
-  :config
-  (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
+    :ensure t
+    :config
+    (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
 
 (use-package tex
     :ensure auctex)
@@ -313,9 +332,9 @@
     ("C-." . writegood-mode))
 
 (use-package modern-cpp-font-lock
-  :ensure t
-  :config
-  (modern-c++-font-lock-global-mode t))
+    :ensure t
+    :config
+    (modern-c++-font-lock-global-mode t))
 
 (use-package clang-format 
     :ensure t
@@ -518,3 +537,10 @@
     :ensure t
     :config
     (add-hook 'csharp-mode-hook 'omnisharp-mode))
+
+;; Uncomment if you want to switch to vim bindings 
+
+ (use-package evil
+    :ensure t
+    :config
+    (evil-mode 1))
