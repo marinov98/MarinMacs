@@ -54,6 +54,10 @@
   - Arch: ```sudo pacman -S cmake```
   - Ubuntu: ```sudo apt-get install cmake```
   - MacOS: ```brew install cmake```
+  #### Clang-Format
+  - Arch: ```sudo pacman -S clang-format```
+  - Ubuntu: ```sudo apt-get install clang-format```
+  - MacOs: ```brew install clang-format```
   #### Ctags (Programming tool that creates tags) 
   - Arch ``` sudo pacman -S ctags ```
   - Ubuntu: ```sudo apt-get install ctags```
