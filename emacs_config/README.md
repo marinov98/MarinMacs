@@ -76,8 +76,7 @@
 # What My Init File Consists Of (Currently)
 
 ## General Settings 
-- line numbers 
-- tabspace: 4
+- set tab to 4 spaces
 - force editor to use spaces
 - syntax highlighting
 - debugging on error 
