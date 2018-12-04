@@ -9,13 +9,28 @@
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 #+END_SRC
-* Evil-Mode
+* General Settings
 #+BEGIN_SRC emacs-lisp
-;; Uncomment if you want to switch to vim bindings 
-;; (use-package evil
-;;   :ensure t
-;;   :config
-;;   (evil-mode 1))
+
+(setq c-basic-offset 4)    ;; indents 4 chars
+(setq tab-width 4)         ;; and 4 char wide for TAB
+(setq indent-tabs-mode nil);; And force use of spaces
+(global-font-lock-mode 1)  ;; syntax highlighting
+(global-linum-mode 1)      ;; line numbers
+(electric-pair-mode)       ;; auto closing brackets
+(fset 'yes-or-no-p 'y-or-n-p) ;; change yes or no to y or n
+(menu-bar-mode -1) ;; disable menu bar
+(toggle-scroll-bar -1) ;; disable scroll bar
+(tool-bar-mode -1) ;; disable tool bar
+
+;; Disable annoying back up files (comment if you want to enable backup files) 
+(setq make-backup-files nil) ;; stop creating backup~ files
+(setq auto-save-default nil) ;; stop creating autosave# files
+(setq create-lockfiles nil)  ;; stop creating any # files
+
+;;;;; Debugger
+(setq gdb-many-windows t) ;; have multiple windows when debugging
+(setq  gdb-show-main t )  ;; Non-nil means display source file containing the main routine at startup
 #+END_SRC
 * Personal KeyBindings
 #+BEGIN_SRC emacs-lisp
@@ -34,6 +49,14 @@
 (global-set-key (kbd "C-`") 'eshell)
 (global-set-key (kbd "C-c b") 'switch-to-prev-buffer)
 
+#+END_SRC
+* Evil-Mode
+#+BEGIN_SRC emacs-lisp
+;; Uncomment if you want to switch to vim bindings 
+;; (use-package evil
+;;   :ensure t
+;;   :config
+;;   (evil-mode 1))
 #+END_SRC
 * Themes
 #+BEGIN_SRC emacs-lisp
@@ -70,29 +93,6 @@
  
 ;;(load-theme 'zerodark t)
 ;;(zerodark-setup-modeline-format)
-#+END_SRC
-* General Settings
-#+BEGIN_SRC emacs-lisp
-
-(setq c-basic-offset 4)    ;; indents 4 chars
-(setq tab-width 4)         ;; and 4 char wide for TAB
-(setq indent-tabs-mode nil);; And force use of spaces
-(global-font-lock-mode 1)  ;; syntax highlighting
-(global-linum-mode 1)      ;; line numbers
-(electric-pair-mode)       ;; auto closing brackets
-(fset 'yes-or-no-p 'y-or-n-p) ;; change yes or no to y or n
-(menu-bar-mode -1) ;; disable menu bar
-(toggle-scroll-bar -1) ;; disable scroll bar
-(tool-bar-mode -1) ;; disable tool bar
-
-;; Disable annoying back up files (comment if you want to enable backup files) 
-(setq make-backup-files nil) ;; stop creating backup~ files
-(setq auto-save-default nil) ;; stop creating autosave# files
-(setq create-lockfiles nil)  ;; stop creating any # files
-
-;;;;; Debugger
-(setq gdb-many-windows t) ;; have multiple windows when debugging
-(setq  gdb-show-main t )  ;; Non-nil means display source file containing the main routine at startup
 #+END_SRC
 * Coding Convienience 
 ** Auto-Complete
