@@ -3,11 +3,38 @@
 #+EMAIL: marin.marinov@macaulay.cuny.edu
 #+LANGUAGE: en
 #+TAGS: Emacs
-#+DESCRIPTION: My emacs config for software developement
+#+DESCRIPTION: My emacs config for software development
 
 * Repo
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+#+END_SRC
+* Evil-Mode
+#+BEGIN_SRC emacs-lisp
+;; Uncomment if you want to switch to vim bindings 
+
+;;(use-package evil
+;;   :ensure t
+;;   :config
+;;   (evil-mode 1))
+#+END_SRC
+* KeyBindings
+#+BEGIN_SRC emacs-lisp
+(use-package restart-emacs
+    :ensure t)
+
+;; My personal keybindings, you change these anyway you like 
+(global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
+(global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file
+(global-set-key (kbd "M-m") 'move-beginning-of-line) ;; moves beginning of the line 
+(global-set-key (kbd "C-?") 'comment-region) ;; comment
+(global-set-key (kbd "C-a") 'back-to-indentation) ;; moves beginning of the first char 
+(global-set-key (kbd "s-r") 'compile) ;; compile code
+(global-set-key (kbd "<f5>") 'restart-emacs) ;; reload
+(global-set-key (kbd "C-c C-e") 'eval-buffer) ;; evaluate the buffer (mini reload)
+(global-set-key (kbd "C-`") 'eshell)
+(global-set-key (kbd "C-c b") 'switch-to-prev-buffer)
+
 #+END_SRC
 * Themes
 #+BEGIN_SRC emacs-lisp
@@ -16,32 +43,32 @@
 ;; Multiple themes can mix into a super theme
 ;; Some themes do not mix well which is why I commented some themes
 
-(use-package zerodark-theme
+ (use-package zerodark-theme
     :ensure t)
 
-(use-package zenburn-theme
-    :ensure t)
+;; (use-package zenburn-theme
+;;   :ensure t)
     
 ;; (use-package poet-theme
 ;;    :ensure t)
  
- (use-package spacemacs-theme 
-      :defer t) 
+;; (use-package spacemacs-theme 
+;;      :defer t) 
 ;;    :init  (load-theme 'spacemacs-dark t))
 
- (use-package gruvbox-theme
-    :ensure t)
+;; (use-package gruvbox-theme
+;;    :ensure t)
 
-(use-package base16-theme
-    :ensure t)
- ;;   :config
- ;;   (load-theme 'base16-ocean))
+;; (use-package base16-theme
+;;    :ensure t
+;;    :config
+;;    (load-theme 'base16-ocean))
 
 (use-package jbeans-theme
     :ensure t
     :config
     (load-theme 'jbeans t))
-
+ 
 ;;(load-theme 'zerodark t)
 ;;(zerodark-setup-modeline-format)
 #+END_SRC
@@ -68,27 +95,8 @@
 (setq gdb-many-windows t) ;; have multiple windows when debugging
 (setq  gdb-show-main t )  ;; Non-nil means display source file containing the main routine at startup
 #+END_SRC
-* KeyBindings
-#+BEGIN_SRC emacs-lisp
-(use-package restart-emacs
-    :ensure t)
-
-;; My personal keybindings, you change these anyway you like 
-(global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
-(global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file
-(global-set-key (kbd "M-m") 'move-beginning-of-line) ;; moves beginning of the line 
-(global-set-key (kbd "C-?") 'comment-region) ;; comment
-(global-set-key (kbd "C-a") 'back-to-indentation) ;; moves beginning of the first char 
-(global-set-key (kbd "s-r") 'compile) ;; compile code
-(global-set-key (kbd "<f5>") 'restart-emacs) ;; reload
-(global-set-key (kbd "C-c C-e") 'eval-buffer) ;; evaluate the buffer (mini reload)
-(global-set-key (kbd "C-`") 'eshell)
-(global-set-key (kbd "C-c b") 'switch-to-prev-buffer)
-
-#+END_SRC
 * Clarity Packages
 #+BEGIN_SRC emacs-lisp
-
 ;; Beacon
 (use-package beacon
     :ensure t
@@ -105,12 +113,10 @@
     (setq dashboard-items '((recents  . 5)
                            (bookmarks . 5)
                            (projects . 5))))
-
 #+END_SRC
 
 * Which Key & Ace-Window
 #+BEGIN_SRC emacs-lisp
-
 ;; Which-Key
 (use-package which-key
 	:ensure t 
@@ -122,9 +128,7 @@
      :ensure t
      :init 
      (global-set-key (kbd "M-o") 'ace-window)
-     (setq aw-background nil)
-     (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
-
+     (setq aw-background nil))
 #+END_SRC
 * Modeline
 #+BEGIN_SRC emacs-lisp
@@ -652,15 +656,4 @@
     :ensure t
     :config
     (add-hook 'csharp-mode-hook 'omnisharp-mode))
-
-
-#+END_SRC
-* Evil-Mode
-#+BEGIN_SRC emacs-lisp
-;; Uncomment if you want to switch to vim bindings 
-
-;; (use-package evil
-;;    :ensure t
-;;    :config
-;;    (evil-mode 1))
 #+END_SRC
