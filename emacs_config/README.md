@@ -178,4 +178,4 @@
 
 ## Vim
 - evil (basically creates vim inside emacs) **You have to uncomment this package in order to ENABLE THE BINDINGS**
-- **WARNING** Make sure you have undo-tree and keep in mind that the keybindings section will be turned off 
+- **WARNING** You need undo tree for this package to fully work (if you are copying my entire config this is not a problem)
