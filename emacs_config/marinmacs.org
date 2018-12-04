@@ -1,4 +1,4 @@
-#+TITLE: The Marinov Init File
+#+TITLE: The MarinMacs Init File
 #+AUTHOR: Marin P. Marinov  
 #+EMAIL: marin.marinov@macaulay.cuny.edu
 #+LANGUAGE: en
