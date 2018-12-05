@@ -90,7 +90,7 @@
 - ```use-package``` (provides the use-package syntax and makes emacs download files if they are not intalled yet)
 ## linum-relative & restart-emacs
 - the ```restart-emacs``` package allows use to keybind the command ```restart-emacs``` so that we can restart and refresh the session with one keystroke whenever we need to.
-- ```linum relative``` enables relative line numbering. 
+- ```linum-relative``` enables relative line numbering. 
 - If you want normal line numbers, comment linum-relative and put ```(global-linum-mode 1)``` instead
 
 
