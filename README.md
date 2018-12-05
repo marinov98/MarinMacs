@@ -5,8 +5,13 @@
 
 ## Purpose:
 - Initially, I made this repo for myself to keep track of my emacs configurations...
-- However, now I want to make it more of a guide for anyone trying to switch to emacs and is confused about what packages to install
-- If you are a **Vim user**, my config allows you to use the power of emacs while keeping the vim bindings.
+- Now I want to make it more of a guide for anyone trying to switch to emacs whether its from another editor and/or is confused about what packages to install and how to configure.
+- Make a guide that welcomes anyone from any editor.
+
+## Who Is This for?
+- **Vim users** wanting to switch and use the power of emacs while keepings their vim keybindings
+- Anyone wanting to use Emacs for its **own keybindings** and extensibility but hates configuring and wants an out of the box experience
+- People who want more productivity but are limited because of their current text editor
 
 ## Why Make This Guide?
 - Emacs is extremely powerful but has a ton of packages and it can be really confusing to pick the right ones, much less configure them
@@ -14,6 +19,22 @@
 - Not everybody likes spending time customizing and configuring, they like things that work right out of the box. However, everybody likes speed and Emacs provides that and the configuration should not be what keeps people using editors such as emacs or vim
 - What if you are a **Vim user** looking to switch to emacs but keep the powerful vim bindings? My emacs works with evil-mode!
 - I just really like to have my stuff online in case event XYZ happens with my machine 
+
+## What my Emacs can do
+- Has packages that allow for
+  - Fast project/file navigation
+  - jump-to-definition
+  - Advanced word search
+  - smart file managers
+  - tree explorers
+  - smart undo
+- Has ide-like support for these languages
+  - C++
+  - Python
+  - Javascript
+  - A little of html/css
+- Allows for either Vim keybindings or original native Emacs keybindings
+- Improved debugger
 
 ## Please Note: 
 - I have used Emacs on MacOS, Arch(Antergos), & Ubuntu so my knowledge is limited when it comes to anything else
