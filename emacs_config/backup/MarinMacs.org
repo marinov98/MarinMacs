@@ -3,47 +3,24 @@
 #+EMAIL: marin.marinov@macaulay.cuny.edu
 #+LANGUAGE: en
 #+TAGS: Emacs
-#+DESCRIPTION: My emacs config for software developement
+#+DESCRIPTION: My emacs config for software development
 
 * Repo
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 #+END_SRC
-* Themes
+* Restart-Emacs & Linum Relative
 #+BEGIN_SRC emacs-lisp
-;; You can uncomment any themes that you like
-;; BE AWARE: emacs can have multiple themes on at the same time
-;; Multiple themes can mix into a super theme
-;; Some themes do not mix well which is why I commented some themes
-
-(use-package zerodark-theme
-    :ensure t)
-
-(use-package zenburn-theme
-    :ensure t)
-    
-;; (use-package poet-theme
-;;    :ensure t)
- 
- (use-package spacemacs-theme 
-      :defer t) 
-;;    :init  (load-theme 'spacemacs-dark t))
-
- (use-package gruvbox-theme
-    :ensure t)
-
-(use-package base16-theme
-    :ensure t)
- ;;   :config
- ;;   (load-theme 'base16-ocean))
-
-(use-package jbeans-theme
+(use-package linum-relative
     :ensure t
     :config
-    (load-theme 'jbeans t))
+    (linum-relative-global-mode 1)) ;; relative line numbers
+;;  (global-linum-mode 1) uncomment this if you want normal line numbers
 
-;;(load-theme 'zerodark t)
-;;(zerodark-setup-modeline-format)
+(use-package restart-emacs
+    :ensure t
+    :config
+    (global-set-key (kbd "<f5>") 'restart-emacs)) ;; To restart emacs
 #+END_SRC
 * General Settings
 #+BEGIN_SRC emacs-lisp
@@ -52,7 +29,6 @@
 (setq tab-width 4)         ;; and 4 char wide for TAB
 (setq indent-tabs-mode nil);; And force use of spaces
 (global-font-lock-mode 1)  ;; syntax highlighting
-(global-linum-mode 1)      ;; line numbers
 (electric-pair-mode)       ;; auto closing brackets
 (fset 'yes-or-no-p 'y-or-n-p) ;; change yes or no to y or n
 (menu-bar-mode -1) ;; disable menu bar
@@ -64,14 +40,13 @@
 (setq auto-save-default nil) ;; stop creating autosave# files
 (setq create-lockfiles nil)  ;; stop creating any # files
 
-;;;;; Debugger
+;; Debugger
+(global-set-key (kbd "C-c d") 'gdb)
 (setq gdb-many-windows t) ;; have multiple windows when debugging
 (setq  gdb-show-main t )  ;; Non-nil means display source file containing the main routine at startup
 #+END_SRC
-* KeyBindings
+* Personal KeyBindings
 #+BEGIN_SRC emacs-lisp
-(use-package restart-emacs
-    :ensure t)
 
 ;; My personal keybindings, you change these anyway you like 
 (global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
@@ -80,14 +55,193 @@
 (global-set-key (kbd "C-?") 'comment-region) ;; comment
 (global-set-key (kbd "C-a") 'back-to-indentation) ;; moves beginning of the first char 
 (global-set-key (kbd "s-r") 'compile) ;; compile code
-(global-set-key (kbd "<f5>") 'restart-emacs) ;; reload
 (global-set-key (kbd "C-c C-e") 'eval-buffer) ;; evaluate the buffer (mini reload)
-(global-set-key (kbd "C-`") 'eshell)
-
+(global-set-key (kbd "C-`") 'eshell) ;; terminal in emacs
+(global-set-key (kbd "C-c b") 'switch-to-prev-buffer) 
+(global-set-key (kbd "C-c r") 'ranger) ;; start ranger from file
 #+END_SRC
-* Fun Packages
+* Evil-Mode
 #+BEGIN_SRC emacs-lisp
+;; Uncomment if you want to switch to vim bindings 
+;;(use-package evil
+;;  :ensure t
+;;  :config
+;;  (evil-mode 1))
+#+END_SRC
+* Themes
+#+BEGIN_SRC emacs-lisp
+;; You can uncomment any themes that you like
+;; BE AWARE: emacs can have multiple themes on at the same time
+;; Multiple themes can mix into a super theme
+;; Some themes do not mix well which is why I commented some themes
 
+ (use-package zerodark-theme
+    :ensure t)
+
+;; (use-package zenburn-theme
+;;   :ensure t)
+    
+;; (use-package poet-theme
+;;    :ensure t)
+ 
+;; (use-package spacemacs-theme 
+;;      :defer t) 
+;;    :init  (load-theme 'spacemacs-dark t))
+
+;; (use-package gruvbox-theme
+;;    :ensure t)
+
+;; (use-package base16-theme
+;;    :ensure t
+;;    :config
+;;    (load-theme 'base16-ocean))
+
+(use-package jbeans-theme
+    :ensure t
+    :config
+    (load-theme 'jbeans t))
+ 
+;;(load-theme 'zerodark t)
+;;(zerodark-setup-modeline-format)
+#+END_SRC
+* Coding Convienience 
+** Auto-Complete
+#+BEGIN_SRC emacs-lisp
+(use-package auto-complete 
+  :ensure t
+  :init
+  (progn
+  (ac-config-default)
+  (global-auto-complete-mode t)))
+#+END_SRC
+** Yasnippet
+#+BEGIN_SRC emacs-lisp
+(use-package yasnippet
+    :ensure t
+    :init 
+    (yas-global-mode 1))
+
+(use-package yasnippet-snippets 
+    :ensure t)
+#+END_SRC 
+** FlyCheck
+#+BEGIN_SRC emacs-lisp
+(use-package flycheck
+     :ensure t
+     :init
+     (global-flycheck-mode t))
+
+(use-package flycheck-pos-tip
+    :ensure t
+    :config
+    (flycheck-pos-tip-mode))
+#+END_SRC
+** Company
+#+BEGIN_SRC emacs-lisp
+(use-package company
+    :ensure t
+    :config
+    (setq company-idle-delay 0) ;; faster autcompletion
+    (setq company-minimum-prefix-length 3) ;; show completions after 3 chars
+    (setq global-company-mode t)) 
+#+END_SRC
+
+** Iedit
+#+BEGIN_SRC emacs-lisp
+(use-package iedit
+    :ensure t
+    :bind (("C-c c" . iedit-mode)))
+#+END_SRC
+** Dump-Jump
+#+BEGIN_SRC emacs-lisp
+(use-package dumb-jump
+    :bind 
+    (("C-M-g" . dumb-jump-go-other-window)
+    ("M-g j" . dumb-jump-go)
+    ("M-g i" . dumb-jump-go-prompt)
+    ("M-g x" . dumb-jump-go-prefer-external)
+    ("M-g z" . dumb-jump-go-prefer-external-other-window))
+    :config 
+    (setq dumb-jump-selector 'ivy) 
+    :ensure)
+#+END_SRC
+** Cider
+#+BEGIN_SRC emacs-lisp
+(use-package cider
+    :ensure t)
+#+END_SRC
+** Undo-Tree
+#+BEGIN_SRC emacs-lisp
+(use-package undo-tree
+  :ensure t
+  :init
+  (global-undo-tree-mode))
+#+END_SRC
+** Shell Config
+   #+BEGIN_SRC emacs-lisp
+(use-package better-shell
+    :ensure t
+    :bind 
+    (("C-x C-`" . better-shell-shell)
+    ("C-;" . better-shell-remote-open)))
+
+(use-package exec-path-from-shell
+    :ensure t
+    :config
+    (when (memq window-system '(mac ns x)) ;; check if its mac
+    (exec-path-from-shell-initialize)))
+   #+END_SRC
+
+* Org & Markdown
+** Enable Org-Mode
+#+BEGIN_SRC emacs-lisp
+(use-package org 
+   :ensure t
+   :pin org)
+
+  ;; Package cannot load for some reason on newer versions so I commented it   
+  ;; (use-package org-ac
+  ;;   :config 
+  ;;   (org-ac/config-default))
+#+END_SRC
+** Org Bullets
+#+Begin_SRC emacs-lisp
+(use-package org-bullets
+    :ensure t
+    :config
+    (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
+#+END_SRC
+** Latex 
+#+BEGIN_SRC emacs-lisp
+(use-package tex
+    :ensure auctex)
+#+END_SRC
+** Writing & PDF
+#+BEGIN_SRC emacs-lisp 
+;; Pdf tools
+(use-package pdf-tools
+    :ensure t)
+
+(use-package org-pdfview
+    :ensure t)
+
+(require 'pdf-tools)
+(require 'org-pdfview)
+
+;; writegood and wc mode 
+(use-package wc-mode
+    :ensure t
+    :bind 
+    ("C-x C-j" . wc-mode))
+
+(use-package writegood-mode
+    :ensure t
+    :bind 
+    ("C-." . writegood-mode))
+ #+END_SRC
+#+END_SRC
+* Clarity Packages
+#+BEGIN_SRC emacs-lisp
 ;; Beacon
 (use-package beacon
     :ensure t
@@ -104,12 +258,10 @@
     (setq dashboard-items '((recents  . 5)
                            (bookmarks . 5)
                            (projects . 5))))
-
 #+END_SRC
 
-* Extra Productivity Helper (Which Key & Ace-Window)
+* Which Key & Ace-Window
 #+BEGIN_SRC emacs-lisp
-
 ;; Which-Key
 (use-package which-key
 	:ensure t 
@@ -121,9 +273,7 @@
      :ensure t
      :init 
      (global-set-key (kbd "M-o") 'ace-window)
-     (setq aw-background nil)
-     (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
-
+     (setq aw-background nil))
 #+END_SRC
 * Modeline
 #+BEGIN_SRC emacs-lisp
@@ -201,19 +351,18 @@
 ;; Swiper 
 (use-package swiper
     :ensure t
-    :bind (("C-s" . swiper)
-	   ("C-r" . swiper)
-	   ("C-c C-r" . ivy-resume)
-	   ("M-x" . counsel-M-x)
-	   ("C-x C-f" . counsel-find-file))
+    :bind 
+    (("C-s" . swiper)
+    ("C-r" . swiper)
+    ("C-c C-r" . ivy-resume)
+    ("M-x" . counsel-M-x)
+    ("C-x C-f" . counsel-find-file))
     :config
-  (progn
+    (progn
     (ivy-mode 1)
     (setq ivy-use-virtual-buffers t)
     (setq ivy-display-style 'fancy)
-    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
-    ))
-
+    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)))
 
 (use-package avy
    :ensure t
@@ -221,9 +370,9 @@
    (("C-:" . avy-goto-word-1)))
 
 #+END_SRC
-* Directory Navigation (Neotree, Ranger, Projectile)
+* Directory Navigation
+** Neotree
 #+BEGIN_SRC emacs-lisp
-
 ;; Pretty Icons
 (use-package all-the-icons
     :ensure t)
@@ -234,13 +383,17 @@
     :defer t
     :bind ("C-c t" . neotree-toggle)
     :config (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
-    
+#+END_SRC
+** Ranger
+#+BEGIN_SRC emacs-lisp
 ;; Ranger
 (use-package ranger
     :ensure t
     :config
     (ranger-override-dired-mode t))
-
+#+END_SRC
+** Projectile
+#+BEGIN_SRC emacs-lisp
 ;; Projectile-mode NOTE: s stands for command on MacOS, windows button for Windows
 (use-package projectile
     :ensure t
@@ -258,86 +411,6 @@
     :ensure t)
 
 #+END_SRC
-* Coding Convienience Packages
-** Auto-Complete
-#+BEGIN_SRC emacs-lisp
-(use-package auto-complete 
-  :ensure t
-  :init
-  (progn
-  (ac-config-default)
-  (global-auto-complete-mode t)))
-#+END_SRC
-** Yasnippet
-#+BEGIN_SRC emacs-lisp
-(use-package yasnippet
-    :ensure t
-    :init 
-    (yas-global-mode 1))
-
-(use-package yasnippet-snippets 
-    :ensure t)
-#+END_SRC 
-** FlyCheck
-#+BEGIN_SRC emacs-lisp
-(use-package flycheck
-     :ensure t
-     :init
-     (global-flycheck-mode t))
-
-(use-package flycheck-pos-tip
-    :ensure t
-    :config
-    (flycheck-pos-tip-mode))
-#+END_SRC
-** Company
-#+BEGIN_SRC emacs-lisp
-(use-package company
-    :ensure t
-    :config
-    (setq company-idle-delay 0) ;; faster autcompletion
-    (setq company-minimum-prefix-length 3) ;; show completions after 3 chars
-    (setq global-company-mode t)) 
-#+END_SRC
-
-** Iedit
-#+BEGIN_SRC emacs-lisp
-(use-package iedit
-    :ensure t
-    :bind (("C-c c" . iedit-mode)))
-#+END_SRC
-** Dump-Jump
-#+BEGIN_SRC emacs-lisp
-(use-package dumb-jump
-    :bind 
-    (("C-M-g" . dumb-jump-go-other-window)
-    ("M-g j" . dumb-jump-go)
-    ("M-g i" . dumb-jump-go-prompt)
-    ("M-g x" . dumb-jump-go-prefer-external)
-    ("M-g z" . dumb-jump-go-prefer-external-other-window))
-    :config 
-    (setq dumb-jump-selector 'ivy) 
-    :ensure)
-#+END_SRC
-** Cider
-#+BEGIN_SRC emacs-lisp
-(use-package cider
-    :ensure t)
-#+END_SRC
-** Shell Config
-   #+BEGIN_SRC emacs-lisp
-(use-package better-shell
-    :ensure t
-    :bind 
-    (("C-x C-`" . better-shell-shell)
-    ("C-;" . better-shell-remote-open)))
-
-(use-package exec-path-from-shell
-    :ensure t
-    :config
-    (when (memq window-system '(mac ns x)) ;; check if its mac
-    (exec-path-from-shell-initialize)))
-   #+END_SRC
 * Magit (Github Integration)
 #+BEGIN_SRC emacs-lisp
 (use-package magit
@@ -345,54 +418,6 @@
     :bind
     (("C-x g" . magit-status)
     ("C-x M-g" . magit-dispatch-popup)))
-#+END_SRC
-* Org & Markdown
-** Enable Org-Mode
-#+BEGIN_SRC emacs-lisp
-(use-package org 
-   :ensure t
-   :pin org)
-
-  ;; Package cannot load for some reason on newer versions so I commented it   
-  ;; (use-package org-ac
-  ;;   :config 
-  ;;   (org-ac/config-default))
-#+END_SRC
-** Org Bullets
-#+Begin_SRC emacs-lisp
-(use-package org-bullets
-    :ensure t
-    :config
-    (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
-#+END_SRC
-** Latex 
-#+BEGIN_SRC emacs-lisp
-(use-package tex
-    :ensure auctex)
-#+END_SRC
-** Writing & PDF
-#+BEGIN_SRC emacs-lisp 
-;; Pdf tools
-(use-package pdf-tools
-    :ensure t)
-
-(use-package org-pdfview
-    :ensure t)
-
-(require 'pdf-tools)
-(require 'org-pdfview)
-
-;; writegood and wc mode 
-(use-package wc-mode
-    :ensure t
-    :bind 
-    ("C-x C-j" . wc-mode))
-
-(use-package writegood-mode
-    :ensure t
-    :bind 
-    ("C-." . writegood-mode))
- #+END_SRC
 #+END_SRC
 * C++
 ** Modern Font Lock
@@ -641,6 +666,4 @@
     :ensure t
     :config
     (add-hook 'csharp-mode-hook 'omnisharp-mode))
-
-
 #+END_SRC
