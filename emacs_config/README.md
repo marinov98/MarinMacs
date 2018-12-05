@@ -175,10 +175,6 @@
 - web-mode (allows for auto completion and automatic tag closing) 
 - emmet-mode (increase html/css productivity with snippets) (OPTIONAL)
 
-## Csharp 
-- **Disclaimer:** Csharp on emacs is something that I am still experimenting with
-- csharp-mode (Allows for emacs to recognize Csharp files)
-
 ## Vim
 - evil (basically creates vim inside emacs) **You have to uncomment this package in order to ENABLE THE BINDINGS**
 - **WARNING** You need undo tree for this package to fully work (if you are copying my entire config this is not a problem)
