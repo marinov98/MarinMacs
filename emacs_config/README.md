@@ -19,7 +19,6 @@
   - [Python](#Python)
   - [JavaScript](#JavaScript)
   - [Web-Development](#Web-Development)
-  - [Csharp](#Csharp)
   - [For Vim users](#Vim)
 
 ## IMPORTANT:  
