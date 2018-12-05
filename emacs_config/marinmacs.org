@@ -9,7 +9,7 @@
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 #+END_SRC
-* Restart-Emacs & Linum Relative
+* Restart-Emacs & Linum-Relative
 #+BEGIN_SRC emacs-lisp
 (use-package linum-relative
     :ensure t
@@ -25,11 +25,16 @@
 * General Settings
 #+BEGIN_SRC emacs-lisp
 
+;; Indententation 
 (setq c-basic-offset 4)    ;; indents 4 chars
 (setq tab-width 4)         ;; and 4 char wide for TAB
 (setq indent-tabs-mode nil);; And force use of spaces
+
+;; syntax highlighthing & auto-close braces
 (global-font-lock-mode 1)  ;; syntax highlighting
 (electric-pair-mode)       ;; auto closing brackets
+
+;; Quick y/n prompt & Disable menu bars
 (fset 'yes-or-no-p 'y-or-n-p) ;; change yes or no to y or n
 (menu-bar-mode -1) ;; disable menu bar
 (toggle-scroll-bar -1) ;; disable scroll bar
@@ -49,24 +54,23 @@
 #+BEGIN_SRC emacs-lisp
 
 ;; My personal keybindings, you change these anyway you like 
-(global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
-(global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file
-(global-set-key (kbd "M-m") 'move-beginning-of-line) ;; moves beginning of the line 
+(global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file DISABLED by evil 
+(global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file DISABLED by evil 
+(global-set-key (kbd "M-m") 'move-beginning-of-line) ;; moves beginning of the line DISABLED by evil
 (global-set-key (kbd "C-?") 'comment-region) ;; comment
-(global-set-key (kbd "C-a") 'back-to-indentation) ;; moves beginning of the first char 
+(global-set-key (kbd "C-a") 'back-to-indentation) ;; moves beginning of the first char DISABLED by evil
 (global-set-key (kbd "s-r") 'compile) ;; compile code
 (global-set-key (kbd "C-c C-e") 'eval-buffer) ;; evaluate the buffer (mini reload)
 (global-set-key (kbd "C-`") 'eshell) ;; terminal in emacs
 (global-set-key (kbd "C-c b") 'switch-to-prev-buffer) 
-(global-set-key (kbd "C-c r") 'ranger) ;; start ranger from file
 #+END_SRC
 * Evil-Mode
 #+BEGIN_SRC emacs-lisp
 ;; Uncomment if you want to switch to vim bindings 
 ;;(use-package evil
-;;  :ensure t
-;;  :config
-;;  (evil-mode 1))
+;; :ensure t
+;; :config
+;; (evil-mode 1))
 #+END_SRC
 * Themes
 #+BEGIN_SRC emacs-lisp
@@ -390,7 +394,8 @@
 (use-package ranger
     :ensure t
     :config
-    (ranger-override-dired-mode t))
+    (ranger-override-dired-mode t)
+    (global-set-key (kbd "C-c r") 'ranger)) ;; start ranger from file
 #+END_SRC
 ** Projectile
 #+BEGIN_SRC emacs-lisp
@@ -651,19 +656,4 @@
 (flycheck-add-mode 'javascript-eslint 'javascript-mode)
 
 ;;;;;;;; JavaScript end
-#+END_SRC
-* Csharp 
-#+BEGIN_SRC emacs-lisp
-(use-package csharp-mode
-    :ensure t
-    :config
-    (defun csharp-development ()
-    "Csharp development."
-    (electric-pair-local-mode 1))
-    (add-hook 'csharp-mode-hook 'csharp-development))
-
-(use-package omnisharp
-    :ensure t
-    :config
-    (add-hook 'csharp-mode-hook 'omnisharp-mode))
 #+END_SRC
