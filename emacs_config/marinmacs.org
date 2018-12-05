@@ -203,10 +203,8 @@
    :ensure t
    :pin org)
 
-  ;; Package cannot load for some reason on newer versions so I commented it   
-  ;; (use-package org-ac
-  ;;   :config 
-  ;;   (org-ac/config-default))
+;; enable auto-complete for org 
+(add-to-list 'ac-modes 'org-mode)
 #+END_SRC
 ** Org Bullets
 #+Begin_SRC emacs-lisp
