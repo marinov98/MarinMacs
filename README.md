@@ -1,4 +1,5 @@
-# Emacs guide MY WAY
+# My Emacs guide 
+- Emacs and Vim users are equally welcomed 
 
 ## Inspiration:
 - I became inspired to write this after I configured my emacs init file to the point where I could comftorably wrtie C++, Python, and JavaScript code as well as take notes in Org mode and write LaTex
