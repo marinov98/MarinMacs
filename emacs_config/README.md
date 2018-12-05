@@ -18,7 +18,7 @@
   - [C++](#Cpp)
   - [Python](#Python)
   - [JavaScript](#JavaScript)
-  - [Web-Deveopment](#Web-Development)
+  - [Web-Development](#Web-Development)
   - [Csharp](#Csharp)
   - [For Vim users](#Vim)
 
