@@ -56,22 +56,23 @@
 ## Favorite-Themes
 
 ### Base16 (Contains 20+ themes but these are my top picks)
-- base16-ocean (Personal Favorite)
+- base16-ocean 
 - base16-oceanicnext 
 - base16-tomorrow-night
 - base16-solarized-dark/light
 
 ### Colorful and visually pleasing    
 - Spacemacs-theme
-- Zerodark-theme
+- Zerodark
 
 ### Easy on the eyes
-- Gruvbox-theme
-- Zenburn-theme
-- JellyBeans (currently in use)
+- Gruvbox
+- Zenburn
+- JellyBeans 
+- Planet
 
 ### For Org and any Markdown Language
-- Poet-theme 
+- Poet
 
 # What My Init File Consists Of (Currently)
 
@@ -125,7 +126,6 @@
 - yasnippet, yasnippet snippets (snippets)
 - company (auto-completion)
 - flycheck (linter/syntax checker)
-- flycheck-pos-tip (shows errors immedietly where the cursor points)
 - iedit (change multiple words at the same time)
 - dump-jump (jump to definition) 
 - undo-tree (smarter undo)
