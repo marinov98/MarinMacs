@@ -68,9 +68,9 @@
 #+BEGIN_SRC emacs-lisp
 ;; Uncomment if you want to switch to vim bindings 
 ;;(use-package evil
-;; :ensure t
-;; :config
-;; (evil-mode 1))
+;;:ensure t
+;;:config
+;;(evil-mode 1))
 #+END_SRC
 * Themes
 #+BEGIN_SRC emacs-lisp
@@ -95,10 +95,8 @@
 ;; (use-package gruvbox-theme
 ;;    :ensure t)
 
-;; (use-package base16-theme
-;;    :ensure t
-;;    :config
-;;    (load-theme 'base16-ocean))
+ (use-package base16-theme
+    :ensure t)
 
 (use-package jbeans-theme
     :ensure t
