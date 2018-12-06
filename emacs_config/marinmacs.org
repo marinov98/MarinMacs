@@ -89,20 +89,27 @@
 ;;    :ensure t)
  
 ;; (use-package spacemacs-theme 
-;;      :defer t) 
+;;    :defer t) 
 ;;    :init  (load-theme 'spacemacs-dark t))
 
 ;; (use-package gruvbox-theme
 ;;    :ensure t)
 
- (use-package base16-theme
+(use-package base16-theme
     :ensure t)
+;;    :config 
+;;    (load-theme 'base16-ocean t))
 
 (use-package jbeans-theme
-    :ensure t
-    :config
-    (load-theme 'jbeans t))
+    :ensure t)
+;;    :config
+;;    (load-theme 'jbeans t))
  
+(use-package planet-theme
+    :ensure t
+    :config 
+    (load-theme 'planet t))
+
 ;;(load-theme 'zerodark t)
 ;;(zerodark-setup-modeline-format)
 #+END_SRC
@@ -132,11 +139,6 @@
      :ensure t
      :init
      (global-flycheck-mode t))
-
-(use-package flycheck-pos-tip
-    :ensure t
-    :config
-    (flycheck-pos-tip-mode))
 #+END_SRC
 ** Company
 #+BEGIN_SRC emacs-lisp
