@@ -70,6 +70,7 @@
 - Zenburn
 - JellyBeans 
 - Planet
+- solarized-dark (from solarized-theme NOT base16)
 
 ### For Org and any Markdown Language
 - Poet
