@@ -68,9 +68,9 @@
 #+BEGIN_SRC emacs-lisp
 ;; Uncomment if you want to switch to vim bindings 
 ;;(use-package evil
-;;:ensure t
-;;:config
-;;(evil-mode 1))
+;;  :ensure t
+;;  :config
+;;  (evil-mode 1))
 #+END_SRC
 * Themes
 #+BEGIN_SRC emacs-lisp
@@ -100,15 +100,23 @@
 ;;    :config 
 ;;    (load-theme 'base16-ocean t))
 
-(use-package jbeans-theme
-    :ensure t)
+;;(use-package jbeans-theme
+;;    :ensure t)
 ;;    :config
 ;;    (load-theme 'jbeans t))
+
+
+
+ (use-package solarized-theme
+     :ensure t
+     :config
+     (load-theme 'solarized-dark t))
+
  
-(use-package planet-theme
-    :ensure t
-    :config 
-    (load-theme 'planet t))
+;;(use-package planet-theme
+;;   :ensure t)
+;;   :config 
+;;   (load-theme 'planet t))
 
 ;;(load-theme 'zerodark t)
 ;;(zerodark-setup-modeline-format)
@@ -279,46 +287,47 @@
 #+END_SRC
 * Modeline
 #+BEGIN_SRC emacs-lisp
-   ;; You can pick one of these, simply uncomment the one you want to try and comment the rest  
+  ;;  You can pick one of these, simply uncomment the one you want to try and comment the rest  
    
-   ;; Telephone-line
+  ;;  Telephone-line
    
-   ;; (use-package telephone-line
-   ;;     :ensure t
-   ;;     :config
-   ;;     (setq telephone-line-primary-right-separator 'telephone-line-abs-left
-   ;;           telephone-line-secondary-right-separator 'telephone-line-abs-hollow-left)
-   ;;     (setq telephone-line-height 24
-   ;;           telephone-line-evil-use-short-tag t)
-   ;;     (setq telephone-line-lhs
-   ;;         '((evil   . (telephone-line-evil-tag-segment))
-   ;;          (accent . (telephone-line-vc-segment
-   ;;                    telephone-line-erc-modified-channels-segment
-   ;;                    telephone-line-process-segment))
-   ;;          (nil    . (telephone-line-minor-mode-segment
-   ;;                    telephone-line-buffer-segment))))
-   ;;     (setq telephone-line-rhs
-   ;;           '((nil    . (telephone-line-misc-info-segment))
-   ;;            (accent . (telephone-line-major-mode-segment))
-   ;;            (evil   . (telephone-line-airline-position-segment))))
-   ;;     (telephone-line-mode 1))
+ ;;  (use-package telephone-line
+ ;;      :ensure t
+ ;;      :config
+ ;;      (setq telephone-line-primary-right-separator 'telephone-line-abs-left
+ ;;            telephone-line-secondary-right-separator 'telephone-line-abs-hollow-left)
+ ;;      (setq telephone-line-height 24
+ ;;            telephone-line-evil-use-short-tag t)
+ ;;      (setq telephone-line-lhs
+ ;;          '((evil   . (telephone-line-evil-tag-segment))
+ ;;           (accent . (telephone-line-vc-segment
+ ;;                     telephone-line-erc-modified-channels-segment
+ ;;                     telephone-line-process-segment))
+ ;;           (nil    . (telephone-line-minor-mode-segment
+ ;;                     telephone-line-buffer-segment))))
+ ;;      (setq telephone-line-rhs
+ ;;            '((nil    . (telephone-line-misc-info-segment))
+ ;;             (accent . (telephone-line-major-mode-segment))
+ ;;             (evil   . (telephone-line-airline-position-segment))))
+ ;;      (telephone-line-mode 1))
 
 
   ;; Spaceline
   
-  ;;  (use-package spaceline
-  ;;     :ensure t
-  ;;     :config
-  ;;     (require 'spaceline-config)
-  ;;     (setq powerline-default-separator (quote arrow))
-  ;;     (spaceline-spacemacs-theme))
+ ;;  (use-package spaceline
+ ;;     :ensure t
+ ;;     :config
+ ;;     (require 'spaceline-config)
+ ;;     (setq powerline-default-separator (quote arrow))
+ ;;     (spaceline-highlight-face-evil-state) ;; evil mode only
+ ;;     (spaceline-spacemacs-theme))
 
   ;; Powerline
 
-     (use-package powerline
-           :ensure t
-           :config
-           (powerline-default-theme))
+   (use-package powerline
+         :ensure t
+         :config
+         (powerline-default-theme))
 	   
     ;; Other themes with powerline
     
