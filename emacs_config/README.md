@@ -180,7 +180,7 @@
 - web-mode (allows for auto completion and automatic tag closing) 
 - emmet-mode (increase html/css productivity with snippets) (OPTIONAL)
 
-## Vim
+## Vim :speak_no_evil:
 - evil (basically creates vim inside emacs) **You have to uncomment this package in order to ENABLE THE BINDINGS**
 - **WARNING** You need undo tree for this package to fully work (if you are copying my entire config this is not a problem)
 - Any movement keybindings in the Personal Keybindings section of my init will be disabled once evil is uncommented
