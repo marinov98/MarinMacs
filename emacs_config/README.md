@@ -48,15 +48,13 @@
 - **Possible Solution #2 :** Make sure you have my init.el copied (fix any small indentention issues there) then run ```M-x customize RET```, go to faces->basics faces->default change the size of the emacs screen to prevent it from indenting.
 
 ## To Be Tested Packages
-- Reveal.js (create presentations with org mode)
 - skewer (live web development)
-- multi-compile
 - smex
 - evil-surround
 - multiple-cursors
 - web-beautify
 - impatient-mode
-- Makefile-mode, makefile executor
+
 
 ## Favorite-Themes
 
