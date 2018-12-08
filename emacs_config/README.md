@@ -54,6 +54,8 @@
 - multiple-cursors
 - web-beautify
 - impatient-mode
+- projectile-speedbar 
+- find-file-in-project 
 
 
 ## Favorite-Themes
