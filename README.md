@@ -36,6 +36,7 @@
   - A little of html/css
 - Allows for either Vim keybindings or original native Emacs keybindings
 - Improved debugger
+- Integrates Github 
 
 ## Please Note: 
 - I have used Emacs on MacOS, Arch(Antergos), & Ubuntu so my knowledge is limited when it comes to anything else
