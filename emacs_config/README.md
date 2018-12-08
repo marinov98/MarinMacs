@@ -114,6 +114,9 @@
 - spaceline
 - powerline (currently using this one)
 
+## Emacs-enhancements
+- smex (improved M-x command)
+
 ## Enhanced-Searching 
 - ivy (improved file search)
 - swiper (improved file/name search by integrating ivy)
