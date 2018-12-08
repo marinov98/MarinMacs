@@ -50,6 +50,12 @@
 ## To Be Tested Packages
 - Reveal.js (create presentations with org mode)
 - skewer (live web development)
+- multi-compile
+- smex
+- multiple-cursors
+- web-beautify
+- impatient-mode
+- Makefile-mode, makefile executor
 - rtags & company-rtags
 - cmake-ide
 
