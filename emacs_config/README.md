@@ -99,10 +99,12 @@
 - the ```restart-emacs``` package allows use to keybind the command ```restart-emacs``` so that we can restart and refresh the session with one keystroke whenever we need to.
 - ```linum-relative``` enables relative line numbering. 
 - If you want normal line numbers, comment linum-relative and put ```(global-linum-mode 1)``` instead
-## Vim :speak_no_evil:
+
+## Vim 
 - evil (basically creates vim inside emacs) **You have to make sure this package is NOT commented in order to ENABLE THE BINDINGS**
 - **WARNING** You need undo tree for this package to fully work (if you are copying my entire config this is not a problem)
 - Any movement keybindings in the Personal Keybindings section of my init will be disabled once evil is uncommented
+- If you just want **Emacs KeyBindings** either erase any "evil" package or comment them 
 
 ## Clarity-Packages
 - dashboard (customizable start up screen)
