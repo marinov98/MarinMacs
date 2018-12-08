@@ -1,4 +1,4 @@
-# My Emacs Configuration
+# My Emacs Configuration :sunrise:
 
 # Contact
 - **Email me if there are any issues/questions/things that can be better**: marin.marinov@macaulay.cuny.edu
