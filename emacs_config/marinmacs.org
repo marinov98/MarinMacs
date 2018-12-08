@@ -53,24 +53,29 @@
 * Personal KeyBindings
 #+BEGIN_SRC emacs-lisp
 
-;; My personal keybindings, you change these anyway you like 
+;;;; My personal keybindings, you change these anyway you like 
+
+;; Movement (DISABLED if evil-mode is on)
 (global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file DISABLED by evil 
 (global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file DISABLED by evil 
 (global-set-key (kbd "M-m") 'move-beginning-of-line) ;; moves beginning of the line DISABLED by evil
-(global-set-key (kbd "C-?") 'comment-region) ;; comment
 (global-set-key (kbd "C-a") 'back-to-indentation) ;; moves beginning of the first char DISABLED by evil
+
+;; Compiling and Buffers
 (global-set-key (kbd "s-r") 'compile) ;; compile code
 (global-set-key (kbd "C-c C-e") 'eval-buffer) ;; evaluate the buffer (mini reload)
-(global-set-key (kbd "C-`") 'eshell) ;; terminal in emacs
-(global-set-key (kbd "C-c b") 'switch-to-prev-buffer) 
+(global-set-key (kbd "C-c b") 'switch-to-prev-buffer)
+ 
+;; Commenting
+(global-set-key (kbd "C-?") 'comment-region) ;; comment
 #+END_SRC
 * Evil-Mode
 #+BEGIN_SRC emacs-lisp
-;; Uncomment if you want to switch to vim bindings 
-;;(use-package evil
-;;  :ensure t
-;;  :config
-;;  (evil-mode 1))
+;; Package needed to enable vim bindings...
+(use-package evil
+  :ensure t
+  :config
+  (evil-mode 1))
 #+END_SRC
 * Themes
 #+BEGIN_SRC emacs-lisp
@@ -120,6 +125,101 @@
 
 ;;(load-theme 'zerodark t)
 ;;(zerodark-setup-modeline-format)
+#+END_SRC
+* Modeline
+#+BEGIN_SRC emacs-lisp
+  ;;  You can pick one of these, simply uncomment the one you want to try and comment the rest  
+   
+  ;;  Telephone-line
+   
+ ;;  (use-package telephone-line
+ ;;      :ensure t
+ ;;      :config
+ ;;      (setq telephone-line-primary-right-separator 'telephone-line-abs-left
+ ;;            telephone-line-secondary-right-separator 'telephone-line-abs-hollow-left)
+ ;;      (setq telephone-line-height 24
+ ;;            telephone-line-evil-use-short-tag t)
+ ;;      (setq telephone-line-lhs
+ ;;          '((evil   . (telephone-line-evil-tag-segment))
+ ;;           (accent . (telephone-line-vc-segment
+ ;;                     telephone-line-erc-modified-channels-segment
+ ;;                     telephone-line-process-segment))
+ ;;           (nil    . (telephone-line-minor-mode-segment
+ ;;                     telephone-line-buffer-segment))))
+ ;;      (setq telephone-line-rhs
+ ;;            '((nil    . (telephone-line-misc-info-segment))
+ ;;             (accent . (telephone-line-major-mode-segment))
+ ;;             (evil   . (telephone-line-airline-position-segment))))
+ ;;      (telephone-line-mode 1))
+
+
+  ;; Spaceline
+  
+   (use-package spaceline
+      :ensure t
+      :config
+      (require 'spaceline-config)
+      (setq powerline-default-separator (quote arrow))
+      (spaceline-highlight-face-evil-state) ;; evil mode only
+      (spaceline-spacemacs-theme))
+
+  ;; Powerline
+
+ ;;  (use-package powerline
+ ;;        :ensure t
+ ;;        :config
+ ;;        (powerline-default-theme))
+	   
+    ;; Other themes with powerline
+    
+    ;;     (powerline-center-theme)
+    ;;     (powerline-vim-theme)
+    ;;     (powerline-center-evil-theme)
+    ;;     (powerline-nano-theme)
+
+#+END_SRC
+
+* Which Key & Ace-Window
+#+BEGIN_SRC emacs-lisp
+;; Which-Key
+(use-package which-key
+	:ensure t 
+	:config
+	(which-key-mode))
+
+;; Ace-Window
+(use-package ace-window
+     :ensure t
+     :init 
+     (global-set-key (kbd "M-o") 'ace-window)
+     (setq aw-background nil))
+#+END_SRC
+* Shell
+   #+BEGIN_SRC emacs-lisp
+(use-package better-shell
+    :ensure t
+    :bind 
+    (("C-x C-`" . better-shell-shell)
+    ("C-;" . better-shell-remote-open)))
+
+(use-package exec-path-from-shell
+    :ensure t
+    :config
+    (when (memq window-system '(mac ns x)) ;; check if its mac
+    (exec-path-from-shell-initialize)))
+
+;; Eshell 
+(global-set-key (kbd "C-`") 'eshell) ;; terminal in emacs
+   #+END_SRC
+
+* Smex 
+#+BEGIN_SRC emacs-lisp
+(use-package smex
+    :ensure t
+    :config
+    (global-set-key (kbd "M-x") 'smex)
+    (smex-initialize))
+
 #+END_SRC
 * Coding Convienience 
 ** Auto-Complete
@@ -189,21 +289,6 @@
   :init
   (global-undo-tree-mode))
 #+END_SRC
-** Shell Config
-   #+BEGIN_SRC emacs-lisp
-(use-package better-shell
-    :ensure t
-    :bind 
-    (("C-x C-`" . better-shell-shell)
-    ("C-;" . better-shell-remote-open)))
-
-(use-package exec-path-from-shell
-    :ensure t
-    :config
-    (when (memq window-system '(mac ns x)) ;; check if its mac
-    (exec-path-from-shell-initialize)))
-   #+END_SRC
-
 * Org & Markdown
 ** Enable Org-Mode
 #+BEGIN_SRC emacs-lisp
@@ -250,95 +335,7 @@
     ("C-." . writegood-mode))
  #+END_SRC
 #+END_SRC
-* Clarity Packages
-#+BEGIN_SRC emacs-lisp
-;; Beacon
-(use-package beacon
-    :ensure t
-    :config
-    (beacon-mode 1))
-
-;; DashBoard
-(use-package dashboard 
-    :ensure t
-    :config
-    (dashboard-setup-startup-hook)
-    (setq dashboard-banner-logo-title "MarinMacs")
-    (setq dashboard-startup-banner 'logo)
-    (setq dashboard-items '((recents  . 5)
-                           (bookmarks . 5)
-                           (projects . 5))))
-#+END_SRC
-
-* Which Key & Ace-Window
-#+BEGIN_SRC emacs-lisp
-;; Which-Key
-(use-package which-key
-	:ensure t 
-	:config
-	(which-key-mode))
-
-;; Ace-Window
-(use-package ace-window
-     :ensure t
-     :init 
-     (global-set-key (kbd "M-o") 'ace-window)
-     (setq aw-background nil))
-#+END_SRC
-* Modeline
-#+BEGIN_SRC emacs-lisp
-  ;;  You can pick one of these, simply uncomment the one you want to try and comment the rest  
-   
-  ;;  Telephone-line
-   
- ;;  (use-package telephone-line
- ;;      :ensure t
- ;;      :config
- ;;      (setq telephone-line-primary-right-separator 'telephone-line-abs-left
- ;;            telephone-line-secondary-right-separator 'telephone-line-abs-hollow-left)
- ;;      (setq telephone-line-height 24
- ;;            telephone-line-evil-use-short-tag t)
- ;;      (setq telephone-line-lhs
- ;;          '((evil   . (telephone-line-evil-tag-segment))
- ;;           (accent . (telephone-line-vc-segment
- ;;                     telephone-line-erc-modified-channels-segment
- ;;                     telephone-line-process-segment))
- ;;           (nil    . (telephone-line-minor-mode-segment
- ;;                     telephone-line-buffer-segment))))
- ;;      (setq telephone-line-rhs
- ;;            '((nil    . (telephone-line-misc-info-segment))
- ;;             (accent . (telephone-line-major-mode-segment))
- ;;             (evil   . (telephone-line-airline-position-segment))))
- ;;      (telephone-line-mode 1))
-
-
-  ;; Spaceline
-  
- ;;  (use-package spaceline
- ;;     :ensure t
- ;;     :config
- ;;     (require 'spaceline-config)
- ;;     (setq powerline-default-separator (quote arrow))
- ;;     (spaceline-highlight-face-evil-state) ;; evil mode only
- ;;     (spaceline-spacemacs-theme))
-
-  ;; Powerline
-
-   (use-package powerline
-         :ensure t
-         :config
-         (powerline-default-theme))
-	   
-    ;; Other themes with powerline
-    
-    ;;     (powerline-center-theme)
-    ;;     (powerline-vim-theme)
-    ;;     (powerline-center-evil-theme)
-    ;;     (powerline-nano-theme)
-
-#+END_SRC
-
-* Ivy, Swiper, Counsel & Avy
+* Ivy-Integration & Avy
 #+BEGIN_SRC emacs-lisp
 
 ;; Ivy
@@ -381,6 +378,25 @@
    (("C-:" . avy-goto-word-1)))
 
 #+END_SRC
+* Project Managment
+#+BEGIN_SRC emacs-lisp
+;; Projectile-mode NOTE: s stands for command on MacOS, windows button for Windows
+(use-package projectile
+    :ensure t
+    :bind
+    (("C-c p" . projectile-command-map)
+    ("s-d" . projectile-find-dir)
+    ("s-f" . projectile-find-file)
+    ("s-g" . projectile-grep))
+    :config
+    (setq projectile-completion-system 'ivy)
+    (projectile-mode +1))
+
+;; Counsel-Projectile
+ (use-package counsel-projectile
+    :ensure t)
+
+#+END_SRC
 * Directory Navigation
 ** Neotree
 #+BEGIN_SRC emacs-lisp
@@ -404,25 +420,26 @@
     (ranger-override-dired-mode t)
     (global-set-key (kbd "C-c r") 'ranger)) ;; start ranger from file
 #+END_SRC
-** Projectile
+* Clarity Packages
 #+BEGIN_SRC emacs-lisp
-;; Projectile-mode NOTE: s stands for command on MacOS, windows button for Windows
-(use-package projectile
+;; Beacon
+(use-package beacon
     :ensure t
-    :bind
-    (("C-c p" . projectile-command-map)
-    ("s-d" . projectile-find-dir)
-    ("s-f" . projectile-find-file)
-    ("s-g" . projectile-grep))
     :config
-    (setq projectile-completion-system 'ivy)
-    (projectile-mode +1))
+    (beacon-mode 1))
 
-;; Counsel-Projectile
- (use-package counsel-projectile
-    :ensure t)
-
+;; DashBoard
+(use-package dashboard 
+    :ensure t
+    :config
+    (dashboard-setup-startup-hook)
+    (setq dashboard-banner-logo-title "MarinMacs")
+    (setq dashboard-startup-banner 'logo)
+    (setq dashboard-items '((recents  . 5)
+                           (bookmarks . 5)
+                           (projects . 5))))
 #+END_SRC
+
 * Magit (Github Integration)
 #+BEGIN_SRC emacs-lisp
 (use-package magit
