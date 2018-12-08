@@ -52,12 +52,11 @@
 - skewer (live web development)
 - multi-compile
 - smex
+- evil-surround
 - multiple-cursors
 - web-beautify
 - impatient-mode
 - Makefile-mode, makefile executor
-- rtags & company-rtags
-- cmake-ide
 
 ## Favorite-Themes
 
