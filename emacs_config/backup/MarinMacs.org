@@ -9,7 +9,7 @@
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 #+END_SRC
-* Restart-Emacs & Linum Relative
+* Restart-Emacs & Linum-Relative
 #+BEGIN_SRC emacs-lisp
 (use-package linum-relative
     :ensure t
@@ -25,11 +25,16 @@
 * General Settings
 #+BEGIN_SRC emacs-lisp
 
+;; Indententation 
 (setq c-basic-offset 4)    ;; indents 4 chars
 (setq tab-width 4)         ;; and 4 char wide for TAB
 (setq indent-tabs-mode nil);; And force use of spaces
+
+;; syntax highlighthing & auto-close braces
 (global-font-lock-mode 1)  ;; syntax highlighting
 (electric-pair-mode)       ;; auto closing brackets
+
+;; Quick y/n prompt & Disable menu bars
 (fset 'yes-or-no-p 'y-or-n-p) ;; change yes or no to y or n
 (menu-bar-mode -1) ;; disable menu bar
 (toggle-scroll-bar -1) ;; disable scroll bar
@@ -49,16 +54,15 @@
 #+BEGIN_SRC emacs-lisp
 
 ;; My personal keybindings, you change these anyway you like 
-(global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file
-(global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file
-(global-set-key (kbd "M-m") 'move-beginning-of-line) ;; moves beginning of the line 
+(global-set-key (kbd "C-S-p") 'beginning-of-buffer) ;; top of file DISABLED by evil 
+(global-set-key (kbd "C-S-n") 'end-of-buffer) ;; end of file DISABLED by evil 
+(global-set-key (kbd "M-m") 'move-beginning-of-line) ;; moves beginning of the line DISABLED by evil
 (global-set-key (kbd "C-?") 'comment-region) ;; comment
-(global-set-key (kbd "C-a") 'back-to-indentation) ;; moves beginning of the first char 
+(global-set-key (kbd "C-a") 'back-to-indentation) ;; moves beginning of the first char DISABLED by evil
 (global-set-key (kbd "s-r") 'compile) ;; compile code
 (global-set-key (kbd "C-c C-e") 'eval-buffer) ;; evaluate the buffer (mini reload)
 (global-set-key (kbd "C-`") 'eshell) ;; terminal in emacs
 (global-set-key (kbd "C-c b") 'switch-to-prev-buffer) 
-(global-set-key (kbd "C-c r") 'ranger) ;; start ranger from file
 #+END_SRC
 * Evil-Mode
 #+BEGIN_SRC emacs-lisp
@@ -85,22 +89,35 @@
 ;;    :ensure t)
  
 ;; (use-package spacemacs-theme 
-;;      :defer t) 
+;;    :defer t) 
 ;;    :init  (load-theme 'spacemacs-dark t))
 
 ;; (use-package gruvbox-theme
 ;;    :ensure t)
 
-;; (use-package base16-theme
-;;    :ensure t
-;;    :config
-;;    (load-theme 'base16-ocean))
+(use-package base16-theme
+    :ensure t)
+;;    :config 
+;;    (load-theme 'base16-ocean t))
 
-(use-package jbeans-theme
-    :ensure t
-    :config
-    (load-theme 'jbeans t))
+;;(use-package jbeans-theme
+;;    :ensure t)
+;;    :config
+;;    (load-theme 'jbeans t))
+
+
+
+ (use-package solarized-theme
+     :ensure t
+     :config
+     (load-theme 'solarized-dark t))
+
  
+;;(use-package planet-theme
+;;   :ensure t)
+;;   :config 
+;;   (load-theme 'planet t))
+
 ;;(load-theme 'zerodark t)
 ;;(zerodark-setup-modeline-format)
 #+END_SRC
@@ -130,11 +147,6 @@
      :ensure t
      :init
      (global-flycheck-mode t))
-
-(use-package flycheck-pos-tip
-    :ensure t
-    :config
-    (flycheck-pos-tip-mode))
 #+END_SRC
 ** Company
 #+BEGIN_SRC emacs-lisp
@@ -199,10 +211,8 @@
    :ensure t
    :pin org)
 
-  ;; Package cannot load for some reason on newer versions so I commented it   
-  ;; (use-package org-ac
-  ;;   :config 
-  ;;   (org-ac/config-default))
+;; enable auto-complete for org 
+(add-to-list 'ac-modes 'org-mode)
 #+END_SRC
 ** Org Bullets
 #+Begin_SRC emacs-lisp
@@ -277,46 +287,47 @@
 #+END_SRC
 * Modeline
 #+BEGIN_SRC emacs-lisp
-   ;; You can pick one of these, simply uncomment the one you want to try and comment the rest  
+  ;;  You can pick one of these, simply uncomment the one you want to try and comment the rest  
    
-   ;; Telephone-line
+  ;;  Telephone-line
    
-   ;; (use-package telephone-line
-   ;;     :ensure t
-   ;;     :config
-   ;;     (setq telephone-line-primary-right-separator 'telephone-line-abs-left
-   ;;           telephone-line-secondary-right-separator 'telephone-line-abs-hollow-left)
-   ;;     (setq telephone-line-height 24
-   ;;           telephone-line-evil-use-short-tag t)
-   ;;     (setq telephone-line-lhs
-   ;;         '((evil   . (telephone-line-evil-tag-segment))
-   ;;          (accent . (telephone-line-vc-segment
-   ;;                    telephone-line-erc-modified-channels-segment
-   ;;                    telephone-line-process-segment))
-   ;;          (nil    . (telephone-line-minor-mode-segment
-   ;;                    telephone-line-buffer-segment))))
-   ;;     (setq telephone-line-rhs
-   ;;           '((nil    . (telephone-line-misc-info-segment))
-   ;;            (accent . (telephone-line-major-mode-segment))
-   ;;            (evil   . (telephone-line-airline-position-segment))))
-   ;;     (telephone-line-mode 1))
+ ;;  (use-package telephone-line
+ ;;      :ensure t
+ ;;      :config
+ ;;      (setq telephone-line-primary-right-separator 'telephone-line-abs-left
+ ;;            telephone-line-secondary-right-separator 'telephone-line-abs-hollow-left)
+ ;;      (setq telephone-line-height 24
+ ;;            telephone-line-evil-use-short-tag t)
+ ;;      (setq telephone-line-lhs
+ ;;          '((evil   . (telephone-line-evil-tag-segment))
+ ;;           (accent . (telephone-line-vc-segment
+ ;;                     telephone-line-erc-modified-channels-segment
+ ;;                     telephone-line-process-segment))
+ ;;           (nil    . (telephone-line-minor-mode-segment
+ ;;                     telephone-line-buffer-segment))))
+ ;;      (setq telephone-line-rhs
+ ;;            '((nil    . (telephone-line-misc-info-segment))
+ ;;             (accent . (telephone-line-major-mode-segment))
+ ;;             (evil   . (telephone-line-airline-position-segment))))
+ ;;      (telephone-line-mode 1))
 
 
   ;; Spaceline
   
-  ;;  (use-package spaceline
-  ;;     :ensure t
-  ;;     :config
-  ;;     (require 'spaceline-config)
-  ;;     (setq powerline-default-separator (quote arrow))
-  ;;     (spaceline-spacemacs-theme))
+ ;;  (use-package spaceline
+ ;;     :ensure t
+ ;;     :config
+ ;;     (require 'spaceline-config)
+ ;;     (setq powerline-default-separator (quote arrow))
+ ;;     (spaceline-highlight-face-evil-state) ;; evil mode only
+ ;;     (spaceline-spacemacs-theme))
 
   ;; Powerline
 
-     (use-package powerline
-           :ensure t
-           :config
-           (powerline-default-theme))
+   (use-package powerline
+         :ensure t
+         :config
+         (powerline-default-theme))
 	   
     ;; Other themes with powerline
     
@@ -390,7 +401,8 @@
 (use-package ranger
     :ensure t
     :config
-    (ranger-override-dired-mode t))
+    (ranger-override-dired-mode t)
+    (global-set-key (kbd "C-c r") 'ranger)) ;; start ranger from file
 #+END_SRC
 ** Projectile
 #+BEGIN_SRC emacs-lisp
@@ -540,25 +552,27 @@
 	   (add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
 	   (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 	   (add-to-list 'auto-mode-alist '("\\.vue?\\'" . web-mode))
+	   (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+	   (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+	   (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+	   (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+	   (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 	   (setq web-mode-engines-alist
 		 '(("django"    . "\\.html\\'")))
 	   (setq web-mode-ac-sources-alist
 	   '(("css" . (ac-source-css-property))
 	   ("vue" . (ac-source-words-in-buffer ac-source-abbrev))
-         ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
-
-;; Indentation
-    (setq web-mode-markup-indent-offset 4)
-    (setq web-mode-code-indent-offset 4)
-    (setq web-mode-css-indent-offset 4)
-
-;; Auto-closing
-    (setq web-mode-enable-auto-closing t)
-    (setq web-mode-enable-auto-quoting t)
-
-;; Highlighting
-    (setq web-mode-enable-current-column-highlight t)
-    (setq web-mode-enable-current-element-highlight t))
+           ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
+	 ;; Indentation
+	 (setq web-mode-markup-indent-offset 4)
+	 (setq web-mode-code-indent-offset 4)
+	 (setq web-mode-css-indent-offset 4)
+	 ;; Auto-closing
+	 (setq web-mode-enable-auto-closing t)
+	 (setq web-mode-enable-auto-quoting t)
+	 ;; Highlighting
+	 (setq web-mode-enable-current-column-highlight t)
+	 (setq web-mode-enable-current-element-highlight t))
 
 #+END_SRC
 ** Emmet 
@@ -651,19 +665,4 @@
 (flycheck-add-mode 'javascript-eslint 'javascript-mode)
 
 ;;;;;;;; JavaScript end
-#+END_SRC
-* Csharp 
-#+BEGIN_SRC emacs-lisp
-(use-package csharp-mode
-    :ensure t
-    :config
-    (defun csharp-development ()
-    "Csharp development."
-    (electric-pair-local-mode 1))
-    (add-hook 'csharp-mode-hook 'csharp-development))
-
-(use-package omnisharp
-    :ensure t
-    :config
-    (add-hook 'csharp-mode-hook 'omnisharp-mode))
 #+END_SRC
