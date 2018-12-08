@@ -88,8 +88,7 @@
   - MacOS: ```brew install ctags```
   ##### Additional install intructions for Ctags to work with ggtags (dont worry about this part too much, im experimenting  with it) 
   - **Simply make sure you have ctags here is the [ggtags](https://github.com/leoliu/ggtags) repo if you want to have a go at configuring it**
-  - I **may or may not** switch to rtags, I want to do more research on the tags and test them on my config 
-  - Whatever I choose, we woul still need to install pygments (directions below)
+  - If you are thinking of incorporating tags, you should install pygments (directions below)
   
   ### Python
   
