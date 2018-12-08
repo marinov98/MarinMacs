@@ -1,4 +1,4 @@
-# My Emacs guide 
+# :computer:	My Emacs guide :computer:	
 - Emacs and Vim users are equally welcomed 
 
 ## Inspiration:
