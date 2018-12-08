@@ -22,14 +22,14 @@
 - I just really like to have my stuff online in case event XYZ happens with my machine 
 
 ## What my Emacs can do
-- Has packages that allow for
+- Has packages that allow for:
   - Fast project/file navigation
   - jump-to-definition
   - Advanced word search
   - smart file managers
   - tree explorers
   - smart undo
-- Has ide-like support for these languages
+- Has ide-like support for these languages:
   - C++
   - Python
   - Javascript
