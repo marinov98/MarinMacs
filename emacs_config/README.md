@@ -13,7 +13,7 @@
   - [Modeline Packages](#Modeline-Customization)
   - [Navigation Packages](#Enhanced-Searching)
   - [General Coding Packages Packages](#General-Coding-Convenience)
-  - [Github package](GitHub-Integration)
+  - [Github package](#GitHub-Integration)
   - [Org & MarkDown packages](#Org-and-Markdown)
   - [C++ packages](#Cpp)
   - [Python packages](#Python)
