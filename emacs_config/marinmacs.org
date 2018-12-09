@@ -44,11 +44,6 @@
 (setq make-backup-files nil) ;; stop creating backup~ files
 (setq auto-save-default nil) ;; stop creating autosave# files
 (setq create-lockfiles nil)  ;; stop creating any # files
-
-;; Debugger
-(global-set-key (kbd "C-c d") 'gdb)
-(setq gdb-many-windows t) ;; have multiple windows when debugging
-(setq  gdb-show-main t )  ;; Non-nil means display source file containing the main routine at startup
 #+END_SRC
 * Personal KeyBindings
 #+BEGIN_SRC emacs-lisp
@@ -72,10 +67,22 @@
 * Evil-Mode
 #+BEGIN_SRC emacs-lisp
 ;; Package needed to enable vim bindings...
-(use-package evil
-  :ensure t
-  :config
-  (evil-mode 1))
+;;(use-package evil
+;; :ensure t
+;; :config
+;; (evil-mode 1))
+;;
+;;(use-package evil-surround
+;;  :ensure t
+;;  :config
+;;  (global-evil-surround-mode 1))
+;;
+;;; Evil multiple-cursors
+;;(use-package evil-mc
+;;  :ensure t
+;;  :config
+;;  (global-evil-mc-mode  1))
+    
 #+END_SRC
 * Themes
 #+BEGIN_SRC emacs-lisp
@@ -132,45 +139,40 @@
    
   ;;  Telephone-line
    
- ;;  (use-package telephone-line
- ;;      :ensure t
- ;;      :config
- ;;      (setq telephone-line-primary-right-separator 'telephone-line-abs-left
- ;;            telephone-line-secondary-right-separator 'telephone-line-abs-hollow-left)
- ;;      (setq telephone-line-height 24
- ;;            telephone-line-evil-use-short-tag t)
- ;;      (setq telephone-line-lhs
- ;;          '((evil   . (telephone-line-evil-tag-segment))
- ;;           (accent . (telephone-line-vc-segment
- ;;                     telephone-line-erc-modified-channels-segment
- ;;                     telephone-line-process-segment))
- ;;           (nil    . (telephone-line-minor-mode-segment
- ;;                     telephone-line-buffer-segment))))
- ;;      (setq telephone-line-rhs
- ;;            '((nil    . (telephone-line-misc-info-segment))
- ;;             (accent . (telephone-line-major-mode-segment))
- ;;             (evil   . (telephone-line-airline-position-segment))))
- ;;      (telephone-line-mode 1))
+   (use-package telephone-line
+       :ensure t
+       :config
+       (setq telephone-line-lhs
+           '((evil   . (telephone-line-evil-tag-segment))
+	   (accent . (telephone-line-vc-segment
+	   telephone-line-erc-modified-channels-segment
+	   telephone-line-process-segment))
+	   (nil    . (telephone-line-minor-mode-segment
+	   telephone-line-buffer-segment))))
+       (setq telephone-line-rhs
+           '((nil    . (telephone-line-misc-info-segment))
+	   (accent . (telephone-line-major-mode-segment))
+	   (evil   . (telephone-line-airline-position-segment)))) 
+       (telephone-line-mode 1))
 
 
   ;; Spaceline
   
-   (use-package spaceline
-      :ensure t
-      :config
-      (require 'spaceline-config)
-      (setq powerline-default-separator (quote arrow))
-      (spaceline-highlight-face-evil-state) ;; evil mode only
-      (spaceline-spacemacs-theme))
+ ;; (use-package spaceline
+ ;;    :ensure t
+ ;;    :config
+ ;;    (require 'spaceline-config)
+ ;;    (setq powerline-default-separator (quote arrow))
+ ;;    (spaceline-highlight-face-evil-state) ;; evil mode only
+ ;;    (spaceline-spacemacs-theme))
 
   ;; Powerline
 
- ;;  (use-package powerline
- ;;        :ensure t
- ;;        :config
- ;;        (powerline-default-theme))
-	   
-    ;; Other themes with powerline
+;;  (use-package powerline
+;;        :ensure t
+;;        :config
+;; (powerline-vim-theme))   
+;;   ;; Other themes with powerline
     
     ;;     (powerline-center-theme)
     ;;     (powerline-vim-theme)
@@ -179,20 +181,21 @@
 
 #+END_SRC
 
-* Which Key & Ace-Window
+* Emacs Enhancements 
+** Smex
 #+BEGIN_SRC emacs-lisp
-;; Which-Key
-(use-package which-key
-	:ensure t 
-	:config
-	(which-key-mode))
-
-;; Ace-Window
-(use-package ace-window
-     :ensure t
-     :init 
-     (global-set-key (kbd "M-o") 'ace-window)
-     (setq aw-background nil))
+(use-package smex
+    :ensure t
+    :config
+    (global-set-key (kbd "M-x") 'smex)
+    (smex-initialize))
+#+END_SRC
+** Debugger
+#+BEGIN_SRC emacs-lisp
+;; Debugger
+(global-set-key (kbd "C-c d") 'gdb)
+(setq gdb-many-windows t) ;; have multiple windows when debugging
+(setq  gdb-show-main t )  ;; Non-nil means display source file containing the main routine at startup
 #+END_SRC
 * Shell
    #+BEGIN_SRC emacs-lisp
@@ -212,16 +215,7 @@
 (global-set-key (kbd "C-`") 'eshell) ;; terminal in emacs
    #+END_SRC
 
-* Smex 
-#+BEGIN_SRC emacs-lisp
-(use-package smex
-    :ensure t
-    :config
-    (global-set-key (kbd "M-x") 'smex)
-    (smex-initialize))
-
-#+END_SRC
-* Coding Convienience 
+* Global Convienience
 ** Auto-Complete
 #+BEGIN_SRC emacs-lisp
 (use-package auto-complete 
@@ -258,6 +252,61 @@
     (setq global-company-mode t)) 
 #+END_SRC
 
+** Undo-Tree
+#+BEGIN_SRC emacs-lisp
+(use-package undo-tree
+  :ensure t
+  :init
+  (global-undo-tree-mode))
+#+END_SRC
+* Which Key & Ace-Window
+#+BEGIN_SRC emacs-lisp
+;; Which-Key
+(use-package which-key
+	:ensure t 
+	:config
+	(which-key-mode))
+
+;; Ace-Window
+(use-package ace-window
+     :ensure t
+     :init 
+     (global-set-key (kbd "M-o") 'ace-window)
+     (setq aw-background nil))
+#+END_SRC
+* Clarity Packages
+#+BEGIN_SRC emacs-lisp
+;; Beacon
+(use-package beacon
+    :ensure t
+    :config
+    (beacon-mode 1))
+
+;; DashBoard
+(use-package dashboard 
+    :ensure t
+    :config
+    (dashboard-setup-startup-hook)
+    (setq dashboard-banner-logo-title "MarinMacs")
+    (setq dashboard-startup-banner 'logo)
+    (setq dashboard-items '((recents  . 5)
+                           (bookmarks . 5)
+                           (projects . 5))))
+#+END_SRC
+
+* Coding Productivity 
+** Multiple-Cursors
+#+BEGIN_SRC emacs-lisp
+;; DISCLAIMER only use this if you are using native EMACS KeyBindings
+;; Evil mode uses evil-mc 
+(use-package multiple-cursors
+    :ensure t
+    :config
+    (global-set-key (kbd "C-x c") 'mc/edit-lines)
+    (global-set-key (kbd "C-c x") 'mc/mark-next-like-this)
+    (global-set-key (kbd "C-c z") 'mc/mark-previous-like-this)
+    (global-set-key (kbd "C-c a") 'mc/mark-all-like-this))
+#+END_SRC
 ** Iedit
 #+BEGIN_SRC emacs-lisp
 (use-package iedit
@@ -281,13 +330,6 @@
 #+BEGIN_SRC emacs-lisp
 (use-package cider
     :ensure t)
-#+END_SRC
-** Undo-Tree
-#+BEGIN_SRC emacs-lisp
-(use-package undo-tree
-  :ensure t
-  :init
-  (global-undo-tree-mode))
 #+END_SRC
 * Org & Markdown
 ** Enable Org-Mode
@@ -420,27 +462,7 @@
     (ranger-override-dired-mode t)
     (global-set-key (kbd "C-c r") 'ranger)) ;; start ranger from file
 #+END_SRC
-* Clarity Packages
-#+BEGIN_SRC emacs-lisp
-;; Beacon
-(use-package beacon
-    :ensure t
-    :config
-    (beacon-mode 1))
-
-;; DashBoard
-(use-package dashboard 
-    :ensure t
-    :config
-    (dashboard-setup-startup-hook)
-    (setq dashboard-banner-logo-title "MarinMacs")
-    (setq dashboard-startup-banner 'logo)
-    (setq dashboard-items '((recents  . 5)
-                           (bookmarks . 5)
-                           (projects . 5))))
-#+END_SRC
-
-* Magit (Github Integration)
+* Github Integration
 #+BEGIN_SRC emacs-lisp
 (use-package magit
     :ensure t
