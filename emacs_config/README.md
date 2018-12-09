@@ -8,18 +8,23 @@
 - [Possible Issues](#Possible-Issues)
 - [Themes I use](#Favorite-Themes)
 - What Packages Are In My Init File:
+  - [For Vim users](#Vim)
   - [Clarity Packages](#Clarity-Packages)
   - [Productivity Packages](#Extra-Productivity-Helper-Packages)
   - [Modeline Packages](#Modeline-Customization)
+  - [Enhance Emacs packages](#Emacs-enhancements)
   - [Navigation Packages](#Enhanced-Searching)
-  - [General Coding Packages Packages](#General-Coding-Convenience)
+  - [Shell Packages](#Shell)
+  - [Global Packages](#Global-Emacs-Helpers)
+  - [Project Managment Packages](#Project-Managment)
+  - [General Coding Packages](#General-Coding-Convenience)
   - [Github package](#GitHub-Integration)
   - [Org & MarkDown packages](#Org-and-Markdown)
   - [C++ packages](#Cpp)
   - [Python packages](#Python)
   - [JavaScript packages](#JavaScript)
   - [Web-Development packages](#Web-Development)
-  - [For Vim users](#Vim)
+  
 
 ## :loudspeaker: IMPORTANT:  
 - I use init.el and marinmacs.org to run my emacs! The [.emacs](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/backup/.emacs) file in the backup folder is an old version of my init file without utilizing org mode and use-package
@@ -49,13 +54,9 @@
 
 ## To Be Tested Packages
 - skewer (live web development)
-- smex
-- evil-surround
-- multiple-cursors
 - web-beautify
 - impatient-mode
-- projectile-speedbar 
-- find-file-in-project 
+
 
 
 ## Favorite-Themes
@@ -101,10 +102,12 @@
 - If you want normal line numbers, comment linum-relative and put ```(global-linum-mode 1)``` instead
 
 ## Vim 
-- evil (basically creates vim inside emacs) **You have to make sure this package is NOT commented in order to ENABLE THE BINDINGS**
 - **WARNING** You need undo tree for this package to fully work (if you are copying my entire config this is not a problem)
 - Any movement keybindings in the Personal Keybindings section of my init will be disabled once evil is uncommented
 - If you just want **Emacs KeyBindings** either erase any "evil" package or comment them 
+- evil (basically creates vim inside emacs) **You have to make sure this package is NOT commented in order to ENABLE THE BINDINGS**
+- evil-surround (just like suround in vim)
+- evil-mc (vimlike multiple cursors)
 
 ## Clarity-Packages
 - dashboard (customizable start up screen)
@@ -115,12 +118,14 @@
 - ace-window (faster window swapping)
 
 ## Modeline-Customization 
-- telephone-line 
-- spaceline
-- powerline (currently using this one)
+- Pick one:
+  - telephone-line 
+  - spaceline
+  - powerline 
 
 ## Emacs-enhancements
 - smex (improved M-x command)
+- improve debugger
 
 ## Enhanced-Searching 
 - ivy (improved file search)
@@ -128,24 +133,31 @@
 - counsel (enhanced ivy commands)
 - avy (fast word navigation)
 
-## Directory Navigation
-- all-the-icons (provides icon-images)
-- neotree (popup sidebar for easy directory/file navigation)
-- ranger (ranger-like file manager, replaces dired)
-- projectile (easier project navigation)
-- counsel-projectile (ivy integration of projectile)
+## Shell
+- better-shell (improves shell functionality within emacs)
+- exec-path-from-shell (sets paths for the terminal automatically)
 
-## General-Coding-Convenience
+## Global-Emacs-Helpers
 - auto-complete (convinient global auto-completion within emacs)
 - yasnippet, yasnippet snippets (snippets)
 - company (auto-completion)
 - flycheck (linter/syntax checker)
+- undo-tree (smarter undo)
+
+## Project-Managment
+- projectile (easier project navigation)
+- counsel-projectile (ivy integration of projectile)
+
+## Directory-Navigation
+- all-the-icons (provides icon-images)
+- neotree (popup sidebar for easy directory/file navigation)
+- ranger (ranger-like file manager, replaces dired)
+
+## Coding-Productivity
+- Multiple-cursors (create multiple cursors on one screen)
 - iedit (change multiple words at the same time)
 - dump-jump (jump to definition) 
-- undo-tree (smarter undo)
 - cider (interactive programming with clojure)
-- better-shell (improves shell functionality within emacs)
-- exec-path-from-shell (sets paths for the terminal automatically)
 
 ## GitHub-Integration 
 - magit 
