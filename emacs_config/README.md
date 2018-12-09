@@ -90,7 +90,6 @@
 - debugging on error 
 - tool bar turned off
 - Disable annoying backup files
-- Enable different parts of the debugger on multiple windows 
 
 # Packages
 
