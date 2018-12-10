@@ -160,7 +160,7 @@
 - magit 
 
 ## Org-and-Markdown
-- org-bullets (nicer org formatting)
+- org-bullets (prettier org formatting)
 - auctex & tex(smoother latex editing)
 - pdf-tools (pdf support in emacs)
 - wc-mode (word counter)
