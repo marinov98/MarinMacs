@@ -52,11 +52,6 @@
 - Best thing to do is ```C-s``` and search for the word and either try to put it in the same line or delete it
 - **Possible Solution #2 :** Make sure you have my init.el copied (fix any small indentention issues there) then run ```M-x customize RET```, go to faces->basics faces->default change the size of the emacs screen to prevent it from indenting.
 
-## To Be Tested Packages
-- skewer (live web development)
-- web-beautify
-- impatient-mode
-
 ## Favorite-Themes
 
 ### Base16 (Contains 20+ themes but these are my top picks)
@@ -195,6 +190,8 @@
 
 ## Web-Development 
 - web-mode (allows for auto completion and automatic tag closing) 
-- emmet-mode (increase html/css productivity with snippets) (OPTIONAL)
+- web-beautify (format js/html/css code)
+- skewer (live web development)
+- emmet-mode (increase html/css productivity with snippets) 
 
 
