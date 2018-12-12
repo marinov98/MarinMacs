@@ -67,21 +67,21 @@
 * Evil-Mode
 #+BEGIN_SRC emacs-lisp
 ;; Package needed to enable vim bindings...
-(use-package evil
-    :ensure t
-    :config
-    (evil-mode 1))
+;;(use-package evil
+;;    :ensure t
+;;    :config
+;;    (evil-mode 1))
 
-(use-package evil-surround
-    :ensure t
-    :config
-    (global-evil-surround-mode 1))
+;;(use-package evil-surround
+;;    :ensure t
+;;    :config
+;;    (global-evil-surround-mode 1))
 
 ;; Evil multiple-cursors
-(use-package evil-mc
-    :ensure t
-    :config
-    (global-evil-mc-mode  1))
+;;(use-package evil-mc
+;;    :ensure t
+;;    :config
+;;    (global-evil-mc-mode  1))
     
 #+END_SRC
 * Themes
