@@ -148,6 +148,12 @@
   - Arch: ``` sudo pacman -S auctex```
   - Ubuntu: ```sudo apt-get install auctex```
   
+  ##### Spellcheck
+  - Arch: ```sudo pacman -S aspell```
+  - Ubuntu: ```sudo apt-get install aspell```
+  - MacOs: ```brew install aspell```
+  
+  
   ##### Cask (for using the dashboard package)
   - Ubuntu & Arch: ```curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python```
   - MacOS: ```brew install cask```
