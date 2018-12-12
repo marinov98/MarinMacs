@@ -633,6 +633,8 @@
 (use-package web-beautify
     :ensure t
     :config
+    (eval-after-load 'sgml-mode
+       '(define-key html-mode-map (kbd "C-c h") 'web-beautify-html))
     (eval-after-load 'web-mode
        '(define-key web-mode-map (kbd "C-c h") 'web-beautify-html))
     (eval-after-load 'js2-mode
