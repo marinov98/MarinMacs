@@ -67,21 +67,21 @@
 * Evil-Mode
 #+BEGIN_SRC emacs-lisp
 ;; Package needed to enable vim bindings...
-;;(use-package evil
-;; :ensure t
-;; :config
-;; (evil-mode 1))
-;;
-;;(use-package evil-surround
-;;  :ensure t
-;;  :config
-;;  (global-evil-surround-mode 1))
-;;
-;;; Evil multiple-cursors
-;;(use-package evil-mc
-;;  :ensure t
-;;  :config
-;;  (global-evil-mc-mode  1))
+(use-package evil
+    :ensure t
+    :config
+    (evil-mode 1))
+
+(use-package evil-surround
+    :ensure t
+    :config
+    (global-evil-surround-mode 1))
+
+;; Evil multiple-cursors
+(use-package evil-mc
+    :ensure t
+    :config
+    (global-evil-mc-mode  1))
     
 #+END_SRC
 * Themes
@@ -352,6 +352,15 @@
 #+BEGIN_SRC emacs-lisp
 (use-package tex
     :ensure auctex)
+
+;; Settings 
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq TeX-save-query nil)
+
+;; Spellchecker and Linter for Latex
+(add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
+(add-hook 'LaTeX-mode-hook 'flycheck-mode)
 #+END_SRC
 ** Writing & PDF
 #+BEGIN_SRC emacs-lisp 
@@ -375,6 +384,11 @@
     :ensure t
     :bind 
     ("C-." . writegood-mode))
+
+;; Settings
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+(add-hook 'text-mode-hook 'turn-on-flyspell) ;; spellchecker
+
  #+END_SRC
 #+END_SRC
 * Ivy-Integration & Avy
