@@ -628,6 +628,56 @@
 	 (setq web-mode-enable-current-element-highlight t))
 
 #+END_SRC
+** Web-Beautify
+#+BEGIN_SRC emacs-lisp
+(use-package web-beautify
+    :ensure t
+    :config
+    (eval-after-load 'web-mode
+       '(define-key web-mode-map (kbd "C-c h") 'web-beautify-html))
+    (eval-after-load 'js2-mode
+       '(define-key js2-mode-map (kbd "C-c h") 'web-beautify-js))
+    (eval-after-load 'css-mode
+        '(define-key css-mode-map (kbd "C-c h") 'web-beautify-css))
+    (eval-after-load 'json-mode
+        '(define-key json-mode-map (kbd "C-c h") 'web-beautify-js)))
+
+;; Format on save
+;;; Javascript
+;;   (eval-after-load 'js2-mode
+;;       '(add-hook 'js2-mode-hook
+;;            (lambda ()
+;;                (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
+;;; Json
+;;   (eval-after-load 'json-mode
+;;       '(add-hook 'json-mode-hook
+;;            (lambda ()
+;;                (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
+;;; Markup
+;;   (eval-after-load 'sgml-mode
+;;       '(add-hook 'html-mode-hook
+;;            (lambda ()
+;;                (add-hook 'before-save-hook 'web-beautify-html-buffer t t))))
+;;; Html
+;;   (eval-after-load 'web-mode
+;;       '(add-hook 'web-mode-hook
+;;            (lambda ()
+;;                (add-hook 'before-save-hook 'web-beautify-html-buffer t t))))
+;;; Css
+;;  (eval-after-load 'css-mode
+;;      '(add-hook 'css-mode-hook
+;;            (lambda ()
+;;                (add-hook 'before-save-hook 'web-beautify-css-buffer t t)))))
+#+END_SRC
+** Skewer
+#+BEGIN_SRC emacs-lisp
+(use-package skewer-mode
+    :ensure t
+    :config
+    (add-hook 'js2-mode-hook 'skewer-mode)
+    (add-hook 'css-mode-hook 'skewer-css-mode)
+    (add-hook 'html-mode-hook 'skewer-html-mode))
+#+END_SRC
 ** Emmet 
 #+BEGIN_SRC emacs-lisp
 (use-package emmet-mode
@@ -638,7 +688,7 @@
 #+END_SRC
 
 * JavaScript
-** Necesities
+** Necessities
 #+BEGIN_SRC emacs-lisp
 ;; Js2-mode
 (use-package js2-mode
