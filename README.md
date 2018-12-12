@@ -125,12 +125,15 @@
   - Ubuntu: ```sudo apt-get install npm```
   - MacOS: ```brew install npm```
   
-  #### Eslint for Javascript
+  #### Eslint for JavaScript
   
-  - install eslint ```npm install eslint```
+  - Install eslint ```npm install eslint```
   
-  #### Javascript autocompletion
-  - run ```sudo npm install -g tern```
+  #### JavaScript autocompletion
+  - Install tern: ```sudo npm install -g tern```
+  
+  #### Javacript/Html/CSS formatting
+  - Install web-beautify ```npm -g install js-beautify```
   
   #### Debugger
   - Arch: ```sudo pacman -S gdb```
