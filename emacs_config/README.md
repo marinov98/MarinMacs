@@ -15,7 +15,7 @@
   - [Enhance Emacs packages](#Emacs-enhancements)
   - [Shell Packages](#Shell)
   - [Global Packages](#Global-Emacs-Helpers)
-  - [Project Managment Packages](#Project-Managment)
+  - [Project Management Packages](#Project-Management)
   - [General Coding Packages](#General-Coding-Convenience)
   - [Github package](#GitHub-Integration)
   - [Org & MarkDown packages](#Org-and-Markdown)
