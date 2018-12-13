@@ -22,6 +22,6 @@
 	(package-refresh-contents)
 	(package-install 'use-package))
 
-;; expand marinov.org and convert it to marinov.el to start-up emacs
+;; expand marinmacs.org and convert it to marinmacs.el to start-up emacs
 (org-babel-load-file (expand-file-name "~/.emacs.d/marinmacs.org"))
 ;;; init.el ends here
