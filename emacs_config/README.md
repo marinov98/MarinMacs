@@ -100,8 +100,8 @@
 - **You have to make sure this package is NOT commented in order to ENABLE THE BINDINGS:**
   - evil (basically creates vim inside emacs) 
 - **Evil support packages:**
-- evil-surround (just like surround in vim)
-- evil-mc (vimlike multiple cursors)
+  - evil-surround (just like surround in vim)
+  - evil-mc (vimlike multiple cursors)
 
 ## Start-up
 - dashboard (customizable start up screen)
