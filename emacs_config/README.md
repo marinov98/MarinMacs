@@ -96,7 +96,10 @@
 - **WARNING** You need undo tree for this package to fully work (if you are copying my entire config this is not a problem)
 - Any **movement keybindings** in the Personal Keybindings section of my init will be disabled once evil is uncommented
 - If you just want **Emacs keybindings** either erase any "evil" package or comment them 
-- evil (basically creates vim inside emacs) **You have to make sure this package is NOT commented in order to ENABLE THE BINDINGS**
+#### **Packages for Vim: **
+- **You have to make sure this package is NOT commented in order to ENABLE THE BINDINGS: **
+  - evil (basically creates vim inside emacs) 
+- **Evil support packages: **
 - evil-surround (just like surround in vim)
 - evil-mc (vimlike multiple cursors)
 
