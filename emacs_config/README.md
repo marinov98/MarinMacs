@@ -122,7 +122,7 @@
 - ranger (ranger-like file manager, replaces dired)
 - avy (fast word navigation)
 - **Ivy Integration**
-  - ivy (improved file search)
+  - ivy (Tool for managing (recording, tracking, resolving and reporting) project dependencies.)
   - swiper (improved file/name search by integrating ivy)
   - counsel (enhanced ivy commands)
 
