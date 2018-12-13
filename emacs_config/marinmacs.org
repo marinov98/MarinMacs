@@ -86,16 +86,17 @@
 ;;   :ensure t
 ;;   :config
 ;;   (evil-mode 1))
-;;  
+
 
 ;;;; Evil Support packages
 
+;; Surround
 ;;(use-package evil-surround
 ;;   :ensure t
 ;;   :config
 ;;   (global-evil-surround-mode 1))
 ;;
-;;; Evil multiple-cursors
+;; Evil multiple-cursors
 ;;(use-package evil-mc
 ;;   :ensure t
 ;;   :config
