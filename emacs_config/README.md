@@ -16,7 +16,7 @@
   - [Shell Packages](#Shell)
   - [Global Packages](#Global-Emacs-Helpers)
   - [Project Management Packages](#Project-Management)
-  - [General Coding Packages](#General-Coding-Convenience)
+  - [General Coding Packages](#Coding-Productivity)
   - [Github package](#GitHub-Integration)
   - [Org & MarkDown packages](#Org-and-Markdown)
   - [C++ packages](#Cpp)
