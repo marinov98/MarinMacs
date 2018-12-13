@@ -158,8 +158,8 @@
 - writegood-mode (sentence/word choice checker)
 
 ## Cpp
-- c++-modern-font-lock (integrates c++11 and above) (OPTIONAL)
-- clang-format (formats c++ code) (OPTIONAL)
+- c++-modern-font-lock (helpes emacs recognize c++11 and above)
+- clang-format (formats c++ code)
 - irony (C++ minor mode based on libclang works with company to give intellisense)
 - company-irony (provides true intelligent c++ intellisense and autocompletetion)
 - company-irony-c-headers (auto completetion for header files)
