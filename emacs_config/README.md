@@ -9,11 +9,10 @@
 - [Themes I use](#Favorite-Themes)
 - What Packages Are In My Init File:
   - [For Vim users](#Vim)
-  - [Clarity Packages](#Clarity-Packages)
+  - [Start-up Screen Packages](#Start-up)
   - [Productivity Packages](#Extra-Productivity-Helper-Packages)
-  - [Modeline Packages](#Modeline-Customization)
+  - [Mode Line Packages](#Modeline-Customization)
   - [Enhance Emacs packages](#Emacs-enhancements)
-  - [Navigation Packages](#Enhanced-Searching)
   - [Shell Packages](#Shell)
   - [Global Packages](#Global-Emacs-Helpers)
   - [Project Managment Packages](#Project-Managment)
@@ -101,9 +100,9 @@
 - evil-surround (just like surround in vim)
 - evil-mc (vimlike multiple cursors)
 
-## Clarity-Packages
+## Start-up
 - dashboard (customizable start up screen)
-- beacon (light that follows your cursor)
+
 
 ## Extra-Productivity-Helper-Packages
 - which-key (key assignments help)
@@ -116,14 +115,13 @@
   - powerline 
 
 ## Emacs-enhancements
-- smex (improved M-x command)
-- improve debugger
-
-## Enhanced-Searching 
-- ivy (improved file search)
-- swiper (improved file/name search by integrating ivy)
-- counsel (enhanced ivy commands)
+- Debug on multiple-windows
+- ranger (ranger-like file manager, replaces dired)
 - avy (fast word navigation)
+- **Ivy Integration**
+  - ivy (improved file search)
+  - swiper (improved file/name search by integrating ivy)
+  - counsel (enhanced ivy commands)
 
 ## Shell
 - better-shell (improves shell functionality within emacs)
@@ -136,16 +134,14 @@
 - flycheck (linter/syntax checker)
 - undo-tree (smarter undo)
 
-## Project-Managment
+## Project-Management
 - projectile (easier project navigation)
 - counsel-projectile (ivy integration of projectile)
 
-## Directory-Navigation
+## Coding-Productivity
+- beacon (light that follows your cursor)
 - all-the-icons (provides icon-images)
 - neotree (popup sidebar for easy directory/file navigation)
-- ranger (ranger-like file manager, replaces dired)
-
-## Coding-Productivity
 - Multiple-cursors (create multiple cursors on one screen)
 - iedit (change multiple words at the same time)
 - dump-jump (jump to definition) 
