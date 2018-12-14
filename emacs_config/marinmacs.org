@@ -83,24 +83,24 @@
 ;;;; Package needed to enable vim bindings...
 
 ;;(use-package evil
-;;   :ensure t
-;;   :config
-;;   (evil-mode 1))
-
-
-;;;; Evil Support packages
-
-;; Surround
-;;(use-package evil-surround
-;;   :ensure t
-;;   :config
-;;   (global-evil-surround-mode 1))
+;;  :ensure t
+;;  :config
+;;  (evil-mode 1))
+;; 
 ;;
-;; Evil multiple-cursors
+;;;;; Evil Support packages
+;;
+;;; Surround
+;;(use-package evil-surround
+;;  :ensure t
+;;  :config
+;;  (global-evil-surround-mode 1))
+;;
+;;; Evil multiple-cursors
 ;;(use-package evil-mc
-;;   :ensure t
-;;   :config
-;;   (global-evil-mc-mode  1))
+;;  :ensure t
+;;  :config
+;;  (global-evil-mc-mode  1))
     
 #+END_SRC
 * Themes
@@ -319,7 +319,7 @@
 (global-set-key (kbd "C-`") 'eshell) ;; terminal in emacs
    #+END_SRC
 
-* Global Convienience
+* Global Convenience
 ** Auto-Complete
 #+BEGIN_SRC emacs-lisp
 (use-package auto-complete 
@@ -507,7 +507,7 @@
     (setq clang-format-style-option ".clang-format")) 
  ;; (setq clang-format-style-option "llvm")) use this option if you do not have a .clang-format file
 #+END_SRC
-** Company-Irony Intellisense
+** Company-Irony IntelliSense
 #+BEGIN_SRC emacs-lisp
 
 ;; Begin auto-completion for C++
@@ -585,7 +585,7 @@
     (venv-initialize-interactive-shells)
     (venv-initialize-eshell))
 #+END_SRC
-** Company-Jedi Intellisense
+** Company-Jedi IntelliSense
 #+BEGIN_SRC emacs-lisp
 (use-package company-jedi
     :ensure t
@@ -694,21 +694,8 @@
 #+END_SRC
 
 * JavaScript
-** Necessities
+** Node Path
 #+BEGIN_SRC emacs-lisp
-;; Js2-mode
-(use-package js2-mode
-    :ensure t)
-
-(use-package js2-refactor
-    :ensure t)
-
-(use-package xref-js2
-    :ensure t)
-
-(use-package company-tern
-   :ensure t
-   :ensure tern)
 
 (use-package add-node-modules-path
    :ensure t
@@ -719,42 +706,47 @@
 #+END_SRC
 ** Js2-mode
 #+BEGIN_SRC emacs-lisp
-(require 'js2-mode)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
-;; Better imenu
-(add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
-;; refactor and xref
-(require 'js2-refactor)
-(require 'xref-js2)
+(use-package js2-mode
+    :ensure t
+    :config
+    (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+    :hook (j2-mode. js2-imenu-extras-mode))
 
-(add-hook 'js2-mode-hook #'js2-refactor-mode)
-(js2r-add-keybindings-with-prefix "C-c C-r")
-(define-key js2-mode-map (kbd "C-k") #'js2r-kill)
+(use-package js2-refactor
+    :ensure t
+    :hook (js2-mode . js2-refactor-mode)
+    :config
+    (js2r-add-keybindings-with-prefix "C-c C-r")
+    (define-key js2-mode-map (kbd "C-k") #'js2r-kill))
+
+(use-package xref-js2
+    :ensure t)
+
 #+END_SRC
-** Company-tern intellisense
+** Company-tern IntelliSense
 #+BEGIN_SRC emacs-lisp
-;; Company-tern Intellisense for JavaScript
-(require 'company-tern)
-(add-to-list 'company-backends 'company-tern)
-(add-hook 'js2-mode-hook (lambda ()
+
+(use-package company-tern
+   :ensure t
+   :ensure tern
+   :config
+   (add-to-list 'company-backends 'company-tern)
+   (add-hook 'js2-mode-hook (lambda ()
                            (tern-mode)
-                           (company-mode)))
-                           
-;; Disable completion keybindings, as we use xref-js2 instead
-(define-key tern-mode-keymap (kbd "M-.") nil)
-(define-key tern-mode-keymap (kbd "M-,") nil)
+                           (company-mode)))               
+    ;; Disable completion keybindings, as we use xref-js2 instead
+    (define-key tern-mode-keymap (kbd "M-.") nil)
+    (define-key tern-mode-keymap (kbd "M-,") nil)
+    ;; Js-mode (which js2 is based on) binds "M-." which conflicts with xref, so
+    ;; unbind it.
+    (define-key js-mode-map (kbd "M-.") nil)
+    (add-hook 'js2-mode-hook (lambda ()
+	(add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))))
 
-;; Js-mode (which js2 is based on) binds "M-." which conflicts with xref, so
-;; unbind it.
-(define-key js-mode-map (kbd "M-.") nil)
-
-(add-hook 'js2-mode-hook (lambda ()
-			   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
 #+END_SRC
 ** Es-lint
 #+BEGIN_SRC emacs-lisp
-;; Es-lint for javascript
 (eval-after-load 'js-mode
   '(add-hook 'js-mode-hook #'add-node-modules-path))
 
@@ -772,6 +764,4 @@
 ;; Use eslint with web-mode for jsx files
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 (flycheck-add-mode 'javascript-eslint 'javascript-mode)
-
-;;;;;;;; JavaScript end
 #+END_SRC
