@@ -131,7 +131,7 @@
 - exec-path-from-shell (sets paths for the terminal automatically)
 
 ## Global-Emacs-Helpers
-- auto-complete (convinient global auto-completion within emacs)
+- auto-complete (convenient global auto-completion within emacs)
 - yasnippet, yasnippet snippets (snippets)
 - company (auto-completion)
 - flycheck (linter/syntax checker)
