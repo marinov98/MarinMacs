@@ -80,7 +80,9 @@
   ####  Gcc (GNU Compiler Collection)
   - Arch: ``` sudo pacman -S base-devel ```
   - Ubuntu: ```sudo apt-get install gcc```
-  - MacOS: Either run ```xcode-select --install``` or install xcode 
+  - MacOS: 
+    - Either run ```xcode-select --install``` or install xcode 
+    - ```brew install gcc``` to get the latest version of gcc
   #### Clang (Compiler front-end for C++)
   - Arch: ``` sudo pacman -S clang ```
   - Ubuntu: ```sudo apt-get install clang```
