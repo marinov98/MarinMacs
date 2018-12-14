@@ -53,12 +53,27 @@
 - **Keep In Mind** : You might find certain machines with certain software (such as gcc and python) already installed I put all the topics below in case your machine has almost nothing related to programming installed on it 
 
 ## Table of contents:
+  - [Cask and Curl](#Cask,Curl)
   - [C++](#Cpp)
   - [Python](#Python)
   - [JavaScript](#JavaScript)
   - [Debugger](#Debugger)
   - [Git version control](#GIT)
   - [LaTex](#LaTex)
+  
+  ### Cask,Curl
+  
+  #### Cask (for using the dashboard package)
+  - Ubuntu & Arch: ```curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python```
+  - MacOS: ```brew install cask```
+  
+  #### install curl 
+  - Arch: ``` sudo pacman -S curl ```
+  - Ubuntu: ```sudo apt-get install curl```
+  - MacOS:
+    - ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null```
+    - ```brew install curl``` 
+  
   
   ### Cpp
   
@@ -113,13 +128,6 @@
   
   ### JavaScript 
   
-  ##### install curl 
-  - Arch: ``` sudo pacman -S curl ```
-  - Ubuntu: ```sudo apt-get install curl```
-  - MacOS:
-    - ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null```
-    - ```brew install curl``` 
-  
   ##### install npm
   - Arch: ``` sudo pacman -S npm ```
   - Ubuntu: ```sudo apt-get install npm```
@@ -160,7 +168,4 @@
   - MacOs: ```brew install aspell```
   
   
-  ##### Cask (for using the dashboard package)
-  - Ubuntu & Arch: ```curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python```
-  - MacOS: ```brew install cask```
   
