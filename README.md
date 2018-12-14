@@ -140,7 +140,7 @@
   - Ubuntu ```Sudo apt-get install gdb```
   - MacOS ```brew install gdb``` 
   
-  #### GIT (Github)
+  #### GIT
   - Ubuntu: ```sudo apt-get install git```
   - MacOS: Should have it preinstalled from xcode command line tools
   - **Now search up how to set up git on your Operating System AFTER installation is complete**
