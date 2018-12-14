@@ -67,7 +67,7 @@
   - Ubuntu & Arch: ```curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python```
   - MacOS: ```brew install cask```
   
-  #### install curl 
+  #### Curl 
   - Arch: ``` sudo pacman -S curl ```
   - Ubuntu: ```sudo apt-get install curl```
   - MacOS:
