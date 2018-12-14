@@ -94,8 +94,8 @@
   
   #### pyenv (python version management)
   - Ubuntu & Arch: 
-  1. ```git clone https://github.com/yyuu/pyenv.git ~/.pyenv```
-  2. ```git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv```
+    - ```git clone https://github.com/yyuu/pyenv.git ~/.pyenv```
+    - ```git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv```
   - MacOS: ```brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper```
   #### Pip (allows you to use pip install in your terminal)
   - Arch ```sudo pacman -S python-pip```
@@ -117,8 +117,8 @@
   - Arch: ``` sudo pacman -S curl ```
   - Ubuntu: ```sudo apt-get install curl```
   - MacOS:
-  1. ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null```
-  2. ```brew install curl``` 
+    - ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null```
+    - ```brew install curl``` 
   
   ##### install npm
   - Arch: ``` sudo pacman -S npm ```
