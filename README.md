@@ -79,7 +79,7 @@
   
   ####  Gcc (GNU Compiler Collection)
   - Arch: ``` sudo pacman -S base-devel ```
-  - Ubuntu: ```sudo apt-get install gcc```
+  - Ubuntu: ```sudo apt-get install gcc build-essential```
   - MacOS: 
     - Either run ```xcode-select --install``` or install xcode 
     - ```brew install gcc``` to get the latest version of gcc
