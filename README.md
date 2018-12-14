@@ -57,7 +57,7 @@
   - [Python](#Python)
   - [JavaScript](#JavaScript)
   - [Debugger](#Debugger)
-  - [GIT](#GIT)
+  - [Git version control](#GIT)
   - [LaTex](#LaTex)
   
   ### Cpp
