@@ -100,7 +100,7 @@
   - Ubuntu: ```sudo apt-get install clang-format```
   - MacOs: ```brew install clang-format```
   #### Ctags (Programming tool that creates tags) 
-  - Arch ``` sudo pacman -S ctags ```
+  - Arch: ``` sudo pacman -S ctags ```
   - Ubuntu: ```sudo apt-get install ctags```
   - MacOS: ```brew install ctags```
   ##### Additional install intructions for Ctags to work with ggtags (dont worry about this part too much, im experimenting  with it) 
@@ -115,9 +115,9 @@
     - ```git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv```
   - MacOS: ```brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper```
   #### Pip (allows you to use pip install in your terminal)
-  - Arch ```sudo pacman -S python-pip```
-  - Ubuntu ```sudo apt-get install python-pip```
-  - MacOS ```brew install pip```
+  - Arch: ```sudo pacman -S python-pip```
+  - Ubuntu: ```sudo apt-get install python-pip```
+  - MacOS: ```brew install pip```
   ##### Packages to install with Pip
   - Rope: ``` sudo pip install rope``` (refactoring library)
   - Jedi: ``` sudo pip install jedi``` (intellisense)
@@ -147,8 +147,8 @@
   
   #### Debugger
   - Arch: ```sudo pacman -S gdb```
-  - Ubuntu ```Sudo apt-get install gdb```
-  - MacOS ```brew install gdb``` 
+  - Ubuntu: ```Sudo apt-get install gdb```
+  - MacOS: ```brew install gdb``` 
   
   #### GIT
   - Ubuntu: ```sudo apt-get install git```
@@ -160,7 +160,7 @@
   ##### Auctex (creating latex files in emacs) 
   - Arch: ``` sudo pacman -S auctex```
   - Ubuntu: ```sudo apt-get install auctex```
-  - MacOS
+  - MacOS:
     - ```brew tap caskroom/cask```
     - ```brew cask install mactex```
   
