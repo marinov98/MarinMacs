@@ -150,6 +150,9 @@
   ##### Auctex (creating latex files in emacs) 
   - Arch: ``` sudo pacman -S auctex```
   - Ubuntu: ```sudo apt-get install auctex```
+  - MacOS
+    - ```brew tap caskroom/cask```
+    - ```brew cask install mactex```
   
   ##### Spellcheck
   - Arch: ```sudo pacman -S aspell```
