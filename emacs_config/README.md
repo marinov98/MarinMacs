@@ -138,7 +138,7 @@
 - undo-tree (smarter undo)
 
 ## Project-Management
-- projectile (easier project navigation)
+- projectile (Project interaction library for emacs)
 - counsel-projectile (ivy integration of projectile)
 
 ## Coding-Productivity
