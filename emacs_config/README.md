@@ -189,7 +189,6 @@
 
 ## Web-Development 
 - web-mode (allows for auto completion and automatic tag closing) 
-- web-beautify (format js/html/css code)
 - skewer (live web development)
 - emmet-mode (increase html/css productivity with snippets) 
 
