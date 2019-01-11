@@ -113,7 +113,7 @@
 
 ## Modeline-Customization 
 - Pick one:
-  - telephone-line 
+  - telephone-line (currently enabled)
   - spaceline
   - powerline 
 
