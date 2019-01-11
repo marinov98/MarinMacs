@@ -86,17 +86,17 @@
 ;;  :ensure t
 ;;  :config
 ;;  (evil-mode 1))
-;; 
-;;
-;;;;; Evil Support packages
-;;
-;;; Surround
+ 
+
+;;;; Evil Support packages
+
+;; Surround
 ;;(use-package evil-surround
 ;;  :ensure t
 ;;  :config
 ;;  (global-evil-surround-mode 1))
-;;
-;;; Evil multiple-cursors
+
+;; Evil multiple-cursors
 ;;(use-package evil-mc
 ;;  :ensure t
 ;;  :config
@@ -175,28 +175,30 @@
        (telephone-line-mode 1))
 
 
-  ;; Spaceline
+;; Spaceline
   
- ;; (use-package spaceline
- ;;    :ensure t
- ;;    :config
- ;;    (require 'spaceline-config)
- ;;    (setq powerline-default-separator (quote arrow))
- ;;    (spaceline-highlight-face-evil-state) ;; evil mode only
- ;;    (spaceline-spacemacs-theme))
+  ;; (use-package spaceline
+  ;;    :ensure t
+  ;;    :config
+  ;;    (require 'spaceline-config)
+  ;;    (setq powerline-default-separator (quote arrow))
+  ;;    (spaceline-highlight-face-evil-state) ;; evil mode only
+  ;;    (spaceline-spacemacs-theme))
 
-  ;; Powerline
+;; Powerline
 
-;;  (use-package powerline
-;;        :ensure t
-;;        :config
-;; (powerline-vim-theme))   
-;;   ;; Other themes with powerline
+  ;;  (use-package powerline
+  ;;        :ensure t
+  ;;        :config
+  ;;        (powerline-default theme))   
+  ;;   
+
+;; Other themes with powerline
     
-    ;;     (powerline-center-theme)
-    ;;     (powerline-vim-theme)
-    ;;     (powerline-center-evil-theme)
-    ;;     (powerline-nano-theme)
+  ;;     (powerline-center-theme)
+  ;;     (powerline-vim-theme)
+  ;;     (powerline-center-evil-theme)
+  ;;     (powerline-nano-theme)
 
 #+END_SRC
 
@@ -576,14 +578,15 @@
 #+END_SRC
 ** Virtualenv
 #+BEGIN_SRC emacs-lisp
-(use-package virtualenv
-    :ensure t)
-
-(use-package virtualenvwrapper
-    :ensure t
-    :config
-    (venv-initialize-interactive-shells)
-    (venv-initialize-eshell))
+;; Uncomment if you need them
+;;(use-package virtualenv
+;;   :ensure t)
+;;
+;;(use-package virtualenvwrapper
+;;   :ensure t
+;;   :config)
+;;   ;;(venv-initialize-interactive-shells)
+;;   ;;(venv-initialize-eshell))
 #+END_SRC
 ** Company-Jedi IntelliSense
 #+BEGIN_SRC emacs-lisp
@@ -631,49 +634,6 @@
 	 (setq web-mode-enable-current-column-highlight t)
 	 (setq web-mode-enable-current-element-highlight t))
 
-#+END_SRC
-** Web-Beautify
-#+BEGIN_SRC emacs-lisp
-(use-package web-beautify
-    :ensure t
-    :config
-    (eval-after-load 'sgml-mode
-       '(define-key html-mode-map (kbd "C-c h") 'web-beautify-html))
-    (eval-after-load 'web-mode
-       '(define-key web-mode-map (kbd "C-c h") 'web-beautify-html))
-    (eval-after-load 'js2-mode
-       '(define-key js2-mode-map (kbd "C-c h") 'web-beautify-js))
-    (eval-after-load 'css-mode
-        '(define-key css-mode-map (kbd "C-c h") 'web-beautify-css))
-    (eval-after-load 'json-mode
-        '(define-key json-mode-map (kbd "C-c h") 'web-beautify-js)))
-
-;; Format on save
-;;; Javascript
-;;   (eval-after-load 'js2-mode
-;;       '(add-hook 'js2-mode-hook
-;;            (lambda ()
-;;                (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
-;;; Json
-;;   (eval-after-load 'json-mode
-;;       '(add-hook 'json-mode-hook
-;;            (lambda ()
-;;                (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
-;;; Markup
-;;   (eval-after-load 'sgml-mode
-;;       '(add-hook 'html-mode-hook
-;;            (lambda ()
-;;                (add-hook 'before-save-hook 'web-beautify-html-buffer t t))))
-;;; Html
-;;   (eval-after-load 'web-mode
-;;       '(add-hook 'web-mode-hook
-;;            (lambda ()
-;;                (add-hook 'before-save-hook 'web-beautify-html-buffer t t))))
-;;; Css
-;;  (eval-after-load 'css-mode
-;;      '(add-hook 'css-mode-hook
-;;            (lambda ()
-;;                (add-hook 'before-save-hook 'web-beautify-css-buffer t t)))))
 #+END_SRC
 ** Skewer
 #+BEGIN_SRC emacs-lisp
