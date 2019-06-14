@@ -26,10 +26,10 @@
 #+BEGIN_SRC emacs-lisp
 
 ;; Indententation 
-(setq c-basic-offset 4)    ;; indents 4 chars
-(setq tab-width 4)         ;; and 4 char wide for TAB
-(setq indent-tabs-mode nil);; And force use of spaces
-
+(setq c-basic-offset 4)       ;; indents 4 chars
+(setq tab-width 4)            ;; and 4 char wide for TAB
+(setq indent-tabs-mode nil)   ;; And force use of spaces
+(setq sgml-quick-keys 'close) ;; html autoclose
 ;; syntax highlighthing & auto-close braces
 (global-font-lock-mode 1)  ;; syntax highlighting
 (electric-pair-mode)       ;; auto closing brackets
@@ -82,25 +82,25 @@
 #+BEGIN_SRC emacs-lisp
 ;;;; Package needed to enable vim bindings...
 
-;;(use-package evil
-;;  :ensure t
-;;  :config
-;;  (evil-mode 1))
+(use-package evil
+  :ensure t
+  :config
+  (evil-mode 1))
  
 
 ;;;; Evil Support packages
 
 ;; Surround
-;;(use-package evil-surround
-;;  :ensure t
-;;  :config
-;;  (global-evil-surround-mode 1))
+(use-package evil-surround
+  :ensure t
+  :config
+  (global-evil-surround-mode 1))
 
 ;; Evil multiple-cursors
-;;(use-package evil-mc
-;;  :ensure t
-;;  :config
-;;  (global-evil-mc-mode  1))
+(use-package evil-mc
+  :ensure t
+  :config
+  (global-evil-mc-mode  1))
     
 #+END_SRC
 * Themes
@@ -127,9 +127,9 @@
 ;;    :ensure t)
 
 (use-package base16-theme
-    :ensure t)
-;;    :config 
-;;    (load-theme 'base16-ocean t))
+    :ensure t
+    :config 
+    (load-theme 'base16-ocean t))
 
 ;;(use-package jbeans-theme
 ;;    :ensure t)
@@ -138,10 +138,11 @@
 
 
 
- (use-package solarized-theme
-     :ensure t
-     :config
-     (load-theme 'solarized-dark t))
+
+;; (use-package solarized-theme
+;;     :ensure t
+;;     :config
+;;     (load-theme 'solarized-dark t))
 
  
 ;;(use-package planet-theme
@@ -610,19 +611,22 @@
     :config
 	   (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 	   (add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
-	   (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+	   (add-to-list 'auto-mode-alist '("\\.jsx?$\\'" . web-mode))
 	   (add-to-list 'auto-mode-alist '("\\.vue?\\'" . web-mode))
 	   (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 	   (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
 	   (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
 	   (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
 	   (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+	   (setq web-mode-content-types-alist '(("jsx" . "\\.js[x]?\\'")))
 	   (setq web-mode-engines-alist
 		 '(("django"    . "\\.html\\'")))
 	   (setq web-mode-ac-sources-alist
 	   '(("css" . (ac-source-css-property))
 	   ("vue" . (ac-source-words-in-buffer ac-source-abbrev))
            ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
+	 ;; Emmet
+	 (add-hook 'web-mode-hook 'emmet-mode)
 	 ;; Indentation
 	 (setq web-mode-markup-indent-offset 4)
 	 (setq web-mode-code-indent-offset 4)
@@ -666,6 +670,9 @@
 #+END_SRC
 ** Js2-mode
 #+BEGIN_SRC emacs-lisp
+(use-package rjsx-mode
+    :ensure t)
+    
 
 (use-package js2-mode
     :ensure t
@@ -724,4 +731,15 @@
 ;; Use eslint with web-mode for jsx files
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 (flycheck-add-mode 'javascript-eslint 'javascript-mode)
+#+END_SRC
+* Assembly
+** Asm Mode
+#+BEGIN_SRC emacs-lisp
+(defun my-asm-mode-hook ()
+  ;; you can use `comment-dwim' (M-;) for this kind of behaviour anyway
+  (local-unset-key (vector asm-comment-char))
+  ;; asm-mode sets it locally to nil, to "stay closer to the old TAB behaviour".
+  (setq tab-always-indent (default-value 'tab-always-indent)))
+
+(add-hook 'asm-mode-hook #'my-asm-mode-hook)
 #+END_SRC
