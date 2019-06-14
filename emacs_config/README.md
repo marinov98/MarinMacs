@@ -180,7 +180,8 @@
 #### Python Jedi Server:
 - Run ``` M-x jedi:install-server RET``` AFTER you added company-jedi to your init file AND AFTER you installed pip installed virtualenv. Now you have Python intellisense ;)
 
-## JavaScript 
+## JavaScript  
+- rjsx-mode enables editing in .jsx files (found in React)
 - js2-mode (enables Javascript mode in emacs)
 - js2-refactor (powerful refactoring)
 - xref-js2 (easy jumping to definitions and refrences)
