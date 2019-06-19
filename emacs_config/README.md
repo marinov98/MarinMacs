@@ -187,10 +187,11 @@
 - xref-js2 (easy jumping to definitions and refrences)
 - company-tern (Javascript intellisense)
 - add-node-modules-path (sets proper path for modules)
+- prettier-js (auto format js code)
 
 ## Web-Development 
 - web-mode (allows for auto completion and automatic tag closing) 
 - skewer (live web development)
 - emmet-mode (increase html/css productivity with snippets) 
-
+- rainbow-mode (showcases color in css files)
 
