@@ -137,13 +137,16 @@
   
   #### Eslint for JavaScript
   
-  - Install eslint ```npm install eslint```
+  - Install eslint ```npm i -g eslint```
   
   #### JavaScript autocompletion
-  - Install tern: ```sudo npm install -g tern```
+  - Install tern: ```npm i -g tern```
   
   #### Javacript/Html/CSS formatting
-  - Install web-beautify ```npm -g install js-beautify```
+  - Install prettier ```npm i -g prettier```
+  
+  #### Other useful npm installs
+  - ``npm i -g react pg requirejs webpack```
   
   #### Debugger
   - Arch: ```sudo pacman -S gdb```
