@@ -65,6 +65,7 @@
 
 ### Easy on the eyes
 - Gruvbox
+- nord
 - Zenburn
 - JellyBeans 
 - Planet
@@ -131,7 +132,6 @@
 - exec-path-from-shell (sets paths for the terminal automatically)
 
 ## Global-Emacs-Helpers
-- auto-complete (convenient global auto-completion within emacs)
 - yasnippet, yasnippet snippets (snippets)
 - company (auto-completion)
 - flycheck (linter/syntax checker)
@@ -145,10 +145,8 @@
 - beacon (light that follows your cursor)
 - all-the-icons (provides icon-images)
 - neotree (popup sidebar for easy directory/file navigation)
-- Multiple-cursors (create multiple cursors on one screen)
 - iedit (change multiple words at the same time)
 - dump-jump (jump to definition) 
-- cider (interactive programming with clojure)
 
 ## GitHub-Integration 
 - magit 
