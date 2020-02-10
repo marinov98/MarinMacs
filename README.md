@@ -119,7 +119,7 @@
   - Arch: ```sudo pacman -S python-pip```
   - Ubuntu: ```sudo apt-get install python-pip```
   - MacOS: ```brew install pip```
-  ##### Packages to install with Pip (Update pip is not supported consider using pip3 for everything below except the language server)
+  ##### Packages to install with Pip (Update: pip is not supported consider using pip3 for everything below except the language server)
   - Rope: ``` sudo pip install rope``` (refactoring library)
   - Jedi: ``` sudo pip install jedi``` (intellisense)
   - flake: ```sudo pip install flake8``` (code checks)
