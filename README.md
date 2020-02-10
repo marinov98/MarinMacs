@@ -83,6 +83,7 @@
   - MacOS: 
     - Either run ```xcode-select --install``` or install xcode 
     - ```brew install gcc``` to get the latest version of gcc
+  - Please also install [clangd](<https://clang.llvm.org/extra/clangd/Installation.html>)
   #### Clang (Compiler front-end for C++)
   - Arch: ``` sudo pacman -S clang ```
   - Ubuntu: ```sudo apt-get install clang```
@@ -125,6 +126,7 @@
   - autopep: ```sudo pip install autopep8``` (Pep8 formatting) 
   - yapf: ```sudo pip install yapf``` (Formatting)
   - pygments : ```sudo pip install pygments``` (This helps ggtags for C++)
+  - Language-server: ``pip install python-language-server[all]``
   #### virtualenv (Python interactive shell)
   - Run ``` sudo pip install virtualenv``` and ``` sudo pip install virtualnevwrapper``` afterwords
   
@@ -135,12 +137,8 @@
   - Ubuntu: ```sudo apt-get install npm```
   - MacOS: ```brew install npm```
   
-  #### Eslint for JavaScript
-  
-  - Install eslint ```npm i -g eslint```
-  
   #### JavaScript autocompletion
-  - Install tern: ```npm i -g tern```
+  - Install language server: ```npm i -g javascript-typescript-langserver```
   
   #### Javacript/Html/CSS formatting
   - Install prettier ```npm i -g prettier```
