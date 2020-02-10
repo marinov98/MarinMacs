@@ -19,6 +19,7 @@
   - [General Coding Packages](#Coding-Productivity)
   - [Github package](#GitHub-Integration)
   - [Org & MarkDown packages](#Org-and-Markdown)
+  - [Language Server Protocal(LSP)](#LSP)
   - [C++ packages](#Cpp)
   - [Python packages](#Python)
   - [JavaScript packages](#JavaScript)
@@ -158,11 +159,12 @@
 - wc-mode (word counter)
 - writegood-mode (sentence/word choice checker)
 
-## LSP (Language server protocal)
+## LSP 
 - **Note:** This is where the auto-completetion takes place
 - company-lsp: backend for providing autocompletion
 - lsp-ui: better ui for showcasing function definitions 
 - If you followed my install instructions, after the packages has installed, you should have autocompletetion enabled so long as you say the file is the root of the project when lsp prompts you 
+- Find out more about how this works [here](<https://github.com/emacs-lsp/lsp-mode>)
 
 ## Cpp
 - c++-modern-font-lock (helpes emacs recognize c++11 and above)
