@@ -19,7 +19,7 @@
   - [General Coding Packages](#Coding-Productivity)
   - [Github package](#GitHub-Integration)
   - [Org & MarkDown packages](#Org-and-Markdown)
-  - [Language Server Protocal(LSP)](#LSP)
+  - [Language Server Protocal (LSP)](#LSP)
   - [C++ packages](#Cpp)
   - [Python packages](#Python)
   - [JavaScript packages](#JavaScript)
