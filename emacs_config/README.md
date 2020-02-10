@@ -133,7 +133,7 @@
 
 ## Global-Emacs-Helpers
 - yasnippet, yasnippet snippets (snippets)
-- company (auto-completion)
+- company (auto-completion framework)
 - flycheck (linter/syntax checker)
 - undo-tree (smarter undo)
 
@@ -158,32 +158,26 @@
 - wc-mode (word counter)
 - writegood-mode (sentence/word choice checker)
 
+## LSP (Language server protocal)
+- **Note:** This is where the auto-completetion takes place
+- company-lsp: backend for providing autocompletion
+- lsp-ui: better ui for showcasing function definitions 
+- If you followed my install instructions, after the packages has installed, you should have autocompletetion enabled so long as you say the file is the root of the project when lsp prompts you 
+
 ## Cpp
 - c++-modern-font-lock (helpes emacs recognize c++11 and above)
 - clang-format (formats c++ code)
-- irony (C++ minor mode based on libclang works with company to give intellisense)
-- company-irony (provides true intelligent c++ intellisense and autocompletetion)
-- company-irony-c-headers (auto completetion for header files)
-- irony-eldoc (indexes c++)
-- flycheck-irony (C/C++/obj-C syntax checker)
-- ggtags (creates tags where you jump around and navigate to definitions)
-#### C++ Irony-server:
-- Run ```M-x irony-install-server RET``` after you put company-irony in your init file(will only execute if you have cmake and libclang installed!). You now have C++ intellisense :D
 
 ## Python
 - virtualenv (interactive python shell) 
 - virtualenvwrapper (virtualized isolated python environment)
 - elpy (enables a powerful python development environment)
-- company-jedi (intellisense)
-#### Python Jedi Server:
-- Run ``` M-x jedi:install-server RET``` AFTER you added company-jedi to your init file AND AFTER you installed pip installed virtualenv. Now you have Python intellisense ;)
 
 ## JavaScript  
 - rjsx-mode enables editing in .jsx files (found in React)
 - js2-mode (enables Javascript mode in emacs)
 - js2-refactor (powerful refactoring)
 - xref-js2 (easy jumping to definitions and refrences)
-- company-tern (Javascript intellisense)
 - add-node-modules-path (sets proper path for modules)
 - prettier-js (auto format js code)
 
