@@ -119,14 +119,16 @@
   - Arch: ```sudo pacman -S python-pip```
   - Ubuntu: ```sudo apt-get install python-pip```
   - MacOS: ```brew install pip```
-  ##### Packages to install with Pip
+  ##### Packages to install with Pip (Update pip is not supported consider using pip3 for everything below except the language server)
   - Rope: ``` sudo pip install rope``` (refactoring library)
   - Jedi: ``` sudo pip install jedi``` (intellisense)
   - flake: ```sudo pip install flake8``` (code checks)
   - autopep: ```sudo pip install autopep8``` (Pep8 formatting) 
   - yapf: ```sudo pip install yapf``` (Formatting)
   - pygments : ```sudo pip install pygments``` (This helps ggtags for C++)
-  - Language-server: ``pip install python-language-server[all]``
+  - Language-server: 
+    -`python3 -m pip install --upgrade pip setuptools wheel`
+    - `python3 -m pip install 'python-language-server[all]'`
   #### virtualenv (Python interactive shell)
   - Run ``` sudo pip install virtualenv``` and ``` sudo pip install virtualnevwrapper``` afterwords
   
