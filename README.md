@@ -127,7 +127,7 @@
   - yapf: ```sudo pip install yapf``` (Formatting)
   - pygments : ```sudo pip install pygments``` (This helps ggtags for C++)
   - Language-server: 
-    -`python3 -m pip install --upgrade pip setuptools wheel`
+    - `python3 -m pip install --upgrade pip setuptools wheel`
     - `python3 -m pip install 'python-language-server[all]'`
   #### virtualenv (Python interactive shell)
   - Run ``` sudo pip install virtualenv``` and ``` sudo pip install virtualnevwrapper``` afterwords
