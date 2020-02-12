@@ -84,6 +84,7 @@
 - debugging on error 
 - tool bar turned off
 - Disable annoying backup files
+- [Fira Code](<https://github.com/tonsky/FiraCode>) font
 
 # Packages
 
@@ -150,7 +151,8 @@
 - dump-jump (jump to definition) 
 
 ## GitHub-Integration 
-- magit 
+- magit (emacs interface for git)
+- evil magit (magit but with vim bindings)
 
 ## Org-and-Markdown
 - org-bullets (prettier org formatting)
