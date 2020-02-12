@@ -13,6 +13,7 @@
 - **Vim users** wanting to switch and use the power of emacs while keepings their vim keybindings
 - Anyone wanting to use Emacs for its **own keybindings** and extensibility but hates configuring and wants an out of the box experience
 - People who want more productivity but are limited because of their current text editor
+- People who already use emacs and maybe want to see if there is anything new they can learn from my config
 
 ## Why Make This Guide?
 - Emacs is extremely powerful but has a ton of packages and it can be really confusing to pick the right ones, much less configure them
@@ -26,17 +27,17 @@
   - Fast project/file navigation
   - jump-to-definition
   - Advanced word search
-  - smart file managers
+  - smart file managers and explorers
   - tree explorers
-  - smart undo
 - Has ide-like support for these languages:
   - C++
   - Python
   - Javascript
-  - A little of html/css
+  - HTML/CSS
 - Allows for either Vim keybindings or original native Emacs keybindings
-- Improved debugger
-- Integrates Github 
+- Debugger
+- Integrates with Git 
+- Can format code
 
 ## Please Note: 
 - I have used Emacs on MacOS, Arch(Antergos), & Ubuntu so my knowledge is limited when it comes to anything else
