@@ -36,8 +36,8 @@
 - Any errors you get can be googled and every package can also be checked online 
 - Depending on how you installed emacs, certain packages might be preinstalled into it 
 - When you see ```RET``` it means hit the ENTER key
-- In emacs C = ctrl and M = alt 
-- Example: ```M-x``` = alt + x  ```C-x C-f``` = ctrl + x ctrl + f
+- **In emacs C = ctrl and M = alt**
+  - Example: ```M-x``` = alt + x  ```C-x C-f``` = ctrl + x ctrl + f
 - If you wish to browse through Emac's packages ```M-x package-list-packages RET``` will open up the package list
 - Additonally you can run ```M-x package-install RET package_name RET``` if you know the exact package that you want 
 - If you just want to get it over with, simply copy my ```init.el``` and ```marinmacs.org```(or whatever you want to name your org file) the files should be created inside the ```.emacs.d``` folder which you can create. All the packages should install and configure automatically (power of use-package), **however** you would still have to install the servers for jedi(Python) and irony(C++) (instructions for that below)
@@ -146,6 +146,7 @@
 ## Coding-Productivity
 - beacon (light that follows your cursor)
 - all-the-icons (provides icon-images)
+  - run  `M-x all-the-icons-install-fonts` to install the fonts
 - neotree (popup sidebar for easy directory/file navigation)
 - iedit (change multiple words at the same time)
 - dump-jump (jump to definition) 
