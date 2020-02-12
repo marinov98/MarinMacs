@@ -45,7 +45,7 @@
 
 ## Contents of this Repo:
 - This README is here to make sure that when you go to my config, everything gets installed without giving error, it would be a pity if you got the config right, but the packages do not even work 
-- **emacs_config** folder : Contains my [init](https://github.com/marinov98/MarinMacs/blob/master/emacs_config/init.el) file as well as a [manual](https://github.com/marinov98/MarinMacs/blob/master/emacs_config/README.md) that lists all the packages that have been installed and their purpose. If you just want to see that then just click the init link and go to it. I wanted to make this guide as detailed as possible and tried to ensure that everything you try here works. 
+- **emacs_config** folder : Contains my [init](<https://github.com/marinov98/MarinMacs/blob/master/emacs_config/init.el>), which launches my [configuration file](https://github.com/marinov98/MarinMacs/blob/master/emacs_config/marinmacs.org) file as well as a [manual](<https://github.com/marinov98/MarinMacs/blob/master/emacs_config/README.md>) that lists all the packages that have been installed and their purpose. If you just want to see that then just click the init link and go to it. I wanted to make this guide as detailed as possible and tried to ensure that everything you try here works. 
 - **Highly Reccommend** reading the contents below before seeing my actual config:
   
 # Necesities to make sure all the emacs packages work correctly
