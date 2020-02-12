@@ -65,7 +65,7 @@
   
   #### Curl 
   - Arch: ``` sudo pacman -S curl ```
-  - Ubuntu: ```sudo apt-get install curl```
+  - Ubuntu: ```sudo apt install curl```
   - MacOS:
     - ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null```
     - ```brew install curl``` 
@@ -79,30 +79,30 @@
   
   ####  Gcc (GNU Compiler Collection)
   - Arch: ``` sudo pacman -S base-devel ```
-  - Ubuntu: ```sudo apt-get install gcc```, ```sudo apt-get install build-essential``` will install a lot of dependencies
+  - Ubuntu: ```sudo apt install gcc```, ```sudo apt install build-essential``` will install a lot of dependencies
   - MacOS: 
     - Either run ```xcode-select --install``` or install xcode 
     - ```brew install gcc``` to get the latest version of gcc
   - Please also install [clangd](<https://clang.llvm.org/extra/clangd/Installation.html>)
   #### Clang (Compiler front-end for C++)
   - Arch: ``` sudo pacman -S clang ```
-  - Ubuntu: ```sudo apt-get install clang```
+  - Ubuntu: ```sudo apt install clang```
   - MacOS: Settled by xcode
   #### Libclang (C API that exposes the C++ abstract syntax)
   - Arch: ``` sudo pacman -S llvm lldb```
-  - Ubuntu: ```sudo apt-get install libclang-dev```
+  - Ubuntu: ```sudo apt install libclang-dev```
   - MacOS: ```brew install --with-toolchain llvm```
   #### CMake (software application for managing the build process of software)
   - Arch: ```sudo pacman -S cmake```
-  - Ubuntu: ```sudo apt-get install cmake```
+  - Ubuntu: ```sudo apt install cmake```
   - MacOS: ```brew install cmake```
   #### Clang-Format
   - Arch: ```sudo pacman -S clang-format```
-  - Ubuntu: ```sudo apt-get install clang-format```
+  - Ubuntu: ```sudo apt install clang-format```
   - MacOs: ```brew install clang-format```
   #### Ctags (Programming tool that creates tags) 
   - Arch: ``` sudo pacman -S ctags ```
-  - Ubuntu: ```sudo apt-get install ctags```
+  - Ubuntu: ```sudo apt install ctags```
   - MacOS: ```brew install ctags```
   ##### Additional install intructions for Ctags to work with ggtags (dont worry about this part too much, im experimenting  with it) 
   - **Simply make sure you have ctags here is the [ggtags](https://github.com/leoliu/ggtags) repo if you want to have a go at configuring it**
@@ -115,11 +115,11 @@
     - ```git clone https://github.com/yyuu/pyenv.git ~/.pyenv```
     - ```git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv```
   - MacOS: ```brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper```
-  #### Pip (allows you to use pip install in your terminal)
+  #### Pip (Note: be informed of the current state of pip. Allows you to use pip install in your terminal)
   - Arch: ```sudo pacman -S python-pip```
-  - Ubuntu: ```sudo apt-get install python-pip```
+  - Ubuntu: ```sudo apt install python-pip```
   - MacOS: ```brew install pip```
-  ##### Packages to install with Pip (Update: pip is not supported consider using pip3 for everything below except the language server)
+  ##### Packages to install with Pip (Caution: pip may not be supported at the time you look at this. Consider using pip3 for everything below except the language server)
   - Rope: ``` sudo pip install rope``` (refactoring library)
   - Jedi: ``` sudo pip install jedi``` (intellisense)
   - flake: ```sudo pip install flake8``` (code checks)
@@ -136,7 +136,7 @@
   
   ##### install npm
   - Arch: ``` sudo pacman -S npm ```
-  - Ubuntu: ```sudo apt-get install npm```
+  - Ubuntu: ```sudo apt install npm```
   - MacOS: ```brew install npm```
   
   #### JavaScript autocompletion
@@ -150,11 +150,11 @@
   
   #### Debugger
   - Arch: ```sudo pacman -S gdb```
-  - Ubuntu: ```Sudo apt-get install gdb```
+  - Ubuntu: ```Sudo apt install gdb```
   - MacOS: ```brew install gdb``` 
   
   #### GIT
-  - Ubuntu: ```sudo apt-get install git```
+  - Ubuntu: ```sudo apt install git```
   - MacOS: Should have it preinstalled from xcode command line tools
   - **Now search up how to set up git on your Operating System AFTER installation is complete**
     
@@ -162,14 +162,14 @@
   
   ##### Auctex (creating latex files in emacs) 
   - Arch: ``` sudo pacman -S auctex```
-  - Ubuntu: ```sudo apt-get install auctex```
+  - Ubuntu: ```sudo apt install auctex```
   - MacOS:
     - ```brew tap caskroom/cask```
     - ```brew cask install mactex```
   
   ##### Spellcheck
   - Arch: ```sudo pacman -S aspell```
-  - Ubuntu: ```sudo apt-get install aspell```
+  - Ubuntu: ```sudo apt install aspell```
   - MacOs: ```brew install aspell```
   
   
