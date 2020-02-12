@@ -45,11 +45,12 @@
 
 ## Contents of this Repo:
 - This README is here to make sure that when you go to my config, everything gets installed without giving error, it would be a pity if you got the config right, but the packages do not even work 
-- **emacs_config** folder : Contains my [init](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/marinit.org) file as well as a [manual](https://github.com/marinov98/My_Emacs-Detailed_Guide/blob/master/emacs_config/README.md) that lists all the packages that have been installed and their purpose. If you just want to see that then just click the init link and go to it. I wanted to make this guide as detailed as possible and tried to ensure that everything you try here works. 
-- **DO NOT** go to the emacs_config folder before reading the contents below:
+- **emacs_config** folder : Contains my [init](https://github.com/marinov98/MarinMacs/blob/master/emacs_config/init.el) file as well as a [manual](https://github.com/marinov98/MarinMacs/blob/master/emacs_config/README.md) that lists all the packages that have been installed and their purpose. If you just want to see that then just click the init link and go to it. I wanted to make this guide as detailed as possible and tried to ensure that everything you try here works. 
+- **Highly Reccommend** reading the contents below before seeing my actual config:
   
 # Necesities to make sure all the emacs packages work correctly
 - **Disclaimer** : You DO NOT need to install everything here ONLY take what you need
+- **CAUTION** : Sometimes repositories and packages become depreciated or change names. I try to keep everything up to date but just be aware when executing the install commands below.
 - **Keep In Mind** : You might find certain machines with certain software (such as gcc and python) already installed I put all the topics below in case your machine has almost nothing related to programming installed on it 
 
 ## Table of contents:
@@ -104,8 +105,6 @@
   - Arch: ``` sudo pacman -S ctags ```
   - Ubuntu: ```sudo apt install ctags```
   - MacOS: ```brew install ctags```
-  ##### Additional install intructions for Ctags to work with ggtags (dont worry about this part too much, im experimenting  with it) 
-  - **Simply make sure you have ctags here is the [ggtags](https://github.com/leoliu/ggtags) repo if you want to have a go at configuring it**
   - If you are thinking of incorporating tags, you should install pygments (directions below)
   
   ### Python
