@@ -32,7 +32,7 @@
 - Has ide-like support for these languages:
   - C++
   - Python
-  - Javascript
+  - JavaScript/TypeScript
   - HTML/CSS
 - Allows for either Vim keybindings or original native Emacs keybindings
 - Debugger
