@@ -90,6 +90,7 @@
 
 ## Use-Package 
 - ```use-package``` (provides the use-package syntax and makes emacs download files if they are not intalled yet)
+- `quelpa-use-package` (adds `:quelpa` and allows downloading straight from github)
 ## restart-emacs
 - the ```restart-emacs``` package allows use to keybind the command ```restart-emacs``` so that we can restart and refresh the session with one keystroke whenever we need to.
 
