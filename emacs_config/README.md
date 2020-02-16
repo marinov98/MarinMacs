@@ -124,8 +124,8 @@
 - all-the-icons (provides icon-images)
   - run  `M-x all-the-icons-install-fonts` to install the fonts 
   - (**Windows Users**: after running the command and choosing your directory, go to the directory and manually install the fonts)
-  - all-the-icons-ivy (icons enhancement for ivy)
-  - all-the-icons-dired (icons enhancement for dired/ranger)
+- all-the-icons-ivy (icons enhancement for ivy)
+- all-the-icons-dired (icons enhancement for dired/ranger)
 - ranger (ranger-like file manager, replaces dired)
 - avy (fast word navigation)
 - **Ivy Integration**
