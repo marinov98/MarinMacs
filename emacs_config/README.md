@@ -130,8 +130,8 @@
 - ranger (ranger-like file manager, replaces dired)
 - avy (fast word navigation)
 - **Ivy Integration**
-  - ivy (Tool for managing (recording, tracking, resolving and reporting) project dependencies.)
-  - swiper (improved file/name search by integrating ivy)
+  - ivy (generic completion mechanism for Emacs.)
+  - swiper (improved file/name search by integrating ivy, alternative to Emac's I-search)
   - counsel (enhanced ivy commands)
 
 ## Shell
