@@ -120,13 +120,13 @@
   - Ubuntu: ```sudo apt install python-pip```
   - MacOS: ```brew install pip```
   ##### Packages to install with Pip (Caution: pip may not be supported at the time you look at this. Consider using pip3 for everything below except the language server)
-  - Rope: ``` sudo pip install rope``` (refactoring library)
-  - Jedi: ``` sudo pip install jedi``` (intellisense)
-  - flake: ```sudo pip install flake8``` (code checks)
-  - autopep: ```sudo pip install autopep8``` (Pep8 formatting) 
-  - yapf: ```sudo pip install yapf``` (Formatting)
-  - pygments : ```sudo pip install pygments``` (This helps ggtags for C++)
-  - Language-server: 
+  - Rope: ``` pip install rope``` (refactoring library)
+  - Jedi: ``` pip install jedi``` (intellisense)
+  - flake: ```pip install flake8``` (code checks)
+  - autopep: ```pip install autopep8``` (Pep8 formatting) 
+  - yapf: ```pip install yapf``` (Formatting)
+  - pygments : ```pip install pygments``` (This helps ggtags for C++)
+  - Language-server (Winodws: works with `python` instead of `python3`: 
     - `python3 -m pip install --upgrade pip setuptools wheel`
     - `python3 -m pip install 'python-language-server[all]'`
   #### virtualenv (Python interactive shell)
