@@ -115,8 +115,8 @@
 
 ## Modeline-Customization 
 - Pick one:
-  - telephone-line (currently enabled)
-  - spaceline
+  - telephone-line 
+  - spaceline (currently enabled)
   - powerline 
 
 ## Emacs-enhancements
