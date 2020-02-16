@@ -22,6 +22,6 @@
 
 
 
-(org-babel-load-file (expand-file-name "~/.emacs.d/marinmacs.org"))
+(org-babel-load-file (expand-file-name "~/.emacs.d/MarinMacs.org"))
 
 ;;; init.el ends here
