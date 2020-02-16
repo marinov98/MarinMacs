@@ -121,6 +121,10 @@
 
 ## Emacs-enhancements
 - Debug on multiple-windows
+- all-the-icons (provides icon-images)
+  - run  `M-x all-the-icons-install-fonts` to install the fonts
+  - all-the-icons-ivy (icons enhancement for ivy)
+  - all-the-icons-dired (icons enhancement for dired/ranger)
 - ranger (ranger-like file manager, replaces dired)
 - avy (fast word navigation)
 - **Ivy Integration**
@@ -144,8 +148,6 @@
 
 ## Coding-Productivity
 - beacon (light that follows your cursor)
-- all-the-icons (provides icon-images)
-  - run  `M-x all-the-icons-install-fonts` to install the fonts
 - neotree (popup sidebar for easy directory/file navigation)
 - iedit (change multiple words at the same time)
 - dump-jump (jump to definition) 
