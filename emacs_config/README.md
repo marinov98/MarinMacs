@@ -95,15 +95,16 @@
 - the ```restart-emacs``` package allows use to keybind the command ```restart-emacs``` so that we can restart and refresh the session with one keystroke whenever we need to.
 
 ## Vim 
-- **WARNING** You need `undo-tree` package for this package to fully work (if you are copying my entire config this is not a problem)
-- Any **movement keybindings** in the Personal Keybindings section of my init will be disabled once evil is uncommented
+- **WARNING** You need the `undo-tree` package for below packages to fully work (if you are copying my entire config this is not a problem)
+- Some of the **movement keybindings** in the Personal Keybindings section of my init may be disabled if **Evil mode** is enabled
 - If you just want **Emacs keybindings** either erase any "evil" package or comment them 
-#### Packages for Vim: 
+#### Packages for Evil Mode (Vim inside Emacs) : 
 - **You have to make sure this package is NOT commented in order to ENABLE THE BINDINGS:**
   - evil (basically creates vim inside emacs) 
 - **Evil support packages:**
   - evil-surround (just like surround in vim)
   - evil-mc (vimlike multiple cursors)
+  - evil-magit (vim keybindings for magit)
 
 ## Start-up
 - dashboard (customizable start up screen)
@@ -155,7 +156,6 @@
 
 ## GitHub-Integration 
 - magit (emacs interface for git)
-- evil magit (magit but with vim bindings)
 
 ## Org-and-Markdown
 - org-bullets (prettier org formatting)
