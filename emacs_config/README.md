@@ -95,7 +95,7 @@
 - the ```restart-emacs``` package allows use to keybind the command ```restart-emacs``` so that we can restart and refresh the session with one keystroke whenever we need to.
 
 ## Vim 
-- **WARNING** You need undo tree for this package to fully work (if you are copying my entire config this is not a problem)
+- **WARNING** You need `undo-tree` package for this package to fully work (if you are copying my entire config this is not a problem)
 - Any **movement keybindings** in the Personal Keybindings section of my init will be disabled once evil is uncommented
 - If you just want **Emacs keybindings** either erase any "evil" package or comment them 
 #### Packages for Vim: 
@@ -141,7 +141,7 @@
 - yasnippet, yasnippet snippets (snippets)
 - company (auto-completion framework)
 - flycheck (linter/syntax checker)
-- undo-tree (smarter undo)
+- undo-tree (smarter undo and enable **Evil mode**)
 
 ## Project-Management
 - projectile (Project interaction library for emacs)
