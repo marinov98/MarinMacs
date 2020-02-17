@@ -133,6 +133,7 @@
   - ivy (generic completion mechanism for Emacs.)
   - swiper (improved file/name search by integrating ivy, alternative to Emac's I-search)
   - counsel (enhanced ivy commands)
+  - ivy-posframe (a different way to display ivy)
 
 ## Shell
 - better-shell (improves shell functionality within emacs)
@@ -169,6 +170,7 @@
 - company-lsp: backend for providing autocompletion
 - lsp-ui: better ui for showcasing function definitions 
 - If you followed my install instructions, after the packages has installed, you should have autocompletetion enabled so long as you say the file is the root of the project when lsp prompts you 
+- **Note for Javascript/Typescript** select `ts-ls` as the server to install when prompted unless you want to use a different one 
 - Find out more about how this works [here](<https://github.com/emacs-lsp/lsp-mode>)
 
 ## Cpp
