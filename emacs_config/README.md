@@ -161,10 +161,10 @@
 ## Org-and-Markdown
 - org-bullets (prettier org formatting)
 - **DEPRECEATED** Below writing writing packages are only kept for reverence
-- auctex & tex (smoother latex editing)
-- pdf-tools (pdf support in emacs)
-- wc-mode (word counter)
-- writegood-mode (sentence/word choice checker)
+  - auctex & tex (smoother latex editing)
+  - pdf-tools (pdf support in emacs)
+  - wc-mode (word counter)
+  - writegood-mode (sentence/word choice checker)
 
 ## LSP 
 - **Note:** This is where the auto-completetion takes place
