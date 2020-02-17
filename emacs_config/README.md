@@ -160,7 +160,7 @@
 
 ## Org-and-Markdown
 - org-bullets (prettier org formatting)
-- **DEPRECEATED Below writing writing packages are only kept for reverence
+- **DEPRECEATED** Below writing writing packages are only kept for reverence
 - auctex & tex (smoother latex editing)
 - pdf-tools (pdf support in emacs)
 - wc-mode (word counter)
