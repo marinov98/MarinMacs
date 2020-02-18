@@ -40,9 +40,10 @@
 - Can format code
 
 ## Please Note: 
-- I have used Emacs on MacOS, Arch(Antergos), & Ubuntu so my knowledge is limited when it comes to anything else
+- I have used Emacs on MacOS, Arch(Antergos), Ubuntu, and Windows(very little) so my knowledge is limited when it comes to anything else
+- **Mac Users**: This guide assumes you have [Homebrew](<https://docs.brew.sh/Installation>) installed
+- **Windows Users**: You should be able to follow along if you use [scoop](https://scoop.sh/) and [choco](https://chocolatey.org/)
 - Make sure you either have [xcode](https://developer.apple.com/xcode/) installed or xcode command line tools for MacOS
-- In order to use ```brew install [package name]``` make sure your mac has [brew](https://brew.sh/) installed
 
 ## Contents of this Repo:
 - This README is here to make sure that when you go to my config, everything gets installed without giving error, it would be a pity if you got the config right, but the packages do not even work 
@@ -53,8 +54,6 @@
 - **Disclaimer** : You DO NOT need to install everything here ONLY take what you need
 - **CAUTION** : Sometimes repositories and packages become depreciated or change names. I try to keep everything up to date but just be aware when executing the install commands below.
 - **Keep In Mind** : You might find certain machines with certain software (such as gcc and python) already installed I put all the topics below in case your machine has almost nothing related to programming installed on it 
-- **Mac Users**: This guide assumes you have [Homebrew](<https://docs.brew.sh/Installation>) installed
-- **Windows Users**: You should be able to follow along if you use [scoop](https://scoop.sh/) and [choco](https://chocolatey.org/)
 
 ## Table of contents:
   - [Cask and Curl](#Cask-Curl)
