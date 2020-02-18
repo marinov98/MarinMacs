@@ -146,37 +146,39 @@
   
   ### JavaScript/Typescript 
   
-  ##### install npm
+##### install npm
   - Arch: ``` sudo pacman -S npm ```
   - Ubuntu: ```sudo apt install npm```
   - MacOS: ```brew install npm```
   
-  #### JavaScript/TypeScript autocompletion
-  - Install language server: ```npm i -g javascript-typescript-langserver```
+#### Web-dev autocompletion
+  - Install language servers: 
+    - `npm i -g typescript-language-server vscode-json-languageserver vscode-html-languageserver-bin yaml-language-server vscode-css-languageserver-bin bash-language-server
+`
   
-  #### Javacript/Html/CSS formatting
+#### Javacript/Html/CSS formatting
   - Install prettier ```npm i -g prettier```
   
-  #### Debugger (mainly for c/cpp)
+#### Debugger (mainly for c/cpp)
   - Arch: ```sudo pacman -S gdb```
   - Ubuntu: ```Sudo apt install gdb```
   - MacOS: ```brew install gdb``` 
   
-  #### GIT
+#### Git
   - Ubuntu: ```sudo apt install git```
   - MacOS: Should have it preinstalled from xcode command line tools
   - **Now search up how to set up git on your Operating System AFTER installation is complete**
     
-  #### LaTex
+#### LaTex
   
-  ##### Auctex (creating latex files in emacs) 
+##### Auctex (creating latex files in emacs) 
   - Arch: ``` sudo pacman -S auctex```
   - Ubuntu: ```sudo apt install auctex```
   - MacOS:
     - ```brew tap caskroom/cask```
     - ```brew cask install mactex```
   
-  ##### Spellcheck
+##### Spellcheck
   - Arch: ```sudo pacman -S aspell```
   - Ubuntu: ```sudo apt install aspell```
   - MacOs: ```brew install aspell```
