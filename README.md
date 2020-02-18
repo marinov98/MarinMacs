@@ -120,9 +120,17 @@
   - If you are thinking of incorporating tags, you should install pygments (directions below)
   
 ### Python
- - Language-server (**Ms-Windows**: works with `python` instead of `python3`: 
-    - `python3 -m pip install --upgrade pip setuptools wheel`
-    - `python3 -m pip install 'python-language-server[all]'`
+
+#### Pip (Note: be informed of the current state of pip (take into account pip3). This allows you to use pip install in your terminal)
+  - Arch: ```sudo pacman -S python-pip```
+  - Ubuntu: ```sudo apt install python-pip```
+  - MacOS: ```brew install pip```
+
+##### Language-server (**Ms-Windows**: works with `python` instead of `python3`: 
+   - `python3 -m pip install --upgrade pip setuptools wheel`
+   - `python3 -m pip install 'python-language-server[all]'`
+    
+
   
 ### Extras
 
@@ -131,10 +139,7 @@
     - ```git clone https://github.com/yyuu/pyenv.git ~/.pyenv```
     - ```git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv```
   - MacOS: ```brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper```
-#### Pip (Note: be informed of the current state of pip. Allows you to use pip install in your terminal)
-  - Arch: ```sudo pacman -S python-pip```
-  - Ubuntu: ```sudo apt install python-pip```
-  - MacOS: ```brew install pip```
+
 ##### Packages to install with Pip (Caution: pip may not be supported at the time you look at this. Consider using pip3 for everything below except the language server)
   - Rope: ``` pip install rope``` (refactoring library)
   - Jedi: ``` pip install jedi``` (intellisense)
