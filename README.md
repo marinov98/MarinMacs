@@ -120,7 +120,12 @@
   - If you are thinking of incorporating tags, you should install pygments (directions below)
   
 ### Python
+ - Language-server (**Ms-Windows**: works with `python` instead of `python3`: 
+    - `python3 -m pip install --upgrade pip setuptools wheel`
+    - `python3 -m pip install 'python-language-server[all]'`
   
+### Extras
+
 #### pyenv (python version management)
   - Ubuntu & Arch: 
     - ```git clone https://github.com/yyuu/pyenv.git ~/.pyenv```
@@ -139,10 +144,7 @@
   - pygments : ```pip install pygments``` (This helps ggtags for C++)
   - virtualenv (Python interactive shell)
     - Run ``` sudo pip install virtualenv``` and ``` sudo pip install virtualnevwrapper``` afterwords
-  - Language-server (**Ms-Windows**: works with `python` instead of `python3`: 
-    - `python3 -m pip install --upgrade pip setuptools wheel`
-    - `python3 -m pip install 'python-language-server[all]'`
-  
+ 
 ### JavaScript/Typescript 
   
 ##### install npm
