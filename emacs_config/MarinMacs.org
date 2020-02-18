@@ -1,4 +1,4 @@
-#+TITLE: MarinMacs Configuration File
+ #+TITLE: MarinMacs Configuration File
 #+AUTHOR: Marin P. Marinov  
 #+EMAIL: marin.marinov@macaulay.cuny.edu
 #+LANGUAGE: en
@@ -100,7 +100,7 @@ My personal keybindings, you change these anyway you like
 (use-package evil-mc
   :ensure t
   :config
-  (global-evil-mc-mode  1))
+  (global-evil-mc-mode 1))
 
  ; NeoTree Override, package (neotree) is shown further in the config
  (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
@@ -381,13 +381,16 @@ My personal keybindings, you change these anyway you like
   ;; Projectile-mode NOTE: s stands for command on MacOS, windows button for Windows
  (use-package projectile
      :ensure t
+     :custom 
+     (projectile-project-search-path '("~/Projects/"))
      :config
      (setq projectile-sort-order 'recently-active)
      (setq projectile-completion-system 'ivy)
-     (projectile-mode 1))
+     (projectile-mode t))
 
  ;; Counsel-Projectile
 (use-package counsel-projectile
+   :requires projectile
    :ensure t
    :bind (("C-c p" . projectile-command-map)
          ("C-c p SPC" . counsel-projectile)
@@ -562,7 +565,7 @@ A jump to definition package that just works. Love this one!
     :ensure)
 #+END_SRC
 * Git
-- Amazing git interface I have yet to get used to...
+- Magit is an amazing git interface I have yet to master...
 - Official Site: https://magit.vc/
 #+BEGIN_SRC emacs-lisp
 (use-package magit
@@ -571,6 +574,14 @@ A jump to definition package that just works. Love this one!
     (("C-x g" . magit-status)
     ("C-x M-g" . magit-dispatch-popup)))
     
+(use-package gitignore-mode
+  :ensure t
+  :mode "\\.gitignore\\'")
+
+(use-package gitconfig-mode
+  :ensure t
+  :mode "\\.gitconfig\\'")
+
 ;; smerge mode deals with merge conflicts in git. Prefix mapping is C-c v
 (setq smerge-command-prefix "\C-cv")
 #+END_SRC
@@ -646,14 +657,12 @@ A jump to definition package that just works. Love this one!
    (setq clang-format-style-option ".clang-format")) 
  ;; (setq clang-format-style-option "llvm")) use this option if you do not have a .clang-format file
  
-
  (use-package clang-format+
   :quelpa (clang-format+
            :fetcher github
            :repo "SavchenkoValeriy/emacs-clang-format-plus")
            :config
            (add-hook 'c-mode-common-hook #'clang-format+-mode))
-
 #+END_SRC
 * Python
 ** Version
