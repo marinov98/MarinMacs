@@ -29,6 +29,8 @@
 ## Quickstart
 - for those of you who just want to use/test my config:
   - copy my `init.el` and `MarinMacs.org` into your own `.emacs.d` directory (make one in your home directory if you dont have one)
+  - Launch Emacs
+  - reference the [install section](#Install-Section) of this guide for stuff you made need to install
 
 ## Please Note: 
 - I have used Emacs on MacOS, Arch(Antergos), Ubuntu, and Windows(very little) so my knowledge is limited when it comes to anything else
@@ -37,7 +39,7 @@
 - **Windows Users**: You should be able to install everything here if you use [scoop](https://scoop.sh/) and [choco](https://chocolatey.org/)
 
 # Table Of Contents
-- What to install before looking at my config:
+- [What to install before looking at my config](#Instal-Section):
   - [Cask and Curl](#Cask-Curl)
   - [C++](#Cpp)
   - [Python](#Python)
@@ -66,6 +68,8 @@
   - [Web-Development packages](#Web-Development)
   - [JavaScript/TypeScript packages](#js-ts)
   
+## Install-Section
+- This section deals with stuff you would need to install outside of emacs to make sure my config works
   
 ## Quick remarks
 - **Disclaimer** : You DO NOT need to install everything here ONLY take what you need
