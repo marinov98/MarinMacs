@@ -454,7 +454,6 @@ My personal keybindings, you change these anyway you like
 #+BEGIN_SRC emacs-lisp
   (use-package company
       :ensure t
-      :bind("C-n" . company-select-next)
       :init
       :config
       (setq company-tooltip-limit 5) ; show 5 candidates at one time
