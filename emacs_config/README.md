@@ -26,6 +26,10 @@
 - What if you are a **Vim user** looking to switch to emacs but keep the powerful vim bindings? My emacs works with evil-mode!
 - I just really like to have my stuff online in case event XYZ happens with my machine 
 
+## Quickstart
+- for those of you who just want to use/test my config:
+  - copy my `init.el` and `MarinMacs.org` into your own `.emacs.d` directory (make one in your home directory if you dont have one)
+
 ## Please Note: 
 - I have used Emacs on MacOS, Arch(Antergos), Ubuntu, and Windows(very little) so my knowledge is limited when it comes to anything else
 - **Mac Users**: This guide assumes you have [Homebrew](<https://docs.brew.sh/Installation>) installed
@@ -195,6 +199,7 @@
 - **Possible Solution #1 :** my config is tested, so there should not be anything that stops your emacs file from loading, however sometimes because my config has long lines of code and emacs default size is not that big, emacs indents and the piece of code goes on a new line and is not part of anything so it looks like an error 
 - Best thing to do is ```C-s``` and search for the word and either try to put it in the same line or delete it
 - **Possible Solution #2 :** Make sure you have my init.el copied (fix any small indentention issues there) then run ```M-x customize RET```, go to faces->basics faces->default change the size of the emacs screen to prevent it from indenting.
+
 
 ## Favorite-Themes
 
