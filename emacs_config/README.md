@@ -49,8 +49,8 @@
   - [LaTex](#LaTex)
 - [Notes Before Beginning](#Notes-Before-Beginning)
 - [Possible Issues](#Possible-Issues)
-- [Themes I use](#Favorite-Themes)
-- What Packages Are In My Init File:
+- [What's in my config?](#Configuration-Section)
+  - [Themes I use](#Favorite-Themes)
   - [For Vim users](#Vim)
   - [Start-up Screen Packages](#Start-up)
   - [Productivity Packages](#Extra-Productivity-Helper-Packages)
@@ -181,7 +181,7 @@
   - Ubuntu: ```sudo apt install aspell```
   - MacOs: ```brew install aspell```
 
-# Things to consider as you go through this guide
+# Configuration-Section
 
 ## Notes-Before-Beginning
 - I include as much as I can, as I was this guide to be useful to both people who never touched emacs as well as emacs veterans
@@ -205,6 +205,24 @@
 - **Possible Solution #2 :** Make sure you have my init.el copied (fix any small indentention issues there) then run ```M-x customize RET```, go to faces->basics faces->default change the size of the emacs screen to prevent it from indenting.
 
 
+# What My Init File Consists Of (Currently)
+
+## General Settings 
+- [Fira Code](<https://github.com/tonsky/FiraCode>) font
+- set default indentation to 4
+  - set to 2 when wokring with html/css/js files
+- debugging on error 
+- tool bar turned off
+- Disabled all forms of backup files
+
+# Packages
+
+## Use-Package 
+- ```use-package``` (provides the use-package syntax and makes emacs download files if they are not intalled yet)
+- `quelpa-use-package` (adds `:quelpa` and allows downloading straight from github)
+## restart-emacs
+- the ```restart-emacs``` package allows use to keybind the command ```restart-emacs``` so that we can restart and refresh the session with one keystroke whenever we need to.
+
 ## Favorite-Themes
 
 ### Base16 (Contains 20+ themes but these are my top picks)
@@ -227,24 +245,6 @@
 
 ### For Org and any Markdown Language
 - Poet
-
-# What My Init File Consists Of (Currently)
-
-## General Settings 
-- [Fira Code](<https://github.com/tonsky/FiraCode>) font
-- set default indentation to 4
-  - set to 2 when wokring with html/css/js files
-- debugging on error 
-- tool bar turned off
-- Disabled all forms of backup files
-
-# Packages
-
-## Use-Package 
-- ```use-package``` (provides the use-package syntax and makes emacs download files if they are not intalled yet)
-- `quelpa-use-package` (adds `:quelpa` and allows downloading straight from github)
-## restart-emacs
-- the ```restart-emacs``` package allows use to keybind the command ```restart-emacs``` so that we can restart and refresh the session with one keystroke whenever we need to.
 
 ## Vim 
 - **WARNING** You need the `undo-tree` package for below packages to fully work (if you are copying my entire config this is not a problem)
