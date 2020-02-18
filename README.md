@@ -53,6 +53,8 @@
 - **Disclaimer** : You DO NOT need to install everything here ONLY take what you need
 - **CAUTION** : Sometimes repositories and packages become depreciated or change names. I try to keep everything up to date but just be aware when executing the install commands below.
 - **Keep In Mind** : You might find certain machines with certain software (such as gcc and python) already installed I put all the topics below in case your machine has almost nothing related to programming installed on it 
+- **Mac Users**: This guide assumes you have [Homebrew](<https://docs.brew.sh/Installation>) installed
+- **Windows Users**: You should be able to follow along if you use [scoop](https://scoop.sh/) and [choco](https://chocolatey.org/)
 
 ## Table of contents:
   - [Cask and Curl](#Cask-Curl)
@@ -68,9 +70,7 @@
   #### Curl 
   - Arch: ``` sudo pacman -S curl ```
   - Ubuntu: ```sudo apt install curl```
-  - MacOS:
-    - ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null```
-    - ```brew install curl``` 
+  - MacOS: ```brew install curl``` 
   
   #### Cask (for using the dashboard package)
   - Ubuntu & Arch: ```curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python```
@@ -126,29 +126,26 @@
   - autopep: ```pip install autopep8``` (Pep8 formatting) 
   - yapf: ```pip install yapf``` (Formatting)
   - pygments : ```pip install pygments``` (This helps ggtags for C++)
-  - Language-server (Winodws: works with `python` instead of `python3`: 
+  - virtualenv (Python interactive shell)
+    - Run ``` sudo pip install virtualenv``` and ``` sudo pip install virtualnevwrapper``` afterwords
+  - Language-server (**Ms-Windows**: works with `python` instead of `python3`: 
     - `python3 -m pip install --upgrade pip setuptools wheel`
     - `python3 -m pip install 'python-language-server[all]'`
-  #### virtualenv (Python interactive shell)
-  - Run ``` sudo pip install virtualenv``` and ``` sudo pip install virtualnevwrapper``` afterwords
   
-  ### JavaScript 
+  ### JavaScript/Typescript 
   
   ##### install npm
   - Arch: ``` sudo pacman -S npm ```
   - Ubuntu: ```sudo apt install npm```
   - MacOS: ```brew install npm```
   
-  #### JavaScript autocompletion
+  #### JavaScript/TypeScript autocompletion
   - Install language server: ```npm i -g javascript-typescript-langserver```
   
   #### Javacript/Html/CSS formatting
   - Install prettier ```npm i -g prettier```
   
-  #### Other useful npm installs
-  - ``npm i -g react pg requirejs webpack```
-  
-  #### Debugger
+  #### Debugger (mainly for c/cpp)
   - Arch: ```sudo pacman -S gdb```
   - Ubuntu: ```Sudo apt install gdb```
   - MacOS: ```brew install gdb``` 
@@ -171,6 +168,4 @@
   - Arch: ```sudo pacman -S aspell```
   - Ubuntu: ```sudo apt install aspell```
   - MacOs: ```brew install aspell```
-  
-  
   
