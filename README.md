@@ -140,7 +140,7 @@
     - ```git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv```
   - MacOS: ```brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper```
 
-##### Packages to install with Pip (Caution: pip may not be supported at the time you look at this. Consider using pip3 for everything below except the language server)
+##### Packages to install with Pip (Caution: pip may not be supported at the time you look at this. Consider using pip3 for everything below)
   - Rope: ``` pip install rope``` (refactoring library)
   - Jedi: ``` pip install jedi``` (intellisense)
   - flake: ```pip install flake8``` (code checks)
