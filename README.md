@@ -2,7 +2,7 @@
 - Emacs and Vim users are equally welcomed 
 
 ## Inspiration:
-- I became inspired to write this after I configured my emacs init file to the point where I could comftorably wrtie C++, Python, and JavaScript code as well as take notes in Org mode and write LaTex
+- I became inspired to write this after I configured my emacs init file to the point where I could comftorably wrtie C++, Python, and JavaScript code as well as take notes in Org mode
 
 ## Purpose:
 - Initially, I made this repo for myself to keep track of my emacs configurations...
@@ -98,7 +98,7 @@
   - Arch: ```sudo pacman -S cmake```
   - Ubuntu: ```sudo apt install cmake```
   - MacOS: ```brew install cmake```
-  #### Clang-Format
+  #### Clang-Format (format C-based code)
   - Arch: ```sudo pacman -S clang-format```
   - Ubuntu: ```sudo apt install clang-format```
   - MacOs: ```brew install clang-format```
