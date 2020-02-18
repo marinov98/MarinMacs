@@ -17,7 +17,7 @@
   - [Global Packages](#Global-Emacs-Helpers)
   - [Project Management Packages](#Project-Management)
   - [General Coding Packages](#Coding-Productivity)
-  - [Github package](#GitHub-Integration)
+  - [Git packages](#Git)
   - [Org & MarkDown packages](#Org-and-Markdown)
   - [Language Server Protocal (LSP)](#LSP)
   - [C++ packages](#Cpp)
@@ -156,8 +156,10 @@
 - iedit (change multiple words at the same time)
 - dump-jump (jump to definition) 
 
-## GitHub-Integration 
+## Git
 - magit (emacs interface for git)
+- gitignore-mode (syntax highlighting for .gitignore files)
+- gitconfig-mode (syntax highlighting for .gitconfig files)
 
 ## Org-and-Markdown
 - org-bullets (prettier org formatting)
@@ -188,6 +190,10 @@
   
 ## Web-Development 
 - web-mode (allows for auto completion and automatic tag closing) 
+- modes (provides syntax highlighting for corresponding files)
+  - json-mode
+  - yaml-mode
+  - dockerfile-mode
 - skewer (live web development)
 - emmet-mode (increase html/css productivity with snippets) 
 - rainbow-mode (showcases color in css files)
