@@ -65,8 +65,8 @@ My personal keybindings, you change these anyway you like
   (global-set-key (kbd "C-?") 'comment-region) ;; comment
 #+END_SRC
 * Dashboard 
-This package is displayed when you start up emacs without selecting a file. 
-Learn to customize it by going here:https://github.com/emacs-dashboard/emacs-dashboard
+- This package is displayed when you start up emacs without selecting a file. 
+- Learn how to customize it by going here: https://github.com/emacs-dashboard/emacs-dashboard
 #+BEGIN_SRC emacs-lisp
 (use-package dashboard 
     :ensure t
@@ -83,7 +83,7 @@ Learn to customize it by going here:https://github.com/emacs-dashboard/emacs-das
 #+END_SRC
 * Evil-Mode
  - Packages needed to emulate vim inside Emacs. 
- - Official Repo for Evil Mode:https://github.com/emacs-evil/evil
+ - Official Repo for Evil Mode: https://github.com/emacs-evil/evil
 #+BEGIN_SRC emacs-lisp
 (use-package evil
   :ensure t
@@ -445,7 +445,8 @@ Amazing tool for managing projects! HomePage:https://projectile.readthedocs.io/e
 (setq-default flycheck-disabled-checkers '(c/c++-clang c/c++-cppcheck c/c++-gcc))
 #+END_SRC
 ** Company
-The framework I use for my autocomplete. Official Site:http://company-mode.github.io/
+- The framework I use for my autocomplete. 
+- Official Site: http://company-mode.github.io/
 #+BEGIN_SRC emacs-lisp
 (use-package company
     :ensure t
@@ -568,7 +569,8 @@ Amazing git interface I have yet to get used to. Official Site:https://magit.vc/
 (setq smerge-command-prefix "\C-cv")
 #+END_SRC
 * LSP
-  LSP stands for Language Server Protocal and makes setting up autocompletion easy. Official Repo:https://github.com/emacs-lsp/lsp-mode 
+  - LSP stands for Language Server Protocal and makes setting up autocompletion easy. 
+  - Official Repo: https://github.com/emacs-lsp/lsp-mode 
 ** config
 #+BEGIN_SRC emacs-lisp  
  (use-package lsp-mode
@@ -672,7 +674,8 @@ Amazing git interface I have yet to get used to. Official Site:https://magit.vc/
 #+END_SRC
 * Web-Development 
 ** Web-Mode
- Autonomous emacs major-mode for editing web templates. Official Website:http://web-mode.org/
+ - Autonomous emacs major-mode for editing web templates. 
+ - Official Website: http://web-mode.org/
 #+BEGIN_SRC emacs-lisp
 (use-package web-mode
     :ensure t
@@ -757,7 +760,7 @@ Amazing git interface I have yet to get used to. Official Site:https://magit.vc/
        :ensure t)  
    #+END_SRC
 ** Emmet 
-More on emmet:https://www.emmet.io/
+More on emmet: https://www.emmet.io/
 #+BEGIN_SRC emacs-lisp
 (use-package emmet-mode
     :ensure t
