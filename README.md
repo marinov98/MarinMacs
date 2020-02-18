@@ -30,7 +30,7 @@
 - for those of you who just want to use/test my config:
   - copy my `init.el` and `MarinMacs.org` into your own `.emacs.d` directory (make one in your home directory if you dont have one)
   - Launch Emacs
-  - reference the [install section](#Install-Section) of this guide for stuff you made need to install
+  - reference the [install section](#Install-Section) of this guide for stuff you may need to install
 
 ## Please Note: 
 - I have used Emacs on MacOS, Arch(Antergos), Ubuntu, and Windows(very little) so my knowledge is limited when it comes to anything else
