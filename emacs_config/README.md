@@ -182,8 +182,14 @@
 
 ## Python
 - **Packages Below are not used but kept for reference**
-- virtualenvwrapper (virtualized isolated python environment)
-- elpy (enables a powerful python development environment)
+  - virtualenvwrapper (virtualized isolated python environment)
+  - elpy (enables a powerful python development environment)
+  
+## Web-Development 
+- web-mode (allows for auto completion and automatic tag closing) 
+- skewer (live web development)
+- emmet-mode (increase html/css productivity with snippets) 
+- rainbow-mode (showcases color in css files)
 
 ## JavaScript/Typescript
 - rjsx-mode enables editing in .jsx files (found in React)
@@ -192,9 +198,4 @@
 - prettier-js (auto format js code)
 - tide (typescript integrated development environment)
 
-## Web-Development 
-- web-mode (allows for auto completion and automatic tag closing) 
-- skewer (live web development)
-- emmet-mode (increase html/css productivity with snippets) 
-- rainbow-mode (showcases color in css files)
 
