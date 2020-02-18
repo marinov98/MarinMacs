@@ -147,7 +147,7 @@
   - autopep: ```pip install autopep8``` (Pep8 formatting) 
   - yapf: ```pip install yapf``` (Formatting)
   - pygments : ```pip install pygments``` (This helps ggtags for C++)
-  - virtualenv (Python interactive shell)
+  - virtualenv (tool to create isolated Python environments)
     - Run ``` sudo pip install virtualenv``` and ``` sudo pip install virtualnevwrapper``` afterwords
  
 ### JavaScript/Typescript 
