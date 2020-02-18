@@ -183,6 +183,7 @@
   - MacOs: ```brew install aspell```
 
 # Configuration-Section
+- This section is all about what is in my [config file](<https://github.com/marinov98/MarinMacs/blob/master/MarinMacs.org>)
 
 ## Notes-Before-Beginning
 - I include as much as I can, as I was this guide to be useful to both people who never touched emacs as well as emacs veterans
