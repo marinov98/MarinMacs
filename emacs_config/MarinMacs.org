@@ -65,7 +65,8 @@ My personal keybindings, you change these anyway you like
   (global-set-key (kbd "C-?") 'comment-region) ;; comment
 #+END_SRC
 * Dashboard 
-This package is displayed when you start up emacs without selecting a file. Learn how to customize it by going here:https://github.com/emacs-dashboard/emacs-dashboard
+This package is displayed when you start up emacs without selecting a file. 
+Learn to customize it by going here:https://github.com/emacs-dashboard/emacs-dashboard
 #+BEGIN_SRC emacs-lisp
 (use-package dashboard 
     :ensure t
