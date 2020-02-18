@@ -109,7 +109,6 @@
 ## Start-up
 - dashboard (customizable start up screen)
 
-
 ## Extra-Productivity-Helper-Packages
 - which-key (key assignments help)
 - ace-window (faster window swapping)
@@ -141,6 +140,7 @@
 
 ## Global-Emacs-Helpers
 - yasnippet, yasnippet snippets (snippets)
+  - react-snippets (snippets for React.js)
 - company (auto-completion framework)
 - flycheck (linter/syntax checker)
 - undo-tree (smarter undo and enable **Evil mode**)
@@ -160,6 +160,7 @@
 
 ## Org-and-Markdown
 - org-bullets (prettier org formatting)
+- markdown-mode (mode for writing in markdown)
 - **DEPRECIATED** Below writing writing packages are only kept for reverence
   - auctex & tex (smoother latex editing)
   - pdf-tools (pdf support in emacs)
