@@ -1,8 +1,8 @@
-# My Emacs Configuration :sunrise:
+# Welcome to my Emacs guide! :sunrise:
 - Emacs and Vim users are equally welcomed 
 
 # Contact
-- **Email me if there are any issues/questions/things that can be better**: marin.marinov@macaulay.cuny.edu
+- Email me if there are any issues/questions/things that can be better: marin.marinov@macaulay.cuny.edu
 
 ## Inspiration:
 - I became inspired to write this after I configured my emacs init file to the point where I could comftorably wrtie C++, Python, and JavaScript code as well as take notes in Org mode
