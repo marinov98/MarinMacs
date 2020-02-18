@@ -23,7 +23,7 @@
   - [C++ packages](#Cpp)
   - [Python packages](#Python)
   - [Web-Development packages](#Web-Development)
-  - [JavaScript packages](#JavaScript/TypeScript)
+  - [JavaScript/TypeScript packages](#js-ts)
   
   
 
@@ -193,7 +193,7 @@
 - rainbow-mode (showcases color in css files)
 - prettier-js (auto format js code)
 
-## JavaScript/TypeScript
+## js-ts
 - rjsx-mode enables editing in .jsx files (found in React)
 - js2-mode (enables Javascript mode in emacs)
 - add-node-modules-path (sets proper path for modules)
