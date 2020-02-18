@@ -115,10 +115,10 @@
 - ace-window (faster window swapping)
 
 ## Modeline-Customization 
-- Pick one:
-  - telephone-line 
-  - spaceline (currently enabled)
-  - powerline 
+ - telephone-line 
+ - spaceline (currently enabled)
+ - powerline 
+ - doom-modeline
 
 ## Emacs-enhancements
 - Debug on multiple-windows
