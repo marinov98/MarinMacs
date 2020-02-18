@@ -190,12 +190,12 @@
 - skewer (live web development)
 - emmet-mode (increase html/css productivity with snippets) 
 - rainbow-mode (showcases color in css files)
+- prettier-js (auto format js code)
 
 ## JavaScript/Typescript
 - rjsx-mode enables editing in .jsx files (found in React)
 - js2-mode (enables Javascript mode in emacs)
 - add-node-modules-path (sets proper path for modules)
-- prettier-js (auto format js code)
 - tide (typescript integrated development environment)
 
 
