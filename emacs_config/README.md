@@ -47,9 +47,9 @@
   - [Debugger](#Debugger)
   - [Git version control](#GIT)
   - [LaTex](#LaTex)
-- [Notes Before Beginning](#Notes-Before-Beginning)
-- [Possible Issues](#Possible-Issues)
 - [What's in my config?](#Configuration-Section)
+  - [Notes Before Beginning](#Notes-Before-Beginning)
+  - [Possible Issues](#Possible-Issues)
   - [Themes I use](#Favorite-Themes)
   - [For Vim users](#Vim)
   - [Start-up Screen Packages](#Start-up)
@@ -76,62 +76,61 @@
 - **CAUTION** : Sometimes repositories and packages become depreciated or change names. I try to keep everything up to date but just be aware when executing the install commands below.
 - **Keep In Mind** : You might find certain machines with certain software (such as gcc and python) already installed I put all the topics below in case your machine has almost nothing related to programming installed on it 
 
-
-  ### Cask-Curl
+### Cask-Curl
   
-  #### Curl 
+#### Curl 
   - Arch: ``` sudo pacman -S curl ```
   - Ubuntu: ```sudo apt install curl```
   - MacOS: ```brew install curl``` 
   
-  #### Cask (for using the dashboard package)
+#### Cask (for using the dashboard package)
   - Ubuntu & Arch: ```curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python```
   - MacOS: ```brew install cask```
   
   
-  ### Cpp
+### Cpp
   
-  ####  Gcc (GNU Compiler Collection)
+####  Gcc (GNU Compiler Collection)
   - Arch: ``` sudo pacman -S base-devel ```
   - Ubuntu: ```sudo apt install gcc```, ```sudo apt install build-essential``` will install a lot of dependencies
   - MacOS: 
     - Either run ```xcode-select --install``` or install xcode 
     - ```brew install gcc``` to get the latest version of gcc
   - Please also install [clangd](<https://clang.llvm.org/extra/clangd/Installation.html>)
-  #### Clang (Compiler front-end for C++)
+#### Clang (Compiler front-end for C++)
   - Arch: ``` sudo pacman -S clang ```
   - Ubuntu: ```sudo apt install clang```
   - MacOS: Settled by xcode
-  #### Libclang (C API that exposes the C++ abstract syntax)
+#### Libclang (C API that exposes the C++ abstract syntax)
   - Arch: ``` sudo pacman -S llvm lldb```
   - Ubuntu: ```sudo apt install libclang-dev```
   - MacOS: ```brew install --with-toolchain llvm```
-  #### CMake (software application for managing the build process of software)
+#### CMake (software application for managing the build process of software)
   - Arch: ```sudo pacman -S cmake```
   - Ubuntu: ```sudo apt install cmake```
   - MacOS: ```brew install cmake```
-  #### Clang-Format (format C-based code)
+#### Clang-Format (format C-based code)
   - Arch: ```sudo pacman -S clang-format```
   - Ubuntu: ```sudo apt install clang-format```
   - MacOs: ```brew install clang-format```
-  #### Ctags (Programming tool that creates tags) 
+#### Ctags (Programming tool that creates tags) 
   - Arch: ``` sudo pacman -S ctags ```
   - Ubuntu: ```sudo apt install ctags```
   - MacOS: ```brew install ctags```
   - If you are thinking of incorporating tags, you should install pygments (directions below)
   
-  ### Python
+### Python
   
-  #### pyenv (python version management)
+#### pyenv (python version management)
   - Ubuntu & Arch: 
     - ```git clone https://github.com/yyuu/pyenv.git ~/.pyenv```
     - ```git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv```
   - MacOS: ```brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper```
-  #### Pip (Note: be informed of the current state of pip. Allows you to use pip install in your terminal)
+#### Pip (Note: be informed of the current state of pip. Allows you to use pip install in your terminal)
   - Arch: ```sudo pacman -S python-pip```
   - Ubuntu: ```sudo apt install python-pip```
   - MacOS: ```brew install pip```
-  ##### Packages to install with Pip (Caution: pip may not be supported at the time you look at this. Consider using pip3 for everything below except the language server)
+##### Packages to install with Pip (Caution: pip may not be supported at the time you look at this. Consider using pip3 for everything below except the language server)
   - Rope: ``` pip install rope``` (refactoring library)
   - Jedi: ``` pip install jedi``` (intellisense)
   - flake: ```pip install flake8``` (code checks)
@@ -144,7 +143,7 @@
     - `python3 -m pip install --upgrade pip setuptools wheel`
     - `python3 -m pip install 'python-language-server[all]'`
   
-  ### JavaScript/Typescript 
+### JavaScript/Typescript 
   
 ##### install npm
   - Arch: ``` sudo pacman -S npm ```
@@ -169,7 +168,7 @@
   - MacOS: Should have it preinstalled from xcode command line tools
   - **Now search up how to set up git on your Operating System AFTER installation is complete**
     
-#### LaTex
+#### LaTex (Optional)
   
 ##### Auctex (creating latex files in emacs) 
   - Arch: ``` sudo pacman -S auctex```
