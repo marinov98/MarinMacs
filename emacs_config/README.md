@@ -22,8 +22,9 @@
   - [Language Server Protocal (LSP)](#LSP)
   - [C++ packages](#Cpp)
   - [Python packages](#Python)
-  - [JavaScript packages](#JavaScript)
   - [Web-Development packages](#Web-Development)
+  - [JavaScript packages](#JavaScript)
+  
   
 
 ## :loudspeaker: IMPORTANT:  
