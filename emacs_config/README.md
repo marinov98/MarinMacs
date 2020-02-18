@@ -178,9 +178,10 @@
 ## Cpp
 - c++-modern-font-lock (helpes emacs recognize c++11 and above)
 - clang-format (formats c++ code)
+- clang-format+ (automatically format C++ code)
 
 ## Python
-- virtualenv (interactive python shell) 
+- **Packages Below are not used but kept for reference**
 - virtualenvwrapper (virtualized isolated python environment)
 - elpy (enables a powerful python development environment)
 
