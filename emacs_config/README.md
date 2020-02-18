@@ -79,13 +79,12 @@
 # What My Init File Consists Of (Currently)
 
 ## General Settings 
-- set tab to 4 spaces
-- force editor to use spaces
-- syntax highlighting
+- [Fira Code](<https://github.com/tonsky/FiraCode>) font
+- set default indentation to 4
+  - set to 2 when wokring with html/css/js files
 - debugging on error 
 - tool bar turned off
-- Disable annoying backup files
-- [Fira Code](<https://github.com/tonsky/FiraCode>) font
+- Disabled all forms of backup files
 
 # Packages
 
