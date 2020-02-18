@@ -187,8 +187,6 @@
 ## JavaScript/Typescript
 - rjsx-mode enables editing in .jsx files (found in React)
 - js2-mode (enables Javascript mode in emacs)
-- js2-refactor (powerful refactoring)
-- xref-js2 (easy jumping to definitions and refrences)
 - add-node-modules-path (sets proper path for modules)
 - prettier-js (auto format js code)
 - tide (typescript integrated development environment)
