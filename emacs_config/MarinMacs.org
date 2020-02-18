@@ -454,7 +454,6 @@ My personal keybindings, you change these anyway you like
 #+BEGIN_SRC emacs-lisp
   (use-package company
       :ensure t
-      :init
       :config
       (setq company-tooltip-limit 5) ; show 5 candidates at one time
       (define-key company-active-map (kbd "M-n") nil) ; old selection key
@@ -563,7 +562,8 @@ A jump to definition package that just works. Love this one!
     :ensure)
 #+END_SRC
 * Git
-Amazing git interface I have yet to get used to. Official Site: https://magit.vc/
+- Amazing git interface I have yet to get used to...
+- Official Site: https://magit.vc/
 #+BEGIN_SRC emacs-lisp
 (use-package magit
     :ensure t
