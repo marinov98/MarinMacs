@@ -82,7 +82,8 @@ Learn to customize it by going here:https://github.com/emacs-dashboard/emacs-das
                            (projects . 5))))
 #+END_SRC
 * Evil-Mode
- Packages needed to emulate vim inside Emacs. Official Repo for Evil Mode:https://github.com/emacs-evil/evil
+ - Packages needed to emulate vim inside Emacs. 
+ - Official Repo for Evil Mode:https://github.com/emacs-evil/evil
 #+BEGIN_SRC emacs-lisp
 (use-package evil
   :ensure t
