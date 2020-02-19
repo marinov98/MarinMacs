@@ -261,7 +261,7 @@ Language server my config uses: [clangd](<https://clang.llvm.org/extra/clangd/In
 - If you just want **Emacs keybindings** either erase any "evil" package or comment them 
 #### Packages for Evil Mode (Vim inside Emacs) : 
 - **You have to make sure this package is NOT commented in order to ENABLE THE BINDINGS:**
-  - evil (basically creates vim inside emacs) 
+  - evil (extensible vi layer) -> basically emulates vim inside emacs 
 - **Evil support packages:**
   - evil-surround (just like surround in vim)
   - evil-mc (vimlike multiple cursors)
