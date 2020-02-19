@@ -272,7 +272,7 @@ Language server my config uses: [clangd](<https://clang.llvm.org/extra/clangd/In
 
 ## Extra-Productivity-Helper-Packages
 - which-key (key assignments help)
-- ace-window (faster window swapping)
+- ace-window (faster and more convinient window swapping)
 
 ## Modeline-Customization 
  - telephone-line 
@@ -344,9 +344,12 @@ Language server my config uses: [clangd](<https://clang.llvm.org/extra/clangd/In
 - clang-format+ (automatically format C++ code)
 
 ## Python
-- **Packages Below are not used but kept for reference**
-  - virtualenvwrapper (virtualized isolated python environment)
-  - elpy (enables a powerful python development environment)
+- **Packages below are not used but kept for reference**
+- virtualenvwrapper (virtualized isolated python environment)
+  - When I start using python more I will probably start utilizing this package again
+- elpy (enables a powerful python development environment)
+  - this package and `company-jedi` was the way I used to do autocompletion in python
+   
   
 ## Web-Development 
 - web-mode (allows for auto completion and automatic tag closing) 
