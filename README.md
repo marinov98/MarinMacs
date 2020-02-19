@@ -90,8 +90,7 @@
   
 ### Cpp
 
-#### Language server my config uses:
-[clangd](<https://clang.llvm.org/extra/clangd/Installation.html>)
+Language server my config uses: [clangd](<https://clang.llvm.org/extra/clangd/Installation.html>)
 
 ### Cpp extras
 
