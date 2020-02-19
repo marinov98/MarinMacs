@@ -89,14 +89,18 @@
   
   
 ### Cpp
-  
-####  Gcc (GNU Compiler Collection)
+
+#### Language server my config uses:
+[clangd](<https://clang.llvm.org/extra/clangd/Installation.html>)
+
+### Cpp extras
+
+#### Gcc (GNU Compiler Collection)
   - Arch: ``` sudo pacman -S base-devel ```
   - Ubuntu: ```sudo apt install gcc```, ```sudo apt install build-essential``` will install a lot of dependencies
   - MacOS: 
     - Either run ```xcode-select --install``` or install xcode 
     - ```brew install gcc``` to get the latest version of gcc
-  - Please also install [clangd](<https://clang.llvm.org/extra/clangd/Installation.html>)
 #### Clang (Compiler front-end for C++)
   - Arch: ``` sudo pacman -S clang ```
   - Ubuntu: ```sudo apt install clang```
@@ -126,12 +130,10 @@
   - Ubuntu: ```sudo apt install python-pip```
   - MacOS: ```brew install pip```
 
-##### Language-server (**Ms-Windows**: works with `python` instead of `python3`: 
+##### Language-server (**Ms-Windows**: works with `python` instead of `python3`) my config uses: 
    - `python3 -m pip install --upgrade pip setuptools wheel`
    - `python3 -m pip install 'python-language-server[all]'`
-    
-
-  
+      
 ### Extras
 
 #### pyenv (python version management)
@@ -157,10 +159,9 @@
   - Ubuntu: ```sudo apt install npm```
   - MacOS: ```brew install npm```
   
-#### Web-dev autocompletion
-  - Install language servers: 
-    - `npm i -g typescript-language-server vscode-json-languageserver vscode-html-languageserver-bin yaml-language-server vscode-css-languageserver-bin bash-language-server
-`
+#### Web-Dev autocomplete
+  - language servers: 
+    - `npm i -g typescript-language-server vscode-json-languageserver vscode-html-languageserver-bin yaml-language-server vscode-css-languageserver-bin bash-language-server`
   
 #### Javacript/Html/CSS formatting
   - Install prettier ```npm i -g prettier```
