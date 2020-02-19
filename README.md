@@ -76,6 +76,8 @@
 - **CAUTION** : Sometimes repositories and packages become depreciated or change names. I try to keep everything up to date but just be aware when executing the install commands below.
 - **Keep In Mind** : You might find certain machines with certain software (such as gcc and python) already installed I put all the topics below in case your machine has almost nothing related to programming installed on it 
 
+- **Mac Users**: run ```xcode-select --install``` or install xcode, installs a lot of stuff for you 
+
 ### Cask-Curl
   
 #### Curl 
@@ -96,10 +98,8 @@ Language server my config uses: [clangd](<https://clang.llvm.org/extra/clangd/In
 
 #### Gcc (GNU Compiler Collection)
   - Arch: ``` sudo pacman -S base-devel ```
-  - Ubuntu: ```sudo apt install gcc```, ```sudo apt install build-essential``` will install a lot of dependencies
-  - MacOS: 
-    - Either run ```xcode-select --install``` or install xcode 
-    - ```brew install gcc``` to get the latest version of gcc
+  - Ubuntu: ```sudo apt install gcc```
+  - MacOS: ```brew install gcc``` to get the latest version of gcc
 #### Clang (Compiler front-end for C++)
   - Arch: ``` sudo pacman -S clang ```
   - Ubuntu: ```sudo apt install clang```
@@ -112,11 +112,11 @@ Language server my config uses: [clangd](<https://clang.llvm.org/extra/clangd/In
   - Arch: ```sudo pacman -S cmake```
   - Ubuntu: ```sudo apt install cmake```
   - MacOS: ```brew install cmake```
-#### Clang-Format (format C-based code)
+#### Clang-Format (format C-based code) 
   - Arch: ```sudo pacman -S clang-format```
   - Ubuntu: ```sudo apt install clang-format```
   - MacOs: ```brew install clang-format```
-#### Ctags (Programming tool that creates tags) 
+#### Ctags (Programming tool that creates tags) {Optional}
   - Arch: ``` sudo pacman -S ctags ```
   - Ubuntu: ```sudo apt install ctags```
   - MacOS: ```brew install ctags```
@@ -130,8 +130,8 @@ Language server my config uses: [clangd](<https://clang.llvm.org/extra/clangd/In
   - MacOS: ```brew install pip```
 
 ##### Language-server (**Ms-Windows**: works with `python` instead of `python3`) my config uses: 
-   - `python3 -m pip install --upgrade pip setuptools wheel`
-   - `python3 -m pip install 'python-language-server[all]'`
+   - upgrade setup wheel: `python3 -m pip install --upgrade pip setuptools wheel`
+   - Actual language server->`python3 -m pip install 'python-language-server[all]'`
       
 ### Extras
 
