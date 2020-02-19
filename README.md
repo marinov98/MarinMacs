@@ -318,7 +318,7 @@ Language server my config uses: [clangd](<https://clang.llvm.org/extra/clangd/In
 
 ## Git
 - magit (emacs interface for git)
-- gitignore-mode (syntax highlighting for .gitignore files)
+- gitignore-mode (syntax highlighting for .gitignore/.dockerignore files)
 - gitconfig-mode (syntax highlighting for .gitconfig files)
 
 ## Org-and-Markdown
