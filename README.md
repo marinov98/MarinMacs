@@ -85,7 +85,7 @@
   
 #### Cask (for using the dashboard package)
   - Ubuntu & Arch: ```curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python```
-  - MacOS: ```brew install cask```
+  - MacOS: ```brew tap caskroom/cask```
   
   
 ### Cpp
