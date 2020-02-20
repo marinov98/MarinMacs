@@ -197,7 +197,7 @@
 - Any errors you get can be googled and every package can also be checked online 
 - Depending on how you installed emacs, certain packages might be preinstalled into it 
 - When you see ```RET``` it means hit the ENTER key
-- **In emacs C = ctrl and M = alt**
+- **In emacs C = ctrl, M = alt,S = shift and s (hyper key) = command key (MacOS) windows key(MS-Windows)**
   - Example: ```M-x``` = alt + x  ```C-x C-f``` = ctrl + x ctrl + f
 - If you wish to browse through Emac's packages ```M-x package-list-packages RET``` will open up the package list
 - Additonally you can run ```M-x package-install RET package_name RET``` if you know the exact package that you want 
@@ -349,7 +349,6 @@
   - When I start using python more I will probably start utilizing this package again
 - elpy (enables a powerful python development environment)
   - this package and `company-jedi` was the way I used to do autocompletion in python
-   
   
 ## Web-Development 
 - web-mode (allows for auto completion and automatic tag closing) 
