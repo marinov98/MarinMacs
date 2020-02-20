@@ -165,7 +165,8 @@
 #### Javacript/Html/CSS formatting
   - Install prettier ```npm i -g prettier```
   
-#### Debugger (mainly for c/cpp)
+#### Debugger
+  - Mainly for c-based languages
   - Arch: ```sudo pacman -S gdb```
   - Ubuntu: ```Sudo apt install gdb```
   - MacOS: ```brew install gdb``` 
