@@ -191,9 +191,10 @@
 
 # Configuration-Section
 - This section is all about what is in my [config file](<https://github.com/marinov98/MarinMacs/blob/master/MarinMacs.org>)
+- The below section is more of an overview of my config at a glance, once you view the org configuration file, it has links to manuals or official repos of the packages I thought were important as well as my own commentary on them.
 
 ## Notes-Before-Beginning
-- I include as much as I can, as I was this guide to be useful to both people who never touched emacs as well as emacs veterans
+- I include as much as I can, as I want this guide to be useful to both people who never touched emacs as well as emacs veterans
 - Any errors you get can be googled and every package can also be checked online 
 - Depending on how you installed emacs, certain packages might be preinstalled into it 
 - When you see ```RET``` it means hit the ENTER key
@@ -221,8 +222,7 @@
 - [Fira Code](<https://github.com/tonsky/FiraCode>) font
 - set default indentation to 4
   - set to 2 when working with html/css/js files
-- debugging on error 
-- tool bar turned off
+- all kinds of tool bars turned off
 - Disabled all forms of backup files
 
 # Packages
@@ -289,7 +289,6 @@
 - all-the-icons-ivy (icons enhancement for ivy)
 - all-the-icons-dired (icons enhancement for dired/ranger)
 - ranger (ranger-like file manager, replaces dired)
-- avy (fast word navigation)
 - **Ivy Integration**
   - ivy (generic completion mechanism for Emacs.)
   - swiper (improved file/name search by integrating ivy, alternative to Emac's I-search)
