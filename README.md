@@ -176,7 +176,8 @@
   - MacOS: Should have it preinstalled from xcode command line tools
   - **Now search up how to set up git on your Operating System AFTER installation is complete**
     
-#### LaTex (Optional)
+#### LaTex 
+- These are mostly optional
   
 ##### Auctex (creating latex files in emacs) 
   - Arch: ``` sudo pacman -S auctex```
