@@ -43,7 +43,7 @@
   - [Cask and Curl](#Cask-Curl)
   - [C++](#Cpp)
   - [Python](#Python)
-  - [JavaScript](#JavaScript)
+  - [JavaScript/TypeScript](#JavaScript-Typescript)
   - [Debugger](#Debugger)
   - [Git version control](#GIT)
   - [LaTex](#LaTex)
@@ -151,7 +151,7 @@
   - virtualenv (tool to create isolated Python environments)
     - Run ``` pip install virtualenv``` and ``` pip install virtualnevwrapper``` afterwords
  
-### JavaScript/Typescript 
+### JavaScript-Typescript 
   
 ##### install npm
   - Arch: ``` sudo pacman -S npm ```
