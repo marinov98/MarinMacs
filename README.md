@@ -36,7 +36,7 @@
 - I have used Emacs on MacOS, Arch(Antergos), Ubuntu, and Windows(very little) so my knowledge is limited when it comes to anything else
 - **Mac Users**: This guide assumes you have [Homebrew](<https://docs.brew.sh/Installation>) installed
   - Also make sure you either have [xcode](https://developer.apple.com/xcode/) installed or xcode command line tools for MacOS
-- **Windows Users**: You should be able to install everything here if you use [scoop](https://scoop.sh/) and [choco](https://chocolatey.org/)
+- **Windows Users**: You should be able to install everything here if you use [scoop](https://scoop.sh/) and [choco](https://chocolatey.org/) or download from the official sites of the packages I am refering to the [external installs](#Install-Section]
 
 # Table Of Contents
 - [What to install before looking at my config](#Instal-Section):
