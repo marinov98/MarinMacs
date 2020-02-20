@@ -62,6 +62,7 @@
   - [General Coding Packages](#Coding-Productivity)
   - [Git packages](#Git)
   - [Org & MarkDown packages](#Org-and-Markdown)
+  - [Hydra](#Hydra)
   - [Language Server Protocal (LSP)](#LSP)
   - [C++ packages](#Cpp)
   - [Python packages](#Python)
