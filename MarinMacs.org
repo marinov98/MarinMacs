@@ -649,7 +649,7 @@ A jump to definition package that just works. Love this one!
 * C/C++
 ** Settings
 #+BEGIN_SRC emacs-lisp
-(setq-default c-basic-offset 4) ;; indents 4 chars for C-based languages
+(setq-default c-basic-offset 4) ;; indentation for C-based languages
 (setq-default flycheck-disabled-checkers '(c/c++-clang c/c++-cppcheck c/c++-gcc)) ;; disable other checkers since we are using clangd
 
 ;; enable modern font lock for >=c++11
@@ -680,13 +680,13 @@ A jump to definition package that just works. Love this one!
 * Python
 ** Settings
 #+BEGIN_SRC emacs-lisp
-  ;; indentation
+  ;; version 
   (setq py-python-command "python3")
   (setq python-shell-interpreter "python3")
 
   ;; indentation
-  (setq-default python-basic-offset 4) ;; default 4
-  (setq-default python-indent-offset 4) ;; indent by 4
+  (setq-default python-basic-offset 4) 
+  (setq-default python-indent-offset 4) 
   (setq python-indent-guess-indent-offset t) ;; allow emacs to guess offset
   (setq python-indent-guess-indent-offset-verbose nil) ;; remove annoying warning
 #+END_SRC
