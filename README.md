@@ -177,7 +177,7 @@
   - **Now search up how to set up git on your Operating System AFTER installation is complete**
     
 #### LaTex 
-- These are mostly optional
+These are mostly optional
   
 ##### Auctex (creating latex files in emacs) 
   - Arch: ``` sudo pacman -S auctex```
