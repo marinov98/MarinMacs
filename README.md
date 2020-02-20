@@ -149,7 +149,7 @@
   - yapf: ```pip install yapf``` (Formatting)
   - pygments : ```pip install pygments``` (This helps ggtags for C++)
   - virtualenv (tool to create isolated Python environments)
-    - Run ``` sudo pip install virtualenv``` and ``` sudo pip install virtualnevwrapper``` afterwords
+    - Run ``` pip install virtualenv``` and ``` pip install virtualnevwrapper``` afterwords
  
 ### JavaScript/Typescript 
   
