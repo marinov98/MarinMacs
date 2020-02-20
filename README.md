@@ -308,12 +308,12 @@
 
 ## Project-Management
 - projectile (Project interaction library for emacs)
-- counsel-projectile (ivy integration of projectile)
+- counsel-projectile (extra projectile commands)
 
 ## Coding-Productivity
 - beacon (light that follows your cursor)
 - neotree (popup sidebar for easy directory/file navigation)
-- iedit (change multiple words at the same time)
+- iedit (change all occurrences of a search at the same time)
 - dump-jump (jump to definition) 
 
 ## Git
