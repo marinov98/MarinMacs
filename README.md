@@ -200,7 +200,8 @@
 - **In emacs C = ctrl, M = alt, S = shift and s (hyper key) = command key (MacOS) windows key(MS-Windows)**
   - Example: ```M-x``` = alt + x  ```C-x C-f``` = ctrl + x ctrl + f
 - If you wish to browse through Emac's packages ```M-x package-list-packages RET``` will open up the package list
-- Additonally you can run ```M-x package-install RET package_name RET``` if you know the exact package that you want 
+  - Additionally you can run ```M-x package-install RET package_name RET``` if you know the exact package that you want
+  - Generally , `use-package` (described below) takes care of automating package installation
 - Once again, if you just want to get it over with, simply copy my ```init.el``` and ```MarinMacs.org```(or whatever you want to name your org file) the files should be created inside the ```.emacs.d``` folder which you can create. All the packages should install and configure automatically (power of use-package), **however** you would still have to install the servers for jedi(Python) and irony(C++) (instructions for that below)
 
 # Possible-Issues 
