@@ -219,7 +219,7 @@
 ## General Settings 
 - [Fira Code](<https://github.com/tonsky/FiraCode>) font
 - set default indentation to 4
-  - set to 2 when wokring with html/css/js files
+  - set to 2 when working with html/css/js files
 - debugging on error 
 - tool bar turned off
 - Disabled all forms of backup files
