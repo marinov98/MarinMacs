@@ -331,6 +331,10 @@ These are mostly optional
   - pdf-tools (pdf support in emacs)
   - wc-mode (word counter)
   - writegood-mode (sentence/word choice checker)
+  
+ ## Hydra
+ - I have done only the bare minimum for this package and have yet to properly experiment
+ - "make Emacs bindings that stick around" looking to add many more hydras in the future
 
 ## LSP 
 - **Note:** This is where the auto-completetion takes place
@@ -339,6 +343,10 @@ These are mostly optional
 - If you followed my install instructions, after the packages has installed, you should have autocompletetion enabled so long as you say the file is the root of the project when lsp prompts you 
 - **Note for Javascript/Typescript** select `ts-ls` as the server to install when prompted unless you want to use a different one 
 - Find out more about how this works [here](<https://github.com/emacs-lsp/lsp-mode>)
+
+## DAP 
+- debugger adapater protocal 
+- I have yet to make this work properly
 
 ## Cpp
 - c++-modern-font-lock (helpes emacs recognize c++11 and above)
