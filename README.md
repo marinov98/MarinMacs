@@ -39,7 +39,7 @@
 - **Windows Users**: You should be able to install everything here if you use [scoop](https://scoop.sh/) and [choco](https://chocolatey.org/) or download from the official sites of the packages I am refering to the [external installs](#Install-Section]
 
 # Table Of Contents
-- [What to install before looking at my config](#Instal-Section):
+- [What to install before looking at my config](#Install-Section):
   - [Cask and Curl](#Cask-Curl)
   - [C++](#Cpp)
   - [Python](#Python)
