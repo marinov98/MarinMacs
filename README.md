@@ -214,7 +214,7 @@
 - **Possible Solution #2 :** Make sure you have my init.el copied (fix any small indentention issues there) then run ```M-x customize RET```, go to faces->basics faces->default change the size of the emacs screen to prevent it from indenting.
 
 
-# What My Init File Consists Of (Currently)
+# What My MarinMacs.org File Consists Of (Currently)
 
 ## General Settings 
 - [Fira Code](<https://github.com/tonsky/FiraCode>) font
