@@ -193,7 +193,7 @@ These are mostly optional
 
 # Configuration-Section
 - This section is all about what is in my [config file](<https://github.com/marinov98/MarinMacs/blob/master/MarinMacs.org>)
-- The below section is more of an overview of my config at a glance, once you view the org configuration file, it has links to manuals or official repos of the packages I thought were important as well as my own commentary on them.
+- This is more of an overview of my config at a glance, once you view the org configuration file, it has links to manuals or official repos of the packages I thought were important as well as my own commentary on them.
 
 ## Notes-Before-Beginning
 - I include as much as I can, as I want this guide to be useful to both people who never touched emacs as well as emacs veterans
