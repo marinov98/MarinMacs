@@ -324,7 +324,7 @@
 ## Org-and-Markdown
 - org-bullets (prettier org formatting)
 - markdown-mode (mode for writing in markdown)
-- **DEPRECIATED** Below writing writing packages are only kept for reverence
+- **DEPRECIATED** Below writing packages are only kept for reverence
   - auctex & tex (smoother latex editing)
   - pdf-tools (pdf support in emacs)
   - wc-mode (word counter)
