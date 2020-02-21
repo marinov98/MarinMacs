@@ -38,7 +38,7 @@
   - [[#dump-jump][Dump-Jump]]
 - [[#git][Git]]
 - [[#hydra][Hydra]]
-- [[#lsp][Language Server Protocal(lsp)]]
+- [[#lsp][Language Server Protocal (lsp)]]
 - [[#dap][Debug Adapter Protocal (dap)]]
 - [[#cpp][C/C++]]
 - [[#python][Python]]
