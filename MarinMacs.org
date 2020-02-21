@@ -636,7 +636,7 @@ Useful if you work on multiple windows and want an efficient way of switching be
       ("<tab>" . company-select-next)) ;; make tab our new select next key
       :config
       (setq company-tooltip-limit 5) ; show 5 candidates at one time
-      (setq company-idle-delay 0.3) ;; slightly delay for optimal performance
+      (setq company-idle-delay 0.5) ;; slightly delay for optimal performance
       (setq company-minimum-prefix-length 3) ;; show completions after 3 chars
       (setq company-selection-wrap-around t)
       (setq global-company-mode t)) 
@@ -887,7 +887,7 @@ A jump to definition package that just works. Love this one!
      :config
      (setq gc-cons-threshold 100000000)
      (setq read-process-output-max (* 1024 1024)) ;; 1mb
-     (setq lsp-idle-delay 0.15) ; small delay for less strain
+     (setq lsp-idle-delay 0.3) ; small delay for less strain
      (setq lsp-clients-clangd-args '("-j=4" "-background-index" "-log=error"))
      (setq lsp-prefer-flymake nil) ; we are using flycheck and not flymake
      ;; hook your languages below
@@ -906,10 +906,10 @@ A jump to definition package that just works. Love this one!
     :hook (lsp-mode . lsp-ui-mode)
     :config
     (setq lsp-ui-flycheck-live-reporting nil) ;; allows our previous flycheck setting to only check syntax on save to work
-    (setq eldoc-idle-delay 0.65) ;; delay eldoc for a little
+    (setq eldoc-idle-delay 1) ;; delay eldoc for 1 second
     ;; ui customization
     (setq lsp-ui-doc-enable t
-          lsp-ui-doc-delay 0.65 ;; display doc after 6.5/10 of a second
+          lsp-ui-doc-delay 1 ;; display doc after 1 second of hovering
           lsp-ui-doc-use-childframe t
           lsp-ui-doc-position 'top
           lsp-ui-doc-include-signature t
