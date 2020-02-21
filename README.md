@@ -348,13 +348,14 @@ These are mostly optional
 - Find out more about how this works [here](<https://github.com/emacs-lsp/lsp-mode>)
 
 ## DAP 
-- debugger adapater protocal 
-- I have yet to make this work properly
+- debugger adapter protocal 
+- visit [official repo](<https://github.com/emacs-lsp/dap-mode>) to get debugging support for your specific language
 
 ## Cpp
 - c++-modern-font-lock (helpes emacs recognize c++11 and above)
 - clang-format (formats c++ code)
 - clang-format+ (automatically format C++ code)
+- dap-gdb-lldb (debugger support for dap-mode)
 
 ## Python
 - **Packages below are not used but kept for reference**
@@ -362,6 +363,7 @@ These are mostly optional
   - When I start using python more I will probably start utilizing this package again
 - elpy (enables a powerful python development environment)
   - this package and `company-jedi` was the way I used to do autocompletion in python
+- dap-python (debugging)
   
 ## Web-Development 
 - web-mode (allows for auto completion and automatic tag closing) 
@@ -379,5 +381,8 @@ These are mostly optional
 - js2-mode (enables Javascript mode in emacs)
 - add-node-modules-path (sets proper path for modules)
 - tide (typescript integrated development environment)
+- Debugging:
+  - Front-end: dap-chrome, dap-firefox
+  - Backend: dap-node
 
 
