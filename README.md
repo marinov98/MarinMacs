@@ -337,7 +337,7 @@ These are mostly optional
  - I have done only the bare minimum for this package and have yet to properly experiment
  - "make Emacs bindings that stick around" looking to add many more hydras in the future
  - hydra (lets you make your own maps and assign bindings)
- - hydra-pretty (not using yet but keeping it for reference)
+ - pretty-hydra (not using yet but keeping it for reference makes prettier hydra UI)
 
 ## LSP 
 - **Note:** This is where the auto-completetion takes place
