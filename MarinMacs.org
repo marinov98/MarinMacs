@@ -14,16 +14,16 @@
 - Now I want to make it more of a guide for anyone trying to switch to emacs whether its from another editor and/or is confused about what packages to install and how to configure.
 - Make a guide that welcomes anyone from any editor.
 ** Who Is This for?
-- **Vim users** wanting to switch and use the power of emacs while keepings their vim keybindings
-- Anyone wanting to use Emacs for its **own keybindings** and extensibility but hates configuring and wants an out of the box experience
+- *Vim users* wanting to switch and use the power of emacs while keepings their vim keybindings
+- Anyone wanting to use Emacs for its *own keybindings* and extensibility but hates configuring and wants an out of the box experience
 - People who want more productivity but are limited because of their current text editor
 - People who already use emacs and maybe want to see if there is anything new they can learn from my config
 - Me whenever I forget or want to reference something
-** Why Make This Into More Of aGuide?
+** Why Make This Into More Of A Guide?
 - Emacs is extremely powerful but has a ton of packages and it can be really confusing to pick the right ones, much less configure them
 - Installing each package requires going to different sites and/or blogs to see how each individual one works, its better to have all the information you need in one place 
 - Not everybody likes spending time customizing and configuring, they like things that work right out of the box. However, everybody likes speed and Emacs provides that and the configuration should not be what keeps people using editors such as emacs or vim
-- What if you are a **Vim user** looking to switch to emacs but keep the powerful vim bindings? My emacs works with evil-mode!
+- What if you are a *Vim user* looking to switch to emacs but keep the powerful vim bindings? My emacs works with evil-mode!
 - I just really like to have my stuff online in case event XYZ happens with my machine 
 * Notes-Before-Beginning
 - I include as much as I can, as I want this guide to be useful to both people who never touched emacs as well as emacs veterans
@@ -37,16 +37,17 @@
   - Generally , `use-package` (described below) takes care of automating package installation
 - Once again, if you just want to get it over with, simply copy my *init.el* and *MarinMacs.org* (or whatever you want to name your org file) 
 - the files should be created inside the ```.emacs.d``` folder which you can create. 
-- All the packages should install and configure automatically (power of use-package), **however** you would still have to install the **langauge servers** (instructions below) if you want autocomplete
+- All the packages should install and configure automatically (power of use-package), *however* you would still have to install the *langauge servers* to enable autocomplete
 * Possible-Issues 
 - After installing my config on a few different machines (Linux, MacOS, Ms-Windows), my config runs fine, but I have occasionally ran into small issues that can be quickly fixed.
+- Run emacs with '--debug-init' flag it should tell you where the error is
 - They are rare but they still happen so below are some solutions to them:
 ** Issue #1: Package cannot load 
-- **Possible Solution** run ```M-x package-refresh-contents ``` , if that doesnt work and the package doesnt mean much to you, remove it from the config or look up the package to see if anything has changed, some packages get deleted over time or replaced or become native to emacs and do not to be specified in the config
+- *Possible Solution* run `M-x package-refresh-contents` , if that doesnt work and the package doesnt mean much to you, remove it from the config or look up the package to see if anything has changed, some packages get deleted over time or replaced or become native to emacs and do not to be specified in the config
 ** Issue #2 : (some word) is void 
-- **Possible Solution #1 :** my config is tested, so there should not be anything that stops your emacs file from loading, however sometimes because my config has long lines of code and emacs default size is not that big, emacs indents and the piece of code goes on a new line and is not part of anything so it looks like an error 
-- Best thing to do is ```C-s``` and search for the word and either try to put it in the same line or delete it
-- **Possible Solution #2 :** Make sure you have my init.el copied (fix any small indentention issues there) then run ```M-x customize RET```, go to faces->basics faces->default change the size of the emacs screen to prevent it from indenting.
+- *Possible Solution #1 :* my config is tested, so there should not be anything that stops your emacs file from loading, however sometimes because my config has long lines of code and emacs default size is not that big, emacs indents and the piece of code goes on a new line and is not part of anything so it looks like an error 
+- Best thing to do is `C-s` and search for the word and either try to put it in the same line or delete it
+- *Possible Solution #2 :* Make sure you have my init.el copied (fix any small indentention issues there) then run `M-x customize RET`, go to faces->basics faces->default change the size of the emacs screen to prevent it from indenting.
 * Table of Contents :TOC_3:
 - [[#settings][General Settings]]
 - [[#keybindings][Personal Keybindings]]
@@ -91,7 +92,7 @@
  :PROPERTIES:
  :CUSTOM_ID: settings
  :END:
-I like to use [[https://github.com/tonsky/FiraCode][Fire Code]] font
+I like to use [[https://github.com/tonsky/FiraCode][Fira Code]] font
 #+BEGIN_SRC emacs-lisp
   ;; Indentation 
   (setq-default indent-tabs-mode nil)                    ;; disable tabs and use spaces
@@ -696,7 +697,7 @@ Useful if you work on multiple windows and want an efficient way of switching be
  :CUSTOM_ID: latex
  :END:
 - I still actually prefer Overleaf for latex editing...Hoping to just use emacs for it one day
-- **DEPRECIATED** Below writing packages are only kept for reverence
+- *DEPRECIATED* Below writing packages are only kept for reverence
   - auctex & tex (smoother latex editing)
   - pdf-tools (pdf support in emacs)
   - wc-mode (word counter)
