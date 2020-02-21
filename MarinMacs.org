@@ -5,7 +5,50 @@
 #+TAGS: Emacs
 #+DESCRIPTION: My emacs config for software development
 
-* General Settings
+* Table of Contents :TOC_3:
+- [[#settings][General Settings]]
+- [[#keybindings][Personal Keybindings]]
+- [[#org-archive][Org-archive]]
+- [[#quelpa][Quelpa]]
+- [[#restart][Restart-Emacs]]
+- [[#dashboard][Dashboard]]
+- [[#evil][Evil-mode]]
+- [[#themes][Themes]]
+- [[#modeline][Modeline]]
+- [[#enhancements][Emacs Enhancements]]
+  - [[#which-key][Which-Key]]
+  - [[#ace-window][Ace-Window]]
+  - [[#gdb][GDB]]
+  - [[#ivy][Ivy integration]]
+  - [[#ranger][Ranger]]
+  - [[#all-icons][All-the-icons]]
+- [[#projectile][Projectile]]
+- [[#shell][Shell]]
+- [[#globals][Globals]]
+  - [[#snippets][Snippets]]
+  - [[#flycheck][Flycheck]]
+  - [[#company][Company]]
+  - [[#undo-tree][Undo Tree]]
+- [[#org-markdown][Org and Markdown]]
+- [[#latex][Latex]]
+- [[#coding][Coding Productivity]]
+  - [[#beacon][Beacon]]
+  - [[#neotree][neotree]]
+  - [[#iedit][iedit]]
+  - [[#dump-jump][Dump-Jump]]
+- [[#git][Git]]
+- [[#hydra][Hydra]]
+- [[#lsp][Language Server Protocal(lsp)]]
+- [[#dap][Debug Adapter Protocal (dap)]]
+- [[#cpp][C/C++]]
+- [[#python][Python]]
+- [[#web-dev][Web-Development]]
+- [[#js][JavaScript/TypeScript]]
+
+* General Settings 
+ :PROPERTIES:
+ :CUSTOM_ID: settings
+ :END:
 #+BEGIN_SRC emacs-lisp
   ;; Indentation 
   (setq-default indent-tabs-mode nil)                    ;; disable tabs and use spaces
@@ -27,6 +70,9 @@
   (setq create-lockfiles nil)                            ;; stop creating any # files
 #+END_SRC
 * Personal Keybindings
+ :PROPERTIES:
+ :CUSTOM_ID: keybindings
+ :END:
 My personal keybindings, you change these anyway you like 
 #+BEGIN_SRC emacs-lisp
   ;; Movement (some might be disabled by evil mode)
@@ -43,16 +89,25 @@ My personal keybindings, you change these anyway you like
 
 #+END_SRC
 * Org-Archive
+ :PROPERTIES:
+ :CUSTOM_ID: org-archive
+ :END:
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 #+END_SRC
 * Quelpa
+ :PROPERTIES:
+ :CUSTOM_ID: quelpa
+ :END:
 'Build and install your Emacs Lisp packages on-the-fly and directly from source.'
 #+BEGIN_SRC emacs-lisp
 (use-package quelpa-use-package
     :ensure t)
 #+END_SRC
 * Restart-Emacs
+ :PROPERTIES:
+ :CUSTOM_ID: restart
+ :END:
 I think I have actually used this package the most... Does exactly what it says
 #+BEGIN_SRC emacs-lisp
 (use-package restart-emacs
@@ -61,6 +116,9 @@ I think I have actually used this package the most... Does exactly what it says
     (global-set-key (kbd "<f5>") 'restart-emacs)) ;; To restart emacs
 #+END_SRC
 * Dashboard 
+ :PROPERTIES:
+ :CUSTOM_ID: dashboard
+ :END:
 - This package is displayed when you start up emacs without selecting a file. 
 - Learn how to customize it by going here: https://github.com/emacs-dashboard/emacs-dashboard
 #+BEGIN_SRC emacs-lisp
@@ -78,6 +136,9 @@ I think I have actually used this package the most... Does exactly what it says
                            (projects . 5))))
 #+END_SRC
 * Evil-Mode
+ :PROPERTIES:
+ :CUSTOM_ID: evil
+ :END:
  - Packages needed to emulate vim inside Emacs. 
  - Official Repo for Evil Mode: https://github.com/emacs-evil/evil
 #+BEGIN_SRC emacs-lisp
@@ -98,7 +159,7 @@ I think I have actually used this package the most... Does exactly what it says
   :config
   (global-evil-mc-mode 1))
 
- ; NeoTree Override, package (neotree) is shown further in the config
+ ; NeoTree override keybindings, package (neotree) is shown further in the config
  (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
  (evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
  (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
@@ -109,11 +170,14 @@ I think I have actually used this package the most... Does exactly what it says
  (evil-define-key 'normal neotree-mode-map (kbd "A") 'neotree-stretch-toggle)
  (evil-define-key 'normal neotree-mode-map (kbd "H") 'neotree-hidden-file-toggle)
     
-  ; Evil magit, package (magit) is shown further in the config
+  ; Evil magit overrides magit keybindings, package (magit) is shown further in the config
  (use-package evil-magit
       :ensure t)
 #+END_SRC
 * Themes
+ :PROPERTIES:
+ :CUSTOM_ID: themes
+ :END:
 You can uncomment any themes that you like here
 #+BEGIN_SRC emacs-lisp
 ;; BE AWARE: emacs can have multiple themes on at the same time
@@ -175,6 +239,9 @@ You can uncomment any themes that you like here
 ;;(zerodark-setup-modeline-format)
 #+END_SRC
 * Modeline
+ :PROPERTIES:
+ :CUSTOM_ID: modeline
+ :END:
  You can pick one of these, simply uncomment the one you want to try and comment the rest  
 #+BEGIN_SRC emacs-lisp
 
@@ -239,7 +306,13 @@ You can uncomment any themes that you like here
 
 #+END_SRC
 * Emacs Enhancements 
+ :PROPERTIES:
+ :CUSTOM_ID: enhancements
+ :END:
 ** Which-Key
+ :PROPERTIES:
+ :CUSTOM_ID: which-key
+ :END:
  A cheat sheet that comes in only when you need it
 #+BEGIN_SRC emacs-lisp
 (use-package which-key
@@ -248,6 +321,9 @@ You can uncomment any themes that you like here
 	(which-key-mode))
 #+END_SRC
 ** Ace-Window
+ :PROPERTIES:
+ :CUSTOM_ID: ace-window
+ :END:
 Useful if you work on multiple windows and want an efficient way of switching between them
 #+BEGIN_SRC emacs-lisp
 (use-package ace-window
@@ -256,8 +332,12 @@ Useful if you work on multiple windows and want an efficient way of switching be
      (global-set-key (kbd "M-o") 'ace-window)
      (setq aw-background nil))
 #+END_SRC
-** Debugger
-Mainly for c-based languages
+** GDB
+ :PROPERTIES:
+ :CUSTOM_ID: gdb
+ :END:
+- Mainly for c-based languages
+- Its great that emacs has built-in native gdb 
 #+BEGIN_SRC emacs-lisp
 ;; Debugger
 (global-set-key (kbd "C-c d") 'gdb)
@@ -265,6 +345,9 @@ Mainly for c-based languages
 (setq  gdb-show-main t )  ;; Non-nil means display source file containing the main routine at startup
 #+END_SRC
 ** Ivy-Integration 
+ :PROPERTIES:
+ :CUSTOM_ID: ivy
+ :END:
  Ivy manual: https://oremacs.com/swiper/
 #+BEGIN_SRC emacs-lisp
 
@@ -328,6 +411,9 @@ Mainly for c-based languages
 
 #+END_SRC
 ** Ranger
+ :PROPERTIES:
+ :CUSTOM_ID: ranger
+ :END:
  - An alternative to dired.
  - ranger file manager but in emacs, works the exact same way
 #+BEGIN_SRC emacs-lisp
@@ -340,6 +426,9 @@ Mainly for c-based languages
 
 #+END_SRC
 ** All-The-Icons
+ :PROPERTIES:
+ :CUSTOM_ID: all-icons
+ :END:
 - This is where the file icons come from
 - Make sure to run `M-x all-the-icons-install-fonts` if you want them to work!
 #+BEGIN_SRC emacs-lisp
@@ -373,7 +462,10 @@ Mainly for c-based languages
      :config
      (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
 #+END_SRC
-* Project Management
+* Projectile
+ :PROPERTIES:
+ :CUSTOM_ID: projectile
+ :END:
 - Amazing tool for managing projects! 
 - Projectile Homepage: https://projectile.readthedocs.io/en/latest/ 
 - Counsel-Projectile: https://github.com/ericdanan/counsel-projectile 
@@ -402,6 +494,9 @@ Mainly for c-based languages
          ("C-c p G" . counsel-projectile-git-grep)))
 #+END_SRC
 * Shell
+ :PROPERTIES:
+ :CUSTOM_ID: shell
+ :END:
    #+BEGIN_SRC emacs-lisp
 (use-package better-shell
     :ensure t
@@ -419,7 +514,13 @@ Mainly for c-based languages
 (global-set-key (kbd "C-~") 'eshell) ;; terminal alternative in emacs
    #+END_SRC
 * Globals
+ :PROPERTIES:
+ :CUSTOM_ID: globals
+ :END:
 ** Snippets
+ :PROPERTIES:
+ :CUSTOM_ID: snippets
+ :END:
 #+BEGIN_SRC emacs-lisp
 (use-package yasnippet
     :ensure t
@@ -439,6 +540,9 @@ Mainly for c-based languages
   :ensure t)
 #+END_SRC 
 ** FlyCheck
+ :PROPERTIES:
+ :CUSTOM_ID: flycheck
+ :END:
 - Checking syntax...basically 
 - Official Site: https://www.flycheck.org/en/latest/
 #+BEGIN_SRC emacs-lisp
@@ -450,6 +554,9 @@ Mainly for c-based languages
      
 #+END_SRC
 ** Company
+ :PROPERTIES:
+ :CUSTOM_ID: company
+ :END:
 - The framework I use for my autocomplete. 
 - Official Site: http://company-mode.github.io/
 #+BEGIN_SRC emacs-lisp
@@ -478,6 +585,9 @@ Mainly for c-based languages
 #+END_SRC
 
 ** Undo-Tree
+ :PROPERTIES:
+ :CUSTOM_ID: undo-tree
+ :END:
  You MUST have this for evil mode to work
 #+BEGIN_SRC emacs-lisp
 (use-package undo-tree
@@ -486,6 +596,9 @@ Mainly for c-based languages
   (global-undo-tree-mode))
 #+END_SRC
 * Org & Markdown
+ :PROPERTIES:
+ :CUSTOM_ID: org-markdown
+ :END:
 ** Enable Org-Mode
 #+BEGIN_SRC emacs-lisp
 (use-package org 
@@ -504,12 +617,23 @@ Mainly for c-based languages
 
 (add-hook 'org-mode-hook #'add-pcomplete-to-capf)
 #+END_SRC
-** Latex 
+** MarkDown
+#+BEGIN_SRC emacs-lisp
+(use-package markdown-mode
+  :ensure t
+  :mode
+  ("\\.\\(md\\|markdown\\)\\'" . markdown-mode))
+#+END_SRC
+* Latex 
+ :PROPERTIES:
+ :CUSTOM_ID: latex
+ :END:
  I still actually prefer Overleaf for latex editing...Hoping to just use emacs for it one day
 #+BEGIN_SRC emacs-lisp
-;; for reference, may be utilized in the future
-;(use-package tex
-;    :ensure auctex)
+;; Enable if you wish, kept for reference, may be utilized in the future
+ (use-package tex
+    :disabled
+    :ensure auctex)
 
 ;; Settings 
 (setq TeX-auto-save t)
@@ -520,15 +644,14 @@ Mainly for c-based languages
 (add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
 (add-hook 'LaTeX-mode-hook 'flycheck-mode)
 #+END_SRC
-** MarkDown
-#+BEGIN_SRC emacs-lisp
-(use-package markdown-mode
-  :ensure t
-  :mode
-  ("\\.\\(md\\|markdown\\)\\'" . markdown-mode))
-#+END_SRC
 * Coding Productivity 
+ :PROPERTIES:
+ :CUSTOM_ID: coding
+ :END:
 ** Beacon 
+ :PROPERTIES:
+ :CUSTOM_ID: beacon
+ :END:
 I never lose where my cursor is thanks to this
 #+BEGIN_SRC emacs-lisp
 (use-package beacon
@@ -537,6 +660,9 @@ I never lose where my cursor is thanks to this
     (beacon-mode 1))
 #+END_SRC
 ** Neotree
+ :PROPERTIES:
+ :CUSTOM_ID: neotree
+ :END:
 I want to try treemacs in the future, but this has been amazing for file browsing
 #+BEGIN_SRC emacs-lisp
   ;; Neotree
@@ -549,6 +675,9 @@ I want to try treemacs in the future, but this has been amazing for file browsin
       (setq neo-theme (if (display-graphic-p) 'icons 'arrow))) ; add icons (utilizes all-the-icons)
 #+END_SRC
 ** Iedit
+ :PROPERTIES:
+ :CUSTOM_ID: iedit
+ :END:
 - Nice utility that finds all matches and replaces them with the user's choice
 - Very similiar to multiple cursors
 #+BEGIN_SRC emacs-lisp
@@ -557,6 +686,9 @@ I want to try treemacs in the future, but this has been amazing for file browsin
     :bind (("C-c c" . iedit-mode)))
 #+END_SRC
 ** Dump-Jump
+ :PROPERTIES:
+ :CUSTOM_ID: dump-jump
+ :END:
 A jump to definition package that just works. Love this one!
 #+BEGIN_SRC emacs-lisp
 (use-package dumb-jump
@@ -572,7 +704,11 @@ A jump to definition package that just works. Love this one!
     :ensure)
 #+END_SRC
 * Git
-- Magit is an amazing git interface I have yet to master...
+ :PROPERTIES:
+ :CUSTOM_ID: git
+ :END:
+- Magit: Amazing git interface I have yet to master...
+- git-timemachine: flip through a file's full list of version. Revert to any given phase easily
 - Official Site: https://magit.vc/
 #+BEGIN_SRC emacs-lisp
 (use-package magit
@@ -590,12 +726,20 @@ A jump to definition package that just works. Love this one!
   :ensure t
   :mode "\\.gitconfig\\'")
 
+(use-package git-timemachine
+  :ensure t
+  :commands git-timemachine)
+
 ;; smerge mode deals with merge conflicts in git. Prefix mapping is C-c v
 (setq smerge-command-prefix "\C-cv")
 #+END_SRC
 * Hydra
+ :PROPERTIES:
+ :CUSTOM_ID: Hydra
+ :END:
 - I have yet to properly play around with this package, you can go pretty crazy here
-- Repo: https://github.com/abo-abo/hydra
+- Allows you set up your own key maps where pressing one key instantly gives access to many other keybindings
+- Repo: https://github.com/abo-abo/hydra (Has a video demo)
 ** config
 #+BEGIN_SRC emacs-lisp
   (use-package hydra
@@ -605,9 +749,10 @@ A jump to definition package that just works. Love this one!
       (setq hydra-hint-display-type 'lv))
 
   ;; for reference when I learn hydra better 
-; (use-package pretty-hydra
-;    :ensure t
-;    :requires hydra)
+ (use-package pretty-hydra
+    :disabled
+    :ensure t
+    :requires hydra)
 #+END_SRC
 ** Hydras
 - I hope to fill these up in the future
@@ -656,8 +801,11 @@ A jump to definition package that just works. Love this one!
     ("q" nil "quit" :color blue))
 #+END_SRC
 * LSP
+ :PROPERTIES:
+ :CUSTOM_ID: lsp
+ :END:
   - LSP stands for Language Server Protocal and makes setting up autocompletion and syntax checking easy. 
-  - Official Repo: https://github.com/emacs-lsp/lsp-mode 
+  - Check the [[https://github.com/emacs-lsp/lsp-mode][Official Repo]] to what to install for your preferred development language
 ** config
 #+BEGIN_SRC emacs-lisp  
   (use-package lsp-mode
@@ -670,12 +818,11 @@ A jump to definition package that just works. Love this one!
      (setq lsp-prefer-flymake nil) ; we are using flycheck and not flymake
      ;; hook your languages below
      (add-hook 'c++-mode-hook #'lsp)
+     (add-hook 'c-mode-hook #'lsp)
      (add-hook 'python-mode-hook #'lsp)
      (add-hook 'js2-mode-hook #'lsp)
      (add-hook 'json-mode-hook #'lsp)
      (add-hook 'web-mode-hook #'lsp)
-     (add-hook 'shell-mode-hook #'lsp)
-     (add-hook 'sh-mode-hook #'lsp)
      (add-hook 'yaml-mode-hook #'lsp)
      (add-hook 'typescript-mode-hook #'lsp))
 
@@ -713,6 +860,9 @@ A jump to definition package that just works. Love this one!
 
 #+END_SRC
 * DAP
+ :PROPERTIES:
+ :CUSTOM_ID: dap
+ :END:
 - DAP stands for Debug Adapter Protocal works similiarly to LSP but for debugging
 - Repo: https://github.com/emacs-lsp/dap-mode (includes everything you need to install for your desired development language)
 #+BEGIN_SRC emacs-lisp
@@ -739,6 +889,10 @@ A jump to definition package that just works. Love this one!
 
 #+END_SRC
 * C/C++
+ :PROPERTIES:
+ :CUSTOM_ID: cpp
+ :END:
+ Clangd Language Server: https://clang.llvm.org/extra/clangd/Installation.html
 ** Settings
 #+BEGIN_SRC emacs-lisp
 (setq-default c-basic-offset 4) ;; indentation for C-based languages
@@ -790,6 +944,10 @@ Still experimenting with this, native gdb in emacs is also really good (describe
            (add-hook 'c-mode-common-hook #'clang-format+-mode))
 #+END_SRC
 * Python
+ :PROPERTIES:
+ :CUSTOM_ID: python
+ :END:
+ Python Language Server: https://pypi.org/project/python-language-server/
 ** Settings
 #+BEGIN_SRC emacs-lisp
   ;; version 
@@ -821,21 +979,29 @@ Note: the template is meant to be edited to personal preferences
 ** Elpy
  No longer need it because of LSP but keeping it for reference
 #+BEGIN_SRC emacs-lisp
-;;(use-package elpy
-;;   :ensure t
-;;   :config 
-;;   (elpy-enable))
+(use-package elpy
+   :disabled
+   :ensure t
+   :config 
+   (elpy-enable))
 #+END_SRC
 ** Virtualenv
- Uncomment if you need it, I have yet to develop seriously in Python
+ Remove disabled if you need it, I have yet to develop seriously in Python
 #+BEGIN_SRC emacs-lisp
-;;(use-package virtualenvwrapper
-;;   :ensure t
-;;   :config)
-;;   ;;(venv-initialize-interactive-shells)
-;;   ;;(venv-initialize-eshell))
+(use-package virtualenvwrapper
+   :disabled
+   :ensure t
+   :config
+   (venv-initialize-interactive-shells)
+   (venv-initialize-eshell))
 #+END_SRC
+ :PROPERTIES:
+ :CUSTOM_ID: python
+ :END:
 * Web-Development 
+ :PROPERTIES:
+ :CUSTOM_ID: web-dev
+ :END:
 ** Web-Mode
  - Autonomous emacs major-mode for editing web templates. 
  - Essential for web-development. Highlighting, auto-closing tags, just great.
@@ -941,6 +1107,10 @@ More on emmet: https://www.emmet.io/
     (web-mode  . emmet-mode)))
 #+END_SRC
 * JavaScript/TypeScript
+ :PROPERTIES:
+ :CUSTOM_ID: js
+ :END:
+ Js/Ts language server: https://github.com/theia-ide/typescript-language-server
 ** Node Path
 Adds the node_modules/.bin directory to the buffer exec_path.
 #+BEGIN_SRC emacs-lisp
@@ -949,6 +1119,26 @@ Adds the node_modules/.bin directory to the buffer exec_path.
    :hook 
    ((web-mode . add-node-modules-path)
    (rjsx-mode . add-node-modules-path)))
+#+END_SRC
+** Debugging
+ Any kind of setup can be found in the dap repo that was mentioned previously...
+*** Front-end
+#+BEGIN_SRC emacs-lisp
+;; debugging in chrome
+(use-package dap-chrome
+  :ensure nil
+  :requires dap-mode)
+  
+;; debugging in firefox
+(use-package dap-firefox
+    :ensure nil
+    :requires dap-mode)
+#+END_SRC
+*** Back-end
+#+BEGIN_SRC emacs-lisp
+(use-package dap-node
+  :ensure nil
+  :requires dap-mode)
 #+END_SRC
 ** Js2-mode
 - A 'better' mode for editing javascript files. Can sometimes have performance issues depending on emacs version
@@ -965,6 +1155,9 @@ Adds the node_modules/.bin directory to the buffer exec_path.
 
 #+END_SRC
 
+ :PROPERTIES:
+ :CUSTOM_ID: ts
+ :END:
 ** TIDE
 All for typescript
 #+BEGIN_SRC emacs-lisp
@@ -993,24 +1186,4 @@ All for typescript
     ;; formats the buffer before saving
     (add-hook 'before-save-hook 'tide-format-before-save)
     (add-hook 'typescript-mode-hook #'setup-tide-mode))
-#+END_SRC
-** Debugging
- Any kind of setup can be found in the dap repo that was mentioned previously...
-*** Front-end
-#+BEGIN_SRC emacs-lisp
-;; debugging in chrome
-(use-package dap-chrome
-  :ensure nil
-  :requires dap-mode)
-  
-;; debugging in firefox
-(use-package dap-firefox
-    :ensure nil
-    :requires dap-mode)
-#+END_SRC
-*** Back-end
-#+BEGIN_SRC emacs-lisp
-(use-package dap-node
-  :ensure nil
-  :requires dap-mode)
 #+END_SRC
