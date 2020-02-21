@@ -640,7 +640,7 @@ A jump to definition package that just works. Love this one!
    "⚡⚡ Ivy/Windows ⚡⚡"
     ("f" counsel-find-file "find")
     ("x" counsel-M-x "M-x")
-    ("B" counsel-switch-buffer)
+    ("B" counsel-switch-buffer "switch buffer")
     ("s" swiper-isearch "search")
     ;; splitting
     ("v" split-window-right "v-split")
