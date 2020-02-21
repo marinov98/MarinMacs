@@ -5,6 +5,48 @@
 #+TAGS: Emacs
 #+DESCRIPTION: My emacs config for software development
 
+* Contact
+- Email me if there are any issues/questions/things that can be better: marin.marinov@macaulay.cuny.edu
+** Inspiration:
+- I became inspired to write this after I configured my emacs init file to the point where I could comftorably write C++, Python, and JavaScript code as well as take notes in Org mode.
+** Purpose:
+- Initially, I made this repo for myself to keep track of my configurations...
+- Now I want to make it more of a guide for anyone trying to switch to emacs whether its from another editor and/or is confused about what packages to install and how to configure.
+- Make a guide that welcomes anyone from any editor.
+** Who Is This for?
+- **Vim users** wanting to switch and use the power of emacs while keepings their vim keybindings
+- Anyone wanting to use Emacs for its **own keybindings** and extensibility but hates configuring and wants an out of the box experience
+- People who want more productivity but are limited because of their current text editor
+- People who already use emacs and maybe want to see if there is anything new they can learn from my config
+- Me whenever I forget or want to reference something
+** Why Make This Into More Of aGuide?
+- Emacs is extremely powerful but has a ton of packages and it can be really confusing to pick the right ones, much less configure them
+- Installing each package requires going to different sites and/or blogs to see how each individual one works, its better to have all the information you need in one place 
+- Not everybody likes spending time customizing and configuring, they like things that work right out of the box. However, everybody likes speed and Emacs provides that and the configuration should not be what keeps people using editors such as emacs or vim
+- What if you are a **Vim user** looking to switch to emacs but keep the powerful vim bindings? My emacs works with evil-mode!
+- I just really like to have my stuff online in case event XYZ happens with my machine 
+* Notes-Before-Beginning
+- I include as much as I can, as I want this guide to be useful to both people who never touched emacs as well as emacs veterans
+- Any errors you get can be googled and every package can also be checked online 
+- Depending on how you installed emacs, certain packages might be preinstalled into it 
+- When you see ```RET``` it means hit the ENTER key
+- *In emacs C = ctrl, M = alt, S = shift and s (hyper key) = command key (MacOS) windows key(MS-Windows)*
+  - Example: ```M-x``` = alt + x  ```C-x C-f``` = ctrl + x ctrl + f
+- If you wish to browse through Emac's packages ```M-x package-list-packages RET``` will open up the package list
+  - Additionally, you can run ```M-x package-install RET package_name RET``` if you know the exact package that you want
+  - Generally , `use-package` (described below) takes care of automating package installation
+- Once again, if you just want to get it over with, simply copy my *init.el* and *MarinMacs.org* (or whatever you want to name your org file) 
+- the files should be created inside the ```.emacs.d``` folder which you can create. 
+- All the packages should install and configure automatically (power of use-package), **however** you would still have to install the **langauge servers** (instructions below) if you want autocomplete
+* Possible-Issues 
+- After installing my config on a few different machines (Linux, MacOS, Ms-Windows), my config runs fine, but I have occasionally ran into small issues that can be quickly fixed.
+- They are rare but they still happen so below are some solutions to them:
+** Issue #1: Package cannot load 
+- **Possible Solution** run ```M-x package-refresh-contents ``` , if that doesnt work and the package doesnt mean much to you, remove it from the config or look up the package to see if anything has changed, some packages get deleted over time or replaced or become native to emacs and do not to be specified in the config
+** Issue #2 : (some word) is void 
+- **Possible Solution #1 :** my config is tested, so there should not be anything that stops your emacs file from loading, however sometimes because my config has long lines of code and emacs default size is not that big, emacs indents and the piece of code goes on a new line and is not part of anything so it looks like an error 
+- Best thing to do is ```C-s``` and search for the word and either try to put it in the same line or delete it
+- **Possible Solution #2 :** Make sure you have my init.el copied (fix any small indentention issues there) then run ```M-x customize RET```, go to faces->basics faces->default change the size of the emacs screen to prevent it from indenting.
 * Table of Contents :TOC_3:
 - [[#settings][General Settings]]
 - [[#keybindings][Personal Keybindings]]
@@ -49,6 +91,7 @@
  :PROPERTIES:
  :CUSTOM_ID: settings
  :END:
+I like to use [[https://github.com/tonsky/FiraCode][Fire Code]] font
 #+BEGIN_SRC emacs-lisp
   ;; Indentation 
   (setq-default indent-tabs-mode nil)                    ;; disable tabs and use spaces
@@ -120,7 +163,8 @@ I think I have actually used this package the most... Does exactly what it says
  :CUSTOM_ID: dashboard
  :END:
 - This package is displayed when you start up emacs without selecting a file. 
-- Learn how to customize it by going here: https://github.com/emacs-dashboard/emacs-dashboard
+- Prerequisites: https://github.com/cask/cask
+- After installing cask, learn how to customize it by going here: https://github.com/emacs-dashboard/emacs-dashboard
 #+BEGIN_SRC emacs-lisp
 (use-package dashboard 
     :ensure t
@@ -140,6 +184,7 @@ I think I have actually used this package the most... Does exactly what it says
  :CUSTOM_ID: evil
  :END:
  - Packages needed to emulate vim inside Emacs. 
+ - Make sure you have [[#undo-tree][undo-tree]] installed 
  - Official Repo for Evil Mode: https://github.com/emacs-evil/evil
 #+BEGIN_SRC emacs-lisp
 (use-package evil
@@ -178,6 +223,28 @@ I think I have actually used this package the most... Does exactly what it says
  :PROPERTIES:
  :CUSTOM_ID: themes
  :END:
+** Favorite-Themes
+*** Base16 (Contains 20+ themes but these are my top picks)
+- base16-ocean 
+- base16-oceanicnext 
+- base16-tomorrow-night
+- base16-solarized-dark/light
+
+*** Colorful and visually pleasing    
+- Spacemacs-theme
+- Zerodark
+
+*** Easy on the eyes
+- Gruvbox
+- nord
+- Zenburn
+- JellyBeans 
+- Planet
+- solarized-dark (from solarized-theme NOT base16)
+
+*** For Org and any Markdown Language
+- Poet
+** Customization
 You can uncomment any themes that you like here
 #+BEGIN_SRC emacs-lisp
 ;; BE AWARE: emacs can have multiple themes on at the same time
@@ -628,7 +695,12 @@ Useful if you work on multiple windows and want an efficient way of switching be
  :PROPERTIES:
  :CUSTOM_ID: latex
  :END:
- I still actually prefer Overleaf for latex editing...Hoping to just use emacs for it one day
+- I still actually prefer Overleaf for latex editing...Hoping to just use emacs for it one day
+- **DEPRECIATED** Below writing packages are only kept for reverence
+  - auctex & tex (smoother latex editing)
+  - pdf-tools (pdf support in emacs)
+  - wc-mode (word counter)
+  - writegood-mode (sentence/word choice checker)
 #+BEGIN_SRC emacs-lisp
 ;; Enable if you wish, kept for reference, may be utilized in the future
  (use-package tex
@@ -748,7 +820,8 @@ A jump to definition package that just works. Love this one!
       (setq hydra-is-helpful t)
       (setq hydra-hint-display-type 'lv))
 
-  ;; for reference when I learn hydra better 
+ ;; for reference when I learn hydra better 
+ ;; gives access to functions that make nice hydra UI
  (use-package pretty-hydra
     :disabled
     :ensure t
@@ -892,7 +965,11 @@ A jump to definition package that just works. Love this one!
  :PROPERTIES:
  :CUSTOM_ID: cpp
  :END:
- Clangd Language Server: https://clang.llvm.org/extra/clangd/Installation.html
+- Clangd Language Server: https://clang.llvm.org/extra/clangd/Installation.html
+- Cpp extras (mostly optional)
+  - [[https://www.google.com/search?q=cmake&oq=cmake&aqs=chrome..69i57j0l6j69i65.645j0j4&client=ubuntu&sourceid=chrome&ie=UTF-8][Cmake]]
+  - [[https://llvm.org/][llvm]]
+  - [[https://clang.llvm.org/][Clang]]
 ** Settings
 #+BEGIN_SRC emacs-lisp
 (setq-default c-basic-offset 4) ;; indentation for C-based languages
@@ -907,7 +984,7 @@ A jump to definition package that just works. Love this one!
     (modern-c++-font-lock-global-mode t))
 #+END_SRC
 ** Debugging
-Still experimenting with this, native gdb in emacs is also really good (described in Emacs Enhancements -> Debugger section)
+Still experimenting with this, native gdb in emacs is also really good (described in [[#gdb][GDB]] section of this config file)
 #+BEGIN_SRC emacs-lisp
 (use-package dap-gdb-lldb
   :ensure nil
@@ -926,6 +1003,8 @@ Still experimenting with this, native gdb in emacs is also really good (describe
 ** Clang-Format
  - The only package that utilizes quelpa at the moment :))
  - Formats your C++ code
+ - Documentation: https://clang.llvm.org/docs/ClangFormat.html
+ - You should also search how to install *clang-format* on your specific OS
 #+BEGIN_SRC emacs-lisp
 (use-package clang-format 
    :ensure t
@@ -947,7 +1026,8 @@ Still experimenting with this, native gdb in emacs is also really good (describe
  :PROPERTIES:
  :CUSTOM_ID: python
  :END:
- Python Language Server: https://pypi.org/project/python-language-server/
+- Python-pip: https://pip.pypa.io/en/stable/
+- Python Language Server: https://pypi.org/project/python-language-server/
 ** Settings
 #+BEGIN_SRC emacs-lisp
   ;; version 
@@ -1002,6 +1082,10 @@ Note: the template is meant to be edited to personal preferences
  :PROPERTIES:
  :CUSTOM_ID: web-dev
  :END:
+ Language servers install command (that I use): 
+ #+BEGIN_SRC markdown
+ `npm i -g typescript-language-server vscode-json-languageserver vscode-html-languageserver-bin yaml-language-server vscode-css-languageserver-bin bash-language-server`
+ #+END_SRC
 ** Web-Mode
  - Autonomous emacs major-mode for editing web templates. 
  - Essential for web-development. Highlighting, auto-closing tags, just great.
@@ -1049,6 +1133,8 @@ Note: the template is meant to be edited to personal preferences
     :ensure t
     :mode "\\.css\\'")
 
+;; format code
+;; need to run 'npm i -g prettier' in order for this to work (Locally should work too)
 (use-package prettier-js
     :ensure t
     :config 
@@ -1110,7 +1196,8 @@ More on emmet: https://www.emmet.io/
  :PROPERTIES:
  :CUSTOM_ID: js
  :END:
- Js/Ts language server: https://github.com/theia-ide/typescript-language-server
+- JavaScript/TypeScript language server: https://github.com/theia-ide/typescript-language-server
+- Select *ts-ls* when prompted which server to install 
 ** Node Path
 Adds the node_modules/.bin directory to the buffer exec_path.
 #+BEGIN_SRC emacs-lisp
